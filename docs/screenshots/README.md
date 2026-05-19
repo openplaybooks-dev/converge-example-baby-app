@@ -1,6 +1,8 @@
 # Screenshots
 
-All 13 screens, captured from the generated Flutter app running in Chrome at viewport **430×2400** logical pixels (× DPR 2 → 860×4800 PNG). The viewport width matches iPhone 16 Pro Max so Material 3 breakpoints render the mobile layout; the height is exaggerated so scrollable Flutter content (Home's Quick Actions, the article reader, the pregnancy progress detail) fits in one shot without clipping.
+All 13 screens, captured from the generated Flutter app running in Chrome at viewport **430×2400** logical pixels (× DPR 2 → 860×4800 PNG before trim). The viewport width matches iPhone 16 Pro Max so Material 3 breakpoints render the mobile layout; the height is exaggerated so scrollable Flutter content (Home's Quick Actions, the article reader, the pregnancy progress detail) fits in one shot without clipping.
+
+After capture, [`scripts/trim-screenshots.mjs`](../../scripts/trim-screenshots.mjs) trims the trailing whitespace and (for screens with a sticky bottom navigation bar that floats at viewport-end with empty space between it and the body) stitches body + nav together with a 24px band. That's why some PNGs are short (Browse: 860×504) and others long (Article reader: 860×2988) — the height reflects actual content, not the capture viewport.
 
 | Order | Route | Screen | File |
 | ---: | :--- | :--- | :--- |

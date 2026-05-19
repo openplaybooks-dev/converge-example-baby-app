@@ -36,3 +36,4 @@ for _ in $(seq 1 20); do
 done
 
 node scripts/capture-screenshots.mjs
+node scripts/trim-screenshots.mjs   # crop trailing whitespace + stitch sticky bottom nav
