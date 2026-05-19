@@ -1,0 +1,322 @@
+{
+  "attemptNumber": 1,
+  "startedAt": "2026-05-18T22:59:00.402Z",
+  "completedAt": "2026-05-18T23:00:52.423Z",
+  "spawnedTasks": [
+    {
+      "id": "001-home-01-spec",
+      "writeToPath": ".converge/journal/default/tasks/001-home-01-spec/TASK.md"
+    },
+    {
+      "id": "001-home-02-design",
+      "writeToPath": ".converge/journal/default/tasks/001-home-02-design/TASK.md"
+    },
+    {
+      "id": "001-home-03-convert",
+      "writeToPath": ".converge/journal/default/tasks/001-home-03-convert/TASK.md"
+    },
+    {
+      "id": "001-home-04-analyze",
+      "writeToPath": ".converge/journal/default/tasks/001-home-04-analyze/TASK.md"
+    },
+    {
+      "id": "001-home-05-split",
+      "writeToPath": ".converge/journal/default/tasks/001-home-05-split/TASK.md"
+    },
+    {
+      "id": "001-home-06-lift",
+      "writeToPath": ".converge/journal/default/tasks/001-home-06-lift/TASK.md"
+    },
+    {
+      "id": "002-browse-01-spec",
+      "writeToPath": ".converge/journal/default/tasks/002-browse-01-spec/TASK.md"
+    },
+    {
+      "id": "002-browse-02-design",
+      "writeToPath": ".converge/journal/default/tasks/002-browse-02-design/TASK.md"
+    },
+    {
+      "id": "002-browse-03-convert",
+      "writeToPath": ".converge/journal/default/tasks/002-browse-03-convert/TASK.md"
+    },
+    {
+      "id": "002-browse-04-analyze",
+      "writeToPath": ".converge/journal/default/tasks/002-browse-04-analyze/TASK.md"
+    },
+    {
+      "id": "002-browse-05-split",
+      "writeToPath": ".converge/journal/default/tasks/002-browse-05-split/TASK.md"
+    },
+    {
+      "id": "002-browse-06-lift",
+      "writeToPath": ".converge/journal/default/tasks/002-browse-06-lift/TASK.md"
+    },
+    {
+      "id": "003-library-01-spec",
+      "writeToPath": ".converge/journal/default/tasks/003-library-01-spec/TASK.md"
+    },
+    {
+      "id": "003-library-02-design",
+      "writeToPath": ".converge/journal/default/tasks/003-library-02-design/TASK.md"
+    },
+    {
+      "id": "003-library-03-convert",
+      "writeToPath": ".converge/journal/default/tasks/003-library-03-convert/TASK.md"
+    },
+    {
+      "id": "003-library-04-analyze",
+      "writeToPath": ".converge/journal/default/tasks/003-library-04-analyze/TASK.md"
+    },
+    {
+      "id": "003-library-05-split",
+      "writeToPath": ".converge/journal/default/tasks/003-library-05-split/TASK.md"
+    },
+    {
+      "id": "003-library-06-lift",
+      "writeToPath": ".converge/journal/default/tasks/003-library-06-lift/TASK.md"
+    },
+    {
+      "id": "004-profile-01-spec",
+      "writeToPath": ".converge/journal/default/tasks/004-profile-01-spec/TASK.md"
+    },
+    {
+      "id": "004-profile-02-design",
+      "writeToPath": ".converge/journal/default/tasks/004-profile-02-design/TASK.md"
+    },
+    {
+      "id": "004-profile-03-convert",
+      "writeToPath": ".converge/journal/default/tasks/004-profile-03-convert/TASK.md"
+    },
+    {
+      "id": "004-profile-04-analyze",
+      "writeToPath": ".converge/journal/default/tasks/004-profile-04-analyze/TASK.md"
+    },
+    {
+      "id": "004-profile-05-split",
+      "writeToPath": ".converge/journal/default/tasks/004-profile-05-split/TASK.md"
+    },
+    {
+      "id": "004-profile-06-lift",
+      "writeToPath": ".converge/journal/default/tasks/004-profile-06-lift/TASK.md"
+    },
+    {
+      "id": "005-cycle-tracking-01-spec",
+      "writeToPath": ".converge/journal/default/tasks/005-cycle-tracking-01-spec/TASK.md"
+    },
+    {
+      "id": "005-cycle-tracking-02-design",
+      "writeToPath": ".converge/journal/default/tasks/005-cycle-tracking-02-design/TASK.md"
+    },
+    {
+      "id": "005-cycle-tracking-03-convert",
+      "writeToPath": ".converge/journal/default/tasks/005-cycle-tracking-03-convert/TASK.md"
+    },
+    {
+      "id": "005-cycle-tracking-04-analyze",
+      "writeToPath": ".converge/journal/default/tasks/005-cycle-tracking-04-analyze/TASK.md"
+    },
+    {
+      "id": "005-cycle-tracking-05-split",
+      "writeToPath": ".converge/journal/default/tasks/005-cycle-tracking-05-split/TASK.md"
+    },
+    {
+      "id": "005-cycle-tracking-06-lift",
+      "writeToPath": ".converge/journal/default/tasks/005-cycle-tracking-06-lift/TASK.md"
+    },
+    {
+      "id": "006-weight-nutrition-01-spec",
+      "writeToPath": ".converge/journal/default/tasks/006-weight-nutrition-01-spec/TASK.md"
+    },
+    {
+      "id": "006-weight-nutrition-02-design",
+      "writeToPath": ".converge/journal/default/tasks/006-weight-nutrition-02-design/TASK.md"
+    },
+    {
+      "id": "006-weight-nutrition-03-convert",
+      "writeToPath": ".converge/journal/default/tasks/006-weight-nutrition-03-convert/TASK.md"
+    },
+    {
+      "id": "006-weight-nutrition-04-analyze",
+      "writeToPath": ".converge/journal/default/tasks/006-weight-nutrition-04-analyze/TASK.md"
+    },
+    {
+      "id": "006-weight-nutrition-05-split",
+      "writeToPath": ".converge/journal/default/tasks/006-weight-nutrition-05-split/TASK.md"
+    },
+    {
+      "id": "006-weight-nutrition-06-lift",
+      "writeToPath": ".converge/journal/default/tasks/006-weight-nutrition-06-lift/TASK.md"
+    },
+    {
+      "id": "007-pregnancy-progress-01-spec",
+      "writeToPath": ".converge/journal/default/tasks/007-pregnancy-progress-01-spec/TASK.md"
+    },
+    {
+      "id": "007-pregnancy-progress-02-design",
+      "writeToPath": ".converge/journal/default/tasks/007-pregnancy-progress-02-design/TASK.md"
+    },
+    {
+      "id": "007-pregnancy-progress-03-convert",
+      "writeToPath": ".converge/journal/default/tasks/007-pregnancy-progress-03-convert/TASK.md"
+    },
+    {
+      "id": "007-pregnancy-progress-04-analyze",
+      "writeToPath": ".converge/journal/default/tasks/007-pregnancy-progress-04-analyze/TASK.md"
+    },
+    {
+      "id": "007-pregnancy-progress-05-split",
+      "writeToPath": ".converge/journal/default/tasks/007-pregnancy-progress-05-split/TASK.md"
+    },
+    {
+      "id": "007-pregnancy-progress-06-lift",
+      "writeToPath": ".converge/journal/default/tasks/007-pregnancy-progress-06-lift/TASK.md"
+    },
+    {
+      "id": "008-mindfulness-01-spec",
+      "writeToPath": ".converge/journal/default/tasks/008-mindfulness-01-spec/TASK.md"
+    },
+    {
+      "id": "008-mindfulness-02-design",
+      "writeToPath": ".converge/journal/default/tasks/008-mindfulness-02-design/TASK.md"
+    },
+    {
+      "id": "008-mindfulness-03-convert",
+      "writeToPath": ".converge/journal/default/tasks/008-mindfulness-03-convert/TASK.md"
+    },
+    {
+      "id": "008-mindfulness-04-analyze",
+      "writeToPath": ".converge/journal/default/tasks/008-mindfulness-04-analyze/TASK.md"
+    },
+    {
+      "id": "008-mindfulness-05-split",
+      "writeToPath": ".converge/journal/default/tasks/008-mindfulness-05-split/TASK.md"
+    },
+    {
+      "id": "008-mindfulness-06-lift",
+      "writeToPath": ".converge/journal/default/tasks/008-mindfulness-06-lift/TASK.md"
+    },
+    {
+      "id": "009-health-log-01-spec",
+      "writeToPath": ".converge/journal/default/tasks/009-health-log-01-spec/TASK.md"
+    },
+    {
+      "id": "009-health-log-02-design",
+      "writeToPath": ".converge/journal/default/tasks/009-health-log-02-design/TASK.md"
+    },
+    {
+      "id": "009-health-log-03-convert",
+      "writeToPath": ".converge/journal/default/tasks/009-health-log-03-convert/TASK.md"
+    },
+    {
+      "id": "009-health-log-04-analyze",
+      "writeToPath": ".converge/journal/default/tasks/009-health-log-04-analyze/TASK.md"
+    },
+    {
+      "id": "009-health-log-05-split",
+      "writeToPath": ".converge/journal/default/tasks/009-health-log-05-split/TASK.md"
+    },
+    {
+      "id": "009-health-log-06-lift",
+      "writeToPath": ".converge/journal/default/tasks/009-health-log-06-lift/TASK.md"
+    },
+    {
+      "id": "010-mood-wellness-01-spec",
+      "writeToPath": ".converge/journal/default/tasks/010-mood-wellness-01-spec/TASK.md"
+    },
+    {
+      "id": "010-mood-wellness-02-design",
+      "writeToPath": ".converge/journal/default/tasks/010-mood-wellness-02-design/TASK.md"
+    },
+    {
+      "id": "010-mood-wellness-03-convert",
+      "writeToPath": ".converge/journal/default/tasks/010-mood-wellness-03-convert/TASK.md"
+    },
+    {
+      "id": "010-mood-wellness-04-analyze",
+      "writeToPath": ".converge/journal/default/tasks/010-mood-wellness-04-analyze/TASK.md"
+    },
+    {
+      "id": "010-mood-wellness-05-split",
+      "writeToPath": ".converge/journal/default/tasks/010-mood-wellness-05-split/TASK.md"
+    },
+    {
+      "id": "010-mood-wellness-06-lift",
+      "writeToPath": ".converge/journal/default/tasks/010-mood-wellness-06-lift/TASK.md"
+    },
+    {
+      "id": "011-education-01-spec",
+      "writeToPath": ".converge/journal/default/tasks/011-education-01-spec/TASK.md"
+    },
+    {
+      "id": "011-education-02-design",
+      "writeToPath": ".converge/journal/default/tasks/011-education-02-design/TASK.md"
+    },
+    {
+      "id": "011-education-03-convert",
+      "writeToPath": ".converge/journal/default/tasks/011-education-03-convert/TASK.md"
+    },
+    {
+      "id": "011-education-04-analyze",
+      "writeToPath": ".converge/journal/default/tasks/011-education-04-analyze/TASK.md"
+    },
+    {
+      "id": "011-education-05-split",
+      "writeToPath": ".converge/journal/default/tasks/011-education-05-split/TASK.md"
+    },
+    {
+      "id": "011-education-06-lift",
+      "writeToPath": ".converge/journal/default/tasks/011-education-06-lift/TASK.md"
+    },
+    {
+      "id": "012-article-reader-01-spec",
+      "writeToPath": ".converge/journal/default/tasks/012-article-reader-01-spec/TASK.md"
+    },
+    {
+      "id": "012-article-reader-02-design",
+      "writeToPath": ".converge/journal/default/tasks/012-article-reader-02-design/TASK.md"
+    },
+    {
+      "id": "012-article-reader-03-convert",
+      "writeToPath": ".converge/journal/default/tasks/012-article-reader-03-convert/TASK.md"
+    },
+    {
+      "id": "012-article-reader-04-analyze",
+      "writeToPath": ".converge/journal/default/tasks/012-article-reader-04-analyze/TASK.md"
+    },
+    {
+      "id": "012-article-reader-05-split",
+      "writeToPath": ".converge/journal/default/tasks/012-article-reader-05-split/TASK.md"
+    },
+    {
+      "id": "012-article-reader-06-lift",
+      "writeToPath": ".converge/journal/default/tasks/012-article-reader-06-lift/TASK.md"
+    },
+    {
+      "id": "013-settings-01-spec",
+      "writeToPath": ".converge/journal/default/tasks/013-settings-01-spec/TASK.md"
+    },
+    {
+      "id": "013-settings-02-design",
+      "writeToPath": ".converge/journal/default/tasks/013-settings-02-design/TASK.md"
+    },
+    {
+      "id": "013-settings-03-convert",
+      "writeToPath": ".converge/journal/default/tasks/013-settings-03-convert/TASK.md"
+    },
+    {
+      "id": "013-settings-04-analyze",
+      "writeToPath": ".converge/journal/default/tasks/013-settings-04-analyze/TASK.md"
+    },
+    {
+      "id": "013-settings-05-split",
+      "writeToPath": ".converge/journal/default/tasks/013-settings-05-split/TASK.md"
+    },
+    {
+      "id": "013-settings-06-lift",
+      "writeToPath": ".converge/journal/default/tasks/013-settings-06-lift/TASK.md"
+    }
+  ],
+  "status": "success",
+  "spawnCount": 78,
+  "durationMs": 112021
+}

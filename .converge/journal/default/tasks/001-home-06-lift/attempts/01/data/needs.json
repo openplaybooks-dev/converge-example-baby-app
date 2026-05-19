@@ -1,0 +1,23 @@
+{
+  "taskId": "001-home-06-lift",
+  "attemptNumber": 1,
+  "inputs": [
+    {
+      "pattern": ".stitch/designs/home/widgets.jsonl",
+      "count": 1,
+      "samples": [
+        ".stitch/designs/home/widgets.jsonl"
+      ]
+    },
+    {
+      "pattern": "lib/screens/home/_widgets/**/*.dart",
+      "count": 0,
+      "samples": []
+    }
+  ],
+  "outputs": [
+    "lib/widgets/**/*.dart"
+  ],
+  "blocked": true,
+  "blockedReason": "Missing required inputs: lib/screens/home/_widgets/**/*.dart"
+}

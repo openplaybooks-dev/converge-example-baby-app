@@ -1,0 +1,3 @@
+[2026-05-19T03:02:22.128Z] [AGENT_START] agent run_task: Split widget: LinkCard
+[2026-05-19T03:02:22.128Z] [CLAUDEFN_START] Split widget: LinkCard (runAgent)
+[2026-05-19T03:07:06.766Z] [AGENT_COMPLETE] claude run_task completed in 284636ms

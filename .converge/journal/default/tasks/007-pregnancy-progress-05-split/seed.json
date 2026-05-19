@@ -1,0 +1,32 @@
+{
+  "seeded": true,
+  "seededAt": "2026-05-19T00:35:49.686Z",
+  "spawnCount": 6,
+  "keepLooping": false,
+  "subtasks": [
+    {
+      "id": "pregnancy-progress-split-001-WeekHeroCard",
+      "writeToPath": ".converge/journal/default/tasks/pregnancy-progress-split-001-WeekHeroCard/TASK.md"
+    },
+    {
+      "id": "pregnancy-progress-split-002-BodyChangesCard",
+      "writeToPath": ".converge/journal/default/tasks/pregnancy-progress-split-002-BodyChangesCard/TASK.md"
+    },
+    {
+      "id": "pregnancy-progress-split-003-BabyDevelopmentCard",
+      "writeToPath": ".converge/journal/default/tasks/pregnancy-progress-split-003-BabyDevelopmentCard/TASK.md"
+    },
+    {
+      "id": "pregnancy-progress-split-004-SelfCareTipsCard",
+      "writeToPath": ".converge/journal/default/tasks/pregnancy-progress-split-004-SelfCareTipsCard/TASK.md"
+    },
+    {
+      "id": "pregnancy-progress-split-005-ExpandableTipTile",
+      "writeToPath": ".converge/journal/default/tasks/pregnancy-progress-split-005-ExpandableTipTile/TASK.md"
+    },
+    {
+      "id": "pregnancy-progress-split-006-DueDateSummaryCard",
+      "writeToPath": ".converge/journal/default/tasks/pregnancy-progress-split-006-DueDateSummaryCard/TASK.md"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "taskId": "012-article-reader-05-split",
+  "attemptNumber": 9262,
+  "inputs": [
+    {
+      "pattern": ".stitch/designs/article-reader/widgets.jsonl",
+      "count": 1,
+      "samples": [
+        ".stitch/designs/article-reader/widgets.jsonl"
+      ]
+    }
+  ],
+  "outputs": [
+    "lib/screens/article_reader/_widgets/**/*.dart"
+  ],
+  "blocked": false
+}

@@ -1,0 +1,34 @@
+[
+  {
+    "id": "screen-exists",
+    "description": "Screen widget file exists",
+    "cmd": "test -f lib/screens/home/home_screen.dart",
+    "passed": true,
+    "exit_code": 0,
+    "output": ""
+  },
+  {
+    "id": "dart-valid",
+    "description": "Dart analysis passes",
+    "cmd": "dart analyze lib/screens/home/home_screen.dart",
+    "passed": true,
+    "exit_code": 0,
+    "output": "Analyzing home_screen.dart...\n\n   info - home_screen.dart:66:17 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors\n   info - home_screen.dart:68:17 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors\n   info - home_screen.dart:70:17 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors\n   info - home_screen.dart:72:17 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors\n   info - home_screen.dart:138:27 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors\n   info - home_screen.dart:161:36 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors\n   info - home_screen.dart:162:38 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors\n   info - home_screen.dart:243:11 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors\n   info - home_screen.dart:331:7 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors\n   info - home_screen.dart:332:7 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors\n   info - home_screen.dart:333:7 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors\n   info - home_screen.dart:334:7 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors\n   info - home_screen.dart:405:13 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors\n\n13 issues found."
+  },
+  {
+    "id": "uses-theme",
+    "description": "Uses Theme.of(context) for styling",
+    "cmd": "grep -q 'Theme.of(context)' lib/screens/home/home_screen.dart",
+    "passed": true,
+    "exit_code": 0,
+    "output": ""
+  },
+  {
+    "id": "no-hardcoded-colors",
+    "description": "No hardcoded colors — uses colorScheme",
+    "cmd": "! grep -qE 'Color\\(0x|Colors\\.' lib/screens/home/home_screen.dart",
+    "passed": true,
+    "exit_code": 0,
+    "output": ""
+  }
+]

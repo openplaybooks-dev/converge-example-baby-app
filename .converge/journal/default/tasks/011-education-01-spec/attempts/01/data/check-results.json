@@ -1,0 +1,18 @@
+[
+  {
+    "id": "spec-exists",
+    "description": "SPEC.md exists for education",
+    "cmd": "test -f .stitch/designs/education/SPEC.md",
+    "passed": true,
+    "exit_code": 0,
+    "output": ""
+  },
+  {
+    "id": "spec-has-content",
+    "description": "SPEC.md has >50 lines",
+    "cmd": "test $(wc -l < .stitch/designs/education/SPEC.md) -gt 50",
+    "passed": true,
+    "exit_code": 0,
+    "output": ""
+  }
+]

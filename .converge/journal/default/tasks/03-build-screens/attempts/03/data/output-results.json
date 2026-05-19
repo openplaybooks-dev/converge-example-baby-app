@@ -1,0 +1,14 @@
+[
+  {
+    "path": "lib/screens/**/*.dart",
+    "exists": false
+  },
+  {
+    "path": "lib/widgets/**/*.dart",
+    "exists": false
+  },
+  {
+    "path": "lib/router/app_router.dart",
+    "exists": false
+  }
+]

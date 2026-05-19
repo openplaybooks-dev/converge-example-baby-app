@@ -1,0 +1,34 @@
+[
+  {
+    "id": "screen-exists",
+    "description": "Screen widget file exists",
+    "cmd": "test -f lib/screens/weight_nutrition/weight_nutrition_screen.dart",
+    "passed": true,
+    "exit_code": 0,
+    "output": ""
+  },
+  {
+    "id": "dart-valid",
+    "description": "Dart analysis passes",
+    "cmd": "dart analyze lib/screens/weight_nutrition/weight_nutrition_screen.dart",
+    "passed": true,
+    "exit_code": 0,
+    "output": "Analyzing weight_nutrition_screen.dart...\n\n   info - weight_nutrition_screen.dart:283:15 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors\n   info - weight_nutrition_screen.dart:391:16 - Missing a required trailing comma. Try adding a trailing comma. - require_trailing_commas\n   info - weight_nutrition_screen.dart:413:9 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors\n   info - weight_nutrition_screen.dart:419:9 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors\n   info - weight_nutrition_screen.dart:425:9 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors\n   info - weight_nutrition_screen.dart:694:26 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors\n   info - weight_nutrition_screen.dart:696:28 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors\n   info - weight_nutrition_screen.dart:748:5 - Missing a required trailing comma. Try adding a trailing comma. - require_trailing_commas\n   info - weight_nutrition_screen.dart:836:26 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors\n   info - weight_nutrition_screen.dart:838:28 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors\n   info - weight_nutrition_screen.dart:888:20 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors\n   info - weight_nutrition_screen.dart:890:22 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors\n\n12 issues found."
+  },
+  {
+    "id": "uses-theme",
+    "description": "Uses Theme.of(context) for styling",
+    "cmd": "grep -q 'Theme.of(context)' lib/screens/weight_nutrition/weight_nutrition_screen.dart",
+    "passed": true,
+    "exit_code": 0,
+    "output": ""
+  },
+  {
+    "id": "no-hardcoded-colors",
+    "description": "No hardcoded colors — uses colorScheme",
+    "cmd": "! grep -qE 'Color\\(0x|Colors\\.' lib/screens/weight_nutrition/weight_nutrition_screen.dart",
+    "passed": true,
+    "exit_code": 0,
+    "output": ""
+  }
+]

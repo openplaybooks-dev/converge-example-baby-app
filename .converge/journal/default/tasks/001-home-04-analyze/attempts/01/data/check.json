@@ -1,0 +1,10 @@
+{
+  "taskId": "001-home-04-analyze",
+  "checks": [
+    {
+      "id": "widgets-json-exists",
+      "description": "widgets.jsonl exists for home",
+      "cmd": "test -f .stitch/designs/home/widgets.jsonl"
+    }
+  ]
+}

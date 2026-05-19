@@ -1,0 +1,17 @@
+{
+  "taskId": "article-reader-split-002-BulletItem",
+  "attemptNumber": 1,
+  "inputs": [
+    {
+      "pattern": "lib/screens/article_reader/article_reader_screen.dart",
+      "count": 1,
+      "samples": [
+        "lib/screens/article_reader/article_reader_screen.dart"
+      ]
+    }
+  ],
+  "outputs": [
+    "lib/screens/article_reader/_widgets/BulletItem.dart"
+  ],
+  "blocked": false
+}

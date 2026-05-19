@@ -1,0 +1,23 @@
+{
+  "taskId": "004-profile-06-lift",
+  "attemptNumber": 1,
+  "inputs": [
+    {
+      "pattern": ".stitch/designs/profile/widgets.jsonl",
+      "count": 1,
+      "samples": [
+        ".stitch/designs/profile/widgets.jsonl"
+      ]
+    },
+    {
+      "pattern": "lib/screens/profile/_widgets/**/*.dart",
+      "count": 0,
+      "samples": []
+    }
+  ],
+  "outputs": [
+    "lib/widgets/**/*.dart"
+  ],
+  "blocked": true,
+  "blockedReason": "Missing required inputs: lib/screens/profile/_widgets/**/*.dart"
+}

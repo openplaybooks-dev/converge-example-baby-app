@@ -1,0 +1,34 @@
+[
+  {
+    "id": "screen-exists",
+    "description": "Screen widget file exists",
+    "cmd": "test -f lib/screens/mindfulness/mindfulness_screen.dart",
+    "passed": true,
+    "exit_code": 0,
+    "output": ""
+  },
+  {
+    "id": "dart-valid",
+    "description": "Dart analysis passes",
+    "cmd": "dart analyze lib/screens/mindfulness/mindfulness_screen.dart",
+    "passed": true,
+    "exit_code": 0,
+    "output": "Analyzing mindfulness_screen.dart...\n\n   info - mindfulness_screen.dart:184:19 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors\n   info - mindfulness_screen.dart:185:28 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors\n   info - mindfulness_screen.dart:327:19 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors\n   info - mindfulness_screen.dart:328:28 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors\n\n4 issues found."
+  },
+  {
+    "id": "uses-theme",
+    "description": "Uses Theme.of(context) for styling",
+    "cmd": "grep -q 'Theme.of(context)' lib/screens/mindfulness/mindfulness_screen.dart",
+    "passed": true,
+    "exit_code": 0,
+    "output": ""
+  },
+  {
+    "id": "no-hardcoded-colors",
+    "description": "No hardcoded colors — uses colorScheme",
+    "cmd": "! grep -qE 'Color\\(0x|Colors\\.' lib/screens/mindfulness/mindfulness_screen.dart",
+    "passed": true,
+    "exit_code": 0,
+    "output": ""
+  }
+]

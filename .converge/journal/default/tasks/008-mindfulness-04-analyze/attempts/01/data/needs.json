@@ -1,0 +1,17 @@
+{
+  "taskId": "008-mindfulness-04-analyze",
+  "attemptNumber": 1,
+  "inputs": [
+    {
+      "pattern": "lib/screens/mindfulness/mindfulness_screen.dart",
+      "count": 1,
+      "samples": [
+        "lib/screens/mindfulness/mindfulness_screen.dart"
+      ]
+    }
+  ],
+  "outputs": [
+    ".stitch/designs/mindfulness/widgets.jsonl"
+  ],
+  "blocked": false
+}

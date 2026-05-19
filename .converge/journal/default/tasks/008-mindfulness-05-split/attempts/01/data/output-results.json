@@ -1,0 +1,6 @@
+[
+  {
+    "path": "lib/screens/mindfulness/_widgets/**/*.dart",
+    "exists": false
+  }
+]

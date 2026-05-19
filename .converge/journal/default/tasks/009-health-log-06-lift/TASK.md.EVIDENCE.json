@@ -1,0 +1,26 @@
+{
+  "kind": "definition",
+  "taskMdPath": "/Users/minh/Documents/openplayboosks/examples/baby-app/.converge/journal/default/tasks/009-health-log-06-lift/TASK.md",
+  "rejectedPath": "/Users/minh/Documents/openplayboosks/examples/baby-app/.converge/journal/default/tasks/009-health-log-06-lift/TASK.md.rejected",
+  "parseError": "frontmatter field `inputs[1]` must be a string, got object (null)",
+  "detectedAt": "2026-05-19T23:15:00.084Z",
+  "expected": {
+    "format": "TASK.md with `---` delimited YAML frontmatter, then markdown body.",
+    "requiredKeys": [
+      "id"
+    ],
+    "listValuedKeys": [
+      "outputs",
+      "inputs",
+      "checks",
+      "depends_on",
+      "tags",
+      "skills"
+    ]
+  },
+  "actual": {
+    "firstBytes": "---\nid: 009-health-log-06-lift\ntitle: \"Lift: Health Log\"\ndescription: Lift shared widgets from Health Log to lib/widgets/\nblocking: true\ninputs:\n  - .stitch/designs/health-log/widgets.jsonl\n  - \noutputs:\n  - lib/widgets/**/*.dart\nseed:\n  mode: cli\ntags:\n  - lift\n  - screen-health-log\nvars:\n  screenId: health-log\n  title: Health Log\n  screenPath: lib/screens/health_log/health_log_screen.dart\n  widg",
+    "byteLength": 1818
+  },
+  "suggestedFix": "Re-emit the TASK.md frontmatter with each list-valued key followed by `  - item` bullets, and ensure scalar values containing colons, pipes, or backslashes are quoted."
+}

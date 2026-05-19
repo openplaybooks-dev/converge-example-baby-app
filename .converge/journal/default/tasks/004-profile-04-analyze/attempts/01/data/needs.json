@@ -1,0 +1,17 @@
+{
+  "taskId": "004-profile-04-analyze",
+  "attemptNumber": 1,
+  "inputs": [
+    {
+      "pattern": "lib/screens/profile/profile_screen.dart",
+      "count": 1,
+      "samples": [
+        "lib/screens/profile/profile_screen.dart"
+      ]
+    }
+  ],
+  "outputs": [
+    ".stitch/designs/profile/widgets.jsonl"
+  ],
+  "blocked": false
+}

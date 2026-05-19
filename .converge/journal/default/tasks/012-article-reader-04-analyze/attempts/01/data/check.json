@@ -1,0 +1,10 @@
+{
+  "taskId": "012-article-reader-04-analyze",
+  "checks": [
+    {
+      "id": "widgets-json-exists",
+      "description": "widgets.jsonl exists for article-reader",
+      "cmd": "test -f .stitch/designs/article-reader/widgets.jsonl"
+    }
+  ]
+}

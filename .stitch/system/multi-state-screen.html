@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Baby Bump - Mood & Wellness</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --color-primary: #7C3AED;
+      --color-secondary: #F9A8D4;
+      --color-tertiary: #6EE7B7;
+      --color-background: #F5F3FF;
+      --color-surface: #FAFAFA;
+      --color-text-primary: #1F2937;
+      --color-text-secondary: #6B7280;
+      --color-border: #E5E7EB;
+      --color-error: #EF4444;
+      --color-white: #FFFFFF;
+      --radius-card: 16px;
+      --radius-button: 24px;
+      --spacing-unit: 8px;
+      --font-family: 'Nunito', sans-serif;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+
+    body {
+      font-family: var(--font-family);
+      background: #1E1B2E;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 20px 0;
+    }
+
+    .phone {
+      width: 375px;
+      min-height: 812px;
+      background: var(--color-background);
+      border-radius: 40px;
+      overflow: hidden;
+      position: relative;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.4);
+    }
+
+    .status-bar {
+      height: 44px;
+      background: var(--color-background);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 24px;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--color-text-primary);
+    }
+
+    .status-bar-icons {
+      display: flex;
+      gap: 6px;
+      align-items: center;
+    }
+
+    .status-bar-icons svg {
+      width: 18px;
+      height: 18px;
+    }
+
+    .app-bar {
+      height: 56px;
+      display: flex;
+      align-items: center;
+      padding: 0 8px;
+      background: var(--color-background);
+    }
+
+    .back-btn {
+      width: 48px;
+      height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: none;
+      background: none;
+      cursor: pointer;
+      border-radius: 50%;
+      transition: background 200ms ease-out;
+    }
+
+    .back-btn:hover {
+      background: var(--color-border);
+    }
+
+    .back-btn svg {
+      width: 24px;
+      height: 24px;
+      color: var(--color-text-primary);
+    }
+
+    .app-bar-title {
+      flex: 1;
+      font-size: 20px;
+      font-weight: 600;
+      color: var(--color-text-primary);
+      text-align: center;
+      margin-right: 48px;
+    }
+
+    .content {
+      padding: 0 16px 100px;
+      overflow-y: auto;
+    }
+
+    .section {
+      margin-bottom: 24px;
+    }
+
+    .card {
+      background: var(--color-white);
+      border-radius: var(--radius-card);
+      padding: 16px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    }
+
+    .card-title {
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--color-text-primary);
+      margin-bottom: 12px;
+    }
+
+    .emoji-selector {
+      display: flex;
+      justify-content: space-between;
+      gap: 8px;
+    }
+
+    .emoji-btn {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      border: 2px solid var(--color-border);
+      background: var(--color-surface);
+      font-size: 32px;
+      cursor: pointer;
+      transition: transform 200ms ease-out, border-color 200ms ease-out, background 200ms ease-out;
+    }
+
+    .emoji-btn:hover, .emoji-btn:focus {
+      border-color: var(--color-primary);
+      transform: scale(1.1);
+    }
+
+    .emoji-btn.selected {
+      border-color: var(--color-primary);
+      background: rgba(124, 58, 237, 0.1);
+    }
+
+    .emoji-btn:focus {
+      outline: none;
+      box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.2);
+    }
+
+    .note-field {
+      margin-top: 16px;
+    }
+
+    .note-input {
+      width: 100%;
+      min-height: 56px;
+      padding: 12px 16px;
+      border: none;
+      border-radius: 12px;
+      background: var(--color-surface);
+      font-family: var(--font-family);
+      font-size: 14px;
+      color: var(--color-text-primary);
+      resize: none;
+      transition: box-shadow 200ms ease-out;
+    }
+
+    .note-input::placeholder {
+      color: var(--color-text-secondary);
+    }
+
+    .note-input:focus {
+      outline: none;
+      box-shadow: 0 0 0 2px var(--color-primary);
+    }
+
+    .chart-card {
+      background: var(--color-white);
+      border-radius: var(--radius-card);
+      padding: 16px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    }
+
+    .chart-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 16px;
+    }
+
+    .chart-title {
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--color-text-primary);
+    }
+
+    .chart-badge {
+      font-size: 11px;
+      font-weight: 500;
+      padding: 4px 8px;
+      border-radius: 8px;
+      background: var(--color-secondary);
+      opacity: 0.3;
+      color: var(--color-text-primary);
+    }
+
+    .chart-area {
+      height: 120px;
+      position: relative;
+    }
+
+    .chart-svg {
+      width: 100%;
+      height: 100%;
+    }
+
+    .chart-empty {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 120px;
+      color: var(--color-text-secondary);
+    }
+
+    .chart-empty svg {
+      width: 48px;
+      height: 48px;
+      margin-bottom: 8px;
+      opacity: 0.5;
+    }
+
+    .chart-empty span {
+      font-size: 14px;
+    }
+
+    .wellness-tip {
+      background: linear-gradient(135deg, var(--color-tertiary), #34D399);
+      border-radius: var(--radius-card);
+      padding: 16px;
+      color: var(--color-text-primary);
+    }
+
+    .tip-label {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.4pt;
+      text-transform: uppercase;
+      opacity: 0.7;
+      margin-bottom: 4px;
+    }
+
+    .tip-text {
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 20px;
+    }
+
+    .state-indicator {
+      position: absolute;
+      top: 60px;
+      right: 16px;
+      padding: 4px 12px;
+      border-radius: 12px;
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5pt;
+    }
+
+    .state-indicator.empty {
+      background: var(--color-border);
+      color: var(--color-text-secondary);
+    }
+
+    .state-indicator.filling {
+      background: var(--color-secondary);
+      opacity: 0.3;
+      color: var(--color-text-primary);
+    }
+
+    .state-indicator.complete {
+      background: var(--color-tertiary);
+      color: var(--color-text-primary);
+    }
+
+    .bottom-nav {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 80px;
+      background: var(--color-white);
+      display: flex;
+      justify-content: space-around;
+      align-items: flex-start;
+      padding-top: 8px;
+      border-top: 1px solid var(--color-border);
+    }
+
+    .nav-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 4px;
+      padding: 8px 16px;
+      border: none;
+      background: none;
+      cursor: pointer;
+      position: relative;
+    }
+
+    .nav-item.active::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      width: 40px;
+      height: 4px;
+      background: var(--color-primary);
+      border-radius: 2px;
+      opacity: 0.15;
+    }
+
+    .nav-item svg {
+      width: 24px;
+      height: 24px;
+      color: var(--color-text-secondary);
+    }
+
+    .nav-item.active svg {
+      color: var(--color-primary);
+    }
+
+    .nav-item span {
+      font-size: 11px;
+      font-weight: 500;
+      color: var(--color-text-secondary);
+    }
+
+    .nav-item.active span {
+      font-weight: 600;
+      color: var(--color-primary);
+    }
+
+    .home-indicator {
+      position: absolute;
+      bottom: 8px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 134px;
+      height: 5px;
+      background: var(--color-text-primary);
+      border-radius: 3px;
+      opacity: 0.2;
+    }
+  </style>
+</head>
+<body>
+  <div class="phone">
+    <div class="status-bar">
+      <span>9:41</span>
+      <div class="status-bar-icons">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M5 12.55a11 11 0 0 1 14.08 0M1.42 9a16 16 0 0 1 21.16 0M8.53 16.11a6 6 0 0 1 6.95 0M12 20h.01"/>
+        </svg>
+        <svg viewBox="0 0 24 24" fill="currentColor">
+          <rect x="2" y="7" width="18" height="10" rx="2" stroke="currentColor" stroke-width="2" fill="none"/>
+          <rect x="4" y="9" width="14" height="6" rx="1" fill="currentColor"/>
+        </svg>
+      </div>
+    </div>
+
+    <header class="app-bar">
+      <button class="back-btn" aria-label="Go back">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M19 12H5M12 19l-7-7 7-7"/>
+        </svg>
+      </button>
+      <h1 class="app-bar-title">Mood & Wellness</h1>
+      <span class="state-indicator complete">7 days</span>
+    </header>
+
+    <main class="content">
+      <section class="section">
+        <div class="card">
+          <h2 class="card-title">How are you feeling today?</h2>
+          <div class="emoji-selector" role="group" aria-label="Mood selection">
+            <button class="emoji-btn" aria-label="Very sad" aria-pressed="false">😢</button>
+            <button class="emoji-btn" aria-label="Sad" aria-pressed="false">😕</button>
+            <button class="emoji-btn selected" aria-label="Neutral" aria-pressed="true">😐</button>
+            <button class="emoji-btn" aria-label="Happy" aria-pressed="false">🙂</button>
+            <button class="emoji-btn" aria-label="Very happy" aria-pressed="false">😊</button>
+          </div>
+          <div class="note-field">
+            <textarea class="note-input" placeholder="Add a note (optional)" aria-label="Mood note"></textarea>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="chart-card">
+          <div class="chart-header">
+            <h3 class="chart-title">Mood Trend</h3>
+            <span class="chart-badge">Last 7 days</span>
+          </div>
+          <div class="chart-area">
+            <svg class="chart-svg" viewBox="0 0 300 120" preserveAspectRatio="none">
+              <defs>
+                <linearGradient id="moodGradient" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="#7C3AED" stop-opacity="0.3"/>
+                  <stop offset="100%" stop-color="#7C3AED" stop-opacity="0"/>
+                </linearGradient>
+              </defs>
+              <path d="M0 90 Q25 85 50 75 T100 65 T150 55 T200 45 T250 40 T300 35 L300 120 L0 120 Z" fill="url(#moodGradient)"/>
+              <path d="M0 90 Q25 85 50 75 T100 65 T150 55 T200 45 T250 40 T300 35" fill="none" stroke="#7C3AED" stroke-width="2.5" stroke-linecap="round"/>
+              <circle cx="0" cy="90" r="4" fill="#7C3AED"/>
+              <circle cx="50" cy="75" r="4" fill="#7C3AED"/>
+              <circle cx="100" cy="65" r="4" fill="#7C3AED"/>
+              <circle cx="150" cy="55" r="4" fill="#7C3AED"/>
+              <circle cx="200" cy="45" r="4" fill="#7C3AED"/>
+              <circle cx="250" cy="40" r="4" fill="#7C3AED"/>
+              <circle cx="300" cy="35" r="4" fill="#7C3AED"/>
+              <text x="0" y="110" font-size="10" fill="#6B7280" text-anchor="middle">Mon</text>
+              <text x="50" y="110" font-size="10" fill="#6B7280" text-anchor="middle">Tue</text>
+              <text x="100" y="110" font-size="10" fill="#6B7280" text-anchor="middle">Wed</text>
+              <text x="150" y="110" font-size="10" fill="#6B7280" text-anchor="middle">Thu</text>
+              <text x="200" y="110" font-size="10" fill="#6B7280" text-anchor="middle">Fri</text>
+              <text x="250" y="110" font-size="10" fill="#6B7280" text-anchor="middle">Sat</text>
+              <text x="300" y="110" font-size="10" fill="#6B7280" text-anchor="middle">Sun</text>
+            </svg>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="chart-card">
+          <div class="chart-header">
+            <h3 class="chart-title">Energy Level</h3>
+            <span class="chart-badge">Last 7 days</span>
+          </div>
+          <div class="chart-area">
+            <svg class="chart-svg" viewBox="0 0 300 120" preserveAspectRatio="none">
+              <defs>
+                <linearGradient id="energyGradient" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="#6EE7B7" stop-opacity="0.3"/>
+                  <stop offset="100%" stop-color="#6EE7B7" stop-opacity="0"/>
+                </linearGradient>
+              </defs>
+              <path d="M0 70 Q25 60 50 65 T100 50 T150 55 T200 35 T250 30 T300 40 L300 120 L0 120 Z" fill="url(#energyGradient)"/>
+              <path d="M0 70 Q25 60 50 65 T100 50 T150 55 T200 35 T250 30 T300 40" fill="none" stroke="#6EE7B7" stroke-width="2.5" stroke-linecap="round"/>
+              <circle cx="0" cy="70" r="4" fill="#6EE7B7"/>
+              <circle cx="50" cy="65" r="4" fill="#6EE7B7"/>
+              <circle cx="100" cy="50" r="4" fill="#6EE7B7"/>
+              <circle cx="150" cy="55" r="4" fill="#6EE7B7"/>
+              <circle cx="200" cy="35" r="4" fill="#6EE7B7"/>
+              <circle cx="250" cy="30" r="4" fill="#6EE7B7"/>
+              <circle cx="300" cy="40" r="4" fill="#6EE7B7"/>
+              <text x="0" y="110" font-size="10" fill="#6B7280" text-anchor="middle">Mon</text>
+              <text x="50" y="110" font-size="10" fill="#6B7280" text-anchor="middle">Tue</text>
+              <text x="100" y="110" font-size="10" fill="#6B7280" text-anchor="middle">Wed</text>
+              <text x="150" y="110" font-size="10" fill="#6B7280" text-anchor="middle">Thu</text>
+              <text x="200" y="110" font-size="10" fill="#6B7280" text-anchor="middle">Fri</text>
+              <text x="250" y="110" font-size="10" fill="#6B7280" text-anchor="middle">Sat</text>
+              <text x="300" y="110" font-size="10" fill="#6B7280" text-anchor="middle">Sun</text>
+            </svg>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="wellness-tip">
+          <div class="tip-label">Wellness Tip</div>
+          <p class="tip-text">Your energy is improving! Try adding a 10-minute walk after meals to maintain this positive trend.</p>
+        </div>
+      </section>
+    </main>
+
+    <nav class="bottom-nav" role="navigation" aria-label="Main navigation">
+      <button class="nav-item" aria-label="Home">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M12 3L4 9v12h5v-7h6v7h5V9z"/>
+        </svg>
+        <span>Home</span>
+      </button>
+      <button class="nav-item" aria-label="Browse">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="11" cy="11" r="8"/>
+          <path d="M21 21l-4.35-4.35"/>
+        </svg>
+        <span>Browse</span>
+      </button>
+      <button class="nav-item" aria-label="Library">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/>
+        </svg>
+        <span>Library</span>
+      </button>
+      <button class="nav-item active" aria-current="page" aria-label="Profile">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="8" r="4"/>
+          <path d="M4 20c0-4 4-6 8-6s8 2 8 6"/>
+        </svg>
+        <span>Profile</span>
+      </button>
+    </nav>
+
+    <div class="home-indicator"></div>
+  </div>
+</body>
+</html>

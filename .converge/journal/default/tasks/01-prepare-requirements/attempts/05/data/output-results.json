@@ -1,0 +1,22 @@
+[
+  {
+    "path": "PRD.md",
+    "exists": true,
+    "size_bytes": 5259
+  },
+  {
+    "path": ".stitch/UX.md",
+    "exists": true,
+    "size_bytes": 15949
+  },
+  {
+    "path": ".stitch/screens.json",
+    "exists": true,
+    "size_bytes": 5746
+  },
+  {
+    "path": ".stitch/SITE.md",
+    "exists": true,
+    "size_bytes": 1433
+  }
+]

@@ -1,0 +1,173 @@
+{
+  "iteration": 1,
+  "stallCount": 0,
+  "nodes": [
+    {
+      "id": "check-seed-seeded",
+      "handler": "check-seed-seeded",
+      "status": "done",
+      "origin": "initial",
+      "data": {
+        "priority": 100
+      },
+      "result": {
+        "action": "continue",
+        "durationMs": 0
+      }
+    },
+    {
+      "id": "check-outputs-exist",
+      "handler": "check-outputs-exist",
+      "status": "done",
+      "origin": "initial",
+      "data": {
+        "priority": 99
+      },
+      "result": {
+        "action": "continue",
+        "durationMs": 0
+      }
+    },
+    {
+      "id": "detect-gaps",
+      "handler": "detect-gaps",
+      "status": "done",
+      "origin": "initial",
+      "data": {
+        "priority": 98
+      },
+      "result": {
+        "action": "continue",
+        "gaps": [
+          {
+            "id": "006-weight-nutrition-04-analyze-plan-missing",
+            "type": "incomplete",
+            "level": "task",
+            "scope": "006-weight-nutrition-04-analyze",
+            "severity": "high",
+            "description": "[006-weight-nutrition-04-analyze] Generating plan",
+            "source": "unit",
+            "detected": "2026-05-19T00:22:24.339Z",
+            "resolved": false,
+            "checks": [],
+            "metadata": {
+              "gapKind": "plan",
+              "unitPath": "/Users/minh/Documents/openplayboosks/examples/baby-app/.converge/journal/default/tasks/006-weight-nutrition-04-analyze/TASK.md",
+              "taskId": "006-weight-nutrition-04-analyze",
+              "taskTitle": "Analyze: Weight & Nutrition"
+            }
+          }
+        ],
+        "durationMs": 1
+      }
+    },
+    {
+      "id": "signal-done",
+      "handler": "signal-done",
+      "status": "buffered",
+      "origin": "initial",
+      "data": {
+        "priority": 97,
+        "applicable": "noGapsAndExecuted"
+      }
+    },
+    {
+      "id": "resolve-plan",
+      "handler": "resolve-plan",
+      "status": "done",
+      "origin": "initial",
+      "data": {
+        "priority": 90
+      },
+      "result": {
+        "action": "continue",
+        "durationMs": 23494
+      }
+    },
+    {
+      "id": "run-executor",
+      "handler": "run-executor",
+      "status": "done",
+      "origin": "initial",
+      "data": {
+        "priority": 65
+      },
+      "result": {
+        "action": "continue",
+        "durationMs": 0
+      }
+    },
+    {
+      "id": "verify",
+      "handler": "verify",
+      "status": "done",
+      "origin": "initial",
+      "data": {
+        "priority": 50
+      },
+      "result": {
+        "action": "done",
+        "success": true,
+        "reason": "All gaps resolved",
+        "gaps": [],
+        "durationMs": 14
+      }
+    },
+    {
+      "id": "check-stall",
+      "handler": "check-stall",
+      "status": "buffered",
+      "origin": "initial",
+      "data": {
+        "priority": 45
+      }
+    },
+    {
+      "id": "advance-attempt",
+      "handler": "advance-attempt",
+      "status": "buffered",
+      "origin": "initial",
+      "data": {
+        "priority": 40
+      }
+    }
+  ],
+  "edges": [
+    {
+      "from": "_start",
+      "to": "check-seed-seeded",
+      "iteration": 1,
+      "ts": "2026-05-19T00:22:24.339Z"
+    },
+    {
+      "from": "check-seed-seeded",
+      "to": "check-outputs-exist",
+      "iteration": 1,
+      "ts": "2026-05-19T00:22:24.339Z"
+    },
+    {
+      "from": "check-outputs-exist",
+      "to": "detect-gaps",
+      "iteration": 1,
+      "ts": "2026-05-19T00:22:24.340Z"
+    },
+    {
+      "from": "detect-gaps",
+      "to": "resolve-plan",
+      "iteration": 1,
+      "ts": "2026-05-19T00:22:47.834Z"
+    },
+    {
+      "from": "resolve-plan",
+      "to": "run-executor",
+      "iteration": 1,
+      "ts": "2026-05-19T00:22:47.834Z"
+    },
+    {
+      "from": "run-executor",
+      "to": "verify",
+      "iteration": 1,
+      "ts": "2026-05-19T00:22:47.849Z"
+    }
+  ]
+}

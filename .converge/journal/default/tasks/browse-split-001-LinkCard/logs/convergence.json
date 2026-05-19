@@ -1,0 +1,249 @@
+{
+  "iteration": 1,
+  "stallCount": 0,
+  "nodes": [
+    {
+      "id": "check-seed-seeded",
+      "handler": "check-seed-seeded",
+      "status": "done",
+      "origin": "initial",
+      "data": {
+        "priority": 100
+      },
+      "result": {
+        "action": "continue",
+        "durationMs": 0
+      }
+    },
+    {
+      "id": "check-outputs-exist",
+      "handler": "check-outputs-exist",
+      "status": "done",
+      "origin": "initial",
+      "data": {
+        "priority": 99
+      },
+      "result": {
+        "action": "continue",
+        "durationMs": 0
+      }
+    },
+    {
+      "id": "detect-gaps",
+      "handler": "detect-gaps",
+      "status": "done",
+      "origin": "initial",
+      "data": {
+        "priority": 98
+      },
+      "result": {
+        "action": "continue",
+        "gaps": [
+          {
+            "id": "browse-split-001-LinkCard-missing-output-lib/screens/browse/_widgets/LinkCard.dart",
+            "type": "incomplete",
+            "level": "task",
+            "scope": "browse-split-001-LinkCard",
+            "severity": "high",
+            "description": "[browse-split-001-LinkCard] Task output not created: lib/screens/browse/_widgets/LinkCard.dart",
+            "source": "unit",
+            "detected": "2026-05-19T03:02:21.947Z",
+            "resolved": false,
+            "checks": [],
+            "metadata": {
+              "gapKind": "output",
+              "unitPath": "/Users/minh/Documents/openplayboosks/examples/baby-app/.converge/journal/default/tasks/browse-split-001-LinkCard/TASK.md",
+              "taskId": "browse-split-001-LinkCard",
+              "taskTitle": "Split widget: LinkCard",
+              "taskPrompt": "# Split widget: LinkCard\n\nExtract the `LinkCard` widget subtree from `lib/screens/browse/browse_screen.dart` into its own file at `lib/screens/browse/_widgets/LinkCard.dart`.\n\n## Steps\n\n1. **Read** — Load `lib/screens/browse/browse_screen.dart`.\n2. **Locate** — Find the widget subtree implementing `LinkCard`. Use the description in `.stitch/designs/browse/widgets.jsonl` (the entry with `name == \"LinkCard\"`) to disambiguate.\n3. **Create file** — Write `lib/screens/browse/_widgets/LinkCard.dart` as a self-contained Stateless or Consumer widget, preserving all imports, theme lookups, and Riverpod accesses.\n4. **Update screen** — Replace the inline subtree in `lib/screens/browse/browse_screen.dart` with `const LinkCard()` and add the relative import.\n5. **Verify** — Run `dart analyze lib/screens/browse/_widgets/LinkCard.dart lib/screens/browse/browse_screen.dart` — must pass.\n\n## Rules\n\n- No hardcoded colours; use `Theme.of(context).colorScheme.*`.\n- No hardcoded text styles; use `Theme.of(context).textTheme.*`.\n- Preserve existing semantics labels and tooltips.\n- One `const` constructor per widget.",
+              "taskInputs": [
+                "lib/screens/browse/browse_screen.dart"
+              ],
+              "factId": "file-exists:test -f \"lib/screens/browse/_widgets/LinkCard.dart\"",
+              "awaitingUserInput": false
+            }
+          },
+          {
+            "id": "browse-split-001-LinkCard-check-failed-widget-exists",
+            "type": "incomplete",
+            "level": "task",
+            "scope": "browse-split-001-LinkCard",
+            "severity": "high",
+            "description": "[browse-split-001-LinkCard] Check failed: Widget file exists",
+            "source": "unit",
+            "detected": "2026-05-19T03:02:21.949Z",
+            "resolved": false,
+            "checks": [],
+            "metadata": {
+              "gapKind": "check-failed",
+              "checkId": "widget-exists",
+              "checkCmd": "test -f lib/screens/browse/_widgets/LinkCard.dart",
+              "checkDescription": "Widget file exists",
+              "checkOutput": "",
+              "checkExitCode": 1,
+              "taskPrompt": "# Split widget: LinkCard\n\nExtract the `LinkCard` widget subtree from `lib/screens/browse/browse_screen.dart` into its own file at `lib/screens/browse/_widgets/LinkCard.dart`.\n\n## Steps\n\n1. **Read** — Load `lib/screens/browse/browse_screen.dart`.\n2. **Locate** — Find the widget subtree implementing `LinkCard`. Use the description in `.stitch/designs/browse/widgets.jsonl` (the entry with `name == \"LinkCard\"`) to disambiguate.\n3. **Create file** — Write `lib/screens/browse/_widgets/LinkCard.dart` as a self-contained Stateless or Consumer widget, preserving all imports, theme lookups, and Riverpod accesses.\n4. **Update screen** — Replace the inline subtree in `lib/screens/browse/browse_screen.dart` with `const LinkCard()` and add the relative import.\n5. **Verify** — Run `dart analyze lib/screens/browse/_widgets/LinkCard.dart lib/screens/browse/browse_screen.dart` — must pass.\n\n## Rules\n\n- No hardcoded colours; use `Theme.of(context).colorScheme.*`.\n- No hardcoded text styles; use `Theme.of(context).textTheme.*`.\n- Preserve existing semantics labels and tooltips.\n- One `const` constructor per widget.",
+              "taskId": "browse-split-001-LinkCard",
+              "taskTitle": "Split widget: LinkCard",
+              "unitPath": "/Users/minh/Documents/openplayboosks/examples/baby-app/.converge/journal/default/tasks/browse-split-001-LinkCard/TASK.md",
+              "factId": "check:widget-exists"
+            }
+          },
+          {
+            "id": "browse-split-001-LinkCard-check-failed-dart-valid",
+            "type": "incomplete",
+            "level": "task",
+            "scope": "browse-split-001-LinkCard",
+            "severity": "high",
+            "description": "[browse-split-001-LinkCard] Check failed: Dart analysis passes",
+            "source": "unit",
+            "detected": "2026-05-19T03:02:22.036Z",
+            "resolved": false,
+            "checks": [],
+            "metadata": {
+              "gapKind": "check-failed",
+              "checkId": "dart-valid",
+              "checkCmd": "dart analyze lib/screens/browse/_widgets/LinkCard.dart",
+              "checkDescription": "Dart analysis passes",
+              "checkOutput": "Directory or file doesn't exist: lib/screens/browse/_widgets/LinkCard.dart\n\nUsage: dart analyze [arguments] [<directory>]\n-h, --help                   Print this usage information.\n    --fatal-infos            Treat info level issues as fatal.\n    --[no-]fatal-warnings    Treat warning level issues as fatal.\n                             (defaults to on)\n\nRun \"dart help\" to see global options.",
+              "checkExitCode": 64,
+              "taskPrompt": "# Split widget: LinkCard\n\nExtract the `LinkCard` widget subtree from `lib/screens/browse/browse_screen.dart` into its own file at `lib/screens/browse/_widgets/LinkCard.dart`.\n\n## Steps\n\n1. **Read** — Load `lib/screens/browse/browse_screen.dart`.\n2. **Locate** — Find the widget subtree implementing `LinkCard`. Use the description in `.stitch/designs/browse/widgets.jsonl` (the entry with `name == \"LinkCard\"`) to disambiguate.\n3. **Create file** — Write `lib/screens/browse/_widgets/LinkCard.dart` as a self-contained Stateless or Consumer widget, preserving all imports, theme lookups, and Riverpod accesses.\n4. **Update screen** — Replace the inline subtree in `lib/screens/browse/browse_screen.dart` with `const LinkCard()` and add the relative import.\n5. **Verify** — Run `dart analyze lib/screens/browse/_widgets/LinkCard.dart lib/screens/browse/browse_screen.dart` — must pass.\n\n## Rules\n\n- No hardcoded colours; use `Theme.of(context).colorScheme.*`.\n- No hardcoded text styles; use `Theme.of(context).textTheme.*`.\n- Preserve existing semantics labels and tooltips.\n- One `const` constructor per widget.",
+              "taskId": "browse-split-001-LinkCard",
+              "taskTitle": "Split widget: LinkCard",
+              "unitPath": "/Users/minh/Documents/openplayboosks/examples/baby-app/.converge/journal/default/tasks/browse-split-001-LinkCard/TASK.md",
+              "factId": "check:dart-valid"
+            }
+          }
+        ],
+        "durationMs": 93
+      }
+    },
+    {
+      "id": "signal-done",
+      "handler": "signal-done",
+      "status": "buffered",
+      "origin": "initial",
+      "data": {
+        "priority": 97,
+        "applicable": "noGapsAndExecuted"
+      }
+    },
+    {
+      "id": "run-executor",
+      "handler": "run-executor",
+      "status": "done",
+      "origin": "initial",
+      "data": {
+        "priority": 65
+      },
+      "result": {
+        "action": "continue",
+        "durationMs": 0
+      }
+    },
+    {
+      "id": "repair-loop",
+      "handler": "repair-loop",
+      "status": "done",
+      "origin": "initial",
+      "data": {
+        "priority": 55
+      },
+      "result": {
+        "action": "continue",
+        "durationMs": 89
+      }
+    },
+    {
+      "id": "verify",
+      "handler": "verify",
+      "status": "done",
+      "origin": "initial",
+      "data": {
+        "priority": 50
+      },
+      "result": {
+        "action": "done",
+        "success": true,
+        "reason": "All gaps resolved",
+        "gaps": [],
+        "durationMs": 1030
+      }
+    },
+    {
+      "id": "check-stall",
+      "handler": "check-stall",
+      "status": "buffered",
+      "origin": "initial",
+      "data": {
+        "priority": 45
+      }
+    },
+    {
+      "id": "advance-attempt",
+      "handler": "advance-attempt",
+      "status": "buffered",
+      "origin": "initial",
+      "data": {
+        "priority": 40
+      }
+    },
+    {
+      "id": "run-strategy:task-run#52",
+      "handler": "run-strategy",
+      "status": "done",
+      "origin": "planned",
+      "data": {
+        "strategy": "task-run",
+        "priority": 55
+      },
+      "result": {
+        "action": "continue",
+        "durationMs": 285727
+      }
+    }
+  ],
+  "edges": [
+    {
+      "from": "_start",
+      "to": "check-seed-seeded",
+      "iteration": 1,
+      "ts": "2026-05-19T03:02:21.942Z"
+    },
+    {
+      "from": "check-seed-seeded",
+      "to": "check-outputs-exist",
+      "iteration": 1,
+      "ts": "2026-05-19T03:02:21.942Z"
+    },
+    {
+      "from": "check-outputs-exist",
+      "to": "detect-gaps",
+      "iteration": 1,
+      "ts": "2026-05-19T03:02:22.037Z"
+    },
+    {
+      "from": "detect-gaps",
+      "to": "run-executor",
+      "iteration": 1,
+      "ts": "2026-05-19T03:02:22.037Z"
+    },
+    {
+      "from": "run-executor",
+      "to": "repair-loop",
+      "iteration": 1,
+      "ts": "2026-05-19T03:02:22.126Z"
+    },
+    {
+      "from": "repair-loop",
+      "to": "run-strategy:task-run#52",
+      "iteration": 1,
+      "ts": "2026-05-19T03:07:07.855Z"
+    },
+    {
+      "from": "run-strategy:task-run#52",
+      "to": "verify",
+      "iteration": 1,
+      "ts": "2026-05-19T03:07:08.885Z"
+    }
+  ]
+}

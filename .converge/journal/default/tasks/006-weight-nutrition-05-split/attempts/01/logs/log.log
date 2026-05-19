@@ -1,0 +1,13 @@
+[2026-05-19T00:23:17.976Z] [Seed_SEED] staged spawn: weight-nutrition-split-001-WeightProgressChart
+[2026-05-19T00:23:17.978Z] [Seed_SEED] staged spawn: weight-nutrition-split-002-WeightToggleChip
+[2026-05-19T00:23:17.980Z] [Seed_SEED] staged spawn: weight-nutrition-split-003-LatestEntryCard
+[2026-05-19T00:23:17.981Z] [Seed_SEED] staged spawn: weight-nutrition-split-004-WeightDeltaIndicator
+[2026-05-19T00:23:17.983Z] [Seed_SEED] staged spawn: weight-nutrition-split-005-NutritionTipsCard
+[2026-05-19T00:23:17.984Z] [Seed_SEED] staged spawn: weight-nutrition-split-006-TipListItem
+[2026-05-19T00:23:17.986Z] [Seed_SEED] staged spawn: weight-nutrition-split-007-WeightLogList
+[2026-05-19T00:23:17.987Z] [Seed_SEED] staged spawn: weight-nutrition-split-008-WeightLogItem
+[2026-05-19T00:23:17.988Z] [Seed_SEED] staged spawn: weight-nutrition-split-009-AddWeightSheet
+[2026-05-19T00:23:17.989Z] [Seed_SEED] staged spawn: weight-nutrition-split-010-WeightInputField
+[2026-05-19T00:23:17.991Z] [Seed_SEED] staged spawn: weight-nutrition-split-011-DatePickerField
+[2026-05-19T00:23:17.992Z] [Seed_SEED] staged spawn: weight-nutrition-split-012-NotesInputField
+[2026-05-19T00:23:17.993Z] [Seed_SEED] staged spawn: weight-nutrition-split-013-EntryDetailSheet

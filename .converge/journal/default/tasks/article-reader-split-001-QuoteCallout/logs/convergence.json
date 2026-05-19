@@ -1,0 +1,692 @@
+{
+  "iteration": 3,
+  "stallCount": 0,
+  "nodes": [
+    {
+      "id": "check-seed-seeded",
+      "handler": "check-seed-seeded",
+      "status": "done",
+      "origin": "initial",
+      "data": {
+        "priority": 100
+      },
+      "result": {
+        "action": "continue",
+        "durationMs": 0
+      }
+    },
+    {
+      "id": "check-outputs-exist",
+      "handler": "check-outputs-exist",
+      "status": "done",
+      "origin": "initial",
+      "data": {
+        "priority": 99
+      },
+      "result": {
+        "action": "continue",
+        "durationMs": 0
+      }
+    },
+    {
+      "id": "detect-gaps",
+      "handler": "detect-gaps",
+      "status": "done",
+      "origin": "initial",
+      "data": {
+        "priority": 98
+      },
+      "result": {
+        "action": "continue",
+        "gaps": [
+          {
+            "id": "article-reader-split-001-QuoteCallout-missing-output-lib/screens/article_reader/_widgets/QuoteCallout.dart",
+            "type": "incomplete",
+            "level": "task",
+            "scope": "article-reader-split-001-QuoteCallout",
+            "severity": "high",
+            "description": "[article-reader-split-001-QuoteCallout] Task output not created: lib/screens/article_reader/_widgets/QuoteCallout.dart",
+            "source": "unit",
+            "detected": "2026-05-19T02:49:41.744Z",
+            "resolved": false,
+            "checks": [],
+            "metadata": {
+              "gapKind": "output",
+              "unitPath": "/Users/minh/Documents/openplayboosks/examples/baby-app/.converge/journal/default/tasks/article-reader-split-001-QuoteCallout/TASK.md",
+              "taskId": "article-reader-split-001-QuoteCallout",
+              "taskTitle": "Split widget: QuoteCallout",
+              "taskPrompt": "# Split widget: QuoteCallout\n\nExtract the `QuoteCallout` widget subtree from `lib/screens/article_reader/article_reader_screen.dart` into its own file at `lib/screens/article_reader/_widgets/QuoteCallout.dart`.\n\n## Steps\n\n1. **Read** — Load `lib/screens/article_reader/article_reader_screen.dart`.\n2. **Locate** — Find the widget subtree implementing `QuoteCallout`. Use the description in `.stitch/designs/article-reader/widgets.jsonl` (the entry with `name == \"QuoteCallout\"`) to disambiguate.\n3. **Create file** — Write `lib/screens/article_reader/_widgets/QuoteCallout.dart` as a self-contained Stateless or Consumer widget, preserving all imports, theme lookups, and Riverpod accesses.\n4. **Update screen** — Replace the inline subtree in `lib/screens/article_reader/article_reader_screen.dart` with `const QuoteCallout()` and add the relative import.\n5. **Verify** — Run `dart analyze lib/screens/article_reader/_widgets/QuoteCallout.dart lib/screens/article_reader/article_reader_screen.dart` — must pass.\n\n## Rules\n\n- No hardcoded colours; use `Theme.of(context).colorScheme.*`.\n- No hardcoded text styles; use `Theme.of(context).textTheme.*`.\n- Preserve existing semantics labels and tooltips.\n- One `const` constructor per widget.",
+              "taskInputs": [
+                "lib/screens/article_reader/article_reader_screen.dart"
+              ],
+              "factId": "file-exists:test -f \"lib/screens/article_reader/_widgets/QuoteCallout.dart\"",
+              "awaitingUserInput": false
+            }
+          },
+          {
+            "id": "article-reader-split-001-QuoteCallout-check-failed-widget-exists",
+            "type": "incomplete",
+            "level": "task",
+            "scope": "article-reader-split-001-QuoteCallout",
+            "severity": "high",
+            "description": "[article-reader-split-001-QuoteCallout] Check failed: Widget file exists",
+            "source": "unit",
+            "detected": "2026-05-19T02:49:41.746Z",
+            "resolved": false,
+            "checks": [],
+            "metadata": {
+              "gapKind": "check-failed",
+              "checkId": "widget-exists",
+              "checkCmd": "test -f lib/screens/article_reader/_widgets/QuoteCallout.dart",
+              "checkDescription": "Widget file exists",
+              "checkOutput": "",
+              "checkExitCode": 1,
+              "taskPrompt": "# Split widget: QuoteCallout\n\nExtract the `QuoteCallout` widget subtree from `lib/screens/article_reader/article_reader_screen.dart` into its own file at `lib/screens/article_reader/_widgets/QuoteCallout.dart`.\n\n## Steps\n\n1. **Read** — Load `lib/screens/article_reader/article_reader_screen.dart`.\n2. **Locate** — Find the widget subtree implementing `QuoteCallout`. Use the description in `.stitch/designs/article-reader/widgets.jsonl` (the entry with `name == \"QuoteCallout\"`) to disambiguate.\n3. **Create file** — Write `lib/screens/article_reader/_widgets/QuoteCallout.dart` as a self-contained Stateless or Consumer widget, preserving all imports, theme lookups, and Riverpod accesses.\n4. **Update screen** — Replace the inline subtree in `lib/screens/article_reader/article_reader_screen.dart` with `const QuoteCallout()` and add the relative import.\n5. **Verify** — Run `dart analyze lib/screens/article_reader/_widgets/QuoteCallout.dart lib/screens/article_reader/article_reader_screen.dart` — must pass.\n\n## Rules\n\n- No hardcoded colours; use `Theme.of(context).colorScheme.*`.\n- No hardcoded text styles; use `Theme.of(context).textTheme.*`.\n- Preserve existing semantics labels and tooltips.\n- One `const` constructor per widget.",
+              "taskId": "article-reader-split-001-QuoteCallout",
+              "taskTitle": "Split widget: QuoteCallout",
+              "unitPath": "/Users/minh/Documents/openplayboosks/examples/baby-app/.converge/journal/default/tasks/article-reader-split-001-QuoteCallout/TASK.md",
+              "factId": "check:widget-exists"
+            }
+          },
+          {
+            "id": "article-reader-split-001-QuoteCallout-check-failed-dart-valid",
+            "type": "incomplete",
+            "level": "task",
+            "scope": "article-reader-split-001-QuoteCallout",
+            "severity": "high",
+            "description": "[article-reader-split-001-QuoteCallout] Check failed: Dart analysis passes",
+            "source": "unit",
+            "detected": "2026-05-19T02:49:41.846Z",
+            "resolved": false,
+            "checks": [],
+            "metadata": {
+              "gapKind": "check-failed",
+              "checkId": "dart-valid",
+              "checkCmd": "dart analyze lib/screens/article_reader/_widgets/QuoteCallout.dart",
+              "checkDescription": "Dart analysis passes",
+              "checkOutput": "Directory or file doesn't exist: lib/screens/article_reader/_widgets/QuoteCallout.dart\n\nUsage: dart analyze [arguments] [<directory>]\n-h, --help                   Print this usage information.\n    --fatal-infos            Treat info level issues as fatal.\n    --[no-]fatal-warnings    Treat warning level issues as fatal.\n                             (defaults to on)\n\nRun \"dart help\" to see global options.",
+              "checkExitCode": 64,
+              "taskPrompt": "# Split widget: QuoteCallout\n\nExtract the `QuoteCallout` widget subtree from `lib/screens/article_reader/article_reader_screen.dart` into its own file at `lib/screens/article_reader/_widgets/QuoteCallout.dart`.\n\n## Steps\n\n1. **Read** — Load `lib/screens/article_reader/article_reader_screen.dart`.\n2. **Locate** — Find the widget subtree implementing `QuoteCallout`. Use the description in `.stitch/designs/article-reader/widgets.jsonl` (the entry with `name == \"QuoteCallout\"`) to disambiguate.\n3. **Create file** — Write `lib/screens/article_reader/_widgets/QuoteCallout.dart` as a self-contained Stateless or Consumer widget, preserving all imports, theme lookups, and Riverpod accesses.\n4. **Update screen** — Replace the inline subtree in `lib/screens/article_reader/article_reader_screen.dart` with `const QuoteCallout()` and add the relative import.\n5. **Verify** — Run `dart analyze lib/screens/article_reader/_widgets/QuoteCallout.dart lib/screens/article_reader/article_reader_screen.dart` — must pass.\n\n## Rules\n\n- No hardcoded colours; use `Theme.of(context).colorScheme.*`.\n- No hardcoded text styles; use `Theme.of(context).textTheme.*`.\n- Preserve existing semantics labels and tooltips.\n- One `const` constructor per widget.",
+              "taskId": "article-reader-split-001-QuoteCallout",
+              "taskTitle": "Split widget: QuoteCallout",
+              "unitPath": "/Users/minh/Documents/openplayboosks/examples/baby-app/.converge/journal/default/tasks/article-reader-split-001-QuoteCallout/TASK.md",
+              "factId": "check:dart-valid"
+            }
+          }
+        ],
+        "durationMs": 106
+      }
+    },
+    {
+      "id": "signal-done",
+      "handler": "signal-done",
+      "status": "buffered",
+      "origin": "initial",
+      "data": {
+        "priority": 97,
+        "applicable": "noGapsAndExecuted"
+      }
+    },
+    {
+      "id": "run-executor",
+      "handler": "run-executor",
+      "status": "done",
+      "origin": "initial",
+      "data": {
+        "priority": 65
+      },
+      "result": {
+        "action": "continue",
+        "durationMs": 0
+      }
+    },
+    {
+      "id": "repair-loop",
+      "handler": "repair-loop",
+      "status": "done",
+      "origin": "initial",
+      "data": {
+        "priority": 55
+      },
+      "result": {
+        "action": "continue",
+        "durationMs": 90
+      }
+    },
+    {
+      "id": "verify",
+      "handler": "verify",
+      "status": "done",
+      "origin": "initial",
+      "data": {
+        "priority": 50
+      },
+      "result": {
+        "action": "continue",
+        "gaps": [
+          {
+            "id": "article-reader-split-001-QuoteCallout-missing-output-lib/screens/article_reader/_widgets/QuoteCallout.dart",
+            "type": "incomplete",
+            "level": "task",
+            "scope": "article-reader-split-001-QuoteCallout",
+            "severity": "high",
+            "description": "[article-reader-split-001-QuoteCallout] Task output not created: lib/screens/article_reader/_widgets/QuoteCallout.dart",
+            "source": "unit",
+            "detected": "2026-05-19T02:52:37.399Z",
+            "resolved": false,
+            "checks": [],
+            "metadata": {
+              "gapKind": "output",
+              "unitPath": "/Users/minh/Documents/openplayboosks/examples/baby-app/.converge/journal/default/tasks/article-reader-split-001-QuoteCallout/TASK.md",
+              "taskId": "article-reader-split-001-QuoteCallout",
+              "taskTitle": "Split widget: QuoteCallout",
+              "taskPrompt": "# Split widget: QuoteCallout\n\nExtract the `QuoteCallout` widget subtree from `lib/screens/article_reader/article_reader_screen.dart` into its own file at `lib/screens/article_reader/_widgets/QuoteCallout.dart`.\n\n## Steps\n\n1. **Read** — Load `lib/screens/article_reader/article_reader_screen.dart`.\n2. **Locate** — Find the widget subtree implementing `QuoteCallout`. Use the description in `.stitch/designs/article-reader/widgets.jsonl` (the entry with `name == \"QuoteCallout\"`) to disambiguate.\n3. **Create file** — Write `lib/screens/article_reader/_widgets/QuoteCallout.dart` as a self-contained Stateless or Consumer widget, preserving all imports, theme lookups, and Riverpod accesses.\n4. **Update screen** — Replace the inline subtree in `lib/screens/article_reader/article_reader_screen.dart` with `const QuoteCallout()` and add the relative import.\n5. **Verify** — Run `dart analyze lib/screens/article_reader/_widgets/QuoteCallout.dart lib/screens/article_reader/article_reader_screen.dart` — must pass.\n\n## Rules\n\n- No hardcoded colours; use `Theme.of(context).colorScheme.*`.\n- No hardcoded text styles; use `Theme.of(context).textTheme.*`.\n- Preserve existing semantics labels and tooltips.\n- One `const` constructor per widget.",
+              "taskInputs": [
+                "lib/screens/article_reader/article_reader_screen.dart"
+              ],
+              "factId": "file-exists:test -f \"lib/screens/article_reader/_widgets/QuoteCallout.dart\"",
+              "awaitingUserInput": false
+            }
+          },
+          {
+            "id": "article-reader-split-001-QuoteCallout-check-failed-widget-exists",
+            "type": "incomplete",
+            "level": "task",
+            "scope": "article-reader-split-001-QuoteCallout",
+            "severity": "high",
+            "description": "[article-reader-split-001-QuoteCallout] Check failed: Widget file exists",
+            "source": "unit",
+            "detected": "2026-05-19T02:52:37.401Z",
+            "resolved": false,
+            "checks": [],
+            "metadata": {
+              "gapKind": "check-failed",
+              "checkId": "widget-exists",
+              "checkCmd": "test -f lib/screens/article_reader/_widgets/QuoteCallout.dart",
+              "checkDescription": "Widget file exists",
+              "checkOutput": "",
+              "checkExitCode": 1,
+              "taskPrompt": "# Split widget: QuoteCallout\n\nExtract the `QuoteCallout` widget subtree from `lib/screens/article_reader/article_reader_screen.dart` into its own file at `lib/screens/article_reader/_widgets/QuoteCallout.dart`.\n\n## Steps\n\n1. **Read** — Load `lib/screens/article_reader/article_reader_screen.dart`.\n2. **Locate** — Find the widget subtree implementing `QuoteCallout`. Use the description in `.stitch/designs/article-reader/widgets.jsonl` (the entry with `name == \"QuoteCallout\"`) to disambiguate.\n3. **Create file** — Write `lib/screens/article_reader/_widgets/QuoteCallout.dart` as a self-contained Stateless or Consumer widget, preserving all imports, theme lookups, and Riverpod accesses.\n4. **Update screen** — Replace the inline subtree in `lib/screens/article_reader/article_reader_screen.dart` with `const QuoteCallout()` and add the relative import.\n5. **Verify** — Run `dart analyze lib/screens/article_reader/_widgets/QuoteCallout.dart lib/screens/article_reader/article_reader_screen.dart` — must pass.\n\n## Rules\n\n- No hardcoded colours; use `Theme.of(context).colorScheme.*`.\n- No hardcoded text styles; use `Theme.of(context).textTheme.*`.\n- Preserve existing semantics labels and tooltips.\n- One `const` constructor per widget.",
+              "taskId": "article-reader-split-001-QuoteCallout",
+              "taskTitle": "Split widget: QuoteCallout",
+              "unitPath": "/Users/minh/Documents/openplayboosks/examples/baby-app/.converge/journal/default/tasks/article-reader-split-001-QuoteCallout/TASK.md",
+              "factId": "check:widget-exists"
+            }
+          },
+          {
+            "id": "article-reader-split-001-QuoteCallout-check-failed-dart-valid",
+            "type": "incomplete",
+            "level": "task",
+            "scope": "article-reader-split-001-QuoteCallout",
+            "severity": "high",
+            "description": "[article-reader-split-001-QuoteCallout] Check failed: Dart analysis passes",
+            "source": "unit",
+            "detected": "2026-05-19T02:52:37.489Z",
+            "resolved": false,
+            "checks": [],
+            "metadata": {
+              "gapKind": "check-failed",
+              "checkId": "dart-valid",
+              "checkCmd": "dart analyze lib/screens/article_reader/_widgets/QuoteCallout.dart",
+              "checkDescription": "Dart analysis passes",
+              "checkOutput": "Directory or file doesn't exist: lib/screens/article_reader/_widgets/QuoteCallout.dart\n\nUsage: dart analyze [arguments] [<directory>]\n-h, --help                   Print this usage information.\n    --fatal-infos            Treat info level issues as fatal.\n    --[no-]fatal-warnings    Treat warning level issues as fatal.\n                             (defaults to on)\n\nRun \"dart help\" to see global options.",
+              "checkExitCode": 64,
+              "taskPrompt": "# Split widget: QuoteCallout\n\nExtract the `QuoteCallout` widget subtree from `lib/screens/article_reader/article_reader_screen.dart` into its own file at `lib/screens/article_reader/_widgets/QuoteCallout.dart`.\n\n## Steps\n\n1. **Read** — Load `lib/screens/article_reader/article_reader_screen.dart`.\n2. **Locate** — Find the widget subtree implementing `QuoteCallout`. Use the description in `.stitch/designs/article-reader/widgets.jsonl` (the entry with `name == \"QuoteCallout\"`) to disambiguate.\n3. **Create file** — Write `lib/screens/article_reader/_widgets/QuoteCallout.dart` as a self-contained Stateless or Consumer widget, preserving all imports, theme lookups, and Riverpod accesses.\n4. **Update screen** — Replace the inline subtree in `lib/screens/article_reader/article_reader_screen.dart` with `const QuoteCallout()` and add the relative import.\n5. **Verify** — Run `dart analyze lib/screens/article_reader/_widgets/QuoteCallout.dart lib/screens/article_reader/article_reader_screen.dart` — must pass.\n\n## Rules\n\n- No hardcoded colours; use `Theme.of(context).colorScheme.*`.\n- No hardcoded text styles; use `Theme.of(context).textTheme.*`.\n- Preserve existing semantics labels and tooltips.\n- One `const` constructor per widget.",
+              "taskId": "article-reader-split-001-QuoteCallout",
+              "taskTitle": "Split widget: QuoteCallout",
+              "unitPath": "/Users/minh/Documents/openplayboosks/examples/baby-app/.converge/journal/default/tasks/article-reader-split-001-QuoteCallout/TASK.md",
+              "factId": "check:dart-valid"
+            }
+          }
+        ],
+        "durationMs": 95
+      }
+    },
+    {
+      "id": "check-stall",
+      "handler": "check-stall",
+      "status": "done",
+      "origin": "initial",
+      "data": {
+        "priority": 45
+      },
+      "result": {
+        "action": "continue",
+        "durationMs": 1
+      }
+    },
+    {
+      "id": "advance-attempt",
+      "handler": "advance-attempt",
+      "status": "done",
+      "origin": "initial",
+      "data": {
+        "priority": 40
+      },
+      "result": {
+        "action": "continue",
+        "durationMs": 0
+      }
+    },
+    {
+      "id": "run-strategy:task-run#48",
+      "handler": "run-strategy",
+      "status": "done",
+      "origin": "planned",
+      "data": {
+        "strategy": "task-run",
+        "priority": 55
+      },
+      "result": {
+        "action": "continue",
+        "durationMs": 175455
+      }
+    },
+    {
+      "id": "check-seed-seeded#2",
+      "handler": "check-seed-seeded",
+      "status": "done",
+      "origin": "reactive",
+      "data": {
+        "priority": 100
+      },
+      "result": {
+        "action": "continue",
+        "durationMs": 0
+      }
+    },
+    {
+      "id": "check-outputs-exist#2",
+      "handler": "check-outputs-exist",
+      "status": "done",
+      "origin": "reactive",
+      "data": {
+        "priority": 99
+      },
+      "result": {
+        "action": "continue",
+        "durationMs": 94
+      }
+    },
+    {
+      "id": "detect-gaps#2",
+      "handler": "detect-gaps",
+      "status": "done",
+      "origin": "reactive",
+      "data": {
+        "priority": 98
+      },
+      "result": {
+        "action": "continue",
+        "gaps": [
+          {
+            "id": "article-reader-split-001-QuoteCallout-missing-output-lib/screens/article_reader/_widgets/QuoteCallout.dart",
+            "type": "incomplete",
+            "level": "task",
+            "scope": "article-reader-split-001-QuoteCallout",
+            "severity": "high",
+            "description": "[article-reader-split-001-QuoteCallout] Task output not created: lib/screens/article_reader/_widgets/QuoteCallout.dart",
+            "source": "unit",
+            "detected": "2026-05-19T02:52:37.590Z",
+            "resolved": false,
+            "checks": [],
+            "metadata": {
+              "gapKind": "output",
+              "unitPath": "/Users/minh/Documents/openplayboosks/examples/baby-app/.converge/journal/default/tasks/article-reader-split-001-QuoteCallout/TASK.md",
+              "taskId": "article-reader-split-001-QuoteCallout",
+              "taskTitle": "Split widget: QuoteCallout",
+              "taskPrompt": "# Split widget: QuoteCallout\n\nExtract the `QuoteCallout` widget subtree from `lib/screens/article_reader/article_reader_screen.dart` into its own file at `lib/screens/article_reader/_widgets/QuoteCallout.dart`.\n\n## Steps\n\n1. **Read** — Load `lib/screens/article_reader/article_reader_screen.dart`.\n2. **Locate** — Find the widget subtree implementing `QuoteCallout`. Use the description in `.stitch/designs/article-reader/widgets.jsonl` (the entry with `name == \"QuoteCallout\"`) to disambiguate.\n3. **Create file** — Write `lib/screens/article_reader/_widgets/QuoteCallout.dart` as a self-contained Stateless or Consumer widget, preserving all imports, theme lookups, and Riverpod accesses.\n4. **Update screen** — Replace the inline subtree in `lib/screens/article_reader/article_reader_screen.dart` with `const QuoteCallout()` and add the relative import.\n5. **Verify** — Run `dart analyze lib/screens/article_reader/_widgets/QuoteCallout.dart lib/screens/article_reader/article_reader_screen.dart` — must pass.\n\n## Rules\n\n- No hardcoded colours; use `Theme.of(context).colorScheme.*`.\n- No hardcoded text styles; use `Theme.of(context).textTheme.*`.\n- Preserve existing semantics labels and tooltips.\n- One `const` constructor per widget.",
+              "taskInputs": [
+                "lib/screens/article_reader/article_reader_screen.dart"
+              ],
+              "factId": "file-exists:test -f \"lib/screens/article_reader/_widgets/QuoteCallout.dart\"",
+              "awaitingUserInput": false
+            }
+          },
+          {
+            "id": "article-reader-split-001-QuoteCallout-check-failed-widget-exists",
+            "type": "incomplete",
+            "level": "task",
+            "scope": "article-reader-split-001-QuoteCallout",
+            "severity": "high",
+            "description": "[article-reader-split-001-QuoteCallout] Check failed: Widget file exists",
+            "source": "unit",
+            "detected": "2026-05-19T02:52:37.592Z",
+            "resolved": false,
+            "checks": [],
+            "metadata": {
+              "gapKind": "check-failed",
+              "checkId": "widget-exists",
+              "checkCmd": "test -f lib/screens/article_reader/_widgets/QuoteCallout.dart",
+              "checkDescription": "Widget file exists",
+              "checkOutput": "",
+              "checkExitCode": 1,
+              "taskPrompt": "# Split widget: QuoteCallout\n\nExtract the `QuoteCallout` widget subtree from `lib/screens/article_reader/article_reader_screen.dart` into its own file at `lib/screens/article_reader/_widgets/QuoteCallout.dart`.\n\n## Steps\n\n1. **Read** — Load `lib/screens/article_reader/article_reader_screen.dart`.\n2. **Locate** — Find the widget subtree implementing `QuoteCallout`. Use the description in `.stitch/designs/article-reader/widgets.jsonl` (the entry with `name == \"QuoteCallout\"`) to disambiguate.\n3. **Create file** — Write `lib/screens/article_reader/_widgets/QuoteCallout.dart` as a self-contained Stateless or Consumer widget, preserving all imports, theme lookups, and Riverpod accesses.\n4. **Update screen** — Replace the inline subtree in `lib/screens/article_reader/article_reader_screen.dart` with `const QuoteCallout()` and add the relative import.\n5. **Verify** — Run `dart analyze lib/screens/article_reader/_widgets/QuoteCallout.dart lib/screens/article_reader/article_reader_screen.dart` — must pass.\n\n## Rules\n\n- No hardcoded colours; use `Theme.of(context).colorScheme.*`.\n- No hardcoded text styles; use `Theme.of(context).textTheme.*`.\n- Preserve existing semantics labels and tooltips.\n- One `const` constructor per widget.",
+              "taskId": "article-reader-split-001-QuoteCallout",
+              "taskTitle": "Split widget: QuoteCallout",
+              "unitPath": "/Users/minh/Documents/openplayboosks/examples/baby-app/.converge/journal/default/tasks/article-reader-split-001-QuoteCallout/TASK.md",
+              "factId": "check:widget-exists"
+            }
+          },
+          {
+            "id": "article-reader-split-001-QuoteCallout-check-failed-dart-valid",
+            "type": "incomplete",
+            "level": "task",
+            "scope": "article-reader-split-001-QuoteCallout",
+            "severity": "high",
+            "description": "[article-reader-split-001-QuoteCallout] Check failed: Dart analysis passes",
+            "source": "unit",
+            "detected": "2026-05-19T02:52:37.678Z",
+            "resolved": false,
+            "checks": [],
+            "metadata": {
+              "gapKind": "check-failed",
+              "checkId": "dart-valid",
+              "checkCmd": "dart analyze lib/screens/article_reader/_widgets/QuoteCallout.dart",
+              "checkDescription": "Dart analysis passes",
+              "checkOutput": "Directory or file doesn't exist: lib/screens/article_reader/_widgets/QuoteCallout.dart\n\nUsage: dart analyze [arguments] [<directory>]\n-h, --help                   Print this usage information.\n    --fatal-infos            Treat info level issues as fatal.\n    --[no-]fatal-warnings    Treat warning level issues as fatal.\n                             (defaults to on)\n\nRun \"dart help\" to see global options.",
+              "checkExitCode": 64,
+              "taskPrompt": "# Split widget: QuoteCallout\n\nExtract the `QuoteCallout` widget subtree from `lib/screens/article_reader/article_reader_screen.dart` into its own file at `lib/screens/article_reader/_widgets/QuoteCallout.dart`.\n\n## Steps\n\n1. **Read** — Load `lib/screens/article_reader/article_reader_screen.dart`.\n2. **Locate** — Find the widget subtree implementing `QuoteCallout`. Use the description in `.stitch/designs/article-reader/widgets.jsonl` (the entry with `name == \"QuoteCallout\"`) to disambiguate.\n3. **Create file** — Write `lib/screens/article_reader/_widgets/QuoteCallout.dart` as a self-contained Stateless or Consumer widget, preserving all imports, theme lookups, and Riverpod accesses.\n4. **Update screen** — Replace the inline subtree in `lib/screens/article_reader/article_reader_screen.dart` with `const QuoteCallout()` and add the relative import.\n5. **Verify** — Run `dart analyze lib/screens/article_reader/_widgets/QuoteCallout.dart lib/screens/article_reader/article_reader_screen.dart` — must pass.\n\n## Rules\n\n- No hardcoded colours; use `Theme.of(context).colorScheme.*`.\n- No hardcoded text styles; use `Theme.of(context).textTheme.*`.\n- Preserve existing semantics labels and tooltips.\n- One `const` constructor per widget.",
+              "taskId": "article-reader-split-001-QuoteCallout",
+              "taskTitle": "Split widget: QuoteCallout",
+              "unitPath": "/Users/minh/Documents/openplayboosks/examples/baby-app/.converge/journal/default/tasks/article-reader-split-001-QuoteCallout/TASK.md",
+              "factId": "check:dart-valid"
+            }
+          }
+        ],
+        "durationMs": 93
+      }
+    },
+    {
+      "id": "signal-done#2",
+      "handler": "signal-done",
+      "status": "buffered",
+      "origin": "reactive",
+      "data": {
+        "priority": 97,
+        "applicable": "noGapsAndExecuted"
+      }
+    },
+    {
+      "id": "repair-loop#2",
+      "handler": "repair-loop",
+      "status": "done",
+      "origin": "reactive",
+      "data": {
+        "priority": 55
+      },
+      "result": {
+        "action": "continue",
+        "durationMs": 4
+      }
+    },
+    {
+      "id": "run-strategy:task-run#49",
+      "handler": "run-strategy",
+      "status": "done",
+      "origin": "planned",
+      "data": {
+        "strategy": "task-run",
+        "priority": 55
+      },
+      "result": {
+        "action": "continue",
+        "durationMs": 178309
+      }
+    },
+    {
+      "id": "verify#2",
+      "handler": "verify",
+      "status": "done",
+      "origin": "reactive",
+      "data": {
+        "priority": 50
+      },
+      "result": {
+        "action": "continue",
+        "gaps": [
+          {
+            "id": "article-reader-split-001-QuoteCallout-check-failed-widget-exists",
+            "type": "incomplete",
+            "level": "task",
+            "scope": "article-reader-split-001-QuoteCallout",
+            "severity": "high",
+            "description": "[article-reader-split-001-QuoteCallout] Check failed: Widget file exists",
+            "source": "unit",
+            "detected": "2026-05-19T02:55:35.998Z",
+            "resolved": false,
+            "checks": [],
+            "metadata": {
+              "gapKind": "check-failed",
+              "checkId": "widget-exists",
+              "checkCmd": "test -f lib/screens/article_reader/_widgets/QuoteCallout.dart",
+              "checkDescription": "Widget file exists",
+              "checkOutput": "",
+              "checkExitCode": 1,
+              "taskPrompt": "# Split widget: QuoteCallout\n\nExtract the `QuoteCallout` widget subtree from `lib/screens/article_reader/article_reader_screen.dart` into its own file at `lib/screens/article_reader/_widgets/QuoteCallout.dart`.\n\n## Steps\n\n1. **Read** — Load `lib/screens/article_reader/article_reader_screen.dart`.\n2. **Locate** — Find the widget subtree implementing `QuoteCallout`. Use the description in `.stitch/designs/article-reader/widgets.jsonl` (the entry with `name == \"QuoteCallout\"`) to disambiguate.\n3. **Create file** — Write `lib/screens/article_reader/_widgets/QuoteCallout.dart` as a self-contained Stateless or Consumer widget, preserving all imports, theme lookups, and Riverpod accesses.\n4. **Update screen** — Replace the inline subtree in `lib/screens/article_reader/article_reader_screen.dart` with `const QuoteCallout()` and add the relative import.\n5. **Verify** — Run `dart analyze lib/screens/article_reader/_widgets/QuoteCallout.dart lib/screens/article_reader/article_reader_screen.dart` — must pass.\n\n## Rules\n\n- No hardcoded colours; use `Theme.of(context).colorScheme.*`.\n- No hardcoded text styles; use `Theme.of(context).textTheme.*`.\n- Preserve existing semantics labels and tooltips.\n- One `const` constructor per widget.",
+              "taskId": "article-reader-split-001-QuoteCallout",
+              "taskTitle": "Split widget: QuoteCallout",
+              "unitPath": "/Users/minh/Documents/openplayboosks/examples/baby-app/.converge/journal/default/tasks/article-reader-split-001-QuoteCallout/TASK.md",
+              "factId": "check:widget-exists"
+            }
+          },
+          {
+            "id": "article-reader-split-001-QuoteCallout-check-failed-dart-valid",
+            "type": "incomplete",
+            "level": "task",
+            "scope": "article-reader-split-001-QuoteCallout",
+            "severity": "high",
+            "description": "[article-reader-split-001-QuoteCallout] Check failed: Dart analysis passes",
+            "source": "unit",
+            "detected": "2026-05-19T02:55:36.085Z",
+            "resolved": false,
+            "checks": [],
+            "metadata": {
+              "gapKind": "check-failed",
+              "checkId": "dart-valid",
+              "checkCmd": "dart analyze lib/screens/article_reader/_widgets/QuoteCallout.dart",
+              "checkDescription": "Dart analysis passes",
+              "checkOutput": "Directory or file doesn't exist: lib/screens/article_reader/_widgets/QuoteCallout.dart\n\nUsage: dart analyze [arguments] [<directory>]\n-h, --help                   Print this usage information.\n    --fatal-infos            Treat info level issues as fatal.\n    --[no-]fatal-warnings    Treat warning level issues as fatal.\n                             (defaults to on)\n\nRun \"dart help\" to see global options.",
+              "checkExitCode": 64,
+              "taskPrompt": "# Split widget: QuoteCallout\n\nExtract the `QuoteCallout` widget subtree from `lib/screens/article_reader/article_reader_screen.dart` into its own file at `lib/screens/article_reader/_widgets/QuoteCallout.dart`.\n\n## Steps\n\n1. **Read** — Load `lib/screens/article_reader/article_reader_screen.dart`.\n2. **Locate** — Find the widget subtree implementing `QuoteCallout`. Use the description in `.stitch/designs/article-reader/widgets.jsonl` (the entry with `name == \"QuoteCallout\"`) to disambiguate.\n3. **Create file** — Write `lib/screens/article_reader/_widgets/QuoteCallout.dart` as a self-contained Stateless or Consumer widget, preserving all imports, theme lookups, and Riverpod accesses.\n4. **Update screen** — Replace the inline subtree in `lib/screens/article_reader/article_reader_screen.dart` with `const QuoteCallout()` and add the relative import.\n5. **Verify** — Run `dart analyze lib/screens/article_reader/_widgets/QuoteCallout.dart lib/screens/article_reader/article_reader_screen.dart` — must pass.\n\n## Rules\n\n- No hardcoded colours; use `Theme.of(context).colorScheme.*`.\n- No hardcoded text styles; use `Theme.of(context).textTheme.*`.\n- Preserve existing semantics labels and tooltips.\n- One `const` constructor per widget.",
+              "taskId": "article-reader-split-001-QuoteCallout",
+              "taskTitle": "Split widget: QuoteCallout",
+              "unitPath": "/Users/minh/Documents/openplayboosks/examples/baby-app/.converge/journal/default/tasks/article-reader-split-001-QuoteCallout/TASK.md",
+              "factId": "check:dart-valid"
+            }
+          }
+        ],
+        "durationMs": 93
+      }
+    },
+    {
+      "id": "check-stall#2",
+      "handler": "check-stall",
+      "status": "done",
+      "origin": "reactive",
+      "data": {
+        "priority": 45
+      },
+      "result": {
+        "action": "continue",
+        "durationMs": 0
+      }
+    },
+    {
+      "id": "advance-attempt#2",
+      "handler": "advance-attempt",
+      "status": "done",
+      "origin": "reactive",
+      "data": {
+        "priority": 40
+      },
+      "result": {
+        "action": "continue",
+        "durationMs": 0
+      }
+    },
+    {
+      "id": "check-seed-seeded#3",
+      "handler": "check-seed-seeded",
+      "status": "done",
+      "origin": "reactive",
+      "data": {
+        "priority": 100
+      },
+      "result": {
+        "action": "continue",
+        "durationMs": 0
+      }
+    },
+    {
+      "id": "check-outputs-exist#3",
+      "handler": "check-outputs-exist",
+      "status": "done",
+      "origin": "reactive",
+      "data": {
+        "priority": 99
+      },
+      "result": {
+        "action": "done",
+        "success": true,
+        "reason": "Outputs already present",
+        "durationMs": 94
+      }
+    },
+    {
+      "id": "detect-gaps#3",
+      "handler": "detect-gaps",
+      "status": "buffered",
+      "origin": "reactive",
+      "data": {
+        "priority": 98
+      }
+    },
+    {
+      "id": "signal-done#3",
+      "handler": "signal-done",
+      "status": "buffered",
+      "origin": "reactive",
+      "data": {
+        "priority": 97,
+        "applicable": "noGapsAndExecuted"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "from": "_start",
+      "to": "check-seed-seeded",
+      "iteration": 1,
+      "ts": "2026-05-19T02:49:41.739Z"
+    },
+    {
+      "from": "check-seed-seeded",
+      "to": "check-outputs-exist",
+      "iteration": 1,
+      "ts": "2026-05-19T02:49:41.740Z"
+    },
+    {
+      "from": "check-outputs-exist",
+      "to": "detect-gaps",
+      "iteration": 1,
+      "ts": "2026-05-19T02:49:41.846Z"
+    },
+    {
+      "from": "detect-gaps",
+      "to": "run-executor",
+      "iteration": 1,
+      "ts": "2026-05-19T02:49:41.847Z"
+    },
+    {
+      "from": "run-executor",
+      "to": "repair-loop",
+      "iteration": 1,
+      "ts": "2026-05-19T02:49:41.937Z"
+    },
+    {
+      "from": "repair-loop",
+      "to": "run-strategy:task-run#48",
+      "iteration": 1,
+      "ts": "2026-05-19T02:52:37.393Z"
+    },
+    {
+      "from": "run-strategy:task-run#48",
+      "to": "verify",
+      "iteration": 1,
+      "ts": "2026-05-19T02:52:37.489Z"
+    },
+    {
+      "from": "verify",
+      "to": "check-stall",
+      "iteration": 1,
+      "ts": "2026-05-19T02:52:37.490Z"
+    },
+    {
+      "from": "check-stall",
+      "to": "advance-attempt",
+      "iteration": 1,
+      "ts": "2026-05-19T02:52:37.490Z"
+    },
+    {
+      "from": "advance-attempt",
+      "to": "check-seed-seeded#2",
+      "iteration": 2,
+      "ts": "2026-05-19T02:52:37.491Z"
+    },
+    {
+      "from": "check-seed-seeded#2",
+      "to": "check-outputs-exist#2",
+      "iteration": 2,
+      "ts": "2026-05-19T02:52:37.585Z"
+    },
+    {
+      "from": "check-outputs-exist#2",
+      "to": "detect-gaps#2",
+      "iteration": 2,
+      "ts": "2026-05-19T02:52:37.678Z"
+    },
+    {
+      "from": "detect-gaps#2",
+      "to": "repair-loop#2",
+      "iteration": 2,
+      "ts": "2026-05-19T02:52:37.682Z"
+    },
+    {
+      "from": "repair-loop#2",
+      "to": "run-strategy:task-run#49",
+      "iteration": 2,
+      "ts": "2026-05-19T02:55:35.991Z"
+    },
+    {
+      "from": "run-strategy:task-run#49",
+      "to": "verify#2",
+      "iteration": 2,
+      "ts": "2026-05-19T02:55:36.085Z"
+    },
+    {
+      "from": "verify#2",
+      "to": "check-stall#2",
+      "iteration": 2,
+      "ts": "2026-05-19T02:55:36.086Z"
+    },
+    {
+      "from": "check-stall#2",
+      "to": "advance-attempt#2",
+      "iteration": 2,
+      "ts": "2026-05-19T02:55:36.086Z"
+    },
+    {
+      "from": "advance-attempt#2",
+      "to": "check-seed-seeded#3",
+      "iteration": 3,
+      "ts": "2026-05-19T02:55:36.087Z"
+    },
+    {
+      "from": "check-seed-seeded#3",
+      "to": "check-outputs-exist#3",
+      "iteration": 3,
+      "ts": "2026-05-19T02:55:36.181Z"
+    }
+  ]
+}

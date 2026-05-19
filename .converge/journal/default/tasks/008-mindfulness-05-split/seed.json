@@ -1,0 +1,20 @@
+{
+  "seeded": true,
+  "seededAt": "2026-05-19T00:47:51.653Z",
+  "spawnCount": 3,
+  "keepLooping": false,
+  "subtasks": [
+    {
+      "id": "mindfulness-split-001-BreathingExerciseCard",
+      "writeToPath": ".converge/journal/default/tasks/mindfulness-split-001-BreathingExerciseCard/TASK.md"
+    },
+    {
+      "id": "mindfulness-split-002-StretchingRoutineCard",
+      "writeToPath": ".converge/journal/default/tasks/mindfulness-split-002-StretchingRoutineCard/TASK.md"
+    },
+    {
+      "id": "mindfulness-split-003-ExerciseBadge",
+      "writeToPath": ".converge/journal/default/tasks/mindfulness-split-003-ExerciseBadge/TASK.md"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+[
+  {
+    "id": "widget-exists",
+    "description": "Widget file exists",
+    "cmd": "test -f lib/screens/article_reader/_widgets/quote_callout.dart",
+    "passed": true,
+    "exit_code": 0,
+    "output": ""
+  },
+  {
+    "id": "dart-valid",
+    "description": "Dart analysis passes",
+    "cmd": "dart analyze lib/screens/article_reader/_widgets/quote_callout.dart lib/screens/article_reader/article_reader_screen.dart",
+    "passed": true,
+    "exit_code": 0,
+    "output": "Analyzing quote_callout.dart, article_reader_screen.dart...\nNo issues found!"
+  }
+]

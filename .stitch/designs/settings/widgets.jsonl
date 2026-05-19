@@ -1,0 +1,7 @@
+{"name": "SettingsCard", "grep": "class _SettingsCard extends StatefulWidget", "description": "Container with animated scale press effect for settings sections", "shared": true}
+{"name": "ListItemRow", "grep": "class _ListItemRow extends StatelessWidget", "description": "Icon + title/description row with optional chevron", "shared": true}
+{"name": "SwitchRow", "grep": "class _SwitchRow extends StatelessWidget", "description": "Toggle row with title and description", "shared": true}
+{"name": "ActionRow", "grep": "class _ActionRow extends StatelessWidget", "description": "Icon + label/description + chevron row with destructive style support", "shared": true}
+{"name": "AboutRow", "grep": "class _AboutRow extends StatelessWidget", "description": "Label + value row for about section", "shared": true}
+{"name": "LinkRow", "grep": "class _LinkRow extends StatelessWidget", "description": "Icon + link text + chevron row", "shared": true}
+{"name": "InkWellScale", "grep": "class _InkWellScale extends StatefulWidget", "description": "Press animation wrapper with scale effect", "shared": true}

@@ -1,0 +1,10 @@
+[
+  {
+    "id": "widgets-json-exists",
+    "description": "widgets.jsonl exists for health-log",
+    "cmd": "test -f .stitch/designs/health-log/widgets.jsonl",
+    "passed": true,
+    "exit_code": 0,
+    "output": ""
+  }
+]

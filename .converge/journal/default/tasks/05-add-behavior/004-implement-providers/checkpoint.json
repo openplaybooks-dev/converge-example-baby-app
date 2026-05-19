@@ -1,0 +1,24 @@
+{
+  "status": "pending",
+  "progress": {
+    "totalChildren": 13,
+    "completedChildren": 0,
+    "failedChildren": 0,
+    "childTaskIds": [
+      "001-provider-PregnancyProfile",
+      "002-provider-WeightEntry",
+      "003-provider-CycleEntry",
+      "004-provider-MoodEntry",
+      "005-provider-SymptomEntry",
+      "006-provider-DoctorVisit",
+      "007-provider-Reminder",
+      "008-provider-WeekContent",
+      "009-provider-InfoItem",
+      "010-provider-SelfCareCheckState",
+      "011-provider-Article",
+      "012-provider-Exercise",
+      "013-provider-UserPreferences"
+    ],
+    "lastProgressUpdate": "2026-05-19T23:15:00.099Z"
+  }
+}

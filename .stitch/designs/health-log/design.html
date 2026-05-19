@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=375, initial-scale=1.0">
+  <title>Health Log — Baby Bump Design</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'lavender': '#7C3AED',
+            'lavender-tint': '#F5F3FF',
+            'blush': '#F9A8D4',
+            'mint': '#6EE7B7',
+            'mist': '#FAFAFA',
+            'graphite': '#1F2937',
+            'stone': '#6B7280',
+            'misty-border': '#E5E7EB',
+            'coral': '#EF4444',
+            'warm-white': '#FFFFFF',
+          },
+          fontFamily: {
+            'nunito': ['Nunito', 'system-ui', 'sans-serif'],
+          },
+          borderRadius: {
+            'card': '16px',
+            'sheet': '28px',
+            'pill': '999px',
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Nunito', system-ui, sans-serif;
+      background: #E8E8E8;
+      display: flex;
+      justify-content: center;
+      padding: 32px 16px;
+      min-height: 100vh;
+    }
+    .phone {
+      width: 375px;
+      min-height: 812px;
+      border-radius: 40px;
+      overflow: hidden;
+      position: relative;
+      box-shadow: 0 24px 64px rgba(0,0,0,0.2);
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+    .card-shadow {
+      box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    }
+    .entry-tap:active {
+      transform: scale(0.98);
+      transition: transform 200ms ease-out;
+    }
+    .fab-tap:active {
+      transform: scale(0.90);
+      transition: transform 200ms ease-out;
+    }
+    .badge-pill {
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-size: 11px;
+      font-weight: 600;
+    }
+    .severity-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+    }
+    @keyframes fade-in {
+      from { opacity: 0; transform: translateY(8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .animate-fade-in {
+      animation: fade-in 300ms ease-out backwards;
+    }
+    @keyframes fab-appear {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
+    }
+    .animate-fab {
+      animation: fab-appear 200ms ease-out backwards;
+      animation-delay: 300ms;
+    }
+  </style>
+</head>
+<body>
+  <div class="phone">
+
+    <!-- Scaffold -->
+    <div data-flutter="scaffold" class="scaffold flex flex-col min-h-screen bg-lavender-tint">
+
+      <!-- AppBar -->
+      <header data-flutter="app-bar" class="flex items-center h-14 px-4 bg-lavender-tint">
+        <button data-flutter="icon-btn" aria-label="Go back" class="w-12 h-12 flex items-center justify-center rounded-full hover:bg-lavender/10">
+          <svg class="w-6 h-6 text-graphite" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+          </svg>
+        </button>
+        <h1 class="flex-1 text-xl font-semibold text-graphite text-center pr-12">Health Log</h1>
+        <button data-flutter="icon-btn" aria-label="Filter entries" class="w-12 h-12 flex items-center justify-center rounded-full hover:bg-lavender/10">
+          <svg class="w-6 h-6 text-graphite" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z"/>
+          </svg>
+        </button>
+      </header>
+
+      <!-- Body - ListView with sections -->
+      <main data-flutter="custom-scroll" class="flex-1 overflow-y-auto px-4 pb-24">
+
+        <!-- Section 1: Summary Stats Banner -->
+        <section class="mt-6 mb-6 animate-fade-in" style="animation-delay: 0ms;">
+          <div data-flutter="card" class="bg-mist rounded-card card-shadow p-4">
+            <div data-flutter="row" data-main-axis="space-between" class="flex justify-between items-center">
+              <!-- Left: Symptom count -->
+              <div data-flutter="row" data-spacing="sm" class="flex items-center gap-2">
+                <div class="w-10 h-10 rounded-full bg-lavender/15 flex items-center justify-center">
+                  <svg class="w-5 h-5 text-lavender" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/>
+                  </svg>
+                </div>
+                <div class="flex flex-col">
+                  <span class="text-base font-semibold text-graphite">3</span>
+                  <span class="text-xs text-stone">symptoms this week</span>
+                </div>
+              </div>
+              <!-- Divider -->
+              <div class="w-px h-10 bg-misty-border"></div>
+              <!-- Right: Next reminder -->
+              <div data-flutter="row" data-spacing="sm" class="flex items-center gap-2">
+                <div class="w-10 h-10 rounded-full bg-mint/20 flex items-center justify-center">
+                  <svg class="w-5 h-5 text-mint" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                  </svg>
+                </div>
+                <div class="flex flex-col">
+                  <span class="text-xs text-stone">Next</span>
+                  <span class="text-sm font-semibold text-graphite">Prenatal on May 22</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Section 2: Timeline -->
+        <section class="mb-6">
+          <!-- Date Header: Today -->
+          <div class="mb-3">
+            <span class="text-xs font-medium text-stone uppercase tracking-wide">Today</span>
+          </div>
+
+          <!-- Timeline entries -->
+          <div data-flutter="column" data-spacing="sm" class="flex flex-col gap-3">
+
+            <!-- Entry 1: Symptom (lavender left border) -->
+            <div data-flutter="card" data-color="primary" class="entry-tap bg-mist rounded-card card-shadow p-4 cursor-pointer relative overflow-hidden" style="border-left: 4px solid #7C3AED;">
+              <div data-flutter="row" data-main-axis="space-between" class="flex justify-between items-start mb-2">
+                <div class="flex-1">
+                  <h3 class="text-base font-semibold text-graphite mb-1" style="line-height: 24px;">Headache</h3>
+                  <!-- Severity dots -->
+                  <div data-flutter="row" data-spacing="xs" class="flex items-center gap-1 mb-2">
+                    <div class="severity-dot bg-lavender"></div>
+                    <div class="severity-dot bg-lavender"></div>
+                    <div class="severity-dot bg-stone/30"></div>
+                    <span class="text-xs text-stone ml-1">Moderate</span>
+                  </div>
+                  <p class="text-sm text-stone truncate" style="line-height: 20px;">Felt dizzy after standing up quickly</p>
+                </div>
+                <span class="text-xs text-stone shrink-0 ml-2">2:30 PM</span>
+              </div>
+            </div>
+
+            <!-- Entry 2: Doctor Visit (blush left border) -->
+            <div data-flutter="card" data-color="secondary" class="entry-tap bg-mist rounded-card card-shadow p-4 cursor-pointer relative overflow-hidden" style="border-left: 4px solid #F9A8D4;">
+              <div data-flutter="row" data-main-axis="space-between" class="flex justify-between items-start mb-2">
+                <div class="flex-1">
+                  <h3 class="text-base font-semibold text-graphite mb-1" style="line-height: 24px;">Dr. Sarah Chen</h3>
+                  <p class="text-sm text-stone truncate mb-2" style="line-height: 20px;">Regular prenatal checkup, everything looks good</p>
+                  <span class="badge-pill bg-mint/20 text-graphite">Next: May 29</span>
+                </div>
+                <span class="text-xs text-stone shrink-0 ml-2">10:00 AM</span>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Date Header: Yesterday -->
+          <div class="mt-6 mb-3">
+            <span class="text-xs font-medium text-stone uppercase tracking-wide">Yesterday</span>
+          </div>
+
+          <!-- More entries -->
+          <div data-flutter="column" data-spacing="sm" class="flex flex-col gap-3">
+
+            <!-- Entry 3: Symptom -->
+            <div data-flutter="card" data-color="primary" class="entry-tap bg-mist rounded-card card-shadow p-4 cursor-pointer relative overflow-hidden" style="border-left: 4px solid #7C3AED;">
+              <div data-flutter="row" data-main-axis="space-between" class="flex justify-between items-start mb-2">
+                <div class="flex-1">
+                  <h3 class="text-base font-semibold text-graphite mb-1" style="line-height: 24px;">Nausea</h3>
+                  <div data-flutter="row" data-spacing="xs" class="flex items-center gap-1 mb-2">
+                    <div class="severity-dot bg-lavender"></div>
+                    <div class="severity-dot bg-stone/30"></div>
+                    <div class="severity-dot bg-stone/30"></div>
+                    <span class="text-xs text-stone ml-1">Mild</span>
+                  </div>
+                  <p class="text-sm text-stone truncate" style="line-height: 20px;">Morning sickness, took ginger tea</p>
+                </div>
+                <span class="text-xs text-stone shrink-0 ml-2">8:15 AM</span>
+              </div>
+            </div>
+
+            <!-- Entry 4: Reminder (mint left border) -->
+            <div data-flutter="card" data-color="tertiary" class="entry-tap bg-mist rounded-card card-shadow p-4 cursor-pointer relative overflow-hidden" style="border-left: 4px solid #6EE7B7;">
+              <div data-flutter="row" data-main-axis="space-between" class="flex justify-between items-start mb-2">
+                <div class="flex-1">
+                  <h3 class="text-base font-semibold text-graphite mb-1" style="line-height: 24px;">Take Prenatal Vitamins</h3>
+                  <span class="badge-pill bg-blush/20 text-graphite">Medication</span>
+                </div>
+                <span class="text-xs text-stone shrink-0 ml-2">7:00 AM</span>
+              </div>
+              <div class="mt-2 flex items-center gap-1">
+                <div class="w-2 h-2 rounded-full bg-mint"></div>
+                <span class="text-xs text-mint font-medium">Enabled</span>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Date Header: May 15, 2026 -->
+          <div class="mt-6 mb-3">
+            <span class="text-xs font-medium text-stone uppercase tracking-wide">May 15, 2026</span>
+          </div>
+
+          <div data-flutter="column" data-spacing="sm" class="flex flex-col gap-3">
+
+            <!-- Entry 5: Doctor Visit -->
+            <div data-flutter="card" data-color="secondary" class="entry-tap bg-mist rounded-card card-shadow p-4 cursor-pointer relative overflow-hidden" style="border-left: 4px solid #F9A8D4;">
+              <div data-flutter="row" data-main-axis="space-between" class="flex justify-between items-start mb-2">
+                <div class="flex-1">
+                  <h3 class="text-base font-semibold text-graphite mb-1" style="line-height: 24px;">Dr. Emily Watson</h3>
+                  <p class="text-sm text-stone truncate mb-2" style="line-height: 20px;">22-week ultrasound scan</p>
+                  <span class="badge-pill bg-mint/20 text-graphite">Next: Jun 12</span>
+                </div>
+                <span class="text-xs text-stone shrink-0 ml-2">11:30 AM</span>
+              </div>
+            </div>
+
+          </div>
+
+        </section>
+
+      </main>
+
+      <!-- FAB - Add new entry -->
+      <button data-flutter="fab" class="animate-fab fab-tap absolute bottom-6 right-4 w-14 h-14 rounded-full bg-lavender shadow-lg flex items-center justify-center">
+        <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 4v16m8-8H4"/>
+        </svg>
+      </button>
+
+    </div>
+  </div>
+</body>
+</html>

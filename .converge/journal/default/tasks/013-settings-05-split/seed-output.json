@@ -1,0 +1,38 @@
+{
+  "attemptNumber": 1,
+  "startedAt": "2026-05-19T02:47:57.602Z",
+  "completedAt": "2026-05-19T02:48:15.065Z",
+  "spawnedTasks": [
+    {
+      "id": "settings-split-001-SettingsCard",
+      "writeToPath": ".converge/journal/default/tasks/settings-split-001-SettingsCard/TASK.md"
+    },
+    {
+      "id": "settings-split-002-ListItemRow",
+      "writeToPath": ".converge/journal/default/tasks/settings-split-002-ListItemRow/TASK.md"
+    },
+    {
+      "id": "settings-split-003-SwitchRow",
+      "writeToPath": ".converge/journal/default/tasks/settings-split-003-SwitchRow/TASK.md"
+    },
+    {
+      "id": "settings-split-004-ActionRow",
+      "writeToPath": ".converge/journal/default/tasks/settings-split-004-ActionRow/TASK.md"
+    },
+    {
+      "id": "settings-split-005-AboutRow",
+      "writeToPath": ".converge/journal/default/tasks/settings-split-005-AboutRow/TASK.md"
+    },
+    {
+      "id": "settings-split-006-LinkRow",
+      "writeToPath": ".converge/journal/default/tasks/settings-split-006-LinkRow/TASK.md"
+    },
+    {
+      "id": "settings-split-007-InkWellScale",
+      "writeToPath": ".converge/journal/default/tasks/settings-split-007-InkWellScale/TASK.md"
+    }
+  ],
+  "status": "success",
+  "spawnCount": 7,
+  "durationMs": 17463
+}

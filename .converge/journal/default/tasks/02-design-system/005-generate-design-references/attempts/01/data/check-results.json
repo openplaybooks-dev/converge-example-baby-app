@@ -1,0 +1,42 @@
+[
+  {
+    "id": "meta-md-exists",
+    "description": "META.md exists",
+    "cmd": "test -f .stitch/system/META.md",
+    "passed": true,
+    "exit_code": 0,
+    "output": ""
+  },
+  {
+    "id": "single-screen-exists",
+    "description": "Single screen HTML exists",
+    "cmd": "test -f .stitch/system/single-screen.html",
+    "passed": true,
+    "exit_code": 0,
+    "output": ""
+  },
+  {
+    "id": "multi-state-exists",
+    "description": "Multi-state screen HTML exists",
+    "cmd": "test -f .stitch/system/multi-state-screen.html",
+    "passed": true,
+    "exit_code": 0,
+    "output": ""
+  },
+  {
+    "id": "celebration-exists",
+    "description": "Celebration screen HTML exists",
+    "cmd": "test -f .stitch/system/celebration-screen.html",
+    "passed": true,
+    "exit_code": 0,
+    "output": ""
+  },
+  {
+    "id": "html-has-tokens",
+    "description": "HTML uses CSS custom properties",
+    "cmd": "grep -q ':root' .stitch/system/single-screen.html",
+    "passed": true,
+    "exit_code": 0,
+    "output": ""
+  }
+]

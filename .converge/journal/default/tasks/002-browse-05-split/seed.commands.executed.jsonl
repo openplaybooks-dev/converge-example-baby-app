@@ -1,0 +1,1 @@
+{"command":"converge spawn template --path .converge/playbooks/default/templates/screen-widget-split/TASK.md --id browse-split-001-LinkCard --var screenId=browse --var screenTitle=Browse --var screenPath=lib/screens/browse/browse_screen.dart --var widgetId=LinkCard --var widgetName=LinkCard --var widgetFile=lib/screens/browse/_widgets/LinkCard.dart","status":"ok"}

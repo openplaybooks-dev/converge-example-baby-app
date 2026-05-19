@@ -1,0 +1,20 @@
+{
+  "taskId": "012-article-reader-03-convert",
+  "epicId": "default",
+  "focusPath": "default/012-article-reader-03-convert",
+  "status": "running",
+  "startedAt": "2026-05-19T02:18:26.267Z",
+  "attempt": 1,
+  "gapsResolved": 0,
+  "gapsFailed": 0,
+  "checklist": [
+    {
+      "id": "subtask:spawn-1",
+      "type": "subtask",
+      "description": "stitch-flutter",
+      "details": ".converge/skills/stitch-flutter/SKILL.md",
+      "done": true,
+      "doneAt": "2026-05-19T02:18:39.572Z"
+    }
+  ]
+}

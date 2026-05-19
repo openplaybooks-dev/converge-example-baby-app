@@ -1,0 +1,17 @@
+{
+  "taskId": "008-mindfulness-05-split",
+  "attemptNumber": 1,
+  "inputs": [
+    {
+      "pattern": ".stitch/designs/mindfulness/widgets.jsonl",
+      "count": 1,
+      "samples": [
+        ".stitch/designs/mindfulness/widgets.jsonl"
+      ]
+    }
+  ],
+  "outputs": [
+    "lib/screens/mindfulness/_widgets/**/*.dart"
+  ],
+  "blocked": false
+}

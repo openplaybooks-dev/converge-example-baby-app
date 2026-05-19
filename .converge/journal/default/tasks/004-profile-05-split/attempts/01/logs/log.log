@@ -1,0 +1,5 @@
+[2026-05-18T23:39:47.987Z] [Seed_SEED] staged spawn: profile-split-001-ProfileHeader
+[2026-05-18T23:39:47.989Z] [Seed_SEED] staged spawn: profile-split-002-NavCard
+[2026-05-18T23:39:47.990Z] [Seed_SEED] staged spawn: profile-split-003-AboutCard
+[2026-05-18T23:39:47.992Z] [Seed_SEED] staged spawn: profile-split-004-BottomNavBar
+[2026-05-18T23:39:47.994Z] [Seed_SEED] staged spawn: profile-split-005-NavItem

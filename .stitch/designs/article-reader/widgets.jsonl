@@ -1,0 +1,3 @@
+{"name": "QuoteCallout", "grep": "\"Pairing iron-rich foods\"", "description": "Styled callout block with left border accent and italic text for quotes and tips", "shared": true}
+{"name": "BulletItem", "grep": "_buildBulletItem", "description": "Bulleted list item with colored dot indicator and text content", "shared": true}
+{"name": "RelatedArticleCard", "grep": "class _RelatedArticleCard", "description": "Card displaying related article with background icon, title, and read time badge", "shared": true}

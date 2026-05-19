@@ -1,0 +1,10 @@
+{
+  "taskId": "006-weight-nutrition-04-analyze",
+  "checks": [
+    {
+      "id": "widgets-json-exists",
+      "description": "widgets.jsonl exists for weight-nutrition",
+      "cmd": "test -f .stitch/designs/weight-nutrition/widgets.jsonl"
+    }
+  ]
+}

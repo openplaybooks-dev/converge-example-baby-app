@@ -1,0 +1,159 @@
+[
+  {
+    "id": "home",
+    "title": "Home",
+    "route": "/",
+    "description": "Central dashboard showing today's snapshot — pregnancy progress, quick-log buttons, and personalized wellness nudges",
+    "features": ["week-banner", "mood-check-in", "today-checklist", "quick-actions", "weekly-tip", "sliver-app-bar"],
+    "navType": "tab",
+    "priority": 1
+  },
+  {
+    "id": "browse",
+    "title": "Browse",
+    "route": "/browse",
+    "description": "Discovery hub containing cycle tracking and weight management entry points",
+    "features": ["cycle-tracking-link", "weight-nutrition-link"],
+    "navType": "tab",
+    "priority": 1
+  },
+  {
+    "id": "library",
+    "title": "Library",
+    "route": "/library",
+    "description": "Personal bookshelf containing health log, mood wellness, and education resources",
+    "features": ["health-log-link", "mood-wellness-link", "education-link"],
+    "navType": "tab",
+    "priority": 1
+  },
+  {
+    "id": "profile",
+    "title": "Profile",
+    "route": "/profile",
+    "description": "Personal profile with mindfulness access, settings, and user preferences",
+    "features": ["mindfulness-link", "settings-link", "avatar"],
+    "navType": "tab",
+    "priority": 1
+  },
+  {
+    "id": "cycle-tracking",
+    "title": "Cycle Tracking",
+    "route": "/cycle-tracking",
+    "description": "Log menstrual cycles, view ovulation predictions, and manage cycle-related reminders",
+    "features": ["current-cycle-card", "cycle-history-list", "fab-add-entry", "bottom-sheet-form"],
+    "navType": "push",
+    "priority": 1
+  },
+  {
+    "id": "weight-nutrition",
+    "title": "Weight & Nutrition",
+    "route": "/weight-nutrition",
+    "description": "Log daily weight, view progress chart, and read stage-specific nutrition tips",
+    "features": ["progress-chart", "latest-entry", "nutrition-tips", "weight-log-list", "fab-add-entry"],
+    "navType": "push",
+    "priority": 1
+  },
+  {
+    "id": "pregnancy-progress",
+    "title": "My Pregnancy",
+    "route": "/pregnancy-progress",
+    "description": "Due date management, week-by-week body change descriptions, and fetal development visuals",
+    "features": ["week-hero", "body-changes", "baby-development", "self-care-tips", "due-date-summary", "page-view"],
+    "navType": "push",
+    "priority": 1
+  },
+  {
+    "id": "mindfulness",
+    "title": "Mindfulness",
+    "route": "/mindfulness",
+    "description": "Guided breathing exercises, light stretching guides, and mindful activity suggestions",
+    "features": ["breathing-exercises", "stretching-self-care", "overlay-trigger"],
+    "navType": "push",
+    "priority": 1
+  },
+  {
+    "id": "health-log",
+    "title": "Health Log",
+    "route": "/health-log",
+    "description": "Unified timeline of all health entries — symptoms, doctor visits, reminders",
+    "features": ["timeline", "summary-stats", "fab-add-entry", "filter-options"],
+    "navType": "push",
+    "priority": 1
+  },
+  {
+    "id": "mood-wellness",
+    "title": "Mood & Wellness",
+    "route": "/mood-wellness",
+    "description": "Log daily moods and energy levels, visualize patterns over time, receive gentle wellness nudges",
+    "features": ["todays-mood-card", "mood-trend-chart", "energy-trend-chart", "wellness-tip"],
+    "navType": "push",
+    "priority": 1
+  },
+  {
+    "id": "education",
+    "title": "Education",
+    "route": "/education",
+    "description": "Browse and read trusted educational articles organized by topic",
+    "features": ["featured-article", "topics-grid", "recent-articles", "search"],
+    "navType": "push",
+    "priority": 1
+  },
+  {
+    "id": "article-reader",
+    "title": "Article Reader",
+    "route": "/article-reader/:id",
+    "description": "Read a single article with clean typography, bookmark capability, and related articles",
+    "features": ["article-header", "article-body", "related-articles", "bookmark", "share", "hero-transition"],
+    "navType": "push",
+    "priority": 1
+  },
+  {
+    "id": "settings",
+    "title": "Settings",
+    "route": "/settings",
+    "description": "Manage user profile, due date, notification preferences, and data export",
+    "features": ["profile-section", "notifications-section", "data-section", "about-section"],
+    "navType": "push",
+    "priority": 1
+  },
+  {
+    "id": "breathing-exercise",
+    "title": "Breathing Exercise",
+    "route": "overlay:breathing-exercise",
+    "description": "Full-screen animated breathing exercise with visual guidance",
+    "features": ["animated-visual", "breathing-phases", "duration-display", "controls"],
+    "overlayType": "full-sheet",
+    "parentScreenId": "mindfulness",
+    "priority": 2
+  },
+  {
+    "id": "stretching-guide",
+    "title": "Stretching Guide",
+    "route": "overlay:stretching-guide",
+    "description": "Bottom sheet with step-by-step stretching instructions and trimester suitability",
+    "features": ["step-list", "trimester-badge", "duration-estimate", "close-button"],
+    "overlayType": "bottom-sheet",
+    "parentScreenId": "mindfulness",
+    "priority": 2
+  },
+  {
+    "id": "mode-selector",
+    "title": "Mode Selector",
+    "route": "overlay:mode-selector",
+    "description": "Bottom sheet for selecting display modes or tracking preferences on Home",
+    "features": ["mode-options", "selection-list"],
+    "overlayType": "bottom-sheet",
+    "parentScreenId": "home",
+    "priority": 3
+  },
+  {
+    "id": "symptom-detail",
+    "title": "Symptom Detail",
+    "route": "overlay:symptom-detail",
+    "description": "Bottom sheet for viewing or editing symptom log entries",
+    "features": ["symptom-form", "severity-selector", "date-picker", "notes-field", "save-button"],
+    "overlayType": "bottom-sheet",
+    "parentScreenId": "health-log",
+    "priority": 2
+  }
+]

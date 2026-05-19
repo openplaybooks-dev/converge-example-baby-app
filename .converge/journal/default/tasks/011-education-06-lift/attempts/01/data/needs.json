@@ -1,0 +1,23 @@
+{
+  "taskId": "011-education-06-lift",
+  "attemptNumber": 1,
+  "inputs": [
+    {
+      "pattern": ".stitch/designs/education/widgets.jsonl",
+      "count": 1,
+      "samples": [
+        ".stitch/designs/education/widgets.jsonl"
+      ]
+    },
+    {
+      "pattern": "lib/screens/education/_widgets/**/*.dart",
+      "count": 0,
+      "samples": []
+    }
+  ],
+  "outputs": [
+    "lib/widgets/**/*.dart"
+  ],
+  "blocked": true,
+  "blockedReason": "Missing required inputs: lib/screens/education/_widgets/**/*.dart"
+}

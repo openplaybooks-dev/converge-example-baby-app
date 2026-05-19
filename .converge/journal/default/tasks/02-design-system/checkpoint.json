@@ -1,0 +1,14 @@
+{
+  "status": "complete",
+  "completedAt": "2026-05-18T22:58:58.961Z",
+  "progress": {
+    "totalChildren": 2,
+    "completedChildren": 2,
+    "failedChildren": 0,
+    "childTaskIds": [
+      "002-generate-design-system",
+      "005-generate-design-references"
+    ],
+    "lastProgressUpdate": "2026-05-19T23:15:00.099Z"
+  }
+}

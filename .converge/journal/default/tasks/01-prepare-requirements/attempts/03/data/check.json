@@ -1,0 +1,15 @@
+{
+  "taskId": "01-prepare-requirements",
+  "checks": [
+    {
+      "id": "ux-spec-exists",
+      "description": "UX specification exists",
+      "cmd": "test -f .stitch/UX.md"
+    },
+    {
+      "id": "screens-json-exists",
+      "description": "Screen definitions exist",
+      "cmd": "test -f .stitch/screens.json"
+    }
+  ]
+}

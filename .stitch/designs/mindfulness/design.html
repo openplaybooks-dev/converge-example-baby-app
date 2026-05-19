@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=375, initial-scale=1.0">
+  <title>Mindfulness — Baby Bump Design</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'lavender': '#7C3AED',
+            'lavender-tint': '#F5F3FF',
+            'blush': '#F9A8D4',
+            'mint': '#6EE7B7',
+            'mist': '#FAFAFA',
+            'graphite': '#1F2937',
+            'stone': '#6B7280',
+            'misty-border': '#E5E7EB',
+            'warm-white': '#FFFFFF',
+          },
+          fontFamily: {
+            'nunito': ['Nunito', 'system-ui', 'sans-serif'],
+          },
+          borderRadius: {
+            'card': '16px',
+            'pill': '999px',
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Nunito', system-ui, sans-serif;
+      background: #E8E8E8;
+      display: flex;
+      justify-content: center;
+      padding: 32px 16px;
+      min-height: 100vh;
+    }
+    .phone {
+      width: 375px;
+      min-height: 812px;
+      border-radius: 40px;
+      overflow: hidden;
+      position: relative;
+      box-shadow: 0 24px 64px rgba(0,0,0,0.2);
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+    .card-shadow {
+      box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    }
+    .card-tap:active {
+      transform: scale(0.98);
+      transition: transform 200ms ease-out;
+    }
+    .badge-pill {
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-size: 11px;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+  <div class="phone">
+
+    <!-- Scaffold -->
+    <div data-flutter="scaffold" class="flex flex-col min-h-screen bg-lavender-tint">
+
+      <!-- AppBar -->
+      <header data-flutter="app-bar" class="flex items-center h-14 px-4 bg-lavender-tint">
+        <button data-flutter="icon-btn" aria-label="Go back" class="w-12 h-12 flex items-center justify-center rounded-full hover:bg-lavender/10">
+          <svg class="w-6 h-6 text-graphite" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+          </svg>
+        </button>
+        <h1 class="flex-1 text-xl font-semibold text-graphite text-center pr-12">Mindfulness</h1>
+      </header>
+
+      <!-- Body - ListView with sections -->
+      <main data-flutter="custom-scroll" class="flex-1 overflow-y-auto px-4 pb-6">
+
+        <!-- Section 1: Breathing Exercises -->
+        <section class="mt-6 mb-6">
+          <h2 class="text-[22px] font-semibold text-graphite mb-4" style="line-height: 28px;">Breathing Exercises</h2>
+
+          <div data-flutter="column" data-spacing="sm" class="flex flex-col gap-3">
+
+            <!-- Card 1: Box Breathing -->
+            <div data-flutter="card" data-color="primary" class="card-tap bg-mist rounded-card card-shadow p-4 cursor-pointer">
+              <div class="flex items-center justify-between">
+                <div class="flex-1">
+                  <h3 class="text-base font-semibold text-graphite mb-1" style="line-height: 24px;">Box Breathing</h3>
+                  <p class="text-sm text-stone mb-2" style="line-height: 20px;">2 min</p>
+                  <span class="badge-pill bg-mint/20 text-lavender">Beginner</span>
+                </div>
+                <svg class="w-5 h-5 text-stone shrink-0 ml-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                </svg>
+              </div>
+            </div>
+
+            <!-- Card 2: Deep Breathing -->
+            <div data-flutter="card" data-color="primary" class="card-tap bg-mist rounded-card card-shadow p-4 cursor-pointer">
+              <div class="flex items-center justify-between">
+                <div class="flex-1">
+                  <h3 class="text-base font-semibold text-graphite mb-1" style="line-height: 24px;">Deep Breathing</h3>
+                  <p class="text-sm text-stone mb-2" style="line-height: 20px;">3 min</p>
+                  <span class="badge-pill bg-mint/20 text-lavender">Beginner</span>
+                </div>
+                <svg class="w-5 h-5 text-stone shrink-0 ml-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                </svg>
+              </div>
+            </div>
+
+            <!-- Card 3: 4-7-8 Technique -->
+            <div data-flutter="card" data-color="primary" class="card-tap bg-mist rounded-card card-shadow p-4 cursor-pointer">
+              <div class="flex items-center justify-between">
+                <div class="flex-1">
+                  <h3 class="text-base font-semibold text-graphite mb-1" style="line-height: 24px;">4-7-8 Technique</h3>
+                  <p class="text-sm text-stone mb-2" style="line-height: 20px;">4 min</p>
+                  <span class="badge-pill bg-blush/30 text-graphite">Intermediate</span>
+                </div>
+                <svg class="w-5 h-5 text-stone shrink-0 ml-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                </svg>
+              </div>
+            </div>
+
+            <!-- Card 4: Energizing Breath -->
+            <div data-flutter="card" data-color="primary" class="card-tap bg-mist rounded-card card-shadow p-4 cursor-pointer">
+              <div class="flex items-center justify-between">
+                <div class="flex-1">
+                  <h3 class="text-base font-semibold text-graphite mb-1" style="line-height: 24px;">Energizing Breath</h3>
+                  <p class="text-sm text-stone mb-2" style="line-height: 20px;">2 min</p>
+                  <span class="badge-pill bg-blush/30 text-graphite">Intermediate</span>
+                </div>
+                <svg class="w-5 h-5 text-stone shrink-0 ml-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                </svg>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- Section 2: Stretching & Self-Care -->
+        <section class="mb-6">
+          <h2 class="text-[22px] font-semibold text-graphite mb-4" style="line-height: 28px;">Stretching & Self-Care</h2>
+
+          <div data-flutter="column" data-spacing="sm" class="flex flex-col gap-3">
+
+            <!-- Card 1: Neck & Shoulders -->
+            <div data-flutter="card" data-color="primary" class="card-tap bg-mist rounded-card card-shadow p-4 cursor-pointer">
+              <div class="flex items-center justify-between">
+                <div class="flex-1">
+                  <h3 class="text-base font-semibold text-graphite mb-1" style="line-height: 24px;">Neck & Shoulders</h3>
+                  <p class="text-sm text-stone mb-2" style="line-height: 20px;">5 min</p>
+                  <span class="badge-pill bg-blush text-graphite">All Trimester</span>
+                </div>
+                <svg class="w-5 h-5 text-stone shrink-0 ml-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                </svg>
+              </div>
+            </div>
+
+            <!-- Card 2: Hip Opener -->
+            <div data-flutter="card" data-color="primary" class="card-tap bg-mist rounded-card card-shadow p-4 cursor-pointer">
+              <div class="flex items-center justify-between">
+                <div class="flex-1">
+                  <h3 class="text-base font-semibold text-graphite mb-1" style="line-height: 24px;">Hip Opener</h3>
+                  <p class="text-sm text-stone mb-2" style="line-height: 20px;">10 min</p>
+                  <span class="badge-pill bg-blush text-graphite">2nd/3rd Tri</span>
+                </div>
+                <svg class="w-5 h-5 text-stone shrink-0 ml-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                </svg>
+              </div>
+            </div>
+
+            <!-- Card 3: Standing Stretch -->
+            <div data-flutter="card" data-color="primary" class="card-tap bg-mist rounded-card card-shadow p-4 cursor-pointer">
+              <div class="flex items-center justify-between">
+                <div class="flex-1">
+                  <h3 class="text-base font-semibold text-graphite mb-1" style="line-height: 24px;">Standing Stretch</h3>
+                  <p class="text-sm text-stone mb-2" style="line-height: 20px;">8 min</p>
+                  <span class="badge-pill bg-blush text-graphite">1st/2nd Tri</span>
+                </div>
+                <svg class="w-5 h-5 text-stone shrink-0 ml-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                </svg>
+              </div>
+            </div>
+
+            <!-- Card 4: Floor Relaxation -->
+            <div data-flutter="card" data-color="primary" class="card-tap bg-mist rounded-card card-shadow p-4 cursor-pointer">
+              <div class="flex items-center justify-between">
+                <div class="flex-1">
+                  <h3 class="text-base font-semibold text-graphite mb-1" style="line-height: 24px;">Floor Relaxation</h3>
+                  <p class="text-sm text-stone mb-2" style="line-height: 20px;">15 min</p>
+                  <span class="badge-pill bg-blush text-graphite">All Trimester</span>
+                </div>
+                <svg class="w-5 h-5 text-stone shrink-0 ml-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                </svg>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+      </main>
+    </div>
+  </div>
+</body>
+</html>

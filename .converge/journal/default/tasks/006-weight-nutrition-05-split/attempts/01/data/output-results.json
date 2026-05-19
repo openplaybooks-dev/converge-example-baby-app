@@ -1,0 +1,6 @@
+[
+  {
+    "path": "lib/screens/weight_nutrition/_widgets/**/*.dart",
+    "exists": false
+  }
+]

@@ -1,0 +1,5 @@
+{"name": "ProfileHeader", "grep": "_ProfileHeader extends StatelessWidget", "description": "User avatar with gradient circle, name display, due date subtitle, and edit profile button", "shared": false}
+{"name": "NavCard", "grep": "class _NavCard extends StatefulWidget", "description": "Self-contained navigation card with icon, title, description, animated press feedback, and tap routing", "shared": true}
+{"name": "AboutCard", "grep": "class _AboutCard extends StatelessWidget", "description": "App info card showing name, version, and privacy policy link", "shared": false}
+{"name": "BottomNavBar", "grep": "class _BottomNavBar extends StatelessWidget", "description": "Bottom navigation bar with 4 app destinations and active state styling", "shared": true}
+{"name": "NavItem", "grep": "class _NavItem extends StatelessWidget", "description": "Individual navigation item with icon, label, and active/inactive state styling", "shared": true}

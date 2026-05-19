@@ -1,0 +1,17 @@
+{
+  "taskId": "browse-split-001-LinkCard",
+  "attemptNumber": 1,
+  "inputs": [
+    {
+      "pattern": "lib/screens/browse/browse_screen.dart",
+      "count": 1,
+      "samples": [
+        "lib/screens/browse/browse_screen.dart"
+      ]
+    }
+  ],
+  "outputs": [
+    "lib/screens/browse/_widgets/LinkCard.dart"
+  ],
+  "blocked": false
+}

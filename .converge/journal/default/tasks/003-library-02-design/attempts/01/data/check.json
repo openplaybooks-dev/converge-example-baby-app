@@ -1,0 +1,25 @@
+{
+  "taskId": "003-library-02-design",
+  "checks": [
+    {
+      "id": "design-exists",
+      "description": "design.html exists for library",
+      "cmd": "test -f .stitch/designs/library/design.html"
+    },
+    {
+      "id": "meta-exists",
+      "description": "META.md exists for library",
+      "cmd": "test -f .stitch/designs/library/META.md"
+    },
+    {
+      "id": "uses-glossary",
+      "description": "HTML uses Flutter HTML Glossary vocabulary",
+      "cmd": "grep -q 'class=\"scaffold\"' .stitch/designs/library/design.html"
+    },
+    {
+      "id": "has-data-attributes",
+      "description": "HTML uses data-* attributes for Flutter conversion",
+      "cmd": "grep -q 'data-color=' .stitch/designs/library/design.html"
+    }
+  ]
+}

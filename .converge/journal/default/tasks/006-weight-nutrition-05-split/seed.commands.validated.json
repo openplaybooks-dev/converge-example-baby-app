@@ -1,0 +1,210 @@
+[
+  {
+    "line": "converge spawn template --path .converge/playbooks/default/templates/screen-widget-split/TASK.md --id weight-nutrition-split-001-WeightProgressChart --var screenId=weight-nutrition --var \"screenTitle=Weight & Nutrition\" --var screenPath=lib/screens/weight_nutrition/weight_nutrition_screen.dart --var widgetId=WeightProgressChart --var widgetName=WeightProgressChart --var widgetFile=lib/screens/weight_nutrition/_widgets/WeightProgressChart.dart",
+    "parsed": {
+      "kind": "template",
+      "path": ".converge/playbooks/default/templates/screen-widget-split/TASK.md",
+      "vars": {
+        "screenId": "weight-nutrition",
+        "screenTitle": "Weight & Nutrition",
+        "screenPath": "lib/screens/weight_nutrition/weight_nutrition_screen.dart",
+        "widgetId": "WeightProgressChart",
+        "widgetName": "WeightProgressChart",
+        "widgetFile": "lib/screens/weight_nutrition/_widgets/WeightProgressChart.dart"
+      },
+      "id": "weight-nutrition-split-001-WeightProgressChart"
+    }
+  },
+  {
+    "line": "converge spawn template --path .converge/playbooks/default/templates/screen-widget-split/TASK.md --id weight-nutrition-split-002-WeightToggleChip --var screenId=weight-nutrition --var \"screenTitle=Weight & Nutrition\" --var screenPath=lib/screens/weight_nutrition/weight_nutrition_screen.dart --var widgetId=WeightToggleChip --var widgetName=WeightToggleChip --var widgetFile=lib/screens/weight_nutrition/_widgets/WeightToggleChip.dart",
+    "parsed": {
+      "kind": "template",
+      "path": ".converge/playbooks/default/templates/screen-widget-split/TASK.md",
+      "vars": {
+        "screenId": "weight-nutrition",
+        "screenTitle": "Weight & Nutrition",
+        "screenPath": "lib/screens/weight_nutrition/weight_nutrition_screen.dart",
+        "widgetId": "WeightToggleChip",
+        "widgetName": "WeightToggleChip",
+        "widgetFile": "lib/screens/weight_nutrition/_widgets/WeightToggleChip.dart"
+      },
+      "id": "weight-nutrition-split-002-WeightToggleChip"
+    }
+  },
+  {
+    "line": "converge spawn template --path .converge/playbooks/default/templates/screen-widget-split/TASK.md --id weight-nutrition-split-003-LatestEntryCard --var screenId=weight-nutrition --var \"screenTitle=Weight & Nutrition\" --var screenPath=lib/screens/weight_nutrition/weight_nutrition_screen.dart --var widgetId=LatestEntryCard --var widgetName=LatestEntryCard --var widgetFile=lib/screens/weight_nutrition/_widgets/LatestEntryCard.dart",
+    "parsed": {
+      "kind": "template",
+      "path": ".converge/playbooks/default/templates/screen-widget-split/TASK.md",
+      "vars": {
+        "screenId": "weight-nutrition",
+        "screenTitle": "Weight & Nutrition",
+        "screenPath": "lib/screens/weight_nutrition/weight_nutrition_screen.dart",
+        "widgetId": "LatestEntryCard",
+        "widgetName": "LatestEntryCard",
+        "widgetFile": "lib/screens/weight_nutrition/_widgets/LatestEntryCard.dart"
+      },
+      "id": "weight-nutrition-split-003-LatestEntryCard"
+    }
+  },
+  {
+    "line": "converge spawn template --path .converge/playbooks/default/templates/screen-widget-split/TASK.md --id weight-nutrition-split-004-WeightDeltaIndicator --var screenId=weight-nutrition --var \"screenTitle=Weight & Nutrition\" --var screenPath=lib/screens/weight_nutrition/weight_nutrition_screen.dart --var widgetId=WeightDeltaIndicator --var widgetName=WeightDeltaIndicator --var widgetFile=lib/screens/weight_nutrition/_widgets/WeightDeltaIndicator.dart",
+    "parsed": {
+      "kind": "template",
+      "path": ".converge/playbooks/default/templates/screen-widget-split/TASK.md",
+      "vars": {
+        "screenId": "weight-nutrition",
+        "screenTitle": "Weight & Nutrition",
+        "screenPath": "lib/screens/weight_nutrition/weight_nutrition_screen.dart",
+        "widgetId": "WeightDeltaIndicator",
+        "widgetName": "WeightDeltaIndicator",
+        "widgetFile": "lib/screens/weight_nutrition/_widgets/WeightDeltaIndicator.dart"
+      },
+      "id": "weight-nutrition-split-004-WeightDeltaIndicator"
+    }
+  },
+  {
+    "line": "converge spawn template --path .converge/playbooks/default/templates/screen-widget-split/TASK.md --id weight-nutrition-split-005-NutritionTipsCard --var screenId=weight-nutrition --var \"screenTitle=Weight & Nutrition\" --var screenPath=lib/screens/weight_nutrition/weight_nutrition_screen.dart --var widgetId=NutritionTipsCard --var widgetName=NutritionTipsCard --var widgetFile=lib/screens/weight_nutrition/_widgets/NutritionTipsCard.dart",
+    "parsed": {
+      "kind": "template",
+      "path": ".converge/playbooks/default/templates/screen-widget-split/TASK.md",
+      "vars": {
+        "screenId": "weight-nutrition",
+        "screenTitle": "Weight & Nutrition",
+        "screenPath": "lib/screens/weight_nutrition/weight_nutrition_screen.dart",
+        "widgetId": "NutritionTipsCard",
+        "widgetName": "NutritionTipsCard",
+        "widgetFile": "lib/screens/weight_nutrition/_widgets/NutritionTipsCard.dart"
+      },
+      "id": "weight-nutrition-split-005-NutritionTipsCard"
+    }
+  },
+  {
+    "line": "converge spawn template --path .converge/playbooks/default/templates/screen-widget-split/TASK.md --id weight-nutrition-split-006-TipListItem --var screenId=weight-nutrition --var \"screenTitle=Weight & Nutrition\" --var screenPath=lib/screens/weight_nutrition/weight_nutrition_screen.dart --var widgetId=TipListItem --var widgetName=TipListItem --var widgetFile=lib/screens/weight_nutrition/_widgets/TipListItem.dart",
+    "parsed": {
+      "kind": "template",
+      "path": ".converge/playbooks/default/templates/screen-widget-split/TASK.md",
+      "vars": {
+        "screenId": "weight-nutrition",
+        "screenTitle": "Weight & Nutrition",
+        "screenPath": "lib/screens/weight_nutrition/weight_nutrition_screen.dart",
+        "widgetId": "TipListItem",
+        "widgetName": "TipListItem",
+        "widgetFile": "lib/screens/weight_nutrition/_widgets/TipListItem.dart"
+      },
+      "id": "weight-nutrition-split-006-TipListItem"
+    }
+  },
+  {
+    "line": "converge spawn template --path .converge/playbooks/default/templates/screen-widget-split/TASK.md --id weight-nutrition-split-007-WeightLogList --var screenId=weight-nutrition --var \"screenTitle=Weight & Nutrition\" --var screenPath=lib/screens/weight_nutrition/weight_nutrition_screen.dart --var widgetId=WeightLogList --var widgetName=WeightLogList --var widgetFile=lib/screens/weight_nutrition/_widgets/WeightLogList.dart",
+    "parsed": {
+      "kind": "template",
+      "path": ".converge/playbooks/default/templates/screen-widget-split/TASK.md",
+      "vars": {
+        "screenId": "weight-nutrition",
+        "screenTitle": "Weight & Nutrition",
+        "screenPath": "lib/screens/weight_nutrition/weight_nutrition_screen.dart",
+        "widgetId": "WeightLogList",
+        "widgetName": "WeightLogList",
+        "widgetFile": "lib/screens/weight_nutrition/_widgets/WeightLogList.dart"
+      },
+      "id": "weight-nutrition-split-007-WeightLogList"
+    }
+  },
+  {
+    "line": "converge spawn template --path .converge/playbooks/default/templates/screen-widget-split/TASK.md --id weight-nutrition-split-008-WeightLogItem --var screenId=weight-nutrition --var \"screenTitle=Weight & Nutrition\" --var screenPath=lib/screens/weight_nutrition/weight_nutrition_screen.dart --var widgetId=WeightLogItem --var widgetName=WeightLogItem --var widgetFile=lib/screens/weight_nutrition/_widgets/WeightLogItem.dart",
+    "parsed": {
+      "kind": "template",
+      "path": ".converge/playbooks/default/templates/screen-widget-split/TASK.md",
+      "vars": {
+        "screenId": "weight-nutrition",
+        "screenTitle": "Weight & Nutrition",
+        "screenPath": "lib/screens/weight_nutrition/weight_nutrition_screen.dart",
+        "widgetId": "WeightLogItem",
+        "widgetName": "WeightLogItem",
+        "widgetFile": "lib/screens/weight_nutrition/_widgets/WeightLogItem.dart"
+      },
+      "id": "weight-nutrition-split-008-WeightLogItem"
+    }
+  },
+  {
+    "line": "converge spawn template --path .converge/playbooks/default/templates/screen-widget-split/TASK.md --id weight-nutrition-split-009-AddWeightSheet --var screenId=weight-nutrition --var \"screenTitle=Weight & Nutrition\" --var screenPath=lib/screens/weight_nutrition/weight_nutrition_screen.dart --var widgetId=AddWeightSheet --var widgetName=AddWeightSheet --var widgetFile=lib/screens/weight_nutrition/_widgets/AddWeightSheet.dart",
+    "parsed": {
+      "kind": "template",
+      "path": ".converge/playbooks/default/templates/screen-widget-split/TASK.md",
+      "vars": {
+        "screenId": "weight-nutrition",
+        "screenTitle": "Weight & Nutrition",
+        "screenPath": "lib/screens/weight_nutrition/weight_nutrition_screen.dart",
+        "widgetId": "AddWeightSheet",
+        "widgetName": "AddWeightSheet",
+        "widgetFile": "lib/screens/weight_nutrition/_widgets/AddWeightSheet.dart"
+      },
+      "id": "weight-nutrition-split-009-AddWeightSheet"
+    }
+  },
+  {
+    "line": "converge spawn template --path .converge/playbooks/default/templates/screen-widget-split/TASK.md --id weight-nutrition-split-010-WeightInputField --var screenId=weight-nutrition --var \"screenTitle=Weight & Nutrition\" --var screenPath=lib/screens/weight_nutrition/weight_nutrition_screen.dart --var widgetId=WeightInputField --var widgetName=WeightInputField --var widgetFile=lib/screens/weight_nutrition/_widgets/WeightInputField.dart",
+    "parsed": {
+      "kind": "template",
+      "path": ".converge/playbooks/default/templates/screen-widget-split/TASK.md",
+      "vars": {
+        "screenId": "weight-nutrition",
+        "screenTitle": "Weight & Nutrition",
+        "screenPath": "lib/screens/weight_nutrition/weight_nutrition_screen.dart",
+        "widgetId": "WeightInputField",
+        "widgetName": "WeightInputField",
+        "widgetFile": "lib/screens/weight_nutrition/_widgets/WeightInputField.dart"
+      },
+      "id": "weight-nutrition-split-010-WeightInputField"
+    }
+  },
+  {
+    "line": "converge spawn template --path .converge/playbooks/default/templates/screen-widget-split/TASK.md --id weight-nutrition-split-011-DatePickerField --var screenId=weight-nutrition --var \"screenTitle=Weight & Nutrition\" --var screenPath=lib/screens/weight_nutrition/weight_nutrition_screen.dart --var widgetId=DatePickerField --var widgetName=DatePickerField --var widgetFile=lib/screens/weight_nutrition/_widgets/DatePickerField.dart",
+    "parsed": {
+      "kind": "template",
+      "path": ".converge/playbooks/default/templates/screen-widget-split/TASK.md",
+      "vars": {
+        "screenId": "weight-nutrition",
+        "screenTitle": "Weight & Nutrition",
+        "screenPath": "lib/screens/weight_nutrition/weight_nutrition_screen.dart",
+        "widgetId": "DatePickerField",
+        "widgetName": "DatePickerField",
+        "widgetFile": "lib/screens/weight_nutrition/_widgets/DatePickerField.dart"
+      },
+      "id": "weight-nutrition-split-011-DatePickerField"
+    }
+  },
+  {
+    "line": "converge spawn template --path .converge/playbooks/default/templates/screen-widget-split/TASK.md --id weight-nutrition-split-012-NotesInputField --var screenId=weight-nutrition --var \"screenTitle=Weight & Nutrition\" --var screenPath=lib/screens/weight_nutrition/weight_nutrition_screen.dart --var widgetId=NotesInputField --var widgetName=NotesInputField --var widgetFile=lib/screens/weight_nutrition/_widgets/NotesInputField.dart",
+    "parsed": {
+      "kind": "template",
+      "path": ".converge/playbooks/default/templates/screen-widget-split/TASK.md",
+      "vars": {
+        "screenId": "weight-nutrition",
+        "screenTitle": "Weight & Nutrition",
+        "screenPath": "lib/screens/weight_nutrition/weight_nutrition_screen.dart",
+        "widgetId": "NotesInputField",
+        "widgetName": "NotesInputField",
+        "widgetFile": "lib/screens/weight_nutrition/_widgets/NotesInputField.dart"
+      },
+      "id": "weight-nutrition-split-012-NotesInputField"
+    }
+  },
+  {
+    "line": "converge spawn template --path .converge/playbooks/default/templates/screen-widget-split/TASK.md --id weight-nutrition-split-013-EntryDetailSheet --var screenId=weight-nutrition --var \"screenTitle=Weight & Nutrition\" --var screenPath=lib/screens/weight_nutrition/weight_nutrition_screen.dart --var widgetId=EntryDetailSheet --var widgetName=EntryDetailSheet --var widgetFile=lib/screens/weight_nutrition/_widgets/EntryDetailSheet.dart",
+    "parsed": {
+      "kind": "template",
+      "path": ".converge/playbooks/default/templates/screen-widget-split/TASK.md",
+      "vars": {
+        "screenId": "weight-nutrition",
+        "screenTitle": "Weight & Nutrition",
+        "screenPath": "lib/screens/weight_nutrition/weight_nutrition_screen.dart",
+        "widgetId": "EntryDetailSheet",
+        "widgetName": "EntryDetailSheet",
+        "widgetFile": "lib/screens/weight_nutrition/_widgets/EntryDetailSheet.dart"
+      },
+      "id": "weight-nutrition-split-013-EntryDetailSheet"
+    }
+  }
+]

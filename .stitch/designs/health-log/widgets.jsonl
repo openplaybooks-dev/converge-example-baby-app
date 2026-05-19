@@ -1,0 +1,3 @@
+{"name": "SummaryStatsCard", "grep": "class _SummaryStatsCard", "description": "Summary banner showing weekly symptom count and next prenatal appointment", "shared": false}
+{"name": "HealthEntryCard", "grep": "class _HealthEntryCard", "description": "Health log entry card with severity dots, badges, enabled indicator, and time", "shared": true}
+{"name": "AddEntryFab", "grep": "class _AddEntryFab", "description": "Floating action button for adding new health log entries", "shared": true}

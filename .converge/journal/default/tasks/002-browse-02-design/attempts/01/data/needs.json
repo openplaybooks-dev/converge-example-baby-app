@@ -1,0 +1,32 @@
+{
+  "taskId": "002-browse-02-design",
+  "attemptNumber": 1,
+  "inputs": [
+    {
+      "pattern": ".stitch/designs/browse/SPEC.md",
+      "count": 1,
+      "samples": [
+        ".stitch/designs/browse/SPEC.md"
+      ]
+    },
+    {
+      "pattern": ".stitch/system/DESIGN.md",
+      "count": 1,
+      "samples": [
+        ".stitch/system/DESIGN.md"
+      ]
+    },
+    {
+      "pattern": ".stitch/system/META.md",
+      "count": 1,
+      "samples": [
+        ".stitch/system/META.md"
+      ]
+    }
+  ],
+  "outputs": [
+    ".stitch/designs/browse/META.md",
+    ".stitch/designs/browse/design.html"
+  ],
+  "blocked": false
+}

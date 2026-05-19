@@ -1,0 +1,82 @@
+[
+  {
+    "line": "converge spawn template --path .converge/playbooks/default/templates/screen-widget-split/TASK.md --id profile-split-001-ProfileHeader --var screenId=profile --var screenTitle=Profile --var screenPath=lib/screens/profile/profile_screen.dart --var widgetId=ProfileHeader --var widgetName=ProfileHeader --var widgetFile=lib/screens/profile/_widgets/ProfileHeader.dart",
+    "parsed": {
+      "kind": "template",
+      "path": ".converge/playbooks/default/templates/screen-widget-split/TASK.md",
+      "vars": {
+        "screenId": "profile",
+        "screenTitle": "Profile",
+        "screenPath": "lib/screens/profile/profile_screen.dart",
+        "widgetId": "ProfileHeader",
+        "widgetName": "ProfileHeader",
+        "widgetFile": "lib/screens/profile/_widgets/ProfileHeader.dart"
+      },
+      "id": "profile-split-001-ProfileHeader"
+    }
+  },
+  {
+    "line": "converge spawn template --path .converge/playbooks/default/templates/screen-widget-split/TASK.md --id profile-split-002-NavCard --var screenId=profile --var screenTitle=Profile --var screenPath=lib/screens/profile/profile_screen.dart --var widgetId=NavCard --var widgetName=NavCard --var widgetFile=lib/screens/profile/_widgets/NavCard.dart",
+    "parsed": {
+      "kind": "template",
+      "path": ".converge/playbooks/default/templates/screen-widget-split/TASK.md",
+      "vars": {
+        "screenId": "profile",
+        "screenTitle": "Profile",
+        "screenPath": "lib/screens/profile/profile_screen.dart",
+        "widgetId": "NavCard",
+        "widgetName": "NavCard",
+        "widgetFile": "lib/screens/profile/_widgets/NavCard.dart"
+      },
+      "id": "profile-split-002-NavCard"
+    }
+  },
+  {
+    "line": "converge spawn template --path .converge/playbooks/default/templates/screen-widget-split/TASK.md --id profile-split-003-AboutCard --var screenId=profile --var screenTitle=Profile --var screenPath=lib/screens/profile/profile_screen.dart --var widgetId=AboutCard --var widgetName=AboutCard --var widgetFile=lib/screens/profile/_widgets/AboutCard.dart",
+    "parsed": {
+      "kind": "template",
+      "path": ".converge/playbooks/default/templates/screen-widget-split/TASK.md",
+      "vars": {
+        "screenId": "profile",
+        "screenTitle": "Profile",
+        "screenPath": "lib/screens/profile/profile_screen.dart",
+        "widgetId": "AboutCard",
+        "widgetName": "AboutCard",
+        "widgetFile": "lib/screens/profile/_widgets/AboutCard.dart"
+      },
+      "id": "profile-split-003-AboutCard"
+    }
+  },
+  {
+    "line": "converge spawn template --path .converge/playbooks/default/templates/screen-widget-split/TASK.md --id profile-split-004-BottomNavBar --var screenId=profile --var screenTitle=Profile --var screenPath=lib/screens/profile/profile_screen.dart --var widgetId=BottomNavBar --var widgetName=BottomNavBar --var widgetFile=lib/screens/profile/_widgets/BottomNavBar.dart",
+    "parsed": {
+      "kind": "template",
+      "path": ".converge/playbooks/default/templates/screen-widget-split/TASK.md",
+      "vars": {
+        "screenId": "profile",
+        "screenTitle": "Profile",
+        "screenPath": "lib/screens/profile/profile_screen.dart",
+        "widgetId": "BottomNavBar",
+        "widgetName": "BottomNavBar",
+        "widgetFile": "lib/screens/profile/_widgets/BottomNavBar.dart"
+      },
+      "id": "profile-split-004-BottomNavBar"
+    }
+  },
+  {
+    "line": "converge spawn template --path .converge/playbooks/default/templates/screen-widget-split/TASK.md --id profile-split-005-NavItem --var screenId=profile --var screenTitle=Profile --var screenPath=lib/screens/profile/profile_screen.dart --var widgetId=NavItem --var widgetName=NavItem --var widgetFile=lib/screens/profile/_widgets/NavItem.dart",
+    "parsed": {
+      "kind": "template",
+      "path": ".converge/playbooks/default/templates/screen-widget-split/TASK.md",
+      "vars": {
+        "screenId": "profile",
+        "screenTitle": "Profile",
+        "screenPath": "lib/screens/profile/profile_screen.dart",
+        "widgetId": "NavItem",
+        "widgetName": "NavItem",
+        "widgetFile": "lib/screens/profile/_widgets/NavItem.dart"
+      },
+      "id": "profile-split-005-NavItem"
+    }
+  }
+]

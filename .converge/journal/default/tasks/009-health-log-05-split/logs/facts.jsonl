@@ -1,0 +1,2 @@
+{"type":"file-exists","path":".stitch/designs/health-log/widgets.jsonl","cmd":"test -f \".stitch/designs/health-log/widgets.jsonl\"","id":"file-exists:test -f \".stitch/designs/health-log/widgets.jsonl\"","ok":true,"output":"","exitCode":0,"collectedAt":"2026-05-19T01:08:30.662Z"}
+{"type":"file-exists","path":".stitch/designs/health-log/widgets.jsonl","cmd":"test -f \".stitch/designs/health-log/widgets.jsonl\"","id":"file-exists:test -f \".stitch/designs/health-log/widgets.jsonl\"","ok":true,"output":"","exitCode":0,"collectedAt":"2026-05-19T01:08:30.666Z"}

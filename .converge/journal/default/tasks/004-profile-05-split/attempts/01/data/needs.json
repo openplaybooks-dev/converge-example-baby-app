@@ -1,0 +1,17 @@
+{
+  "taskId": "004-profile-05-split",
+  "attemptNumber": 1,
+  "inputs": [
+    {
+      "pattern": ".stitch/designs/profile/widgets.jsonl",
+      "count": 1,
+      "samples": [
+        ".stitch/designs/profile/widgets.jsonl"
+      ]
+    }
+  ],
+  "outputs": [
+    "lib/screens/profile/_widgets/**/*.dart"
+  ],
+  "blocked": false
+}

@@ -1,0 +1,28 @@
+{
+  "seeded": true,
+  "seededAt": "2026-05-18T23:52:52.767Z",
+  "spawnCount": 5,
+  "keepLooping": false,
+  "subtasks": [
+    {
+      "id": "cycle-tracking-split-001-CurrentCycleCard",
+      "writeToPath": ".converge/journal/default/tasks/cycle-tracking-split-001-CurrentCycleCard/TASK.md"
+    },
+    {
+      "id": "cycle-tracking-split-002-HistoryItemCard",
+      "writeToPath": ".converge/journal/default/tasks/cycle-tracking-split-002-HistoryItemCard/TASK.md"
+    },
+    {
+      "id": "cycle-tracking-split-003-LogCycleBottomSheet",
+      "writeToPath": ".converge/journal/default/tasks/cycle-tracking-split-003-LogCycleBottomSheet/TASK.md"
+    },
+    {
+      "id": "cycle-tracking-split-004-FertileWindowBottomSheet",
+      "writeToPath": ".converge/journal/default/tasks/cycle-tracking-split-004-FertileWindowBottomSheet/TASK.md"
+    },
+    {
+      "id": "cycle-tracking-split-005-EntryDetailBottomSheet",
+      "writeToPath": ".converge/journal/default/tasks/cycle-tracking-split-005-EntryDetailBottomSheet/TASK.md"
+    }
+  ]
+}

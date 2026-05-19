@@ -1,0 +1,18 @@
+[
+  {
+    "id": "design-md-exists",
+    "description": "Design system specification exists",
+    "cmd": "test -f .stitch/system/DESIGN.md",
+    "passed": true,
+    "exit_code": 0,
+    "output": ""
+  },
+  {
+    "id": "meta-md-exists",
+    "description": "META.md exists",
+    "cmd": "test -f .stitch/system/META.md",
+    "passed": true,
+    "exit_code": 0,
+    "output": ""
+  }
+]

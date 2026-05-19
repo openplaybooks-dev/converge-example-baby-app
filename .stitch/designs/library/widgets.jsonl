@@ -1,0 +1,3 @@
+{"name": "LinkCard", "grep": "class _LinkCard", "description": "Tappable card with icon, title, description, and scale animation for library navigation", "shared": true}
+{"name": "NavDestination", "grep": "_buildNavDestination", "description": "Navigation item with icon, label, and active state styling", "shared": true}
+{"name": "BottomNavBar", "grep": "_buildBottomNavigationBar", "description": "Bottom navigation bar with app destinations", "shared": true}

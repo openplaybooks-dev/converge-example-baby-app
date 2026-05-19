@@ -1,0 +1,26 @@
+[
+  {
+    "id": "design-md-exists",
+    "description": "DESIGN.md exists",
+    "cmd": "test -f .stitch/system/DESIGN.md",
+    "passed": true,
+    "exit_code": 0,
+    "output": ""
+  },
+  {
+    "id": "design-md-has-colors",
+    "description": "DESIGN.md contains color palette",
+    "cmd": "grep -q \"Color Palette\" .stitch/system/DESIGN.md",
+    "passed": true,
+    "exit_code": 0,
+    "output": ""
+  },
+  {
+    "id": "design-md-has-typography",
+    "description": "DESIGN.md contains typography",
+    "cmd": "grep -q \"Typography\" .stitch/system/DESIGN.md",
+    "passed": true,
+    "exit_code": 0,
+    "output": ""
+  }
+]

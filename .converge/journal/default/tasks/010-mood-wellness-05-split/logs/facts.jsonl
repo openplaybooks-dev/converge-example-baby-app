@@ -1,0 +1,2 @@
+{"type":"file-exists","path":".stitch/designs/mood-wellness/widgets.jsonl","cmd":"test -f \".stitch/designs/mood-wellness/widgets.jsonl\"","id":"file-exists:test -f \".stitch/designs/mood-wellness/widgets.jsonl\"","ok":true,"output":"","exitCode":0,"collectedAt":"2026-05-19T01:31:06.041Z"}
+{"type":"file-exists","path":".stitch/designs/mood-wellness/widgets.jsonl","cmd":"test -f \".stitch/designs/mood-wellness/widgets.jsonl\"","id":"file-exists:test -f \".stitch/designs/mood-wellness/widgets.jsonl\"","ok":true,"output":"","exitCode":0,"collectedAt":"2026-05-19T01:31:06.044Z"}

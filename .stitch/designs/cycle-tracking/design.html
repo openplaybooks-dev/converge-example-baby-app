@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=375, initial-scale=1.0" />
+  <title>Cycle Tracking — Baby Bump Design</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'lavender': '#7C3AED',
+            'lavender-light': '#A78BFA',
+            'lavender-tint': '#F5F3FF',
+            'blush': '#F9A8D4',
+            'mint': '#6EE7B7',
+            'mist': '#FAFAFA',
+            'graphite': '#1F2937',
+            'stone': '#6B7280',
+            'misty-border': '#E5E7EB',
+            'coral': '#EF4444',
+            'warm-white': '#FFFFFF',
+          },
+          fontFamily: {
+            'nunito': ['Nunito', 'system-ui', 'sans-serif'],
+          },
+          borderRadius: {
+            'card': '16px',
+            'sheet': '28px',
+            'pill': '999px',
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Nunito', system-ui, sans-serif;
+      background: #E8E8E8;
+      display: flex;
+      justify-content: center;
+      padding: 32px 16px;
+      min-height: 100vh;
+    }
+    .phone {
+      width: 375px;
+      min-height: 812px;
+      border-radius: 40px;
+      overflow: hidden;
+      position: relative;
+      box-shadow: 0 24px 64px rgba(0,0,0,0.2);
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+    /* Card shadow */
+    .card-shadow {
+      box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+    }
+    /* FAB press feedback */
+    .fab-press:active {
+      transform: scale(0.9);
+    }
+    /* History item press */
+    .history-press:active {
+      transform: scale(0.98);
+    }
+  </style>
+</head>
+<body>
+  <div class="phone">
+
+    <!-- Scaffold root with AppBar -->
+    <div data-flutter="scaffold" class="flex flex-col min-h-screen bg-lavender-tint">
+
+      <!-- AppBar: lavender primary, title + back button -->
+      <header data-flutter="app-bar" data-color="primary" class="bg-lavender h-14 flex items-center px-2">
+        <button data-flutter="icon-btn" aria-label="Back to Browse" class="w-12 h-12 flex items-center justify-center rounded-full">
+          <svg class="icon w-6 h-6 text-white" data-name="arrow_back" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M15 18l-6-6 6-6"/>
+          </svg>
+        </button>
+        <h1 class="text-xl font-semibold text-white ml-2">Cycle Tracking</h1>
+      </header>
+
+      <!-- Body: ListView with content padding -->
+      <main class="flex-1 overflow-y-auto px-4 pt-6 pb-24">
+
+        <!-- Section 1: Current Cycle Card -->
+        <section class="mb-6">
+          <div class="bg-mist rounded-card card-shadow p-4" data-flutter="card">
+            <!-- Cycle day badge -->
+            <div class="inline-flex items-center px-3 py-1.5 bg-lavender text-white rounded-full text-sm font-semibold mb-3" data-flutter="chip" data-color="primary">
+              Day 14
+            </div>
+
+            <!-- Days counter -->
+            <div class="text-4xl font-bold text-graphite leading-tight mb-1">14</div>
+            <div class="text-sm text-stone mb-4">days since last period</div>
+
+            <!-- Next period row -->
+            <div class="flex items-center gap-2 text-sm text-stone mb-3">
+              <svg class="icon w-4 h-4 text-lavender" data-name="calendar_today" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="4" width="18" height="18" rx="2"/>
+                <path d="M16 2v4M8 2v4M3 10h18"/>
+              </svg>
+              <span>Next period expected: May 28, 2026</span>
+            </div>
+
+            <!-- Fertile window row -->
+            <div class="flex items-center gap-2 px-3 py-2 bg-blush/20 rounded-lg mb-4 cursor-pointer" data-flutter="ink-well" role="button" tabindex="0" aria-label="Tap to learn about your fertile window">
+              <svg class="icon w-4 h-4 text-blush" data-name="egg_alt" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="8" stroke="currentColor" stroke-width="2" fill="none"/>
+                <circle cx="12" cy="12" r="4" fill="currentColor"/>
+              </svg>
+              <span class="text-sm font-medium text-graphite">Fertile window: May 19 - May 23</span>
+            </div>
+
+            <!-- Cycle progress bar -->
+            <div class="h-2 bg-misty-border rounded-full overflow-hidden" data-flutter="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+              <div class="h-full bg-lavender rounded-full" data-color="primary" style="width: 50%"></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Section 2: Cycle History -->
+        <section>
+          <h2 class="text-2xl font-bold text-graphite mb-4">Cycle History</h2>
+
+          <!-- History items -->
+          <article class="bg-mist rounded-xl card-shadow p-4 mb-3 history-press cursor-pointer" data-flutter="card" data-flutter="list-tile" role="button" tabindex="0" aria-label="Cycle from April 1 to April 28, 2026, 28 days">
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-base font-semibold text-graphite">Apr 1 - Apr 28, 2026</span>
+              <span class="px-2 py-0.5 bg-lavender-tint text-lavender text-xs font-medium rounded-lg">28 days</span>
+            </div>
+            <div class="h-1.5 bg-misty-border rounded-full mb-2 overflow-hidden">
+              <div class="h-full bg-lavender rounded-full" data-color="primary" style="width: 100%"></div>
+            </div>
+            <span class="text-sm text-stone">Regular cycle this month</span>
+          </article>
+
+          <article class="bg-mist rounded-xl card-shadow p-4 mb-3 history-press cursor-pointer" data-flutter="card" data-flutter="list-tile" role="button" tabindex="0" aria-label="Cycle from March 4 to March 31, 2026, 27 days">
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-base font-semibold text-graphite">Mar 4 - Mar 31, 2026</span>
+              <span class="px-2 py-0.5 bg-lavender-tint text-lavender text-xs font-medium rounded-lg">27 days</span>
+            </div>
+            <div class="h-1.5 bg-misty-border rounded-full mb-2 overflow-hidden">
+              <div class="h-full bg-lavender rounded-full" data-color="primary" style="width: 96%"></div>
+            </div>
+            <span class="text-sm text-stone">Shorter than usual</span>
+          </article>
+
+          <article class="bg-mist rounded-xl card-shadow p-4 mb-3 history-press cursor-pointer" data-flutter="card" data-flutter="list-tile" role="button" tabindex="0" aria-label="Cycle from February 5 to March 4, 2026, 27 days, irregular">
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-base font-semibold text-graphite">Feb 5 - Mar 4, 2026</span>
+              <span class="flex items-center gap-2">
+                <span class="px-2 py-0.5 bg-lavender-tint text-lavender text-xs font-medium rounded-lg">27 days</span>
+                <span class="w-2 h-2 bg-blush rounded-full" data-color="secondary" aria-label="Irregular"></span>
+              </span>
+            </div>
+            <div class="h-1.5 bg-misty-border rounded-full mb-2 overflow-hidden">
+              <div class="h-full bg-lavender rounded-full" data-color="primary" style="width: 96%"></div>
+            </div>
+            <span class="text-sm text-stone">Had stress this month</span>
+          </article>
+
+        </section>
+      </main>
+
+      <!-- FAB: Add new cycle entry -->
+      <button data-flutter="fab" data-icon="add" class="fab-press absolute bottom-20 right-4 w-14 h-14 bg-lavender rounded-full flex items-center justify-center shadow-lg" aria-label="Add new cycle entry">
+        <svg class="icon w-6 h-6 text-white" data-name="add" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M12 5v14M5 12h14"/>
+        </svg>
+      </button>
+
+    </div>
+
+    <!-- Bottom Sheet: Log Cycle (preview overlay) -->
+    <div data-flutter="bottom-sheet" class="absolute bottom-0 left-0 right-0 bg-warm-white rounded-t-[28px] p-4 pb-8 shadow-xl">
+      <!-- Handle bar -->
+      <div class="w-10 h-1 bg-misty-border rounded-full mx-auto mb-4"></div>
+
+      <h2 class="text-xl font-semibold text-graphite mb-4">Log Cycle</h2>
+
+      <!-- Date field -->
+      <div class="mb-4">
+        <label class="block text-sm font-medium text-stone mb-1">Period Started</label>
+        <input type="date" class="w-full px-4 py-3 bg-mist border border-misty-border rounded-xl text-graphite font-medium" data-flutter="text-field" value="2026-05-15">
+      </div>
+
+      <!-- Cycle length field -->
+      <div class="mb-4">
+        <label class="block text-sm font-medium text-stone mb-1">Cycle Length (days)</label>
+        <input type="number" class="w-full px-4 py-3 bg-mist border border-misty-border rounded-xl text-graphite font-medium" data-flutter="text-field" value="28" placeholder="28">
+      </div>
+
+      <!-- Notes field -->
+      <div class="mb-4">
+        <label class="block text-sm font-medium text-stone mb-1">Notes</label>
+        <textarea class="w-full px-4 py-3 bg-mist border border-misty-border rounded-xl text-graphite font-medium min-h-[56px] resize-none" data-flutter="text-field" placeholder="Add notes..."></textarea>
+      </div>
+
+      <!-- Irregular toggle -->
+      <div class="flex items-center justify-between py-3 mb-6">
+        <span class="text-base font-medium text-graphite">Irregular cycle</span>
+        <div class="w-13 h-8 bg-misty-border rounded-full relative cursor-pointer" data-flutter="switch" role="switch" aria-checked="false" tabindex="0">
+          <div class="absolute top-1 left-1 w-6 h-6 bg-white rounded-full shadow transition-transform duration-200"></div>
+        </div>
+      </div>
+
+      <!-- Action buttons -->
+      <div class="flex gap-3">
+        <button class="flex-1 py-3.5 text-sm font-semibold text-stone" data-flutter="text-btn">Cancel</button>
+        <button class="flex-2 py-3.5 px-6 bg-lavender text-white text-sm font-semibold rounded-full" data-flutter="filled-btn" data-color="primary">Save</button>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>

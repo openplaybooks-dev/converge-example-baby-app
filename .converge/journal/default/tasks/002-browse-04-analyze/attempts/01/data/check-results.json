@@ -1,0 +1,10 @@
+[
+  {
+    "id": "widgets-json-exists",
+    "description": "widgets.jsonl exists for browse",
+    "cmd": "test -f .stitch/designs/browse/widgets.jsonl",
+    "passed": true,
+    "exit_code": 0,
+    "output": ""
+  }
+]

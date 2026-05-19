@@ -1,0 +1,17 @@
+{
+  "taskId": "005-cycle-tracking-04-analyze",
+  "attemptNumber": 1,
+  "inputs": [
+    {
+      "pattern": "lib/screens/cycle_tracking/cycle_tracking_screen.dart",
+      "count": 1,
+      "samples": [
+        "lib/screens/cycle_tracking/cycle_tracking_screen.dart"
+      ]
+    }
+  ],
+  "outputs": [
+    ".stitch/designs/cycle-tracking/widgets.jsonl"
+  ],
+  "blocked": false
+}

@@ -1,0 +1,10 @@
+{
+  "taskId": "013-settings-04-analyze",
+  "checks": [
+    {
+      "id": "widgets-json-exists",
+      "description": "widgets.jsonl exists for settings",
+      "cmd": "test -f .stitch/designs/settings/widgets.jsonl"
+    }
+  ]
+}

@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Baby Bump - Profile</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --color-primary: #7C3AED;
+      --color-secondary: #F9A8D4;
+      --color-tertiary: #6EE7B7;
+      --color-background: #F5F3FF;
+      --color-surface: #FAFAFA;
+      --color-text-primary: #1F2937;
+      --color-text-secondary: #6B7280;
+      --color-border: #E5E7EB;
+      --color-error: #EF4444;
+      --color-white: #FFFFFF;
+      --radius-card: 16px;
+      --radius-button: 24px;
+      --spacing-unit: 8px;
+      --font-family: 'Nunito', sans-serif;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+
+    body {
+      font-family: var(--font-family);
+      background: #1E1B2E;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 20px 0;
+    }
+
+    .phone {
+      width: 375px;
+      min-height: 812px;
+      background: var(--color-background);
+      border-radius: 40px;
+      overflow: hidden;
+      position: relative;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.4);
+    }
+
+    .status-bar {
+      height: 44px;
+      background: var(--color-background);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 24px;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--color-text-primary);
+    }
+
+    .status-bar-icons {
+      display: flex;
+      gap: 6px;
+      align-items: center;
+    }
+
+    .status-bar-icons svg {
+      width: 18px;
+      height: 18px;
+    }
+
+    .app-bar {
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 16px;
+      background: var(--color-background);
+    }
+
+    .app-bar-title {
+      font-size: 20px;
+      font-weight: 600;
+      color: var(--color-text-primary);
+    }
+
+    .content {
+      padding: 0 16px 100px;
+      overflow-y: auto;
+    }
+
+    .section {
+      margin-bottom: 24px;
+    }
+
+    .profile-header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 16px;
+    }
+
+    .avatar {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 12px;
+    }
+
+    .avatar-initial {
+      font-size: 32px;
+      font-weight: 700;
+      color: var(--color-white);
+    }
+
+    .user-name {
+      font-size: 32px;
+      font-weight: 700;
+      color: var(--color-text-primary);
+      line-height: 40px;
+      margin-bottom: 4px;
+    }
+
+    .due-date-text {
+      font-size: 14px;
+      font-weight: 400;
+      color: var(--color-text-secondary);
+      line-height: 20px;
+      margin-bottom: 12px;
+    }
+
+    .edit-profile-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 8px 16px;
+      background: transparent;
+      border: none;
+      font-family: var(--font-family);
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--color-primary);
+      cursor: pointer;
+      border-radius: var(--radius-button);
+      min-height: 48px;
+      transition: opacity 200ms ease-out;
+    }
+
+    .edit-profile-btn:hover {
+      opacity: 0.7;
+    }
+
+    .edit-profile-btn:active {
+      opacity: 0.5;
+    }
+
+    .nav-card {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 16px;
+      background: var(--color-white);
+      border-radius: var(--radius-card);
+      padding: 16px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+      cursor: pointer;
+      transition: transform 200ms ease-out, box-shadow 200ms ease-out;
+      text-decoration: none;
+      min-height: 56px;
+    }
+
+    .nav-card:hover {
+      transform: scale(0.98);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    }
+
+    .nav-card:active {
+      transform: scale(0.98);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    }
+
+    .icon-container {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .icon-container.mindfulness {
+      background: rgba(249, 168, 212, 0.2);
+    }
+
+    .icon-container.settings {
+      background: rgba(124, 58, 237, 0.15);
+    }
+
+    .icon-container svg {
+      width: 24px;
+      height: 24px;
+    }
+
+    .icon-container.mindfulness svg {
+      color: var(--color-secondary);
+    }
+
+    .icon-container.settings svg {
+      color: var(--color-primary);
+    }
+
+    .nav-card-content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .nav-card-title {
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--color-text-primary);
+      line-height: 24px;
+    }
+
+    .nav-card-description {
+      font-size: 14px;
+      font-weight: 400;
+      color: var(--color-text-secondary);
+      line-height: 20px;
+    }
+
+    .chevron {
+      color: var(--color-text-secondary);
+      flex-shrink: 0;
+    }
+
+    .chevron svg {
+      width: 24px;
+      height: 24px;
+    }
+
+    .about-card {
+      background: var(--color-white);
+      border-radius: var(--radius-card);
+      padding: 16px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    }
+
+    .about-title {
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--color-text-primary);
+      line-height: 24px;
+      margin-bottom: 4px;
+    }
+
+    .about-version {
+      font-size: 12px;
+      font-weight: 400;
+      color: var(--color-text-secondary);
+      line-height: 16px;
+      margin-bottom: 8px;
+    }
+
+    .privacy-link {
+      display: inline-flex;
+      align-items: center;
+      background: transparent;
+      border: none;
+      font-family: var(--font-family);
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--color-primary);
+      cursor: pointer;
+      padding: 0;
+      min-height: 48px;
+      transition: opacity 200ms ease-out;
+    }
+
+    .privacy-link:hover {
+      opacity: 0.7;
+    }
+
+    .privacy-link:active {
+      opacity: 0.5;
+    }
+
+    .bottom-nav {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 80px;
+      background: var(--color-white);
+      display: flex;
+      justify-content: space-around;
+      align-items: flex-start;
+      padding-top: 8px;
+      border-top: 1px solid var(--color-border);
+    }
+
+    .nav-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 4px;
+      padding: 8px 16px;
+      border: none;
+      background: none;
+      cursor: pointer;
+      position: relative;
+    }
+
+    .nav-item.active::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      width: 40px;
+      height: 4px;
+      background: var(--color-primary);
+      border-radius: 2px;
+      opacity: 0.15;
+    }
+
+    .nav-item svg {
+      width: 24px;
+      height: 24px;
+      color: var(--color-text-secondary);
+    }
+
+    .nav-item.active svg {
+      color: var(--color-primary);
+    }
+
+    .nav-item span {
+      font-size: 11px;
+      font-weight: 400;
+      color: var(--color-text-secondary);
+    }
+
+    .nav-item.active span {
+      font-weight: 600;
+      color: var(--color-primary);
+    }
+
+    .home-indicator {
+      position: absolute;
+      bottom: 8px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 134px;
+      height: 5px;
+      background: var(--color-text-primary);
+      border-radius: 3px;
+      opacity: 0.2;
+    }
+  </style>
+</head>
+<body>
+  <div class="phone scaffold" data-flutter="scaffold">
+    <div class="status-bar">
+      <span>9:41</span>
+      <div class="status-bar-icons">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M5 12.55a11 11 0 0 1 14.08 0M1.42 9a16 16 0 0 1 21.16 0M8.53 16.11a6 6 0 0 1 6.95 0M12 20h.01"/>
+        </svg>
+        <svg viewBox="0 0 24 24" fill="currentColor">
+          <rect x="2" y="7" width="18" height="10" rx="2" stroke="currentColor" stroke-width="2" fill="none"/>
+          <rect x="4" y="9" width="14" height="6" rx="1" fill="currentColor"/>
+        </svg>
+      </div>
+    </div>
+
+    <header class="app-bar">
+      <h1 class="app-bar-title">Profile</h1>
+    </header>
+
+    <main class="content">
+      <section class="section profile-header">
+        <div class="avatar" aria-label="User profile picture">
+          <span class="avatar-initial">S</span>
+        </div>
+        <div class="user-name" data-color="deep-graphite">Sarah</div>
+        <div class="due-date-text" data-color="stone-grey">Due December 15, 2026</div>
+        <button class="edit-profile-btn" aria-label="Edit profile, double tap to open settings">
+          Edit profile
+        </button>
+      </section>
+
+      <section class="section">
+        <a href="#/mindfulness" class="nav-card" data-route="/mindfulness" aria-label="Mindfulness, double tap to open mindfulness screen">
+          <div class="icon-container mindfulness">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
+              <circle cx="12" cy="12" r="5"/>
+              <path d="M12 7v5l3 3"/>
+            </svg>
+          </div>
+          <div class="nav-card-content">
+            <div class="nav-card-title">Mindfulness</div>
+            <div class="nav-card-description">Breathing exercises, stretching, relaxation</div>
+          </div>
+          <div class="chevron">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M9 18l6-6-6-6"/>
+            </svg>
+          </div>
+        </a>
+      </section>
+
+      <section class="section">
+        <a href="#/settings" class="nav-card" data-route="/settings" aria-label="Settings, double tap to open settings screen">
+          <div class="icon-container settings">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="3"/>
+              <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+            </svg>
+          </div>
+          <div class="nav-card-content">
+            <div class="nav-card-title">Settings</div>
+            <div class="nav-card-description">Notifications, due date, data export</div>
+          </div>
+          <div class="chevron">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M9 18l6-6-6-6"/>
+            </svg>
+          </div>
+        </a>
+      </section>
+
+      <section class="section">
+        <div class="about-card">
+          <div class="about-title">Baby Bump</div>
+          <div class="about-version">Version 1.0.0</div>
+          <button class="privacy-link">Privacy policy</button>
+        </div>
+      </section>
+    </main>
+
+    <nav class="bottom-nav" role="navigation" aria-label="Main navigation">
+      <button class="nav-item" aria-label="Home">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+          <polyline points="9 22 9 12 15 12 15 22"/>
+        </svg>
+        <span>Home</span>
+      </button>
+      <button class="nav-item" aria-label="Browse">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="11" cy="11" r="8"/>
+          <path d="M21 21l-4.35-4.35"/>
+        </svg>
+        <span>Browse</span>
+      </button>
+      <button class="nav-item" aria-label="Library">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/>
+        </svg>
+        <span>Library</span>
+      </button>
+      <button class="nav-item active" aria-current="page" aria-label="Profile">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+          <circle cx="12" cy="8" r="4"/>
+          <path d="M4 20c0-4 4-6 8-6s8 2 8 6"/>
+        </svg>
+        <span>Profile</span>
+      </button>
+    </nav>
+
+    <div class="home-indicator"></div>
+  </div>
+</body>
+</html>

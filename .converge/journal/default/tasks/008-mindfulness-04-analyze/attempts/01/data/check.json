@@ -1,0 +1,10 @@
+{
+  "taskId": "008-mindfulness-04-analyze",
+  "checks": [
+    {
+      "id": "widgets-json-exists",
+      "description": "widgets.jsonl exists for mindfulness",
+      "cmd": "test -f .stitch/designs/mindfulness/widgets.jsonl"
+    }
+  ]
+}

@@ -1,0 +1,324 @@
+{
+  "iteration": 2,
+  "stallCount": 1,
+  "nodes": [
+    {
+      "id": "check-seed-seeded",
+      "handler": "check-seed-seeded",
+      "status": "done",
+      "origin": "initial",
+      "data": {
+        "priority": 100
+      },
+      "result": {
+        "action": "continue",
+        "durationMs": 0
+      }
+    },
+    {
+      "id": "check-outputs-exist",
+      "handler": "check-outputs-exist",
+      "status": "done",
+      "origin": "initial",
+      "data": {
+        "priority": 99
+      },
+      "result": {
+        "action": "continue",
+        "durationMs": 1
+      }
+    },
+    {
+      "id": "detect-gaps",
+      "handler": "detect-gaps",
+      "status": "done",
+      "origin": "initial",
+      "data": {
+        "priority": 98
+      },
+      "result": {
+        "action": "continue",
+        "gaps": [
+          {
+            "id": "003-library-03-convert-check-failed-no-hardcoded-colors",
+            "type": "incomplete",
+            "level": "task",
+            "scope": "003-library-03-convert",
+            "severity": "high",
+            "description": "[003-library-03-convert] Check failed: No hardcoded colors — uses colorScheme",
+            "source": "unit",
+            "detected": "2026-05-18T23:29:11.434Z",
+            "resolved": false,
+            "checks": [],
+            "metadata": {
+              "gapKind": "check-failed",
+              "checkId": "no-hardcoded-colors",
+              "checkCmd": "! grep -qE 'Color\\(0x|Colors\\.' lib/screens/library/library_screen.dart",
+              "checkDescription": "No hardcoded colors — uses colorScheme",
+              "checkOutput": "",
+              "checkExitCode": 1,
+              "taskPrompt": "# Convert: Library\n\nConvert the constrained HTML design to a pixel-perfect Flutter widget using the **stitch-flutter** skill.\n\n## Inputs\n- `.stitch/designs/library/design.html` — HTML design mockup (written in Flutter HTML Glossary vocabulary)\n- `.stitch/designs/library/SPEC.md` — Screen specification\n- `.stitch/system/DESIGN.md` — Design system specification\n\n## How It Works\n\nThe HTML mockup uses the **Flutter HTML Glossary** — a constrained vocabulary where every HTML class and `data-*` attribute maps 1:1 to a Flutter widget. This enables mechanical, pixel-perfect conversion.\n\n## Conversion Steps\n\n1. **Read HTML** — Parse `.stitch/designs/library/design.html` and extract:\n   - `:root` CSS tokens → update `lib/theme/app_theme.dart` if new tokens found\n   - `.scaffold` element tree → this is the conversion entry point\n   - `data-*` attributes → Flutter widget parameters\n   - `data-animate` attributes → `flutter_animate` chains\n   - `aria-*` attributes → `Semantics` widgets\n\n2. **Walk the DOM** — Process each glossary element top-down:\n   - `.scaffold` → `Scaffold()`\n   - `.app-bar` → `AppBar()`\n   - `.column` → `Column()`\n   - `.row` → `Row()`\n   - `.card` → `Card()`\n   - `.ink-well[data-route]` → `InkWell(onTap: () => context.push(route))`\n   - `.network-image` → `CachedNetworkImage()`\n   - `.icon[data-name]` → `Icon(Icons.{name})`\n   - Text classes (`.title-large`, `.body-medium`, etc.) → `Text(..., style: textTheme.X)`\n   - `data-color` → `colorScheme.X`\n   - `data-spacing` → `AppTheme.spaceX`\n   - `data-radius` → `AppTheme.radiusX`\n\n3. **Generate Dart** — Write `lib/screens/library/library_screen.dart`:\n   ```dart\n   import 'package:flutter/material.dart';\n   import 'package:cached_network_image/cached_network_image.dart';\n   import 'package:flutter_animate/flutter_animate.dart';\n   import 'package:folio/theme/app_theme.dart';\n\n   class LibraryScreen extends StatelessWidget {\n     const LibraryScreen({super.key});\n\n     @override\n     Widget build(BuildContext context) {\n       final theme = Theme.of(context);\n       final colorScheme = theme.colorScheme;\n       final textTheme = theme.textTheme;\n\n       return Scaffold(\n         // ... mechanically converted from glossary elements\n       );\n     }\n   }\n   ```\n\n4. **Update router** — Add route to `lib/router/app_router.dart`:\n   ```dart\n   GoRoute(\n     path: '/library',\n     builder: (context, state) => const LibraryScreen(),\n   ),\n   ```\n\n5. **Verify** — Run `dart analyze lib/screens/library/library_screen.dart`\n\n## Reference Skills\n\n- Read **flutter-building-layouts** for constraint rules (constraints down, sizes up), avoiding unbounded constraints in flex boxes, and when to use `Expanded` vs `Flexible` vs `SizedBox`.\n- Read **flutter-animating-apps** for Hero transition setup, implicit vs explicit animations, and staggered animation patterns.\n\n## Quality Gates\n\n- **No hardcoded colors** — `Color(0xFF...)` and `Colors.blue` are banned; use `colorScheme.X`\n- **No hardcoded text styles** — `TextStyle(fontSize: 16)` is banned; use `textTheme.X`\n- **No hardcoded spacing** — `EdgeInsets.all(16)` is banned; use `AppTheme.spaceMd`\n- **No Container abuse** — prefer `SizedBox`, `Padding`, `DecoratedBox` when Container is overkill\n- **Use const** — `const` constructor wherever possible\n- **Trailing commas** — on every parameter list\n\n## Success Criteria\n\n- `lib/screens/library/library_screen.dart` exists with valid Dart\n- Uses `Theme.of(context)` for all styling (colors, text, shapes)\n- No hardcoded colors, text styles, or spacing values\n- Route added to `app_router.dart`\n- `dart analyze` passes",
+              "taskSkill": "stitch-flutter",
+              "taskId": "003-library-03-convert",
+              "taskTitle": "Convert: Library",
+              "unitPath": "/Users/minh/Documents/openplayboosks/examples/baby-app/.converge/journal/default/tasks/003-library-03-convert/TASK.md",
+              "factId": "check:no-hardcoded-colors"
+            }
+          }
+        ],
+        "durationMs": 1966
+      }
+    },
+    {
+      "id": "signal-done",
+      "handler": "signal-done",
+      "status": "buffered",
+      "origin": "initial",
+      "data": {
+        "priority": 97,
+        "applicable": "noGapsAndExecuted"
+      }
+    },
+    {
+      "id": "run-executor",
+      "handler": "run-executor",
+      "status": "done",
+      "origin": "initial",
+      "data": {
+        "priority": 65
+      },
+      "result": {
+        "action": "continue",
+        "durationMs": 0
+      }
+    },
+    {
+      "id": "repair-loop",
+      "handler": "repair-loop",
+      "status": "done",
+      "origin": "initial",
+      "data": {
+        "priority": 55
+      },
+      "result": {
+        "action": "continue",
+        "durationMs": 1504
+      }
+    },
+    {
+      "id": "run-skill",
+      "handler": "run-skill",
+      "status": "done",
+      "origin": "reactive",
+      "data": {
+        "priority": 64
+      },
+      "result": {
+        "action": "continue",
+        "durationMs": 11973
+      }
+    },
+    {
+      "id": "verify",
+      "handler": "verify",
+      "status": "done",
+      "origin": "initial",
+      "data": {
+        "priority": 50
+      },
+      "result": {
+        "action": "continue",
+        "gaps": [
+          {
+            "id": "003-library-03-convert-check-failed-no-hardcoded-colors",
+            "type": "incomplete",
+            "level": "task",
+            "scope": "003-library-03-convert",
+            "severity": "high",
+            "description": "[003-library-03-convert] Check failed: No hardcoded colors — uses colorScheme",
+            "source": "unit",
+            "detected": "2026-05-18T23:30:00.793Z",
+            "resolved": false,
+            "checks": [],
+            "metadata": {
+              "gapKind": "check-failed",
+              "checkId": "no-hardcoded-colors",
+              "checkCmd": "! grep -qE 'Color\\(0x|Colors\\.' lib/screens/library/library_screen.dart",
+              "checkDescription": "No hardcoded colors — uses colorScheme",
+              "checkOutput": "",
+              "checkExitCode": 1,
+              "taskPrompt": "# Convert: Library\n\nConvert the constrained HTML design to a pixel-perfect Flutter widget using the **stitch-flutter** skill.\n\n## Inputs\n- `.stitch/designs/library/design.html` — HTML design mockup (written in Flutter HTML Glossary vocabulary)\n- `.stitch/designs/library/SPEC.md` — Screen specification\n- `.stitch/system/DESIGN.md` — Design system specification\n\n## How It Works\n\nThe HTML mockup uses the **Flutter HTML Glossary** — a constrained vocabulary where every HTML class and `data-*` attribute maps 1:1 to a Flutter widget. This enables mechanical, pixel-perfect conversion.\n\n## Conversion Steps\n\n1. **Read HTML** — Parse `.stitch/designs/library/design.html` and extract:\n   - `:root` CSS tokens → update `lib/theme/app_theme.dart` if new tokens found\n   - `.scaffold` element tree → this is the conversion entry point\n   - `data-*` attributes → Flutter widget parameters\n   - `data-animate` attributes → `flutter_animate` chains\n   - `aria-*` attributes → `Semantics` widgets\n\n2. **Walk the DOM** — Process each glossary element top-down:\n   - `.scaffold` → `Scaffold()`\n   - `.app-bar` → `AppBar()`\n   - `.column` → `Column()`\n   - `.row` → `Row()`\n   - `.card` → `Card()`\n   - `.ink-well[data-route]` → `InkWell(onTap: () => context.push(route))`\n   - `.network-image` → `CachedNetworkImage()`\n   - `.icon[data-name]` → `Icon(Icons.{name})`\n   - Text classes (`.title-large`, `.body-medium`, etc.) → `Text(..., style: textTheme.X)`\n   - `data-color` → `colorScheme.X`\n   - `data-spacing` → `AppTheme.spaceX`\n   - `data-radius` → `AppTheme.radiusX`\n\n3. **Generate Dart** — Write `lib/screens/library/library_screen.dart`:\n   ```dart\n   import 'package:flutter/material.dart';\n   import 'package:cached_network_image/cached_network_image.dart';\n   import 'package:flutter_animate/flutter_animate.dart';\n   import 'package:folio/theme/app_theme.dart';\n\n   class LibraryScreen extends StatelessWidget {\n     const LibraryScreen({super.key});\n\n     @override\n     Widget build(BuildContext context) {\n       final theme = Theme.of(context);\n       final colorScheme = theme.colorScheme;\n       final textTheme = theme.textTheme;\n\n       return Scaffold(\n         // ... mechanically converted from glossary elements\n       );\n     }\n   }\n   ```\n\n4. **Update router** — Add route to `lib/router/app_router.dart`:\n   ```dart\n   GoRoute(\n     path: '/library',\n     builder: (context, state) => const LibraryScreen(),\n   ),\n   ```\n\n5. **Verify** — Run `dart analyze lib/screens/library/library_screen.dart`\n\n## Reference Skills\n\n- Read **flutter-building-layouts** for constraint rules (constraints down, sizes up), avoiding unbounded constraints in flex boxes, and when to use `Expanded` vs `Flexible` vs `SizedBox`.\n- Read **flutter-animating-apps** for Hero transition setup, implicit vs explicit animations, and staggered animation patterns.\n\n## Quality Gates\n\n- **No hardcoded colors** — `Color(0xFF...)` and `Colors.blue` are banned; use `colorScheme.X`\n- **No hardcoded text styles** — `TextStyle(fontSize: 16)` is banned; use `textTheme.X`\n- **No hardcoded spacing** — `EdgeInsets.all(16)` is banned; use `AppTheme.spaceMd`\n- **No Container abuse** — prefer `SizedBox`, `Padding`, `DecoratedBox` when Container is overkill\n- **Use const** — `const` constructor wherever possible\n- **Trailing commas** — on every parameter list\n\n## Success Criteria\n\n- `lib/screens/library/library_screen.dart` exists with valid Dart\n- Uses `Theme.of(context)` for all styling (colors, text, shapes)\n- No hardcoded colors, text styles, or spacing values\n- Route added to `app_router.dart`\n- `dart analyze` passes",
+              "taskSkill": "stitch-flutter",
+              "taskId": "003-library-03-convert",
+              "taskTitle": "Convert: Library",
+              "unitPath": "/Users/minh/Documents/openplayboosks/examples/baby-app/.converge/journal/default/tasks/003-library-03-convert/TASK.md",
+              "factId": "check:no-hardcoded-colors"
+            }
+          }
+        ],
+        "durationMs": 1152
+      }
+    },
+    {
+      "id": "check-stall",
+      "handler": "check-stall",
+      "status": "done",
+      "origin": "initial",
+      "data": {
+        "priority": 45
+      },
+      "result": {
+        "action": "continue",
+        "durationMs": 0
+      }
+    },
+    {
+      "id": "advance-attempt",
+      "handler": "advance-attempt",
+      "status": "done",
+      "origin": "initial",
+      "data": {
+        "priority": 40
+      },
+      "result": {
+        "action": "continue",
+        "durationMs": 0
+      }
+    },
+    {
+      "id": "run-strategy:task-run#7",
+      "handler": "run-strategy",
+      "status": "done",
+      "origin": "planned",
+      "data": {
+        "strategy": "task-run",
+        "priority": 55
+      },
+      "result": {
+        "action": "continue",
+        "durationMs": 34726
+      }
+    },
+    {
+      "id": "check-seed-seeded#2",
+      "handler": "check-seed-seeded",
+      "status": "done",
+      "origin": "reactive",
+      "data": {
+        "priority": 100
+      },
+      "result": {
+        "action": "continue",
+        "durationMs": 0
+      }
+    },
+    {
+      "id": "check-outputs-exist#2",
+      "handler": "check-outputs-exist",
+      "status": "done",
+      "origin": "reactive",
+      "data": {
+        "priority": 99
+      },
+      "result": {
+        "action": "done",
+        "success": true,
+        "reason": "Outputs already present",
+        "durationMs": 1081
+      }
+    },
+    {
+      "id": "detect-gaps#2",
+      "handler": "detect-gaps",
+      "status": "buffered",
+      "origin": "reactive",
+      "data": {
+        "priority": 98
+      }
+    },
+    {
+      "id": "signal-done#2",
+      "handler": "signal-done",
+      "status": "buffered",
+      "origin": "reactive",
+      "data": {
+        "priority": 97,
+        "applicable": "noGapsAndExecuted"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "from": "_start",
+      "to": "check-seed-seeded",
+      "iteration": 1,
+      "ts": "2026-05-18T23:29:09.467Z"
+    },
+    {
+      "from": "check-seed-seeded",
+      "to": "check-outputs-exist",
+      "iteration": 1,
+      "ts": "2026-05-18T23:29:09.468Z"
+    },
+    {
+      "from": "check-outputs-exist",
+      "to": "detect-gaps",
+      "iteration": 1,
+      "ts": "2026-05-18T23:29:11.434Z"
+    },
+    {
+      "from": "detect-gaps",
+      "to": "run-executor",
+      "iteration": 1,
+      "ts": "2026-05-18T23:29:11.435Z"
+    },
+    {
+      "from": "run-executor",
+      "to": "run-skill",
+      "iteration": 1,
+      "ts": "2026-05-18T23:29:23.408Z"
+    },
+    {
+      "from": "run-skill",
+      "to": "repair-loop",
+      "iteration": 1,
+      "ts": "2026-05-18T23:29:24.913Z"
+    },
+    {
+      "from": "repair-loop",
+      "to": "run-strategy:task-run#7",
+      "iteration": 1,
+      "ts": "2026-05-18T23:29:59.640Z"
+    },
+    {
+      "from": "run-strategy:task-run#7",
+      "to": "verify",
+      "iteration": 1,
+      "ts": "2026-05-18T23:30:00.793Z"
+    },
+    {
+      "from": "verify",
+      "to": "check-stall",
+      "iteration": 1,
+      "ts": "2026-05-18T23:30:00.794Z"
+    },
+    {
+      "from": "check-stall",
+      "to": "advance-attempt",
+      "iteration": 1,
+      "ts": "2026-05-18T23:30:00.795Z"
+    },
+    {
+      "from": "advance-attempt",
+      "to": "check-seed-seeded#2",
+      "iteration": 2,
+      "ts": "2026-05-18T23:30:00.795Z"
+    },
+    {
+      "from": "check-seed-seeded#2",
+      "to": "check-outputs-exist#2",
+      "iteration": 2,
+      "ts": "2026-05-18T23:30:01.876Z"
+    }
+  ]
+}

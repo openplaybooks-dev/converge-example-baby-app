@@ -1,0 +1,26 @@
+[
+  {
+    "id": "prd-exists",
+    "description": "PRD.md exists",
+    "cmd": "test -f PRD.md",
+    "passed": true,
+    "exit_code": 0,
+    "output": ""
+  },
+  {
+    "id": "prd-has-sections",
+    "description": "PRD.md has expected sections",
+    "cmd": "grep -qE \"## (Overview|Features|Requirements)\" PRD.md",
+    "passed": true,
+    "exit_code": 0,
+    "output": ""
+  },
+  {
+    "id": "prd-matches-idea",
+    "description": "PRD.md references the app name from idea.md",
+    "cmd": "first=$(head -1 idea.md | sed 's/^#* *//' | awk '{print $1}'); grep -qi \"$first\" PRD.md",
+    "passed": true,
+    "exit_code": 0,
+    "output": ""
+  }
+]

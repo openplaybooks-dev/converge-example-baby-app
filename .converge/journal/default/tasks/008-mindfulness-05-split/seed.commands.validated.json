@@ -1,0 +1,50 @@
+[
+  {
+    "line": "converge spawn template --path .converge/playbooks/default/templates/screen-widget-split/TASK.md --id mindfulness-split-001-BreathingExerciseCard --var screenId=mindfulness --var screenTitle=Mindfulness --var screenPath=lib/screens/mindfulness/mindfulness_screen.dart --var widgetId=BreathingExerciseCard --var widgetName=BreathingExerciseCard --var widgetFile=lib/screens/mindfulness/_widgets/BreathingExerciseCard.dart",
+    "parsed": {
+      "kind": "template",
+      "path": ".converge/playbooks/default/templates/screen-widget-split/TASK.md",
+      "vars": {
+        "screenId": "mindfulness",
+        "screenTitle": "Mindfulness",
+        "screenPath": "lib/screens/mindfulness/mindfulness_screen.dart",
+        "widgetId": "BreathingExerciseCard",
+        "widgetName": "BreathingExerciseCard",
+        "widgetFile": "lib/screens/mindfulness/_widgets/BreathingExerciseCard.dart"
+      },
+      "id": "mindfulness-split-001-BreathingExerciseCard"
+    }
+  },
+  {
+    "line": "converge spawn template --path .converge/playbooks/default/templates/screen-widget-split/TASK.md --id mindfulness-split-002-StretchingRoutineCard --var screenId=mindfulness --var screenTitle=Mindfulness --var screenPath=lib/screens/mindfulness/mindfulness_screen.dart --var widgetId=StretchingRoutineCard --var widgetName=StretchingRoutineCard --var widgetFile=lib/screens/mindfulness/_widgets/StretchingRoutineCard.dart",
+    "parsed": {
+      "kind": "template",
+      "path": ".converge/playbooks/default/templates/screen-widget-split/TASK.md",
+      "vars": {
+        "screenId": "mindfulness",
+        "screenTitle": "Mindfulness",
+        "screenPath": "lib/screens/mindfulness/mindfulness_screen.dart",
+        "widgetId": "StretchingRoutineCard",
+        "widgetName": "StretchingRoutineCard",
+        "widgetFile": "lib/screens/mindfulness/_widgets/StretchingRoutineCard.dart"
+      },
+      "id": "mindfulness-split-002-StretchingRoutineCard"
+    }
+  },
+  {
+    "line": "converge spawn template --path .converge/playbooks/default/templates/screen-widget-split/TASK.md --id mindfulness-split-003-ExerciseBadge --var screenId=mindfulness --var screenTitle=Mindfulness --var screenPath=lib/screens/mindfulness/mindfulness_screen.dart --var widgetId=ExerciseBadge --var widgetName=ExerciseBadge --var widgetFile=lib/screens/mindfulness/_widgets/ExerciseBadge.dart",
+    "parsed": {
+      "kind": "template",
+      "path": ".converge/playbooks/default/templates/screen-widget-split/TASK.md",
+      "vars": {
+        "screenId": "mindfulness",
+        "screenTitle": "Mindfulness",
+        "screenPath": "lib/screens/mindfulness/mindfulness_screen.dart",
+        "widgetId": "ExerciseBadge",
+        "widgetName": "ExerciseBadge",
+        "widgetFile": "lib/screens/mindfulness/_widgets/ExerciseBadge.dart"
+      },
+      "id": "mindfulness-split-003-ExerciseBadge"
+    }
+  }
+]

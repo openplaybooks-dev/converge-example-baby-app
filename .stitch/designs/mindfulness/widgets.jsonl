@@ -1,0 +1,3 @@
+{"name": "BreathingExerciseCard", "grep": "class _BreathingExerciseCard", "description": "Tappable card for breathing exercises with morningMist background, title, duration, and difficulty badge", "shared": false}
+{"name": "StretchingRoutineCard", "grep": "class _StretchingRoutineCard", "description": "Tappable card for stretching routines with morningMist background, title, duration, and trimester badge", "shared": false}
+{"name": "ExerciseBadge", "grep": "radiusPill", "description": "Pill-shaped badge with configurable background color for displaying difficulty or trimester labels", "shared": true}

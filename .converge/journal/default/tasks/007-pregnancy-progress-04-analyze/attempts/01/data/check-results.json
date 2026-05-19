@@ -1,0 +1,10 @@
+[
+  {
+    "id": "widgets-json-exists",
+    "description": "widgets.jsonl exists for pregnancy-progress",
+    "cmd": "test -f .stitch/designs/pregnancy-progress/widgets.jsonl",
+    "passed": true,
+    "exit_code": 0,
+    "output": ""
+  }
+]

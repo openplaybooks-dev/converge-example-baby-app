@@ -1,0 +1,34 @@
+[
+  {
+    "id": "screen-exists",
+    "description": "Screen widget file exists",
+    "cmd": "test -f lib/screens/mood_wellness/mood_wellness_screen.dart",
+    "passed": true,
+    "exit_code": 0,
+    "output": ""
+  },
+  {
+    "id": "dart-valid",
+    "description": "Dart analysis passes",
+    "cmd": "dart analyze lib/screens/mood_wellness/mood_wellness_screen.dart",
+    "passed": true,
+    "exit_code": 0,
+    "output": "Analyzing mood_wellness_screen.dart...\n\n   info - mood_wellness_screen.dart:416:24 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors\n   info - mood_wellness_screen.dart:422:36 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors\n   info - mood_wellness_screen.dart:423:36 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors\n   info - mood_wellness_screen.dart:424:36 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors\n   info - mood_wellness_screen.dart:425:36 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors\n   info - mood_wellness_screen.dart:441:7 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors\n   info - mood_wellness_screen.dart:442:7 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors\n   info - mood_wellness_screen.dart:443:7 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors\n   info - mood_wellness_screen.dart:444:7 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors\n   info - mood_wellness_screen.dart:445:7 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors\n   info - mood_wellness_screen.dart:446:7 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors\n   info - mood_wellness_screen.dart:447:7 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors\n   info - mood_wellness_screen.dart:615:24 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors\n   info - mood_wellness_screen.dart:621:31 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors\n   info - mood_wellness_screen.dart:622:30 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors\n   info - mood_wellness_screen.dart:623:30 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors\n   info - mood_wellness_screen.dart:624:31 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors\n   info - mood_wellness_screen.dart:640:7 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors\n   info - mood_wellness_screen.dart:641:7 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors\n   info - mood_wellness_screen.dart:642:7 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors\n   info - mood_wellness_screen.dart:643:7 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors\n   info - mood_wellness_screen.dart:644:7 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors\n   info - mood_wellness_screen.dart:645:7 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors\n   info - mood_wellness_screen.dart:646:7 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors\n   info - mood_wellness_screen.dart:810:30 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors\n\n25 issues found."
+  },
+  {
+    "id": "uses-theme",
+    "description": "Uses Theme.of(context) for styling",
+    "cmd": "grep -q 'Theme.of(context)' lib/screens/mood_wellness/mood_wellness_screen.dart",
+    "passed": true,
+    "exit_code": 0,
+    "output": ""
+  },
+  {
+    "id": "no-hardcoded-colors",
+    "description": "No hardcoded colors — uses colorScheme",
+    "cmd": "! grep -qE 'Color\\(0x|Colors\\.' lib/screens/mood_wellness/mood_wellness_screen.dart",
+    "passed": true,
+    "exit_code": 0,
+    "output": ""
+  }
+]

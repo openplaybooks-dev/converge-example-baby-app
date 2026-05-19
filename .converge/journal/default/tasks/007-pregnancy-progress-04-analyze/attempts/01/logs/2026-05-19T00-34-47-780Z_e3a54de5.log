@@ -1,0 +1,946 @@
+[2026-05-19T00:34:47.780Z] [INFO] Starting claudefn session=e3a54de5-457f-4de9-8e2c-5f7d5dbf48a9
+[2026-05-19T00:34:47.780Z] [INFO] Timeout=300000ms (activity-based idle timeout); wallClockTimeout=900000ms; meaningfulActivityTimeout=240000ms
+[2026-05-19T00:34:47.780Z] [CMD] claude --dangerously-skip-permissions -p --no-session-persistence --strict-mcp-config --mcp-config /var/folders/kd/y0fyvccs7zn6w_zjr8qfdhwr0000gn/T/claudefn-mcp-e3a54de5-457f-4de9-8e2c-5f7d5dbf48a9.json --output-format stream-json --verbose
+[2026-05-19T00:34:47.780Z] [PROMPT] You are a software architect and planning specialist. Your role is to explore the codebase and design implementation plans.
+
+=== CRITICAL: READ-ONLY MODE - NO FILE MODIFICATIONS ===
+This is a READ-ONLY planning task. You are STRICTLY PROHIBITED from:
+- Creating new files (no Write, touch, or file creation of any kind)
+- Modifying existing files (no Edit operations)
+- Deleting files (no rm or deletion)
+- Using redirect operators (>, >>) or heredocs to write to files
+
+Your role is EXCLUSIVELY to e...[truncated]
+[2026-05-19T00:34:48.125Z] [STDOUT] {"type":"system","subtype":"init","cwd":"/Users/minh/Documents/openplayboosks/examples/baby-app","session_id":"496ab247-646c-45c0-a04a-f48f95d2e8ea","tools":["Task","AskUserQuestion","Bash","CronCreate","CronDelete","CronList","Edit","EnterPlanMode","EnterWorktree","ExitPlanMode","ExitWorktree","Glob","Grep","NotebookEdit","Read","ScheduleWakeup","Skill","TaskCreate","TaskGet","TaskList","TaskOutput","TaskStop","TaskUpdate","WebFetch","WebSearch","Write"],"mcp_servers":[],"model":"MiniMax-M2.7","permissionMode":"bypassPermissions","slash_commands":["keyword-research","converge-planning","flutter-asset-integration","flutter-building-forms","flutter-handling-http-and-json","asset-requirements-analysis","flutter-widget-design","stitch-design","ux-breakdown","metadata-generation","extract-data-models-from-flutter","flutter-riverpod-patterns","svg-illustration-generation","flutter-architecting-apps","visual-specification","flutter-implementing-navigation-and-routing","flutter-improving-accessibility","flutter-animating-apps","taste-design","flutter-theming-apps","flutter-building-layouts","flutter-managing-state","flutter-testing-apps","ux-design","update-config","debug","simplify","batch","fewer-permission-prompts","loop","claude-api","clear","compact","context","heapdump","init","review","security-review","usage","insights","goal","team-onboarding"],"apiKeySource":"none","claude_code_version":"2.1.143","output_style":"default","agents":["claude","Explore","general-purpose","Plan","statusline-setup"],"skills":["keyword-research","converge-planning","flutter-asset-integration","flutter-building-forms","flutter-handling-http-and-json","asset-requirements-analysis","stitch-design","metadata-generation","svg-illustration-generation","flutter-architecting-apps","visual-specification","flutter-implementing-navigation-and-routing","flutter-improving-accessibility","flutter-animating-apps","flutter-theming-apps","flutter-building-layouts","flutter-managing-state","flutter-testing-apps","update-config","debug","simplify","batch","fewer-permission-prompts","loop","claude-api"],"plugins":[],"analytics_disabled":true,"uuid":"567b674d-91c0-45d6-845d-e20dd84e85e2","memory_paths":{"auto":"/Users/minh/.claude/projects/-Users-minh-Documents-openplayboosks-examples-baby-app/memory/"},"fast_mode_state":"off"}
+[2026-05-19T00:34:48.126Z] [STREAM_EVENT] {"type":"system","subtype":"init","cwd":"/Users/minh/Documents/openplayboosks/examples/baby-app","session_id":"496ab247-646c-45c0-a04a-f48f95d2e8ea","tools":["Task","AskUserQuestion","Bash","CronCreate","CronDelete","CronList","Edit","EnterPlanMode","EnterWorktree","ExitPlanMode","ExitWorktree","Glob","Grep","NotebookEdit","Read","ScheduleWakeup","Skill","TaskCreate","TaskGet","TaskList","TaskOutput","TaskStop","TaskUpdate","WebFetch","WebSearch","Write"],"mcp_servers":[],"model":"MiniMax-M2.7","permissionMode":"bypassPermissions","slash_commands":["keyword-research","converge-planning","flutter-asset-integration","flutter-building-forms","flutter-handling-http-and-json","asset-requirements-analysis","flutter-widget-design","stitch-design","ux-breakdown","metadata-generation","extract-data-models-from-flutter","flutter-riverpod-patterns","svg-illustration-generation","flutter-architecting-apps","visual-specification","flutter-implementing-navigation-and-routing","flutter-improving-accessibility","flutter-animating-apps","taste-design","flutter-theming-apps","flutter-building-layouts","flutter-managing-state","flutter-testing-apps","ux-design","update-config","debug","simplify","batch","fewer-permission-prompts","loop","claude-api","clear","compact","context","heapdump","init","review","security-review","usage","insights","goal","team-onboarding"],"apiKeySource":"none","claude_code_version":"2.1.143","output_style":"default","agents":["claude","Explore","general-purpose","Plan","statusline-setup"],"skills":["keyword-research","converge-planning","flutter-asset-integration","flutter-building-forms","flutter-handling-http-and-json","asset-requirements-analysis","stitch-design","metadata-generation","svg-illustration-generation","flutter-architecting-apps","visual-specification","flutter-implementing-navigation-and-routing","flutter-improving-accessibility","flutter-animating-apps","flutter-theming-apps","flutter-building-layouts","flutter-managing-state","flutter-testing-apps","update-config","debug","simplify","batch","fewer-permission-prompts","loop","claude-api"],"plugins":[],"analytics_disabled":true,"uuid":"567b674d-91c0-45d6-845d-e20dd84e85e2","memory_paths":{"auto":"/Users/minh/.claude/projects/-Users-minh-Documents-openplayboosks-examples-baby-app/memory/"},"fast_mode_state":"off"}
+[2026-05-19T00:34:54.232Z] [STDOUT] {"type":"assistant","message":{"id":"065ae32ac318bb1a815264be8bbe4317","type":"message","role":"assistant","content":[{"type":"thinking","thinking":"The user wants me to analyze a Flutter screen widget and identify extractable widget regions. Let me start by reading the screen file to understand its structure.","signature":"4c3e59d7ecb7120b059263ec6862a0607307a9a6cc2dce0dcb9bd373873d0d3f"}],"model":"MiniMax-M2.7","stop_reason":null,"stop_sequence":null,"usage":{"input_tokens":149,"output_tokens":0,"cache_creation_input_tokens":2006,"cache_read_input_tokens":23239},"service_tier":"standard","context_management":null},"parent_tool_use_id":null,"session_id":"496ab247-646c-45c0-a04a-f48f95d2e8ea","uuid":"fdc0df06-4ab5-4a22-8627-6519e99c2a00"}
+[2026-05-19T00:34:54.233Z] [STREAM_EVENT] {"type":"assistant","message":{"id":"065ae32ac318bb1a815264be8bbe4317","type":"message","role":"assistant","content":[{"type":"thinking","thinking":"The user wants me to analyze a Flutter screen widget and identify extractable widget regions. Let me start by reading the screen file to understand its structure.","signature":"4c3e59d7ecb7120b059263ec6862a0607307a9a6cc2dce0dcb9bd373873d0d3f"}],"model":"MiniMax-M2.7","stop_reason":null,"stop_sequence":null,"usage":{"input_tokens":149,"output_tokens":0,"cache_creation_input_tokens":2006,"cache_read_input_tokens":23239},"service_tier":"standard","context_management":null},"parent_tool_use_id":null,"session_id":"496ab247-646c-45c0-a04a-f48f95d2e8ea","uuid":"fdc0df06-4ab5-4a22-8627-6519e99c2a00"}
+[2026-05-19T00:34:54.233Z] [THINKING] The user wants me to analyze a Flutter screen widget and identify extractable widget regions. Let me start by reading the screen file to understand its structure.
+[2026-05-19T00:34:54.233Z] [STDOUT] {"type":"assistant","message":{"id":"065ae32ac318bb1a815264be8bbe4317","type":"message","role":"assistant","content":[{"type":"text","text":"I'll analyze the pregnancy progress screen widget to identify extractable widget regions.\n"}],"model":"MiniMax-M2.7","stop_reason":null,"stop_sequence":null,"usage":{"input_tokens":149,"output_tokens":0,"cache_creation_input_tokens":2006,"cache_read_input_tokens":23239},"service_tier":"standard","context_management":null},"parent_tool_use_id":null,"session_id":"496ab247-646c-45c0-a04a-f48f95d2e8ea","uuid":"b3bb8caf-1be0-4c87-9141-99ef1974669a"}
+[2026-05-19T00:34:54.234Z] [STREAM_EVENT] {"type":"assistant","message":{"id":"065ae32ac318bb1a815264be8bbe4317","type":"message","role":"assistant","content":[{"type":"text","text":"I'll analyze the pregnancy progress screen widget to identify extractable widget regions.\n"}],"model":"MiniMax-M2.7","stop_reason":null,"stop_sequence":null,"usage":{"input_tokens":149,"output_tokens":0,"cache_creation_input_tokens":2006,"cache_read_input_tokens":23239},"service_tier":"standard","context_management":null},"parent_tool_use_id":null,"session_id":"496ab247-646c-45c0-a04a-f48f95d2e8ea","uuid":"b3bb8caf-1be0-4c87-9141-99ef1974669a"}
+[2026-05-19T00:34:54.234Z] [TEXT_BLOCK] I'll analyze the pregnancy progress screen widget to identify extractable widget regions.
+
+[2026-05-19T00:34:54.850Z] [STDOUT] {"type":"assistant","message":{"id":"065ae32ac318bb1a815264be8bbe4317","type":"message","role":"assistant","content":[{"type":"tool_use","id":"call_function_kfyszzewlemw_1","name":"Read","input":{"file_path":"/Users/minh/Documents/openplayboosks/examples/baby-app/lib/screens/pregnancy_progress/pregnancy_progress_screen.dart"}}],"model":"MiniMax-M2.7","stop_reason":null,"stop_sequence":null,"usage":{"input_tokens":149,"output_tokens":0,"cache_creation_input_tokens":2006,"cache_read_input_tokens":23239},"service_tier":"standard","context_management":null},"parent_tool_use_id":null,"session_id":"496ab247-646c-45c0-a04a-f48f95d2e8ea","uuid":"bae6ef08-8a90-4955-9328-604568ea863c"}
+[2026-05-19T00:34:54.851Z] [STREAM_EVENT] {"type":"assistant","message":{"id":"065ae32ac318bb1a815264be8bbe4317","type":"message","role":"assistant","content":[{"type":"tool_use","id":"call_function_kfyszzewlemw_1","name":"Read","input":{"file_path":"/Users/minh/Documents/openplayboosks/examples/baby-app/lib/screens/pregnancy_progress/pregnancy_progress_screen.dart"}}],"model":"MiniMax-M2.7","stop_reason":null,"stop_sequence":null,"usage":{"input_tokens":149,"output_tokens":0,"cache_creation_input_tokens":2006,"cache_read_input_tokens":23239},"service_tier":"standard","context_management":null},"parent_tool_use_id":null,"session_id":"496ab247-646c-45c0-a04a-f48f95d2e8ea","uuid":"bae6ef08-8a90-4955-9328-604568ea863c"}
+[2026-05-19T00:34:54.851Z] [TOOL_USE] Tool: Read
+Input: {
+  "file_path": "/Users/minh/Documents/openplayboosks/examples/baby-app/lib/screens/pregnancy_progress/pregnancy_progress_screen.dart"
+}
+[2026-05-19T00:34:54.852Z] [STDOUT] {"type":"assistant","message":{"id":"065ae32ac318bb1a815264be8bbe4317","type":"message","role":"assistant","content":[{"type":"tool_use","id":"call_function_kfyszzewlemw_2","name":"Glob","input":{"pattern":".stitch/designs/**/*.jsonl"}}],"model":"MiniMax-M2.7","stop_reason":null,"stop_sequence":null,"usage":{"input_tokens":149,"output_tokens":0,"cache_creation_input_tokens":2006,"cache_read_input_tokens":23239},"service_tier":"standard","context_management":null},"parent_tool_use_id":null,"session_id":"496ab247-646c-45c0-a04a-f48f95d2e8ea","uuid":"f0993c67-8712-4a4d-b973-b94e883a9588"}
+[2026-05-19T00:34:54.852Z] [STREAM_EVENT] {"type":"assistant","message":{"id":"065ae32ac318bb1a815264be8bbe4317","type":"message","role":"assistant","content":[{"type":"tool_use","id":"call_function_kfyszzewlemw_2","name":"Glob","input":{"pattern":".stitch/designs/**/*.jsonl"}}],"model":"MiniMax-M2.7","stop_reason":null,"stop_sequence":null,"usage":{"input_tokens":149,"output_tokens":0,"cache_creation_input_tokens":2006,"cache_read_input_tokens":23239},"service_tier":"standard","context_management":null},"parent_tool_use_id":null,"session_id":"496ab247-646c-45c0-a04a-f48f95d2e8ea","uuid":"f0993c67-8712-4a4d-b973-b94e883a9588"}
+[2026-05-19T00:34:54.852Z] [TOOL_USE] Tool: Glob
+Input: {
+  "pattern": ".stitch/designs/**/*.jsonl"
+}
+[2026-05-19T00:34:54.870Z] [STDOUT] {"type":"user","message":{"role":"user","content":[{"tool_use_id":"call_function_kfyszzewlemw_1","type":"tool_result","content":"1\timport 'package:flutter/material.dart';\n2\timport 'package:go_router/go_router.dart';\n3\t\n4\timport '../../theme/app_theme.dart';\n5\t\n6\tclass PregnancyProgressScreen extends StatefulWidget {\n7\t  const PregnancyProgressScreen({super.key});\n8\t\n9\t  @override\n10\t  State<PregnancyProgressScreen> createState() => _PregnancyProgressScreenState();\n11\t}\n12\t\n13\tclass _PregnancyProgressScreenState extends State<PregnancyProgressScreen> {\n14\t  late PageController _pageController;\n15\t  int _currentWeek = 12;\n16\t\n17\t  @override\n18\t  void initState() {\n19\t    super.initState();\n20\t    _pageController = PageController(initialPage: _currentWeek - 1);\n21\t  }\n22\t\n23\t  @override\n24\t  void dispose() {\n25\t    _pageController.dispose();\n26\t    super.dispose();\n27\t  }\n28\t\n29\t  @override\n30\t  Widget build(BuildContext context) {\n31\t    final theme = Theme.of(context);\n32\t    final colorScheme = theme.colorScheme;\n33\t    final textTheme = theme.textTheme;\n34\t\n35\t    return Scaffold(\n36\t      backgroundColor: colorScheme.surfaceContainer,\n37\t      appBar: AppBar(\n38\t        backgroundColor: colorScheme.surfaceContainer,\n39\t        elevation: 0,\n40\t        leading: IconButton(\n41\t          onPressed: () => context.pop(),\n42\t          icon: const Icon(Icons.arrow_back_ios, size: 24),\n43\t          padding: EdgeInsets.zero,\n44\t          constraints: const BoxConstraints(minWidth: 48, minHeight: 48),\n45\t        ),\n46\t        title: Text(\n47\t          'My Pregnancy',\n48\t          style: textTheme.headlineSmall?.copyWith(\n49\t            color: colorScheme.onSurface,\n50\t          ),\n51\t        ),\n52\t        centerTitle: true,\n53\t      ),\n54\t      body: Stack(\n55\t        children: [\n56\t          PageView.builder(\n57\t            controller: _pageController,\n58\t            itemCount: 40,\n59\t            onPageChanged: (index) {\n60\t              setState(() {\n61\t                _currentWeek = index + 1;\n62\t              });\n63\t            },\n64\t            itemBuilder: (context, index) {\n65\t              final week = index + 1;\n66\t              return _WeekPage(week: week);\n67\t            },\n68\t          ),\n69\t          Positioned(\n70\t            left: 0,\n71\t            right: 0,\n72\t            bottom: 0,\n73\t            child: _DueDateSummaryCard(currentWeek: _currentWeek),\n74\t          ),\n75\t        ],\n76\t      ),\n77\t    );\n78\t  }\n79\t}\n80\t\n81\tclass _WeekPage extends StatelessWidget {\n82\t  final int week;\n83\t\n84\t  const _WeekPage({required this.week});\n85\t\n86\t  @override\n87\t  Widget build(BuildContext context) {\n88\t    final trimester = _getTrimester(week);\n89\t    final weeksRemaining = 40 - week;\n90\t    final dueDate = DateTime(2026, 1, 15);\n91\t    final fruitEmoji = _getFruitEmoji(week);\n92\t\n93\t    return SingleChildScrollView(\n94\t      padding: const EdgeInsets.only(\n95\t        left: AppTheme.spaceMd,\n96\t        right: AppTheme.spaceMd,\n97\t        top: AppTheme.spaceXs,\n98\t        bottom: 160,\n99\t      ),\n100\t      child: Column(\n101\t        children: [\n102\t          _WeekHeroCard(\n103\t            week: week,\n104\t            trimester: trimester,\n105\t            weeksRemaining: weeksRemaining,\n106\t            dueDate: dueDate,\n107\t            fruitEmoji: fruitEmoji,\n108\t          ),\n109\t          const SizedBox(height: AppTheme.spaceMd),\n110\t          _BodyChangesCard(week: week),\n111\t          const SizedBox(height: AppTheme.spaceMd),\n112\t          _BabyDevelopmentCard(week: week),\n113\t          const SizedBox(height: AppTheme.spaceMd),\n114\t          _SelfCareTipsCard(week: week),\n115\t        ],\n116\t      ),\n117\t    );\n118\t  }\n119\t\n120\t  String _getTrimester(int week) {\n121\t    if (week <= 13) return 'First Trimester';\n122\t    if (week <= 26) return 'Second Trimester';\n123\t    return 'Third Trimester';\n124\t  }\n125\t\n126\t  String _getFruitEmoji(int week) {\n127\t    const fruits = [\n128\t      ' poppy seed', // 4\n129\t      ' sesame seed', // 5\n130\t      '🫐 blueberry', // 6\n131\t      '🫐 blueberry', // 7\n132\t      '🫐 blueberry', // 8\n133\t      '🫐 blueberry', // 9\n134\t      '🫐 blueberry', // 10\n135\t      '🍒 cherry', // 11\n136\t      '🍒 cherry', // 12\n137\t      '🍒 cherry', // 12\n138\t      '🍅 tomato', // 12\n139\t    ];\n140\t    if (week < 4) return '🌱 seed';\n141\t    if (week > 12) return '🍅 tomato';\n142\t    return fruits[week - 4];\n143\t  }\n144\t}\n145\t\n146\tclass _WeekHeroCard extends StatelessWidget {\n147\t  final int week;\n148\t  final String trimester;\n149\t  final int weeksRemaining;\n150\t  final DateTime dueDate;\n151\t  final String fruitEmoji;\n152\t\n153\t  const _WeekHeroCard({\n154\t    required this.week,\n155\t    required this.trimester,\n156\t    required this.weeksRemaining,\n157\t    required this.dueDate,\n158\t    required this.fruitEmoji,\n159\t  });\n160\t\n161\t  @override\n162\t  Widget build(BuildContext context) {\n163\t    final theme = Theme.of(context);\n164\t    final colorScheme = theme.colorScheme;\n165\t    final textTheme = theme.textTheme;\n166\t\n167\t    return Container(\n168\t      width: double.infinity,\n169\t      padding: const EdgeInsets.all(AppTheme.spaceLg),\n170\t      decoration: BoxDecoration(\n171\t        borderRadius: BorderRadius.circular(AppTheme.radiusLg),\n172\t        gradient: LinearGradient(\n173\t          begin: Alignment.topCenter,\n174\t          end: Alignment.bottomCenter,\n175\t          colors: [\n176\t            colorScheme.tertiary,\n177\t            colorScheme.surface,\n178\t          ],\n179\t        ),\n180\t      ),\n181\t      child: Column(\n182\t        children: [\n183\t          Container(\n184\t            width: 80,\n185\t            height: 80,\n186\t            decoration: BoxDecoration(\n187\t              color: colorScheme.tertiary.withValues(alpha: 0.5),\n188\t              shape: BoxShape.circle,\n189\t            ),\n190\t            child: Center(\n191\t              child: Text(\n192\t                fruitEmoji.split(' ').first,\n193\t                style: const TextStyle(fontSize: 40),\n194\t              ),\n195\t            ),\n196\t          ),\n197\t          const SizedBox(height: AppTheme.spaceSm),\n198\t          Text(\n199\t            'Week $week',\n200\t            style: TextStyle(\n201\t              fontSize: 57,\n202\t              fontWeight: FontWeight.w700,\n203\t              height: 64 / 57,\n204\t              color: colorScheme.primary,\n205\t            ),\n206\t          ),\n207\t          const SizedBox(height: AppTheme.spaceXs),\n208\t          Container(\n209\t            padding: const EdgeInsets.symmetric(\n210\t              horizontal: AppTheme.spaceSm,\n211\t              vertical: AppTheme.spaceXxs,\n212\t            ),\n213\t            decoration: BoxDecoration(\n214\t              color: colorScheme.tertiary.withValues(alpha: 0.3),\n215\t              borderRadius: BorderRadius.circular(AppTheme.radiusPill),\n216\t            ),\n217\t            child: Row(\n218\t              mainAxisSize: MainAxisSize.min,\n219\t              children: [\n220\t                Text(\n221\t                  trimester,\n222\t                  style: textTheme.labelLarge?.copyWith(\n223\t                    color: colorScheme.primary,\n224\t                  ),\n225\t                ),\n226\t              ],\n227\t            ),\n228\t          ),\n229\t          const SizedBox(height: AppTheme.spaceXs),\n230\t          Text(\n231\t            '$weeksRemaining weeks to go',\n232\t            style: textTheme.bodyMedium?.copyWith(\n233\t              color: colorScheme.onSurfaceVariant,\n234\t            ),\n235\t          ),\n236\t          const SizedBox(height: AppTheme.spaceXxs),\n237\t          Text(\n238\t            'Due ${dueDate.month}/${dueDate.day}/${dueDate.year}',\n239\t            style: textTheme.labelSmall?.copyWith(\n240\t              color: colorScheme.onSurfaceVariant,\n241\t            ),\n242\t          ),\n243\t        ],\n244\t      ),\n245\t    );\n246\t  }\n247\t}\n248\t\n249\tclass _BodyChangesCard extends StatelessWidget {\n250\t  final int week;\n251\t\n252\t  const _BodyChangesCard({required this.week});\n253\t\n254\t  @override\n255\t  Widget build(BuildContext context) {\n256\t    final theme = Theme.of(context);\n257\t    final colorScheme = theme.colorScheme;\n258\t    final textTheme = theme.textTheme;\n259\t\n260\t    final bodyChanges = _getBodyChanges(week);\n261\t\n262\t    return Container(\n263\t      padding: const EdgeInsets.all(AppTheme.spaceMd),\n264\t      decoration: BoxDecoration(\n265\t        color: colorScheme.surface,\n266\t        borderRadius: BorderRadius.circular(AppTheme.radiusLg),\n267\t        boxShadow: const [\n268\t          BoxShadow(\n269\t            color: AppTheme.shadow,\n270\t            blurRadius: 24,\n271\t            offset: Offset(0, 8),\n272\t          ),\n273\t        ],\n274\t      ),\n275\t      child: Column(\n276\t        crossAxisAlignment: CrossAxisAlignment.start,\n277\t        children: [\n278\t          Text(\n279\t            'Body Changes',\n280\t            style: textTheme.titleLarge?.copyWith(\n281\t              color: colorScheme.onSurface,\n282\t            ),\n283\t          ),\n284\t          const SizedBox(height: AppTheme.spaceSm),\n285\t          ...bodyChanges.map(\n286\t            (change) => Padding(\n287\t              padding: const EdgeInsets.only(bottom: AppTheme.spaceSm),\n288\t              child: Row(\n289\t                crossAxisAlignment: CrossAxisAlignment.start,\n290\t                children: [\n291\t                  Container(\n292\t                    width: 8,\n293\t                    height: 8,\n294\t                    margin: const EdgeInsets.only(top: 6),\n295\t                    decoration: BoxDecoration(\n296\t                      color: colorScheme.tertiary,\n297\t                      shape: BoxShape.circle,\n298\t                    ),\n299\t                  ),\n300\t                  const SizedBox(width: AppTheme.spaceSm),\n301\t                  Expanded(\n302\t                    child: Text(\n303\t                      change,\n304\t                      style: textTheme.bodyMedium?.copyWith(\n305\t                        color: colorScheme.onSurface,\n306\t                      ),\n307\t                    ),\n308\t                  ),\n309\t                ],\n310\t              ),\n311\t            ),\n312\t          ),\n313\t        ],\n314\t      ),\n315\t    );\n316\t  }\n317\t\n318\t  List<String> _getBodyChanges(int week) {\n319\t    const changes = {\n320\t      12: [\n321\t        'Your uterus is now about the size of a grapefruit',\n322\t        'You may experience mild cramping or round ligament pain',\n323\t        'Fatigue may continue, but energy often improves this trimester',\n324\t      ],\n325\t      24: [\n326\t        'Your belly is growing noticeably',\n327\t        'You may feel the baby move soon (quickening)',\n328\t        'Leg cramps and swelling may occur',\n329\t      ],\n330\t    };\n331\t    return changes[week] ??\n332\t        [\n333\t          'Your body is adapting to pregnancy',\n334\t          'Hormonal changes may affect your mood',\n335\t          'Stay hydrated and rest when needed',\n336\t        ];\n337\t  }\n338\t}\n339\t\n340\tclass _BabyDevelopmentCard extends StatelessWidget {\n341\t  final int week;\n342\t\n343\t  const _BabyDevelopmentCard({required this.week});\n344\t\n345\t  @override\n346\t  Widget build(BuildContext context) {\n347\t    final theme = Theme.of(context);\n348\t    final colorScheme = theme.colorScheme;\n349\t    final textTheme = theme.textTheme;\n350\t\n351\t    return Container(\n352\t      padding: const EdgeInsets.all(AppTheme.spaceMd),\n353\t      decoration: BoxDecoration(\n354\t        color: colorScheme.surface,\n355\t        borderRadius: BorderRadius.circular(AppTheme.radiusLg),\n356\t        boxShadow: const [\n357\t          BoxShadow(\n358\t            color: AppTheme.shadow,\n359\t            blurRadius: 24,\n360\t            offset: Offset(0, 8),\n361\t          ),\n362\t        ],\n363\t      ),\n364\t      child: Column(\n365\t        crossAxisAlignment: CrossAxisAlignment.start,\n366\t        children: [\n367\t          Text(\n368\t            'Baby\\'s Development',\n369\t            style: textTheme.titleLarge?.copyWith(\n370\t              color: colorScheme.onSurface,\n371\t            ),\n372\t          ),\n373\t          const SizedBox(height: AppTheme.spaceSm),\n374\t          Text(\n375\t            _getBabyDevelopment(week),\n376\t            style: textTheme.bodyLarge?.copyWith(\n377\t              color: colorScheme.onSurface,\n378\t            ),\n379\t          ),\n380\t        ],\n381\t      ),\n382\t    );\n383\t  }\n384\t\n385\t  String _getBabyDevelopment(int week) {\n386\t    const developments = {\n387\t      12:\n388\t          'Your baby is now about 2 inches long — the size of a plum! Fingers and toes are fully formed, and tooth buds are appearing beneath the gums. The brain continues to develop rapidly, and your baby may start making small movements you can\\'t feel yet.',\n389\t      24:\n390\t          'Your baby is about 12 inches long — the size of a papaya! The brain is developing rapidly, and the baby can hear your voice. Fat is beginning to accumulate, giving the skin a smoother appearance.',\n391\t    };\n392\t    return developments[week] ??\n393\t        'Your baby is growing and developing. Each week brings new milestones.';\n394\t  }\n395\t}\n396\t\n397\tclass _SelfCareTipsCard extends StatefulWidget {\n398\t  final int week;\n399\t\n400\t  const _SelfCareTipsCard({required this.week});\n401\t\n402\t  @override\n403\t  State<_SelfCareTipsCard> createState() => _SelfCareTipsCardState();\n404\t}\n405\t\n406\tclass _SelfCareTipsCardState extends State<_SelfCareTipsCard> {\n407\t  int _expandedIndex = -1;\n408\t\n409\t  @override\n410\t  Widget build(BuildContext context) {\n411\t    final theme = Theme.of(context);\n412\t    final colorScheme = theme.colorScheme;\n413\t    final textTheme = theme.textTheme;\n414\t\n415\t    final tips = _getSelfCareTips(widget.week);\n416\t\n417\t    return Container(\n418\t      padding: const EdgeInsets.all(AppTheme.spaceMd),\n419\t      decoration: BoxDecoration(\n420\t        color: colorScheme.surface,\n421\t        borderRadius: BorderRadius.circular(AppTheme.radiusLg),\n422\t        boxShadow: const [\n423\t          BoxShadow(\n424\t            color: AppTheme.shadow,\n425\t            blurRadius: 24,\n426\t            offset: Offset(0, 8),\n427\t          ),\n428\t        ],\n429\t      ),\n430\t      child: Column(\n431\t        crossAxisAlignment: CrossAxisAlignment.start,\n432\t        children: [\n433\t          Text(\n434\t            'Self-Care Tips',\n435\t            style: textTheme.titleLarge?.copyWith(\n436\t              color: colorScheme.onSurface,\n437\t            ),\n438\t          ),\n439\t          const SizedBox(height: AppTheme.spaceSm),\n440\t          ...List.generate(tips.length, (index) {\n441\t            final tip = tips[index];\n442\t            final isExpanded = _expandedIndex == index;\n443\t            return Padding(\n444\t              padding: const EdgeInsets.only(bottom: AppTheme.spaceSm),\n445\t              child: _ExpandableTipTile(\n446\t                number: index + 1,\n447\t                title: tip['title']!,\n448\t                detail: tip['detail']!,\n449\t                isExpanded: isExpanded,\n450\t                onTap: () {\n451\t                  setState(() {\n452\t                    _expandedIndex = isExpanded ? -1 : index;\n453\t                  });\n454\t                },\n455\t              ),\n456\t            );\n457\t          }),\n458\t        ],\n459\t      ),\n460\t    );\n461\t  }\n462\t\n463\t  List<Map<String, String>> _getSelfCareTips(int week) {\n464\t    const tips = {\n465\t      12: [\n466\t        {\n467\t          'title': 'Stay hydrated',\n468\t          'detail':\n469\t              'Aim for 8-10 glasses of water daily. Staying hydrated helps prevent UTIs and constipation, common during pregnancy.',\n470\t        },\n471\t        {\n472\t          'title': 'Try gentle exercise',\n473\t          'detail':\n474\t              'Walking or prenatal yoga can help with energy levels and prepare your body for labor.',\n475\t        },\n476\t        {\n477\t          'title': 'Schedule your anatomy scan',\n478\t          'detail':\n479\t              'Your 20-week anatomy scan is approaching. This detailed ultrasound checks baby\\'s development and is often covered by insurance.',\n480\t        },\n481\t      ],\n482\t      24: [\n483\t        {\n484\t          'title': 'Practice good posture',\n485\t          'detail':\n486\t              'As your belly grows, focus on standing and sitting with good alignment to reduce back pain.',\n487\t        },\n488\t        {\n489\t          'title': 'Continue staying active',\n490\t          'detail':\n491\t              'Regular low-impact exercise like swimming or walking can help with circulation and energy.',\n492\t        },\n493\t        {\n494\t          'title': 'Start planning the nursery',\n495\t          'detail':\n496\t              'This is a great time to start thinking about nursery themes and gathering essential items.',\n497\t        },\n498\t      ],\n499\t    };\n500\t    return tips[week] ??\n501\t        [\n502\t          {\n503\t            'title': 'Stay hydrated',\n504\t            'detail': 'Drink plenty of water throughout the day.',\n505\t          },\n506\t          {\n507\t            'title': 'Rest when needed',\n508\t            'detail': 'Listen to your body and rest when you feel tired.',\n509\t          },\n510\t          {\n511\t            'title': 'Attend prenatal appointments',\n512\t            'detail': 'Regular check-ups help monitor your pregnancy progress.',\n513\t          },\n514\t        ];\n515\t  }\n516\t}\n517\t\n518\tclass _ExpandableTipTile extends StatelessWidget {\n519\t  final int number;\n520\t  final String title;\n521\t  final String detail;\n522\t  final bool isExpanded;\n523\t  final VoidCallback onTap;\n524\t\n525\t  const _ExpandableTipTile({\n526\t    required this.number,\n527\t    required this.title,\n528\t    required this.detail,\n529\t    required this.isExpanded,\n530\t    required this.onTap,\n531\t  });\n532\t\n533\t  @override\n534\t  Widget build(BuildContext context) {\n535\t    final theme = Theme.of(context);\n536\t    final colorScheme = theme.colorScheme;\n537\t    final textTheme = theme.textTheme;\n538\t\n539\t    return GestureDetector(\n540\t      onTap: onTap,\n541\t      child: Container(\n542\t        padding: const EdgeInsets.all(AppTheme.spaceSm),\n543\t        decoration: BoxDecoration(\n544\t          border: Border.all(color: colorScheme.outline),\n545\t          borderRadius: BorderRadius.circular(AppTheme.radiusMd),\n546\t        ),\n547\t        child: Column(\n548\t          crossAxisAlignment: CrossAxisAlignment.start,\n549\t          children: [\n550\t            Row(\n551\t              crossAxisAlignment: CrossAxisAlignment.center,\n552\t              children: [\n553\t                Container(\n554\t                  width: 32,\n555\t                  height: 32,\n556\t                  decoration: BoxDecoration(\n557\t                    color: colorScheme.tertiary,\n558\t                    shape: BoxShape.circle,\n559\t                  ),\n560\t                  child: Center(\n561\t                    child: Text(\n562\t                      '$number',\n563\t                      style: textTheme.labelLarge?.copyWith(\n564\t                        color: colorScheme.surface,\n565\t                      ),\n566\t                    ),\n567\t                  ),\n568\t                ),\n569\t                const SizedBox(width: AppTheme.spaceSm),\n570\t                Expanded(\n571\t                  child: Text(\n572\t                    title,\n573\t                    style: textTheme.titleMedium?.copyWith(\n574\t                      color: colorScheme.onSurface,\n575\t                    ),\n576\t                  ),\n577\t                ),\n578\t                Icon(\n579\t                  isExpanded ? Icons.expand_less : Icons.expand_more,\n580\t                  size: 20,\n581\t                  color: colorScheme.onSurfaceVariant,\n582\t                ),\n583\t              ],\n584\t            ),\n585\t            if (isExpanded) ...[\n586\t              const SizedBox(height: AppTheme.spaceXs),\n587\t              Padding(\n588\t                padding: const EdgeInsets.only(left: 44),\n589\t                child: Text(\n590\t                  detail,\n591\t                  style: textTheme.bodyMedium?.copyWith(\n592\t                    color: colorScheme.onSurface,\n593\t                  ),\n594\t                ),\n595\t              ),\n596\t            ],\n597\t          ],\n598\t        ),\n599\t      ),\n600\t    );\n601\t  }\n602\t}\n603\t\n604\tclass _DueDateSummaryCard extends StatelessWidget {\n605\t  final int currentWeek;\n606\t\n607\t  const _DueDateSummaryCard({required this.currentWeek});\n608\t\n609\t  @override\n610\t  Widget build(BuildContext context) {\n611\t    final theme = Theme.of(context);\n612\t    final colorScheme = theme.colorScheme;\n613\t    final textTheme = theme.textTheme;\n614\t\n615\t    final trimester = _getTrimester(currentWeek);\n616\t    final dueDate = DateTime(2026, 1, 15);\n617\t    final daysRemaining = dueDate.difference(DateTime.now()).inDays;\n618\t\n619\t    return Container(\n620\t      decoration: BoxDecoration(\n621\t        color: colorScheme.surface,\n622\t        borderRadius: const BorderRadius.only(\n623\t          topLeft: Radius.circular(28),\n624\t          topRight: Radius.circular(28),\n625\t        ),\n626\t        boxShadow: const [\n627\t          BoxShadow(\n628\t            color: AppTheme.shadow,\n629\t            blurRadius: 24,\n630\t            offset: Offset(0, 8),\n631\t          ),\n632\t        ],\n633\t      ),\n634\t      child: SafeArea(\n635\t        top: false,\n636\t        child: Padding(\n637\t          padding: const EdgeInsets.symmetric(\n638\t            horizontal: AppTheme.spaceLg,\n639\t            vertical: AppTheme.spaceMd,\n640\t          ),\n641\t          child: Row(\n642\t            mainAxisAlignment: MainAxisAlignment.spaceBetween,\n643\t            crossAxisAlignment: CrossAxisAlignment.center,\n644\t            children: [\n645\t              Column(\n646\t                crossAxisAlignment: CrossAxisAlignment.start,\n647\t                mainAxisSize: MainAxisSize.min,\n648\t                children: [\n649\t                  Container(\n650\t                    padding: const EdgeInsets.symmetric(\n651\t                      horizontal: AppTheme.spaceSm,\n652\t                      vertical: AppTheme.spaceXxs,\n653\t                    ),\n654\t                    decoration: BoxDecoration(\n655\t                      color: colorScheme.primary,\n656\t                      borderRadius: BorderRadius.circular(AppTheme.radiusPill),\n657\t                    ),\n658\t                    child: Row(\n659\t                      mainAxisSize: MainAxisSize.min,\n660\t                      children: [\n661\t                        Icon(\n662\t                          Icons.star,\n663\t                          size: 16,\n664\t                          color: colorScheme.onPrimary,\n665\t                        ),\n666\t                        const SizedBox(width: AppTheme.spaceXxs),\n667\t                        Text(\n668\t                          trimester,\n669\t                          style: textTheme.labelMedium?.copyWith(\n670\t                            color: colorScheme.onPrimary,\n671\t                          ),\n672\t                        ),\n673\t                      ],\n674\t                    ),\n675\t                  ),\n676\t                  const SizedBox(height: AppTheme.spaceXs),\n677\t                  Text(\n678\t                    'Due Date',\n679\t                    style: textTheme.labelSmall?.copyWith(\n680\t                      color: colorScheme.onSurfaceVariant,\n681\t                    ),\n682\t                  ),\n683\t                  Text(\n684\t                    '${dueDate.month}/${dueDate.day}/${dueDate.year}',\n685\t                    style: textTheme.titleMedium?.copyWith(\n686\t                      color: colorScheme.onSurface,\n687\t                    ),\n688\t                  ),\n689\t                ],\n690\t              ),\n691\t              Column(\n692\t                crossAxisAlignment: CrossAxisAlignment.end,\n693\t                mainAxisSize: MainAxisSize.min,\n694\t                children: [\n695\t                  Text(\n696\t                    '$daysRemaining',\n697\t                    style: textTheme.headlineLarge?.copyWith(\n698\t                      color: AppTheme.success,\n699\t                    ),\n700\t                  ),\n701\t                  Text(\n702\t                    'days to go',\n703\t                    style: textTheme.bodyMedium?.copyWith(\n704\t                      color: colorScheme.onSurfaceVariant,\n705\t                    ),\n706\t                  ),\n707\t                ],\n708\t              ),\n709\t            ],\n710\t          ),\n711\t        ),\n712\t      ),\n713\t    );\n714\t  }\n715\t\n716\t  String _getTrimester(int week) {\n717\t    if (week <= 13) return 'First Trimester';\n718\t    if (week <= 26) return 'Second Trimester';\n719\t    return 'Third Trimester';\n720\t  }\n721\t}"}]},"parent_tool_use_id":null,"session_id":"496ab247-646c-45c0-a04a-f48f95d2e8ea","uuid":"8a89c98c-2ea6-4512-84f3-2da7bfe46c98","timestamp":"2026-05-19T00:34:54.869Z","tool_use_result":{"type":"text","file":{"filePath":"/Users/minh/Documents/openplayboosks/examples/baby-app/lib/screens/pregnancy_progress/pregnancy_progress_screen.dart","content":"import 'package:flutter/material.dart';\nimport 'package:go_router/go_router.dart';\n\nimport '../../theme/app_theme.dart';\n\nclass PregnancyProgressScreen extends StatefulWidget {\n  const PregnancyProgressScreen({super.key});\n\n  @override\n  State<PregnancyProgressScreen> createState() => _PregnancyProgressScreenState();\n}\n\nclass _PregnancyProgressScreenState extends State<PregnancyProgressScreen> {\n  late PageController _pageController;\n  int _currentWeek = 12;\n\n  @override\n  void initState() {\n    super.initState();\n    _pageController = PageController(initialPage: _currentWeek - 1);\n  }\n\n  @override\n  void dispose() {\n    _pageController.dispose();\n    super.dispose();\n  }\n\n  @override\n  Widget build(BuildContext context) {\n    final theme = Theme.of(context);\n    final colorScheme = theme.colorScheme;\n    final textTheme = theme.textTheme;\n\n    return Scaffold(\n      backgroundColor: colorScheme.surfaceContainer,\n      appBar: AppBar(\n        backgroundColor: colorScheme.surfaceContainer,\n        elevation: 0,\n        leading: IconButton(\n          onPressed: () => context.pop(),\n          icon: const Icon(Icons.arrow_back_ios, size: 24),\n          padding: EdgeInsets.zero,\n          constraints: const BoxConstraints(minWidth: 48, minHeight: 48),\n        ),\n        title: Text(\n          'My Pregnancy',\n          style: textTheme.headlineSmall?.copyWith(\n            color: colorScheme.onSurface,\n          ),\n        ),\n        centerTitle: true,\n      ),\n      body: Stack(\n        children: [\n          PageView.builder(\n            controller: _pageController,\n            itemCount: 40,\n            onPageChanged: (index) {\n              setState(() {\n                _currentWeek = index + 1;\n              });\n            },\n            itemBuilder: (context, index) {\n              final week = index + 1;\n              return _WeekPage(week: week);\n            },\n          ),\n          Positioned(\n            left: 0,\n            right: 0,\n            bottom: 0,\n            child: _DueDateSummaryCard(currentWeek: _currentWeek),\n          ),\n        ],\n      ),\n    );\n  }\n}\n\nclass _WeekPage extends StatelessWidget {\n  final int week;\n\n  const _WeekPage({required this.week});\n\n  @override\n  Widget build(BuildContext context) {\n    final trimester = _getTrimester(week);\n    final weeksRemaining = 40 - week;\n    final dueDate = DateTime(2026, 1, 15);\n    final fruitEmoji = _getFruitEmoji(week);\n\n    return SingleChildScrollView(\n      padding: const EdgeInsets.only(\n        left: AppTheme.spaceMd,\n        right: AppTheme.spaceMd,\n        top: AppTheme.spaceXs,\n        bottom: 160,\n      ),\n      child: Column(\n        children: [\n          _WeekHeroCard(\n            week: week,\n            trimester: trimester,\n            weeksRemaining: weeksRemaining,\n            dueDate: dueDate,\n            fruitEmoji: fruitEmoji,\n          ),\n          const SizedBox(height: AppTheme.spaceMd),\n          _BodyChangesCard(week: week),\n          const SizedBox(height: AppTheme.spaceMd),\n          _BabyDevelopmentCard(week: week),\n          const SizedBox(height: AppTheme.spaceMd),\n          _SelfCareTipsCard(week: week),\n        ],\n      ),\n    );\n  }\n\n  String _getTrimester(int week) {\n    if (week <= 13) return 'First Trimester';\n    if (week <= 26) return 'Second Trimester';\n    return 'Third Trimester';\n  }\n\n  String _getFruitEmoji(int week) {\n    const fruits = [\n      ' poppy seed', // 4\n      ' sesame seed', // 5\n      '🫐 blueberry', // 6\n      '🫐 blueberry', // 7\n      '🫐 blueberry', // 8\n      '🫐 blueberry', // 9\n      '🫐 blueberry', // 10\n      '🍒 cherry', // 11\n      '🍒 cherry', // 12\n      '🍒 cherry', // 12\n      '🍅 tomato', // 12\n    ];\n    if (week < 4) return '🌱 seed';\n    if (week > 12) return '🍅 tomato';\n    return fruits[week - 4];\n  }\n}\n\nclass _WeekHeroCard extends StatelessWidget {\n  final int week;\n  final String trimester;\n  final int weeksRemaining;\n  final DateTime dueDate;\n  final String fruitEmoji;\n\n  const _WeekHeroCard({\n    required this.week,\n    required this.trimester,\n    required this.weeksRemaining,\n    required this.dueDate,\n    required this.fruitEmoji,\n  });\n\n  @override\n  Widget build(BuildContext context) {\n    final theme = Theme.of(context);\n    final colorScheme = theme.colorScheme;\n    final textTheme = theme.textTheme;\n\n    return Container(\n      width: double.infinity,\n      padding: const EdgeInsets.all(AppTheme.spaceLg),\n      decoration: BoxDecoration(\n        borderRadius: BorderRadius.circular(AppTheme.radiusLg),\n        gradient: LinearGradient(\n          begin: Alignment.topCenter,\n          end: Alignment.bottomCenter,\n          colors: [\n            colorScheme.tertiary,\n            colorScheme.surface,\n          ],\n        ),\n      ),\n      child: Column(\n        children: [\n          Container(\n            width: 80,\n            height: 80,\n            decoration: BoxDecoration(\n              color: colorScheme.tertiary.withValues(alpha: 0.5),\n              shape: BoxShape.circle,\n            ),\n            child: Center(\n              child: Text(\n                fruitEmoji.split(' ').first,\n                style: const TextStyle(fontSize: 40),\n              ),\n            ),\n          ),\n          const SizedBox(height: AppTheme.spaceSm),\n          Text(\n            'Week $week',\n            style: TextStyle(\n              fontSize: 57,\n              fontWeight: FontWeight.w700,\n              height: 64 / 57,\n              color: colorScheme.primary,\n            ),\n          ),\n          const SizedBox(height: AppTheme.spaceXs),\n          Container(\n            padding: const EdgeInsets.symmetric(\n              horizontal: AppTheme.spaceSm,\n              vertical: AppTheme.spaceXxs,\n            ),\n            decoration: BoxDecoration(\n              color: colorScheme.tertiary.withValues(alpha: 0.3),\n              borderRadius: BorderRadius.circular(AppTheme.radiusPill),\n            ),\n            child: Row(\n              mainAxisSize: MainAxisSize.min,\n              children: [\n                Text(\n                  trimester,\n                  style: textTheme.labelLarge?.copyWith(\n                    color: colorScheme.primary,\n                  ),\n                ),\n              ],\n            ),\n          ),\n          const SizedBox(height: AppTheme.spaceXs),\n          Text(\n            '$weeksRemaining weeks to go',\n            style: textTheme.bodyMedium?.copyWith(\n              color: colorScheme.onSurfaceVariant,\n            ),\n          ),\n          const SizedBox(height: AppTheme.spaceXxs),\n          Text(\n            'Due ${dueDate.month}/${dueDate.day}/${dueDate.year}',\n            style: textTheme.labelSmall?.copyWith(\n              color: colorScheme.onSurfaceVariant,\n            ),\n          ),\n        ],\n      ),\n    );\n  }\n}\n\nclass _BodyChangesCard extends StatelessWidget {\n  final int week;\n\n  const _BodyChangesCard({required this.week});\n\n  @override\n  Widget build(BuildContext context) {\n    final theme = Theme.of(context);\n    final colorScheme = theme.colorScheme;\n    final textTheme = theme.textTheme;\n\n    final bodyChanges = _getBodyChanges(week);\n\n    return Container(\n      padding: const EdgeInsets.all(AppTheme.spaceMd),\n      decoration: BoxDecoration(\n        color: colorScheme.surface,\n        borderRadius: BorderRadius.circular(AppTheme.radiusLg),\n        boxShadow: const [\n          BoxShadow(\n            color: AppTheme.shadow,\n            blurRadius: 24,\n            offset: Offset(0, 8),\n          ),\n        ],\n      ),\n      child: Column(\n        crossAxisAlignment: CrossAxisAlignment.start,\n        children: [\n          Text(\n            'Body Changes',\n            style: textTheme.titleLarge?.copyWith(\n              color: colorScheme.onSurface,\n            ),\n          ),\n          const SizedBox(height: AppTheme.spaceSm),\n          ...bodyChanges.map(\n            (change) => Padding(\n              padding: const EdgeInsets.only(bottom: AppTheme.spaceSm),\n              child: Row(\n                crossAxisAlignment: CrossAxisAlignment.start,\n                children: [\n                  Container(\n                    width: 8,\n                    height: 8,\n                    margin: const EdgeInsets.only(top: 6),\n                    decoration: BoxDecoration(\n                      color: colorScheme.tertiary,\n                      shape: BoxShape.circle,\n                    ),\n                  ),\n                  const SizedBox(width: AppTheme.spaceSm),\n                  Expanded(\n                    child: Text(\n                      change,\n                      style: textTheme.bodyMedium?.copyWith(\n                        color: colorScheme.onSurface,\n                      ),\n                    ),\n                  ),\n                ],\n              ),\n            ),\n          ),\n        ],\n      ),\n    );\n  }\n\n  List<String> _getBodyChanges(int week) {\n    const changes = {\n      12: [\n        'Your uterus is now about the size of a grapefruit',\n        'You may experience mild cramping or round ligament pain',\n        'Fatigue may continue, but energy often improves this trimester',\n      ],\n      24: [\n        'Your belly is growing noticeably',\n        'You may feel the baby move soon (quickening)',\n        'Leg cramps and swelling may occur',\n      ],\n    };\n    return changes[week] ??\n        [\n          'Your body is adapting to pregnancy',\n          'Hormonal changes may affect your mood',\n          'Stay hydrated and rest when needed',\n        ];\n  }\n}\n\nclass _BabyDevelopmentCard extends StatelessWidget {\n  final int week;\n\n  const _BabyDevelopmentCard({required this.week});\n\n  @override\n  Widget build(BuildContext context) {\n    final theme = Theme.of(context);\n    final colorScheme = theme.colorScheme;\n    final textTheme = theme.textTheme;\n\n    return Container(\n      padding: const EdgeInsets.all(AppTheme.spaceMd),\n      decoration: BoxDecoration(\n        color: colorScheme.surface,\n        borderRadius: BorderRadius.circular(AppTheme.radiusLg),\n        boxShadow: const [\n          BoxShadow(\n            color: AppTheme.shadow,\n            blurRadius: 24,\n            offset: Offset(0, 8),\n          ),\n        ],\n      ),\n      child: Column(\n        crossAxisAlignment: CrossAxisAlignment.start,\n        children: [\n          Text(\n            'Baby\\'s Development',\n            style: textTheme.titleLarge?.copyWith(\n              color: colorScheme.onSurface,\n            ),\n          ),\n          const SizedBox(height: AppTheme.spaceSm),\n          Text(\n            _getBabyDevelopment(week),\n            style: textTheme.bodyLarge?.copyWith(\n              color: colorScheme.onSurface,\n            ),\n          ),\n        ],\n      ),\n    );\n  }\n\n  String _getBabyDevelopment(int week) {\n    const developments = {\n      12:\n          'Your baby is now about 2 inches long — the size of a plum! Fingers and toes are fully formed, and tooth buds are appearing beneath the gums. The brain continues to develop rapidly, and your baby may start making small movements you can\\'t feel yet.',\n      24:\n          'Your baby is about 12 inches long — the size of a papaya! The brain is developing rapidly, and the baby can hear your voice. Fat is beginning to accumulate, giving the skin a smoother appearance.',\n    };\n    return developments[week] ??\n        'Your baby is growing and developing. Each week brings new milestones.';\n  }\n}\n\nclass _SelfCareTipsCard extends StatefulWidget {\n  final int week;\n\n  const _SelfCareTipsCard({required this.week});\n\n  @override\n  State<_SelfCareTipsCard> createState() => _SelfCareTipsCardState();\n}\n\nclass _SelfCareTipsCardState extends State<_SelfCareTipsCard> {\n  int _expandedIndex = -1;\n\n  @override\n  Widget build(BuildContext context) {\n    final theme = Theme.of(context);\n    final colorScheme = theme.colorScheme;\n    final textTheme = theme.textTheme;\n\n    final tips = _getSelfCareTips(widget.week);\n\n    return Container(\n      padding: const EdgeInsets.all(AppTheme.spaceMd),\n      decoration: BoxDecoration(\n        color: colorScheme.surface,\n        borderRadius: BorderRadius.circular(AppTheme.radiusLg),\n        boxShadow: const [\n          BoxShadow(\n            color: AppTheme.shadow,\n            blurRadius: 24,\n            offset: Offset(0, 8),\n          ),\n        ],\n      ),\n      child: Column(\n        crossAxisAlignment: CrossAxisAlignment.start,\n        children: [\n          Text(\n            'Self-Care Tips',\n            style: textTheme.titleLarge?.copyWith(\n              color: colorScheme.onSurface,\n            ),\n          ),\n          const SizedBox(height: AppTheme.spaceSm),\n          ...List.generate(tips.length, (index) {\n            final tip = tips[index];\n            final isExpanded = _expandedIndex == index;\n            return Padding(\n              padding: const EdgeInsets.only(bottom: AppTheme.spaceSm),\n              child: _ExpandableTipTile(\n                number: index + 1,\n                title: tip['title']!,\n                detail: tip['detail']!,\n                isExpanded: isExpanded,\n                onTap: () {\n                  setState(() {\n                    _expandedIndex = isExpanded ? -1 : index;\n                  });\n                },\n              ),\n            );\n          }),\n        ],\n      ),\n    );\n  }\n\n  List<Map<String, String>> _getSelfCareTips(int week) {\n    const tips = {\n      12: [\n        {\n          'title': 'Stay hydrated',\n          'detail':\n              'Aim for 8-10 glasses of water daily. Staying hydrated helps prevent UTIs and constipation, common during pregnancy.',\n        },\n        {\n          'title': 'Try gentle exercise',\n          'detail':\n              'Walking or prenatal yoga can help with energy levels and prepare your body for labor.',\n        },\n        {\n          'title': 'Schedule your anatomy scan',\n          'detail':\n              'Your 20-week anatomy scan is approaching. This detailed ultrasound checks baby\\'s development and is often covered by insurance.',\n        },\n      ],\n      24: [\n        {\n          'title': 'Practice good posture',\n          'detail':\n              'As your belly grows, focus on standing and sitting with good alignment to reduce back pain.',\n        },\n        {\n          'title': 'Continue staying active',\n          'detail':\n              'Regular low-impact exercise like swimming or walking can help with circulation and energy.',\n        },\n        {\n          'title': 'Start planning the nursery',\n          'detail':\n              'This is a great time to start thinking about nursery themes and gathering essential items.',\n        },\n      ],\n    };\n    return tips[week] ??\n        [\n          {\n            'title': 'Stay hydrated',\n            'detail': 'Drink plenty of water throughout the day.',\n          },\n          {\n            'title': 'Rest when needed',\n            'detail': 'Listen to your body and rest when you feel tired.',\n          },\n          {\n            'title': 'Attend prenatal appointments',\n            'detail': 'Regular check-ups help monitor your pregnancy progress.',\n          },\n        ];\n  }\n}\n\nclass _ExpandableTipTile extends StatelessWidget {\n  final int number;\n  final String title;\n  final String detail;\n  final bool isExpanded;\n  final VoidCallback onTap;\n\n  const _ExpandableTipTile({\n    required this.number,\n    required this.title,\n    required this.detail,\n    required this.isExpanded,\n    required this.onTap,\n  });\n\n  @override\n  Widget build(BuildContext context) {\n    final theme = Theme.of(context);\n    final colorScheme = theme.colorScheme;\n    final textTheme = theme.textTheme;\n\n    return GestureDetector(\n      onTap: onTap,\n      child: Container(\n        padding: const EdgeInsets.all(AppTheme.spaceSm),\n        decoration: BoxDecoration(\n          border: Border.all(color: colorScheme.outline),\n          borderRadius: BorderRadius.circular(AppTheme.radiusMd),\n        ),\n        child: Column(\n          crossAxisAlignment: CrossAxisAlignment.start,\n          children: [\n            Row(\n              crossAxisAlignment: CrossAxisAlignment.center,\n              children: [\n                Container(\n                  width: 32,\n                  height: 32,\n                  decoration: BoxDecoration(\n                    color: colorScheme.tertiary,\n                    shape: BoxShape.circle,\n                  ),\n                  child: Center(\n                    child: Text(\n                      '$number',\n                      style: textTheme.labelLarge?.copyWith(\n                        color: colorScheme.surface,\n                      ),\n                    ),\n                  ),\n                ),\n                const SizedBox(width: AppTheme.spaceSm),\n                Expanded(\n                  child: Text(\n                    title,\n                    style: textTheme.titleMedium?.copyWith(\n                      color: colorScheme.onSurface,\n                    ),\n                  ),\n                ),\n                Icon(\n                  isExpanded ? Icons.expand_less : Icons.expand_more,\n                  size: 20,\n                  color: colorScheme.onSurfaceVariant,\n                ),\n              ],\n            ),\n            if (isExpanded) ...[\n              const SizedBox(height: AppTheme.spaceXs),\n              Padding(\n                padding: const EdgeInsets.only(left: 44),\n                child: Text(\n                  detail,\n                  style: textTheme.bodyMedium?.copyWith(\n                    color: colorScheme.onSurface,\n                  ),\n                ),\n              ),\n            ],\n          ],\n        ),\n      ),\n    );\n  }\n}\n\nclass _DueDateSummaryCard extends StatelessWidget {\n  final int currentWeek;\n\n  const _DueDateSummaryCard({required this.currentWeek});\n\n  @override\n  Widget build(BuildContext context) {\n    final theme = Theme.of(context);\n    final colorScheme = theme.colorScheme;\n    final textTheme = theme.textTheme;\n\n    final trimester = _getTrimester(currentWeek);\n    final dueDate = DateTime(2026, 1, 15);\n    final daysRemaining = dueDate.difference(DateTime.now()).inDays;\n\n    return Container(\n      decoration: BoxDecoration(\n        color: colorScheme.surface,\n        borderRadius: const BorderRadius.only(\n          topLeft: Radius.circular(28),\n          topRight: Radius.circular(28),\n        ),\n        boxShadow: const [\n          BoxShadow(\n            color: AppTheme.shadow,\n            blurRadius: 24,\n            offset: Offset(0, 8),\n          ),\n        ],\n      ),\n      child: SafeArea(\n        top: false,\n        child: Padding(\n          padding: const EdgeInsets.symmetric(\n            horizontal: AppTheme.spaceLg,\n            vertical: AppTheme.spaceMd,\n          ),\n          child: Row(\n            mainAxisAlignment: MainAxisAlignment.spaceBetween,\n            crossAxisAlignment: CrossAxisAlignment.center,\n            children: [\n              Column(\n                crossAxisAlignment: CrossAxisAlignment.start,\n                mainAxisSize: MainAxisSize.min,\n                children: [\n                  Container(\n                    padding: const EdgeInsets.symmetric(\n                      horizontal: AppTheme.spaceSm,\n                      vertical: AppTheme.spaceXxs,\n                    ),\n                    decoration: BoxDecoration(\n                      color: colorScheme.primary,\n                      borderRadius: BorderRadius.circular(AppTheme.radiusPill),\n                    ),\n                    child: Row(\n                      mainAxisSize: MainAxisSize.min,\n                      children: [\n                        Icon(\n                          Icons.star,\n                          size: 16,\n                          color: colorScheme.onPrimary,\n                        ),\n                        const SizedBox(width: AppTheme.spaceXxs),\n                        Text(\n                          trimester,\n                          style: textTheme.labelMedium?.copyWith(\n                            color: colorScheme.onPrimary,\n                          ),\n                        ),\n                      ],\n                    ),\n                  ),\n                  const SizedBox(height: AppTheme.spaceXs),\n                  Text(\n                    'Due Date',\n                    style: textTheme.labelSmall?.copyWith(\n                      color: colorScheme.onSurfaceVariant,\n                    ),\n                  ),\n                  Text(\n                    '${dueDate.month}/${dueDate.day}/${dueDate.year}',\n                    style: textTheme.titleMedium?.copyWith(\n                      color: colorScheme.onSurface,\n                    ),\n                  ),\n                ],\n              ),\n              Column(\n                crossAxisAlignment: CrossAxisAlignment.end,\n                mainAxisSize: MainAxisSize.min,\n                children: [\n                  Text(\n                    '$daysRemaining',\n                    style: textTheme.headlineLarge?.copyWith(\n                      color: AppTheme.success,\n                    ),\n                  ),\n                  Text(\n                    'days to go',\n                    style: textTheme.bodyMedium?.copyWith(\n                      color: colorScheme.onSurfaceVariant,\n                    ),\n                  ),\n                ],\n              ),\n            ],\n          ),\n        ),\n      ),\n    );\n  }\n\n  String _getTrimester(int week) {\n    if (week <= 13) return 'First Trimester';\n    if (week <= 26) return 'Second Trimester';\n    return 'Third Trimester';\n  }\n}","numLines":721,"startLine":1,"totalLines":721}}}
+[2026-05-19T00:34:54.871Z] [STREAM_EVENT] {"type":"user","message":{"role":"user","content":[{"tool_use_id":"call_function_kfyszzewlemw_1","type":"tool_result","content":"1\timport 'package:flutter/material.dart';\n2\timport 'package:go_router/go_router.dart';\n3\t\n4\timport '../../theme/app_theme.dart';\n5\t\n6\tclass PregnancyProgressScreen extends StatefulWidget {\n7\t  const PregnancyProgressScreen({super.key});\n8\t\n9\t  @override\n10\t  State<PregnancyProgressScreen> createState() => _PregnancyProgressScreenState();\n11\t}\n12\t\n13\tclass _PregnancyProgressScreenState extends State<PregnancyProgressScreen> {\n14\t  late PageController _pageController;\n15\t  int _currentWeek = 12;\n16\t\n17\t  @override\n18\t  void initState() {\n19\t    super.initState();\n20\t    _pageController = PageController(initialPage: _currentWeek - 1);\n21\t  }\n22\t\n23\t  @override\n24\t  void dispose() {\n25\t    _pageController.dispose();\n26\t    super.dispose();\n27\t  }\n28\t\n29\t  @override\n30\t  Widget build(BuildContext context) {\n31\t    final theme = Theme.of(context);\n32\t    final colorScheme = theme.colorScheme;\n33\t    final textTheme = theme.textTheme;\n34\t\n35\t    return Scaffold(\n36\t      backgroundColor: colorScheme.surfaceContainer,\n37\t      appBar: AppBar(\n38\t        backgroundColor: colorScheme.surfaceContainer,\n39\t        elevation: 0,\n40\t        leading: IconButton(\n41\t          onPressed: () => context.pop(),\n42\t          icon: const Icon(Icons.arrow_back_ios, size: 24),\n43\t          padding: EdgeInsets.zero,\n44\t          constraints: const BoxConstraints(minWidth: 48, minHeight: 48),\n45\t        ),\n46\t        title: Text(\n47\t          'My Pregnancy',\n48\t          style: textTheme.headlineSmall?.copyWith(\n49\t            color: colorScheme.onSurface,\n50\t          ),\n51\t        ),\n52\t        centerTitle: true,\n53\t      ),\n54\t      body: Stack(\n55\t        children: [\n56\t          PageView.builder(\n57\t            controller: _pageController,\n58\t            itemCount: 40,\n59\t            onPageChanged: (index) {\n60\t              setState(() {\n61\t                _currentWeek = index + 1;\n62\t              });\n63\t            },\n64\t            itemBuilder: (context, index) {\n65\t              final week = index + 1;\n66\t              return _WeekPage(week: week);\n67\t            },\n68\t          ),\n69\t          Positioned(\n70\t            left: 0,\n71\t            right: 0,\n72\t            bottom: 0,\n73\t            child: _DueDateSummaryCard(currentWeek: _currentWeek),\n74\t          ),\n75\t        ],\n76\t      ),\n77\t    );\n78\t  }\n79\t}\n80\t\n81\tclass _WeekPage extends StatelessWidget {\n82\t  final int week;\n83\t\n84\t  const _WeekPage({required this.week});\n85\t\n86\t  @override\n87\t  Widget build(BuildContext context) {\n88\t    final trimester = _getTrimester(week);\n89\t    final weeksRemaining = 40 - week;\n90\t    final dueDate = DateTime(2026, 1, 15);\n91\t    final fruitEmoji = _getFruitEmoji(week);\n92\t\n93\t    return SingleChildScrollView(\n94\t      padding: const EdgeInsets.only(\n95\t        left: AppTheme.spaceMd,\n96\t        right: AppTheme.spaceMd,\n97\t        top: AppTheme.spaceXs,\n98\t        bottom: 160,\n99\t      ),\n100\t      child: Column(\n101\t        children: [\n102\t          _WeekHeroCard(\n103\t            week: week,\n104\t            trimester: trimester,\n105\t            weeksRemaining: weeksRemaining,\n106\t            dueDate: dueDate,\n107\t            fruitEmoji: fruitEmoji,\n108\t          ),\n109\t          const SizedBox(height: AppTheme.spaceMd),\n110\t          _BodyChangesCard(week: week),\n111\t          const SizedBox(height: AppTheme.spaceMd),\n112\t          _BabyDevelopmentCard(week: week),\n113\t          const SizedBox(height: AppTheme.spaceMd),\n114\t          _SelfCareTipsCard(week: week),\n115\t        ],\n116\t      ),\n117\t    );\n118\t  }\n119\t\n120\t  String _getTrimester(int week) {\n121\t    if (week <= 13) return 'First Trimester';\n122\t    if (week <= 26) return 'Second Trimester';\n123\t    return 'Third Trimester';\n124\t  }\n125\t\n126\t  String _getFruitEmoji(int week) {\n127\t    const fruits = [\n128\t      ' poppy seed', // 4\n129\t      ' sesame seed', // 5\n130\t      '🫐 blueberry', // 6\n131\t      '🫐 blueberry', // 7\n132\t      '🫐 blueberry', // 8\n133\t      '🫐 blueberry', // 9\n134\t      '🫐 blueberry', // 10\n135\t      '🍒 cherry', // 11\n136\t      '🍒 cherry', // 12\n137\t      '🍒 cherry', // 12\n138\t      '🍅 tomato', // 12\n139\t    ];\n140\t    if (week < 4) return '🌱 seed';\n141\t    if (week > 12) return '🍅 tomato';\n142\t    return fruits[week - 4];\n143\t  }\n144\t}\n145\t\n146\tclass _WeekHeroCard extends StatelessWidget {\n147\t  final int week;\n148\t  final String trimester;\n149\t  final int weeksRemaining;\n150\t  final DateTime dueDate;\n151\t  final String fruitEmoji;\n152\t\n153\t  const _WeekHeroCard({\n154\t    required this.week,\n155\t    required this.trimester,\n156\t    required this.weeksRemaining,\n157\t    required this.dueDate,\n158\t    required this.fruitEmoji,\n159\t  });\n160\t\n161\t  @override\n162\t  Widget build(BuildContext context) {\n163\t    final theme = Theme.of(context);\n164\t    final colorScheme = theme.colorScheme;\n165\t    final textTheme = theme.textTheme;\n166\t\n167\t    return Container(\n168\t      width: double.infinity,\n169\t      padding: const EdgeInsets.all(AppTheme.spaceLg),\n170\t      decoration: BoxDecoration(\n171\t        borderRadius: BorderRadius.circular(AppTheme.radiusLg),\n172\t        gradient: LinearGradient(\n173\t          begin: Alignment.topCenter,\n174\t          end: Alignment.bottomCenter,\n175\t          colors: [\n176\t            colorScheme.tertiary,\n177\t            colorScheme.surface,\n178\t          ],\n179\t        ),\n180\t      ),\n181\t      child: Column(\n182\t        children: [\n183\t          Container(\n184\t            width: 80,\n185\t            height: 80,\n186\t            decoration: BoxDecoration(\n187\t              color: colorScheme.tertiary.withValues(alpha: 0.5),\n188\t              shape: BoxShape.circle,\n189\t            ),\n190\t            child: Center(\n191\t              child: Text(\n192\t                fruitEmoji.split(' ').first,\n193\t                style: const TextStyle(fontSize: 40),\n194\t              ),\n195\t            ),\n196\t          ),\n197\t          const SizedBox(height: AppTheme.spaceSm),\n198\t          Text(\n199\t            'Week $week',\n200\t            style: TextStyle(\n201\t              fontSize: 57,\n202\t              fontWeight: FontWeight.w700,\n203\t              height: 64 / 57,\n204\t              color: colorScheme.primary,\n205\t            ),\n206\t          ),\n207\t          const SizedBox(height: AppTheme.spaceXs),\n208\t          Container(\n209\t            padding: const EdgeInsets.symmetric(\n210\t              horizontal: AppTheme.spaceSm,\n211\t              vertical: AppTheme.spaceXxs,\n212\t            ),\n213\t            decoration: BoxDecoration(\n214\t              color: colorScheme.tertiary.withValues(alpha: 0.3),\n215\t              borderRadius: BorderRadius.circular(AppTheme.radiusPill),\n216\t            ),\n217\t            child: Row(\n218\t              mainAxisSize: MainAxisSize.min,\n219\t              children: [\n220\t                Text(\n221\t                  trimester,\n222\t                  style: textTheme.labelLarge?.copyWith(\n223\t                    color: colorScheme.primary,\n224\t                  ),\n225\t                ),\n226\t              ],\n227\t            ),\n228\t          ),\n229\t          const SizedBox(height: AppTheme.spaceXs),\n230\t          Text(\n231\t            '$weeksRemaining weeks to go',\n232\t            style: textTheme.bodyMedium?.copyWith(\n233\t              color: colorScheme.onSurfaceVariant,\n234\t            ),\n235\t          ),\n236\t          const SizedBox(height: AppTheme.spaceXxs),\n237\t          Text(\n238\t            'Due ${dueDate.month}/${dueDate.day}/${dueDate.year}',\n239\t            style: textTheme.labelSmall?.copyWith(\n240\t              color: colorScheme.onSurfaceVariant,\n241\t            ),\n242\t          ),\n243\t        ],\n244\t      ),\n245\t    );\n246\t  }\n247\t}\n248\t\n249\tclass _BodyChangesCard extends StatelessWidget {\n250\t  final int week;\n251\t\n252\t  const _BodyChangesCard({required this.week});\n253\t\n254\t  @override\n255\t  Widget build(BuildContext context) {\n256\t    final theme = Theme.of(context);\n257\t    final colorScheme = theme.colorScheme;\n258\t    final textTheme = theme.textTheme;\n259\t\n260\t    final bodyChanges = _getBodyChanges(week);\n261\t\n262\t    return Container(\n263\t      padding: const EdgeInsets.all(AppTheme.spaceMd),\n264\t      decoration: BoxDecoration(\n265\t        color: colorScheme.surface,\n266\t        borderRadius: BorderRadius.circular(AppTheme.radiusLg),\n267\t        boxShadow: const [\n268\t          BoxShadow(\n269\t            color: AppTheme.shadow,\n270\t            blurRadius: 24,\n271\t            offset: Offset(0, 8),\n272\t          ),\n273\t        ],\n274\t      ),\n275\t      child: Column(\n276\t        crossAxisAlignment: CrossAxisAlignment.start,\n277\t        children: [\n278\t          Text(\n279\t            'Body Changes',\n280\t            style: textTheme.titleLarge?.copyWith(\n281\t              color: colorScheme.onSurface,\n282\t            ),\n283\t          ),\n284\t          const SizedBox(height: AppTheme.spaceSm),\n285\t          ...bodyChanges.map(\n286\t            (change) => Padding(\n287\t              padding: const EdgeInsets.only(bottom: AppTheme.spaceSm),\n288\t              child: Row(\n289\t                crossAxisAlignment: CrossAxisAlignment.start,\n290\t                children: [\n291\t                  Container(\n292\t                    width: 8,\n293\t                    height: 8,\n294\t                    margin: const EdgeInsets.only(top: 6),\n295\t                    decoration: BoxDecoration(\n296\t                      color: colorScheme.tertiary,\n297\t                      shape: BoxShape.circle,\n298\t                    ),\n299\t                  ),\n300\t                  const SizedBox(width: AppTheme.spaceSm),\n301\t                  Expanded(\n302\t                    child: Text(\n303\t                      change,\n304\t                      style: textTheme.bodyMedium?.copyWith(\n305\t                        color: colorScheme.onSurface,\n306\t                      ),\n307\t                    ),\n308\t                  ),\n309\t                ],\n310\t              ),\n311\t            ),\n312\t          ),\n313\t        ],\n314\t      ),\n315\t    );\n316\t  }\n317\t\n318\t  List<String> _getBodyChanges(int week) {\n319\t    const changes = {\n320\t      12: [\n321\t        'Your uterus is now about the size of a grapefruit',\n322\t        'You may experience mild cramping or round ligament pain',\n323\t        'Fatigue may continue, but energy often improves this trimester',\n324\t      ],\n325\t      24: [\n326\t        'Your belly is growing noticeably',\n327\t        'You may feel the baby move soon (quickening)',\n328\t        'Leg cramps and swelling may occur',\n329\t      ],\n330\t    };\n331\t    return changes[week] ??\n332\t        [\n333\t          'Your body is adapting to pregnancy',\n334\t          'Hormonal changes may affect your mood',\n335\t          'Stay hydrated and rest when needed',\n336\t        ];\n337\t  }\n338\t}\n339\t\n340\tclass _BabyDevelopmentCard extends StatelessWidget {\n341\t  final int week;\n342\t\n343\t  const _BabyDevelopmentCard({required this.week});\n344\t\n345\t  @override\n346\t  Widget build(BuildContext context) {\n347\t    final theme = Theme.of(context);\n348\t    final colorScheme = theme.colorScheme;\n349\t    final textTheme = theme.textTheme;\n350\t\n351\t    return Container(\n352\t      padding: const EdgeInsets.all(AppTheme.spaceMd),\n353\t      decoration: BoxDecoration(\n354\t        color: colorScheme.surface,\n355\t        borderRadius: BorderRadius.circular(AppTheme.radiusLg),\n356\t        boxShadow: const [\n357\t          BoxShadow(\n358\t            color: AppTheme.shadow,\n359\t            blurRadius: 24,\n360\t            offset: Offset(0, 8),\n361\t          ),\n362\t        ],\n363\t      ),\n364\t      child: Column(\n365\t        crossAxisAlignment: CrossAxisAlignment.start,\n366\t        children: [\n367\t          Text(\n368\t            'Baby\\'s Development',\n369\t            style: textTheme.titleLarge?.copyWith(\n370\t              color: colorScheme.onSurface,\n371\t            ),\n372\t          ),\n373\t          const SizedBox(height: AppTheme.spaceSm),\n374\t          Text(\n375\t            _getBabyDevelopment(week),\n376\t            style: textTheme.bodyLarge?.copyWith(\n377\t              color: colorScheme.onSurface,\n378\t            ),\n379\t          ),\n380\t        ],\n381\t      ),\n382\t    );\n383\t  }\n384\t\n385\t  String _getBabyDevelopment(int week) {\n386\t    const developments = {\n387\t      12:\n388\t          'Your baby is now about 2 inches long — the size of a plum! Fingers and toes are fully formed, and tooth buds are appearing beneath the gums. The brain continues to develop rapidly, and your baby may start making small movements you can\\'t feel yet.',\n389\t      24:\n390\t          'Your baby is about 12 inches long — the size of a papaya! The brain is developing rapidly, and the baby can hear your voice. Fat is beginning to accumulate, giving the skin a smoother appearance.',\n391\t    };\n392\t    return developments[week] ??\n393\t        'Your baby is growing and developing. Each week brings new milestones.';\n394\t  }\n395\t}\n396\t\n397\tclass _SelfCareTipsCard extends StatefulWidget {\n398\t  final int week;\n399\t\n400\t  const _SelfCareTipsCard({required this.week});\n401\t\n402\t  @override\n403\t  State<_SelfCareTipsCard> createState() => _SelfCareTipsCardState();\n404\t}\n405\t\n406\tclass _SelfCareTipsCardState extends State<_SelfCareTipsCard> {\n407\t  int _expandedIndex = -1;\n408\t\n409\t  @override\n410\t  Widget build(BuildContext context) {\n411\t    final theme = Theme.of(context);\n412\t    final colorScheme = theme.colorScheme;\n413\t    final textTheme = theme.textTheme;\n414\t\n415\t    final tips = _getSelfCareTips(widget.week);\n416\t\n417\t    return Container(\n418\t      padding: const EdgeInsets.all(AppTheme.spaceMd),\n419\t      decoration: BoxDecoration(\n420\t        color: colorScheme.surface,\n421\t        borderRadius: BorderRadius.circular(AppTheme.radiusLg),\n422\t        boxShadow: const [\n423\t          BoxShadow(\n424\t            color: AppTheme.shadow,\n425\t            blurRadius: 24,\n426\t            offset: Offset(0, 8),\n427\t          ),\n428\t        ],\n429\t      ),\n430\t      child: Column(\n431\t        crossAxisAlignment: CrossAxisAlignment.start,\n432\t        children: [\n433\t          Text(\n434\t            'Self-Care Tips',\n435\t            style: textTheme.titleLarge?.copyWith(\n436\t              color: colorScheme.onSurface,\n437\t            ),\n438\t          ),\n439\t          const SizedBox(height: AppTheme.spaceSm),\n440\t          ...List.generate(tips.length, (index) {\n441\t            final tip = tips[index];\n442\t            final isExpanded = _expandedIndex == index;\n443\t            return Padding(\n444\t              padding: const EdgeInsets.only(bottom: AppTheme.spaceSm),\n445\t              child: _ExpandableTipTile(\n446\t                number: index + 1,\n447\t                title: tip['title']!,\n448\t                detail: tip['detail']!,\n449\t                isExpanded: isExpanded,\n450\t                onTap: () {\n451\t                  setState(() {\n452\t                    _expandedIndex = isExpanded ? -1 : index;\n453\t                  });\n454\t                },\n455\t              ),\n456\t            );\n457\t          }),\n458\t        ],\n459\t      ),\n460\t    );\n461\t  }\n462\t\n463\t  List<Map<String, String>> _getSelfCareTips(int week) {\n464\t    const tips = {\n465\t      12: [\n466\t        {\n467\t          'title': 'Stay hydrated',\n468\t          'detail':\n469\t              'Aim for 8-10 glasses of water daily. Staying hydrated helps prevent UTIs and constipation, common during pregnancy.',\n470\t        },\n471\t        {\n472\t          'title': 'Try gentle exercise',\n473\t          'detail':\n474\t              'Walking or prenatal yoga can help with energy levels and prepare your body for labor.',\n475\t        },\n476\t        {\n477\t          'title': 'Schedule your anatomy scan',\n478\t          'detail':\n479\t              'Your 20-week anatomy scan is approaching. This detailed ultrasound checks baby\\'s development and is often covered by insurance.',\n480\t        },\n481\t      ],\n482\t      24: [\n483\t        {\n484\t          'title': 'Practice good posture',\n485\t          'detail':\n486\t              'As your belly grows, focus on standing and sitting with good alignment to reduce back pain.',\n487\t        },\n488\t        {\n489\t          'title': 'Continue staying active',\n490\t          'detail':\n491\t              'Regular low-impact exercise like swimming or walking can help with circulation and energy.',\n492\t        },\n493\t        {\n494\t          'title': 'Start planning the nursery',\n495\t          'detail':\n496\t              'This is a great time to start thinking about nursery themes and gathering essential items.',\n497\t        },\n498\t      ],\n499\t    };\n500\t    return tips[week] ??\n501\t        [\n502\t          {\n503\t            'title': 'Stay hydrated',\n504\t            'detail': 'Drink plenty of water throughout the day.',\n505\t          },\n506\t          {\n507\t            'title': 'Rest when needed',\n508\t            'detail': 'Listen to your body and rest when you feel tired.',\n509\t          },\n510\t          {\n511\t            'title': 'Attend prenatal appointments',\n512\t            'detail': 'Regular check-ups help monitor your pregnancy progress.',\n513\t          },\n514\t        ];\n515\t  }\n516\t}\n517\t\n518\tclass _ExpandableTipTile extends StatelessWidget {\n519\t  final int number;\n520\t  final String title;\n521\t  final String detail;\n522\t  final bool isExpanded;\n523\t  final VoidCallback onTap;\n524\t\n525\t  const _ExpandableTipTile({\n526\t    required this.number,\n527\t    required this.title,\n528\t    required this.detail,\n529\t    required this.isExpanded,\n530\t    required this.onTap,\n531\t  });\n532\t\n533\t  @override\n534\t  Widget build(BuildContext context) {\n535\t    final theme = Theme.of(context);\n536\t    final colorScheme = theme.colorScheme;\n537\t    final textTheme = theme.textTheme;\n538\t\n539\t    return GestureDetector(\n540\t      onTap: onTap,\n541\t      child: Container(\n542\t        padding: const EdgeInsets.all(AppTheme.spaceSm),\n543\t        decoration: BoxDecoration(\n544\t          border: Border.all(color: colorScheme.outline),\n545\t          borderRadius: BorderRadius.circular(AppTheme.radiusMd),\n546\t        ),\n547\t        child: Column(\n548\t          crossAxisAlignment: CrossAxisAlignment.start,\n549\t          children: [\n550\t            Row(\n551\t              crossAxisAlignment: CrossAxisAlignment.center,\n552\t              children: [\n553\t                Container(\n554\t                  width: 32,\n555\t                  height: 32,\n556\t                  decoration: BoxDecoration(\n557\t                    color: colorScheme.tertiary,\n558\t                    shape: BoxShape.circle,\n559\t                  ),\n560\t                  child: Center(\n561\t                    child: Text(\n562\t                      '$number',\n563\t                      style: textTheme.labelLarge?.copyWith(\n564\t                        color: colorScheme.surface,\n565\t                      ),\n566\t                    ),\n567\t                  ),\n568\t                ),\n569\t                const SizedBox(width: AppTheme.spaceSm),\n570\t                Expanded(\n571\t                  child: Text(\n572\t                    title,\n573\t                    style: textTheme.titleMedium?.copyWith(\n574\t                      color: colorScheme.onSurface,\n575\t                    ),\n576\t                  ),\n577\t                ),\n578\t                Icon(\n579\t                  isExpanded ? Icons.expand_less : Icons.expand_more,\n580\t                  size: 20,\n581\t                  color: colorScheme.onSurfaceVariant,\n582\t                ),\n583\t              ],\n584\t            ),\n585\t            if (isExpanded) ...[\n586\t              const SizedBox(height: AppTheme.spaceXs),\n587\t              Padding(\n588\t                padding: const EdgeInsets.only(left: 44),\n589\t                child: Text(\n590\t                  detail,\n591\t                  style: textTheme.bodyMedium?.copyWith(\n592\t                    color: colorScheme.onSurface,\n593\t                  ),\n594\t                ),\n595\t              ),\n596\t            ],\n597\t          ],\n598\t        ),\n599\t      ),\n600\t    );\n601\t  }\n602\t}\n603\t\n604\tclass _DueDateSummaryCard extends StatelessWidget {\n605\t  final int currentWeek;\n606\t\n607\t  const _DueDateSummaryCard({required this.currentWeek});\n608\t\n609\t  @override\n610\t  Widget build(BuildContext context) {\n611\t    final theme = Theme.of(context);\n612\t    final colorScheme = theme.colorScheme;\n613\t    final textTheme = theme.textTheme;\n614\t\n615\t    final trimester = _getTrimester(currentWeek);\n616\t    final dueDate = DateTime(2026, 1, 15);\n617\t    final daysRemaining = dueDate.difference(DateTime.now()).inDays;\n618\t\n619\t    return Container(\n620\t      decoration: BoxDecoration(\n621\t        color: colorScheme.surface,\n622\t        borderRadius: const BorderRadius.only(\n623\t          topLeft: Radius.circular(28),\n624\t          topRight: Radius.circular(28),\n625\t        ),\n626\t        boxShadow: const [\n627\t          BoxShadow(\n628\t            color: AppTheme.shadow,\n629\t            blurRadius: 24,\n630\t            offset: Offset(0, 8),\n631\t          ),\n632\t        ],\n633\t      ),\n634\t      child: SafeArea(\n635\t        top: false,\n636\t        child: Padding(\n637\t          padding: const EdgeInsets.symmetric(\n638\t            horizontal: AppTheme.spaceLg,\n639\t            vertical: AppTheme.spaceMd,\n640\t          ),\n641\t          child: Row(\n642\t            mainAxisAlignment: MainAxisAlignment.spaceBetween,\n643\t            crossAxisAlignment: CrossAxisAlignment.center,\n644\t            children: [\n645\t              Column(\n646\t                crossAxisAlignment: CrossAxisAlignment.start,\n647\t                mainAxisSize: MainAxisSize.min,\n648\t                children: [\n649\t                  Container(\n650\t                    padding: const EdgeInsets.symmetric(\n651\t                      horizontal: AppTheme.spaceSm,\n652\t                      vertical: AppTheme.spaceXxs,\n653\t                    ),\n654\t                    decoration: BoxDecoration(\n655\t                      color: colorScheme.primary,\n656\t                      borderRadius: BorderRadius.circular(AppTheme.radiusPill),\n657\t                    ),\n658\t                    child: Row(\n659\t                      mainAxisSize: MainAxisSize.min,\n660\t                      children: [\n661\t                        Icon(\n662\t                          Icons.star,\n663\t                          size: 16,\n664\t                          color: colorScheme.onPrimary,\n665\t                        ),\n666\t                        const SizedBox(width: AppTheme.spaceXxs),\n667\t                        Text(\n668\t                          trimester,\n669\t                          style: textTheme.labelMedium?.copyWith(\n670\t                            color: colorScheme.onPrimary,\n671\t                          ),\n672\t                        ),\n673\t                      ],\n674\t                    ),\n675\t                  ),\n676\t                  const SizedBox(height: AppTheme.spaceXs),\n677\t                  Text(\n678\t                    'Due Date',\n679\t                    style: textTheme.labelSmall?.copyWith(\n680\t                      color: colorScheme.onSurfaceVariant,\n681\t                    ),\n682\t                  ),\n683\t                  Text(\n684\t                    '${dueDate.month}/${dueDate.day}/${dueDate.year}',\n685\t                    style: textTheme.titleMedium?.copyWith(\n686\t                      color: colorScheme.onSurface,\n687\t                    ),\n688\t                  ),\n689\t                ],\n690\t              ),\n691\t              Column(\n692\t                crossAxisAlignment: CrossAxisAlignment.end,\n693\t                mainAxisSize: MainAxisSize.min,\n694\t                children: [\n695\t                  Text(\n696\t                    '$daysRemaining',\n697\t                    style: textTheme.headlineLarge?.copyWith(\n698\t                      color: AppTheme.success,\n699\t                    ),\n700\t                  ),\n701\t                  Text(\n702\t                    'days to go',\n703\t                    style: textTheme.bodyMedium?.copyWith(\n704\t                      color: colorScheme.onSurfaceVariant,\n705\t                    ),\n706\t                  ),\n707\t                ],\n708\t              ),\n709\t            ],\n710\t          ),\n711\t        ),\n712\t      ),\n713\t    );\n714\t  }\n715\t\n716\t  String _getTrimester(int week) {\n717\t    if (week <= 13) return 'First Trimester';\n718\t    if (week <= 26) return 'Second Trimester';\n719\t    return 'Third Trimester';\n720\t  }\n721\t}"}]},"parent_tool_use_id":null,"session_id":"496ab247-646c-45c0-a04a-f48f95d2e8ea","uuid":"8a89c98c-2ea6-4512-84f3-2da7bfe46c98","timestamp":"2026-05-19T00:34:54.869Z","tool_use_result":{"type":"text","file":{"filePath":"/Users/minh/Documents/openplayboosks/examples/baby-app/lib/screens/pregnancy_progress/pregnancy_progress_screen.dart","content":"import 'package:flutter/material.dart';\nimport 'package:go_router/go_router.dart';\n\nimport '../../theme/app_theme.dart';\n\nclass PregnancyProgressScreen extends StatefulWidget {\n  const PregnancyProgressScreen({super.key});\n\n  @override\n  State<PregnancyProgressScreen> createState() => _PregnancyProgressScreenState();\n}\n\nclass _PregnancyProgressScreenState extends State<PregnancyProgressScreen> {\n  late PageController _pageController;\n  int _currentWeek = 12;\n\n  @override\n  void initState() {\n    super.initState();\n    _pageController = PageController(initialPage: _currentWeek - 1);\n  }\n\n  @override\n  void dispose() {\n    _pageController.dispose();\n    super.dispose();\n  }\n\n  @override\n  Widget build(BuildContext context) {\n    final theme = Theme.of(context);\n    final colorScheme = theme.colorScheme;\n    final textTheme = theme.textTheme;\n\n    return Scaffold(\n      backgroundColor: colorScheme.surfaceContainer,\n      appBar: AppBar(\n        backgroundColor: colorScheme.surfaceContainer,\n        elevation: 0,\n        leading: IconButton(\n          onPressed: () => context.pop(),\n          icon: const Icon(Icons.arrow_back_ios, size: 24),\n          padding: EdgeInsets.zero,\n          constraints: const BoxConstraints(minWidth: 48, minHeight: 48),\n        ),\n        title: Text(\n          'My Pregnancy',\n          style: textTheme.headlineSmall?.copyWith(\n            color: colorScheme.onSurface,\n          ),\n        ),\n        centerTitle: true,\n      ),\n      body: Stack(\n        children: [\n          PageView.builder(\n            controller: _pageController,\n            itemCount: 40,\n            onPageChanged: (index) {\n              setState(() {\n                _currentWeek = index + 1;\n              });\n            },\n            itemBuilder: (context, index) {\n              final week = index + 1;\n              return _WeekPage(week: week);\n            },\n          ),\n          Positioned(\n            left: 0,\n            right: 0,\n            bottom: 0,\n            child: _DueDateSummaryCard(currentWeek: _currentWeek),\n          ),\n        ],\n      ),\n    );\n  }\n}\n\nclass _WeekPage extends StatelessWidget {\n  final int week;\n\n  const _WeekPage({required this.week});\n\n  @override\n  Widget build(BuildContext context) {\n    final trimester = _getTrimester(week);\n    final weeksRemaining = 40 - week;\n    final dueDate = DateTime(2026, 1, 15);\n    final fruitEmoji = _getFruitEmoji(week);\n\n    return SingleChildScrollView(\n      padding: const EdgeInsets.only(\n        left: AppTheme.spaceMd,\n        right: AppTheme.spaceMd,\n        top: AppTheme.spaceXs,\n        bottom: 160,\n      ),\n      child: Column(\n        children: [\n          _WeekHeroCard(\n            week: week,\n            trimester: trimester,\n            weeksRemaining: weeksRemaining,\n            dueDate: dueDate,\n            fruitEmoji: fruitEmoji,\n          ),\n          const SizedBox(height: AppTheme.spaceMd),\n          _BodyChangesCard(week: week),\n          const SizedBox(height: AppTheme.spaceMd),\n          _BabyDevelopmentCard(week: week),\n          const SizedBox(height: AppTheme.spaceMd),\n          _SelfCareTipsCard(week: week),\n        ],\n      ),\n    );\n  }\n\n  String _getTrimester(int week) {\n    if (week <= 13) return 'First Trimester';\n    if (week <= 26) return 'Second Trimester';\n    return 'Third Trimester';\n  }\n\n  String _getFruitEmoji(int week) {\n    const fruits = [\n      ' poppy seed', // 4\n      ' sesame seed', // 5\n      '🫐 blueberry', // 6\n      '🫐 blueberry', // 7\n      '🫐 blueberry', // 8\n      '🫐 blueberry', // 9\n      '🫐 blueberry', // 10\n      '🍒 cherry', // 11\n      '🍒 cherry', // 12\n      '🍒 cherry', // 12\n      '🍅 tomato', // 12\n    ];\n    if (week < 4) return '🌱 seed';\n    if (week > 12) return '🍅 tomato';\n    return fruits[week - 4];\n  }\n}\n\nclass _WeekHeroCard extends StatelessWidget {\n  final int week;\n  final String trimester;\n  final int weeksRemaining;\n  final DateTime dueDate;\n  final String fruitEmoji;\n\n  const _WeekHeroCard({\n    required this.week,\n    required this.trimester,\n    required this.weeksRemaining,\n    required this.dueDate,\n    required this.fruitEmoji,\n  });\n\n  @override\n  Widget build(BuildContext context) {\n    final theme = Theme.of(context);\n    final colorScheme = theme.colorScheme;\n    final textTheme = theme.textTheme;\n\n    return Container(\n      width: double.infinity,\n      padding: const EdgeInsets.all(AppTheme.spaceLg),\n      decoration: BoxDecoration(\n        borderRadius: BorderRadius.circular(AppTheme.radiusLg),\n        gradient: LinearGradient(\n          begin: Alignment.topCenter,\n          end: Alignment.bottomCenter,\n          colors: [\n            colorScheme.tertiary,\n            colorScheme.surface,\n          ],\n        ),\n      ),\n      child: Column(\n        children: [\n          Container(\n            width: 80,\n            height: 80,\n            decoration: BoxDecoration(\n              color: colorScheme.tertiary.withValues(alpha: 0.5),\n              shape: BoxShape.circle,\n            ),\n            child: Center(\n              child: Text(\n                fruitEmoji.split(' ').first,\n                style: const TextStyle(fontSize: 40),\n              ),\n            ),\n          ),\n          const SizedBox(height: AppTheme.spaceSm),\n          Text(\n            'Week $week',\n            style: TextStyle(\n              fontSize: 57,\n              fontWeight: FontWeight.w700,\n              height: 64 / 57,\n              color: colorScheme.primary,\n            ),\n          ),\n          const SizedBox(height: AppTheme.spaceXs),\n          Container(\n            padding: const EdgeInsets.symmetric(\n              horizontal: AppTheme.spaceSm,\n              vertical: AppTheme.spaceXxs,\n            ),\n            decoration: BoxDecoration(\n              color: colorScheme.tertiary.withValues(alpha: 0.3),\n              borderRadius: BorderRadius.circular(AppTheme.radiusPill),\n            ),\n            child: Row(\n              mainAxisSize: MainAxisSize.min,\n              children: [\n                Text(\n                  trimester,\n                  style: textTheme.labelLarge?.copyWith(\n                    color: colorScheme.primary,\n                  ),\n                ),\n              ],\n            ),\n          ),\n          const SizedBox(height: AppTheme.spaceXs),\n          Text(\n            '$weeksRemaining weeks to go',\n            style: textTheme.bodyMedium?.copyWith(\n              color: colorScheme.onSurfaceVariant,\n            ),\n          ),\n          const SizedBox(height: AppTheme.spaceXxs),\n          Text(\n            'Due ${dueDate.month}/${dueDate.day}/${dueDate.year}',\n            style: textTheme.labelSmall?.copyWith(\n              color: colorScheme.onSurfaceVariant,\n            ),\n          ),\n        ],\n      ),\n    );\n  }\n}\n\nclass _BodyChangesCard extends StatelessWidget {\n  final int week;\n\n  const _BodyChangesCard({required this.week});\n\n  @override\n  Widget build(BuildContext context) {\n    final theme = Theme.of(context);\n    final colorScheme = theme.colorScheme;\n    final textTheme = theme.textTheme;\n\n    final bodyChanges = _getBodyChanges(week);\n\n    return Container(\n      padding: const EdgeInsets.all(AppTheme.spaceMd),\n      decoration: BoxDecoration(\n        color: colorScheme.surface,\n        borderRadius: BorderRadius.circular(AppTheme.radiusLg),\n        boxShadow: const [\n          BoxShadow(\n            color: AppTheme.shadow,\n            blurRadius: 24,\n            offset: Offset(0, 8),\n          ),\n        ],\n      ),\n      child: Column(\n        crossAxisAlignment: CrossAxisAlignment.start,\n        children: [\n          Text(\n            'Body Changes',\n            style: textTheme.titleLarge?.copyWith(\n              color: colorScheme.onSurface,\n            ),\n          ),\n          const SizedBox(height: AppTheme.spaceSm),\n          ...bodyChanges.map(\n            (change) => Padding(\n              padding: const EdgeInsets.only(bottom: AppTheme.spaceSm),\n              child: Row(\n                crossAxisAlignment: CrossAxisAlignment.start,\n                children: [\n                  Container(\n                    width: 8,\n                    height: 8,\n                    margin: const EdgeInsets.only(top: 6),\n                    decoration: BoxDecoration(\n                      color: colorScheme.tertiary,\n                      shape: BoxShape.circle,\n                    ),\n                  ),\n                  const SizedBox(width: AppTheme.spaceSm),\n                  Expanded(\n                    child: Text(\n                      change,\n                      style: textTheme.bodyMedium?.copyWith(\n                        color: colorScheme.onSurface,\n                      ),\n                    ),\n                  ),\n                ],\n              ),\n            ),\n          ),\n        ],\n      ),\n    );\n  }\n\n  List<String> _getBodyChanges(int week) {\n    const changes = {\n      12: [\n        'Your uterus is now about the size of a grapefruit',\n        'You may experience mild cramping or round ligament pain',\n        'Fatigue may continue, but energy often improves this trimester',\n      ],\n      24: [\n        'Your belly is growing noticeably',\n        'You may feel the baby move soon (quickening)',\n        'Leg cramps and swelling may occur',\n      ],\n    };\n    return changes[week] ??\n        [\n          'Your body is adapting to pregnancy',\n          'Hormonal changes may affect your mood',\n          'Stay hydrated and rest when needed',\n        ];\n  }\n}\n\nclass _BabyDevelopmentCard extends StatelessWidget {\n  final int week;\n\n  const _BabyDevelopmentCard({required this.week});\n\n  @override\n  Widget build(BuildContext context) {\n    final theme = Theme.of(context);\n    final colorScheme = theme.colorScheme;\n    final textTheme = theme.textTheme;\n\n    return Container(\n      padding: const EdgeInsets.all(AppTheme.spaceMd),\n      decoration: BoxDecoration(\n        color: colorScheme.surface,\n        borderRadius: BorderRadius.circular(AppTheme.radiusLg),\n        boxShadow: const [\n          BoxShadow(\n            color: AppTheme.shadow,\n            blurRadius: 24,\n            offset: Offset(0, 8),\n          ),\n        ],\n      ),\n      child: Column(\n        crossAxisAlignment: CrossAxisAlignment.start,\n        children: [\n          Text(\n            'Baby\\'s Development',\n            style: textTheme.titleLarge?.copyWith(\n              color: colorScheme.onSurface,\n            ),\n          ),\n          const SizedBox(height: AppTheme.spaceSm),\n          Text(\n            _getBabyDevelopment(week),\n            style: textTheme.bodyLarge?.copyWith(\n              color: colorScheme.onSurface,\n            ),\n          ),\n        ],\n      ),\n    );\n  }\n\n  String _getBabyDevelopment(int week) {\n    const developments = {\n      12:\n          'Your baby is now about 2 inches long — the size of a plum! Fingers and toes are fully formed, and tooth buds are appearing beneath the gums. The brain continues to develop rapidly, and your baby may start making small movements you can\\'t feel yet.',\n      24:\n          'Your baby is about 12 inches long — the size of a papaya! The brain is developing rapidly, and the baby can hear your voice. Fat is beginning to accumulate, giving the skin a smoother appearance.',\n    };\n    return developments[week] ??\n        'Your baby is growing and developing. Each week brings new milestones.';\n  }\n}\n\nclass _SelfCareTipsCard extends StatefulWidget {\n  final int week;\n\n  const _SelfCareTipsCard({required this.week});\n\n  @override\n  State<_SelfCareTipsCard> createState() => _SelfCareTipsCardState();\n}\n\nclass _SelfCareTipsCardState extends State<_SelfCareTipsCard> {\n  int _expandedIndex = -1;\n\n  @override\n  Widget build(BuildContext context) {\n    final theme = Theme.of(context);\n    final colorScheme = theme.colorScheme;\n    final textTheme = theme.textTheme;\n\n    final tips = _getSelfCareTips(widget.week);\n\n    return Container(\n      padding: const EdgeInsets.all(AppTheme.spaceMd),\n      decoration: BoxDecoration(\n        color: colorScheme.surface,\n        borderRadius: BorderRadius.circular(AppTheme.radiusLg),\n        boxShadow: const [\n          BoxShadow(\n            color: AppTheme.shadow,\n            blurRadius: 24,\n            offset: Offset(0, 8),\n          ),\n        ],\n      ),\n      child: Column(\n        crossAxisAlignment: CrossAxisAlignment.start,\n        children: [\n          Text(\n            'Self-Care Tips',\n            style: textTheme.titleLarge?.copyWith(\n              color: colorScheme.onSurface,\n            ),\n          ),\n          const SizedBox(height: AppTheme.spaceSm),\n          ...List.generate(tips.length, (index) {\n            final tip = tips[index];\n            final isExpanded = _expandedIndex == index;\n            return Padding(\n              padding: const EdgeInsets.only(bottom: AppTheme.spaceSm),\n              child: _ExpandableTipTile(\n                number: index + 1,\n                title: tip['title']!,\n                detail: tip['detail']!,\n                isExpanded: isExpanded,\n                onTap: () {\n                  setState(() {\n                    _expandedIndex = isExpanded ? -1 : index;\n                  });\n                },\n              ),\n            );\n          }),\n        ],\n      ),\n    );\n  }\n\n  List<Map<String, String>> _getSelfCareTips(int week) {\n    const tips = {\n      12: [\n        {\n          'title': 'Stay hydrated',\n          'detail':\n              'Aim for 8-10 glasses of water daily. Staying hydrated helps prevent UTIs and constipation, common during pregnancy.',\n        },\n        {\n          'title': 'Try gentle exercise',\n          'detail':\n              'Walking or prenatal yoga can help with energy levels and prepare your body for labor.',\n        },\n        {\n          'title': 'Schedule your anatomy scan',\n          'detail':\n              'Your 20-week anatomy scan is approaching. This detailed ultrasound checks baby\\'s development and is often covered by insurance.',\n        },\n      ],\n      24: [\n        {\n          'title': 'Practice good posture',\n          'detail':\n              'As your belly grows, focus on standing and sitting with good alignment to reduce back pain.',\n        },\n        {\n          'title': 'Continue staying active',\n          'detail':\n              'Regular low-impact exercise like swimming or walking can help with circulation and energy.',\n        },\n        {\n          'title': 'Start planning the nursery',\n          'detail':\n              'This is a great time to start thinking about nursery themes and gathering essential items.',\n        },\n      ],\n    };\n    return tips[week] ??\n        [\n          {\n            'title': 'Stay hydrated',\n            'detail': 'Drink plenty of water throughout the day.',\n          },\n          {\n            'title': 'Rest when needed',\n            'detail': 'Listen to your body and rest when you feel tired.',\n          },\n          {\n            'title': 'Attend prenatal appointments',\n            'detail': 'Regular check-ups help monitor your pregnancy progress.',\n          },\n        ];\n  }\n}\n\nclass _ExpandableTipTile extends StatelessWidget {\n  final int number;\n  final String title;\n  final String detail;\n  final bool isExpanded;\n  final VoidCallback onTap;\n\n  const _ExpandableTipTile({\n    required this.number,\n    required this.title,\n    required this.detail,\n    required this.isExpanded,\n    required this.onTap,\n  });\n\n  @override\n  Widget build(BuildContext context) {\n    final theme = Theme.of(context);\n    final colorScheme = theme.colorScheme;\n    final textTheme = theme.textTheme;\n\n    return GestureDetector(\n      onTap: onTap,\n      child: Container(\n        padding: const EdgeInsets.all(AppTheme.spaceSm),\n        decoration: BoxDecoration(\n          border: Border.all(color: colorScheme.outline),\n          borderRadius: BorderRadius.circular(AppTheme.radiusMd),\n        ),\n        child: Column(\n          crossAxisAlignment: CrossAxisAlignment.start,\n          children: [\n            Row(\n              crossAxisAlignment: CrossAxisAlignment.center,\n              children: [\n                Container(\n                  width: 32,\n                  height: 32,\n                  decoration: BoxDecoration(\n                    color: colorScheme.tertiary,\n                    shape: BoxShape.circle,\n                  ),\n                  child: Center(\n                    child: Text(\n                      '$number',\n                      style: textTheme.labelLarge?.copyWith(\n                        color: colorScheme.surface,\n                      ),\n                    ),\n                  ),\n                ),\n                const SizedBox(width: AppTheme.spaceSm),\n                Expanded(\n                  child: Text(\n                    title,\n                    style: textTheme.titleMedium?.copyWith(\n                      color: colorScheme.onSurface,\n                    ),\n                  ),\n                ),\n                Icon(\n                  isExpanded ? Icons.expand_less : Icons.expand_more,\n                  size: 20,\n                  color: colorScheme.onSurfaceVariant,\n                ),\n              ],\n            ),\n            if (isExpanded) ...[\n              const SizedBox(height: AppTheme.spaceXs),\n              Padding(\n                padding: const EdgeInsets.only(left: 44),\n                child: Text(\n                  detail,\n                  style: textTheme.bodyMedium?.copyWith(\n                    color: colorScheme.onSurface,\n                  ),\n                ),\n              ),\n            ],\n          ],\n        ),\n      ),\n    );\n  }\n}\n\nclass _DueDateSummaryCard extends StatelessWidget {\n  final int currentWeek;\n\n  const _DueDateSummaryCard({required this.currentWeek});\n\n  @override\n  Widget build(BuildContext context) {\n    final theme = Theme.of(context);\n    final colorScheme = theme.colorScheme;\n    final textTheme = theme.textTheme;\n\n    final trimester = _getTrimester(currentWeek);\n    final dueDate = DateTime(2026, 1, 15);\n    final daysRemaining = dueDate.difference(DateTime.now()).inDays;\n\n    return Container(\n      decoration: BoxDecoration(\n        color: colorScheme.surface,\n        borderRadius: const BorderRadius.only(\n          topLeft: Radius.circular(28),\n          topRight: Radius.circular(28),\n        ),\n        boxShadow: const [\n          BoxShadow(\n            color: AppTheme.shadow,\n            blurRadius: 24,\n            offset: Offset(0, 8),\n          ),\n        ],\n      ),\n      child: SafeArea(\n        top: false,\n        child: Padding(\n          padding: const EdgeInsets.symmetric(\n            horizontal: AppTheme.spaceLg,\n            vertical: AppTheme.spaceMd,\n          ),\n          child: Row(\n            mainAxisAlignment: MainAxisAlignment.spaceBetween,\n            crossAxisAlignment: CrossAxisAlignment.center,\n            children: [\n              Column(\n                crossAxisAlignment: CrossAxisAlignment.start,\n                mainAxisSize: MainAxisSize.min,\n                children: [\n                  Container(\n                    padding: const EdgeInsets.symmetric(\n                      horizontal: AppTheme.spaceSm,\n                      vertical: AppTheme.spaceXxs,\n                    ),\n                    decoration: BoxDecoration(\n                      color: colorScheme.primary,\n                      borderRadius: BorderRadius.circular(AppTheme.radiusPill),\n                    ),\n                    child: Row(\n                      mainAxisSize: MainAxisSize.min,\n                      children: [\n                        Icon(\n                          Icons.star,\n                          size: 16,\n                          color: colorScheme.onPrimary,\n                        ),\n                        const SizedBox(width: AppTheme.spaceXxs),\n                        Text(\n                          trimester,\n                          style: textTheme.labelMedium?.copyWith(\n                            color: colorScheme.onPrimary,\n                          ),\n                        ),\n                      ],\n                    ),\n                  ),\n                  const SizedBox(height: AppTheme.spaceXs),\n                  Text(\n                    'Due Date',\n                    style: textTheme.labelSmall?.copyWith(\n                      color: colorScheme.onSurfaceVariant,\n                    ),\n                  ),\n                  Text(\n                    '${dueDate.month}/${dueDate.day}/${dueDate.year}',\n                    style: textTheme.titleMedium?.copyWith(\n                      color: colorScheme.onSurface,\n                    ),\n                  ),\n                ],\n              ),\n              Column(\n                crossAxisAlignment: CrossAxisAlignment.end,\n                mainAxisSize: MainAxisSize.min,\n                children: [\n                  Text(\n                    '$daysRemaining',\n                    style: textTheme.headlineLarge?.copyWith(\n                      color: AppTheme.success,\n                    ),\n                  ),\n                  Text(\n                    'days to go',\n                    style: textTheme.bodyMedium?.copyWith(\n                      color: colorScheme.onSurfaceVariant,\n                    ),\n                  ),\n                ],\n              ),\n            ],\n          ),\n        ),\n      ),\n    );\n  }\n\n  String _getTrimester(int week) {\n    if (week <= 13) return 'First Trimester';\n    if (week <= 26) return 'Second Trimester';\n    return 'Third Trimester';\n  }\n}","numLines":721,"startLine":1,"totalLines":721}}}
+[2026-05-19T00:34:54.871Z] [TOOL_RESULT] 1	import 'package:flutter/material.dart';
+2	import 'package:go_router/go_router.dart';
+3	
+4	import '../../theme/app_theme.dart';
+5	
+6	class PregnancyProgressScreen extends StatefulWidget {
+7	  const PregnancyProgressScreen({super.key});
+8	
+9	  @override
+10	  State<PregnancyProgressScreen> createState() => _PregnancyProgressScreenState();
+11	}
+12	
+13	class _PregnancyProgressScreenState extends State<PregnancyProgressScreen> {
+14	  late PageController _pageController;
+15	  int _currentWeek = 12;
+16	
+17	  @override
+18	  void initState() {
+19	    super.initState();
+20	    _pageController = PageController(initialPage: _currentWeek - 1);
+21	  }
+22	
+23	  @override
+24	  void dispose() {
+25	    _pageController.dispose();
+26	    super.dispose();
+27	  }
+28	
+29	  @override
+30	  Widget build(BuildContext context) {
+31	    final theme = Theme.of(context);
+32	    final colorScheme = theme.colorScheme;
+33	    final textTheme = theme.textTheme;
+34	
+35	    return Scaffold(
+36	      backgroundColor: colorScheme.surfaceContainer,
+37	      appBar: AppBar(
+38	        backgroundColor: colorScheme.surfaceContainer,
+39	        elevation: 0,
+40	        leading: IconButton(
+41	          onPressed: () => context.pop(),
+42	          icon: const Icon(Icons.arrow_back_ios, size: 24),
+43	          padding: EdgeInsets.zero,
+44	          constraints: const BoxConstraints(minWidth: 48, minHeight: 48),
+45	        ),
+46	        title: Text(
+47	          'My Pregnancy',
+48	          style: textTheme.headlineSmall?.copyWith(
+49	            color: colorScheme.onSurface,
+50	          ),
+51	        ),
+52	        centerTitle: true,
+53	      ),
+54	      body: Stack(
+55	        children: [
+56	          PageView.builder(
+57	            controller: _pageController,
+58	            itemCount: 40,
+59	            onPageChanged: (index) {
+60	              setState(() {
+61	                _currentWeek = index + 1;
+62	              });
+63	            },
+64	            itemBuilder: (context, index) {
+65	              final week = index + 1;
+66	              return _WeekPage(week: week);
+67	            },
+68	          ),
+69	          Positioned(
+70	            left: 0,
+71	            right: 0,
+72	            bottom: 0,
+73	            child: _DueDateSummaryCard(currentWeek: _currentWeek),
+74	          ),
+75	        ],
+76	      ),
+77	    );
+78	  }
+79	}
+80	
+81	class _WeekPage extends StatelessWidget {
+82	  final int week;
+83	
+84	  const _WeekPage({required this.week});
+85	
+86	  @override
+87	  Widget build(BuildContext context) {
+88	    final trimester = _getTrimester(week);
+89	    final weeksRemaining = 40 - week;
+90	    final dueDate = DateTime(2026, 1, 15);
+91	    final fruitEmoji = _getFruitEmoji(week);
+92	
+93	    return SingleChildScrollView(
+94	      padding: const EdgeInsets.only(
+95	        left: AppTheme.spaceMd,
+96	        right: AppTheme.spaceMd,
+97	        top: AppTheme.spaceXs,
+98	        bottom: 160,
+99	      ),
+100	      child: Column(
+101	        children: [
+102	          _WeekHeroCard(
+103	            week: week,
+104	            trimester: trimester,
+105	            weeksRemaining: weeksRemaining,
+106	            dueDate: dueDate,
+107	            fruitEmoji: fruitEmoji,
+108	          ),
+109	          const SizedBox(height: AppTheme.spaceMd),
+110	          _BodyChangesCard(week: week),
+111	          const SizedBox(height: AppTheme.spaceMd),
+112	          _BabyDevelopmentCard(week: week),
+113	          const SizedBox(height: AppTheme.spaceMd),
+114	          _SelfCareTipsCard(week: week),
+115	        ],
+116	      ),
+117	    );
+118	  }
+119	
+120	  String _getTrimester(int week) {
+121	    if (week <= 13) return 'First Trimester';
+122	    if (week <= 26) return 'Second Trimester';
+123	    return 'Third Trimester';
+124	  }
+125	
+126	  String _getFruitEmoji(int week) {
+127	    const fruits = [
+128	      ' poppy seed', // 4
+129	      ' sesame seed', // 5
+130	      '🫐 blueberry', // 6
+131	      '🫐 blueberry', // 7
+132	      '🫐 blueberry', // 8
+133	      '🫐 blueberry', // 9
+134	      '🫐 blueberry', // 10
+135	      '🍒 cherry', // 11
+136	      '🍒 cherry', // 12
+137	      '🍒 cherry', // 12
+138	      '🍅 tomato', // 12
+139	    ];
+140	    if (week < 4) return '🌱 seed';
+141	    if (week > 12) return '🍅 tomato';
+142	    return fruits[week - 4];
+143	  }
+144	}
+145	
+146	class _WeekHeroCard extends StatelessWidget {
+147	  final int week;
+148	  final String trimester;
+149	  final int weeksRemaining;
+150	  final DateTime dueDate;
+151	  final String fruitEmoji;
+152	
+153	  const _WeekHeroCard({
+154	    required this.week,
+155	    required this.trimester,
+156	    required this.weeksRemaining,
+157	    required this.dueDate,
+158	    required this.fruitEmoji,
+159	  });
+160	
+161	  @override
+162	  Widget build(BuildContext context) {
+163	    final theme = Theme.of(context);
+164	    final colorScheme = theme.colorScheme;
+165	    final textTheme = theme.textTheme;
+166	
+167	    return Container(
+168	      width: double.infinity,
+169	      padding: const EdgeInsets.all(AppTheme.spaceLg),
+170	      decoration: BoxDecoration(
+171	        borderRadius: BorderRadius.circular(AppTheme.radiusLg),
+172	        gradient: LinearGradient(
+173	          begin: Alignment.topCenter,
+174	          end: Alignment.bottomCenter,
+175	          colors: [
+176	            colorScheme.tertiary,
+177	            colorScheme.surface,
+178	          ],
+179	        ),
+180	      ),
+181	      child: Column(
+182	        children: [
+183	          Container(
+184	            width: 80,
+185	            height: 80,
+186	            decoration: BoxDecoration(
+187	              color: colorScheme.tertiary.withValues(alpha: 0.5),
+188	              shape: BoxShape.circle,
+189	            ),
+190	            child: Center(
+191	              child: Text(
+192	                fruitEmoji.split(' ').first,
+193	                style: const TextStyle(fontSize: 40),
+194	              ),
+195	            ),
+196	          ),
+197	          const SizedBox(height: AppTheme.spaceSm),
+198	          Text(
+199	            'Week $week',
+200	            style: TextStyle(
+201	              fontSize: 57,
+202	              fontWeight: FontWeight.w700,
+203	              height: 64 / 57,
+204	              color: colorScheme.primary,
+205	            ),
+206	          ),
+207	          const SizedBox(height: AppTheme.spaceXs),
+208	          Container(
+209	            padding: const EdgeInsets.symmetric(
+210	              horizontal: AppTheme.spaceSm,
+211	              vertical: AppTheme.spaceXxs,
+212	            ),
+213	            decoration: BoxDecoration(
+214	              color: colorScheme.tertiary.withValues(alpha: 0.3),
+215	              borderRadius: BorderRadius.circular(AppTheme.radiusPill),
+216	            ),
+217	            child: Row(
+218	              mainAxisSize: MainAxisSize.min,
+219	              children: [
+220	                Text(
+221	                  trimester,
+222	                  style: textTheme.labelLarge?.copyWith(
+223	                    color: colorScheme.primary,
+224	                  ),
+225	                ),
+226	              ],
+227	            ),
+228	          ),
+229	          const SizedBox(height: AppTheme.spaceXs),
+230	          Text(
+231	            '$weeksRemaining weeks to go',
+232	            style: textTheme.bodyMedium?.copyWith(
+233	              color: colorScheme.onSurfaceVariant,
+234	            ),
+235	          ),
+236	          const SizedBox(height: AppTheme.spaceXxs),
+237	          Text(
+238	            'Due ${dueDate.month}/${dueDate.day}/${dueDate.year}',
+239	            style: textTheme.labelSmall?.copyWith(
+240	              color: colorScheme.onSurfaceVariant,
+241	            ),
+242	          ),
+243	        ],
+244	      ),
+245	    );
+246	  }
+247	}
+248	
+249	class _BodyChangesCard extends StatelessWidget {
+250	  final int week;
+251	
+252	  const _BodyChangesCard({required this.week});
+253	
+254	  @override
+255	  Widget build(BuildContext context) {
+256	    final theme = Theme.of(context);
+257	    final colorScheme = theme.colorScheme;
+258	    final textTheme = theme.textTheme;
+259	
+260	    final bodyChanges = _getBodyChanges(week);
+261	
+262	    return Container(
+263	      padding: const EdgeInsets.all(AppTheme.spaceMd),
+264	      decoration: BoxDecoration(
+265	        color: colorScheme.surface,
+266	        borderRadius: BorderRadius.circular(AppTheme.radiusLg),
+267	        boxShadow: const [
+268	          BoxShadow(
+269	            color: AppTheme.shadow,
+270	            blurRadius: 24,
+271	            offset: Offset(0, 8),
+272	          ),
+273	        ],
+274	      ),
+275	      child: Column(
+276	        crossAxisAlignment: CrossAxisAlignment.start,
+277	        children: [
+278	          Text(
+279	            'Body Changes',
+280	            style: textTheme.titleLarge?.copyWith(
+281	              color: colorScheme.onSurface,
+282	            ),
+283	          ),
+284	          const SizedBox(height: AppTheme.spaceSm),
+285	          ...bodyChanges.map(
+286	            (change) => Padding(
+287	              padding: const EdgeInsets.only(bottom: AppTheme.spaceSm),
+288	              child: Row(
+289	                crossAxisAlignment: CrossAxisAlignment.start,
+290	                children: [
+291	                  Container(
+292	                    width: 8,
+293	                    height: 8,
+294	                    margin: const EdgeInsets.only(top: 6),
+295	                    decoration: BoxDecoration(
+296	                      color: colorScheme.tertiary,
+297	                      shape: BoxShape.circle,
+298	                    ),
+299	                  ),
+300	                  const SizedBox(width: AppTheme.spaceSm),
+301	                  Expanded(
+302	                    child: Text(
+303	                      change,
+304	                      style: textTheme.bodyMedium?.copyWith(
+305	                        color: colorScheme.onSurface,
+306	                      ),
+307	                    ),
+308	                  ),
+309	                ],
+310	              ),
+311	            ),
+312	          ),
+313	        ],
+314	      ),
+315	    );
+316	  }
+317	
+318	  List<String> _getBodyChanges(int week) {
+319	    const changes = {
+320	      12: [
+321	        'Your uterus is now about the size of a grapefruit',
+322	        'You may experience mild cramping or round ligament pain',
+323	        'Fatigue may continue, but energy often improves this trimester',
+324	      ],
+325	      24: [
+326	        'Your belly is growing noticeably',
+327	        'You may feel the baby move soon (quickening)',
+328	        'Leg cramps and swelling may occur',
+329	      ],
+330	    };
+331	    return changes[week] ??
+332	        [
+333	          'Your body is adapting to pregnancy',
+334	          'Hormonal changes may affect your mood',
+335	          'Stay hydrated and rest when needed',
+336	        ];
+337	  }
+338	}
+339	
+340	class _BabyDevelopmentCard extends StatelessWidget {
+341	  final int week;
+342	
+343	  const _BabyDevelopmentCard({required this.week});
+344	
+345	  @override
+346	  Widget build(BuildContext context) {
+347	    final theme = Theme.of(context);
+348	    final colorScheme = theme.colorScheme;
+349	    final textTheme = theme.textTheme;
+350	
+351	    return Container(
+352	      padding: const EdgeInsets.all(AppTheme.spaceMd),
+353	      decoration: BoxDecoration(
+354	        color: colorScheme.surface,
+355	        borderRadius: BorderRadius.circular(AppTheme.radiusLg),
+356	        boxShadow: const [
+357	          BoxShadow(
+358	            color: AppTheme.shadow,
+359	            blurRadius: 24,
+360	            offset: Offset(0, 8),
+361	          ),
+362	        ],
+363	      ),
+364	      child: Column(
+365	        crossAxisAlignment: CrossAxisAlignment.start,
+366	        children: [
+367	          Text(
+368	            'Baby\'s Development',
+369	            style: textTheme.titleLarge?.copyWith(
+370	              color: colorScheme.onSurface,
+371	            ),
+372	          ),
+373	          const SizedBox(height: AppTheme.spaceSm),
+374	          Text(
+375	            _getBabyDevelopment(week),
+376	            style: textTheme.bodyLarge?.copyWith(
+377	              color: colorScheme.onSurface,
+378	            ),
+379	          ),
+380	        ],
+381	      ),
+382	    );
+383	  }
+384	
+385	  String _getBabyDevelopment(int week) {
+386	    const developments = {
+387	      12:
+388	          'Your baby is now about 2 inches long — the size of a plum! Fingers and toes are fully formed, and tooth buds are appearing beneath the gums. The brain continues to develop rapidly, and your baby may start making small movements you can\'t feel yet.',
+389	      24:
+390	          'Your baby is about 12 inches long — the size of a papaya! The brain is developing rapidly, and the baby can hear your voice. Fat is beginning to accumulate, giving the skin a smoother appearance.',
+391	    };
+392	    return developments[week] ??
+393	        'Your baby is growing and developing. Each week brings new milestones.';
+394	  }
+395	}
+396	
+397	class _SelfCareTipsCard extends StatefulWidget {
+398	  final int week;
+399	
+400	  const _SelfCareTipsCard({required this.week});
+401	
+402	  @override
+403	  State<_SelfCareTipsCard> createState() => _SelfCareTipsCardState();
+404	}
+405	
+406	class _SelfCareTipsCardState extends State<_SelfCareTipsCard> {
+407	  int _expandedIndex = -1;
+408	
+409	  @override
+410	  Widget build(BuildContext context) {
+411	    final theme = Theme.of(context);
+412	    final colorScheme = theme.colorScheme;
+413	    final textTheme = theme.textTheme;
+414	
+415	    final tips = _getSelfCareTips(widget.week);
+416	
+417	    return Container(
+418	      padding: const EdgeInsets.all(AppTheme.spaceMd),
+419	      decoration: BoxDecoration(
+420	        color: colorScheme.surface,
+421	        borderRadius: BorderRadius.circular(AppTheme.radiusLg),
+422	        boxShadow: const [
+423	          BoxShadow(
+424	            color: AppTheme.shadow,
+425	            blurRadius: 24,
+426	            offset: Offset(0, 8),
+427	          ),
+428	        ],
+429	      ),
+430	      child: Column(
+431	        crossAxisAlignment: CrossAxisAlignment.start,
+432	        children: [
+433	          Text(
+434	            'Self-Care Tips',
+435	            style: textTheme.titleLarge?.copyWith(
+436	              color: colorScheme.onSurface,
+437	            ),
+438	          ),
+439	          const SizedBox(height: AppTheme.spaceSm),
+440	          ...List.generate(tips.length, (index) {
+441	            final tip = tips[index];
+442	            final isExpanded = _expandedIndex == index;
+443	            return Padding(
+444	              padding: const EdgeInsets.only(bottom: AppTheme.spaceSm),
+445	              child: _ExpandableTipTile(
+446	                number: index + 1,
+447	                title: tip['title']!,
+448	                detail: tip['detail']!,
+449	                isExpanded: isExpanded,
+450	                onTap: () {
+451	                  setState(() {
+452	                    _expandedIndex = isExpanded ? -1 : index;
+453	                  });
+454	                },
+455	              ),
+456	            );
+457	          }),
+458	        ],
+459	      ),
+460	    );
+461	  }
+462	
+463	  List<Map<String, String>> _getSelfCareTips(int week) {
+464	    const tips = {
+465	      12: [
+466	        {
+467	          'title': 'Stay hydrated',
+468	          'detail':
+469	              'Aim for 8-10 glasses of water daily. Staying hydrated helps prevent UTIs and constipation, common during pregnancy.',
+470	        },
+471	        {
+472	          'title': 'Try gentle exercise',
+473	          'detail':
+474	              'Walking or prenatal yoga can help with energy levels and prepare your body for labor.',
+475	        },
+476	        {
+477	          'title': 'Schedule your anatomy scan',
+478	          'detail':
+479	              'Your 20-week anatomy scan is approaching. This detailed ultrasound checks baby\'s development and is often covered by insurance.',
+480	        },
+481	      ],
+482	      24: [
+483	        {
+484	          'title': 'Practice good posture',
+485	          'detail':
+486	              'As your belly grows, focus on standing and sitting with good alignment to reduce back pain.',
+487	        },
+488	        {
+489	          'title': 'Continue staying active',
+490	          'detail':
+491	              'Regular low-impact exercise like swimming or walking can help with circulation and energy.',
+492	        },
+493	        {
+494	          'title': 'Start planning the nursery',
+495	          'detail':
+496	              'This is a great time to start thinking about nursery themes and gathering essential items.',
+497	        },
+498	      ],
+499	    };
+500	    return tips[week] ??
+501	        [
+502	          {
+503	            'title': 'Stay hydrated',
+504	            'detail': 'Drink plenty of water throughout the day.',
+505	          },
+506	          {
+507	            'title': 'Rest when needed',
+508	            'detail': 'Listen to your body and rest when you feel tired.',
+509	          },
+510	          {
+511	            'title': 'Attend prenatal appointments',
+512	            'detail': 'Regular check-ups help monitor your pregnancy progress.',
+513	          },
+514	        ];
+515	  }
+516	}
+517	
+518	class _ExpandableTipTile extends StatelessWidget {
+519	  final int number;
+520	  final String title;
+521	  final String detail;
+522	  final bool isExpanded;
+523	  final VoidCallback onTap;
+524	
+525	  const _ExpandableTipTile({
+526	    required this.number,
+527	    required this.title,
+528	    required this.detail,
+529	    required this.isExpanded,
+530	    required this.onTap,
+531	  });
+532	
+533	  @override
+534	  Widget build(BuildContext context) {
+535	    final theme = Theme.of(context);
+536	    final colorScheme = theme.colorScheme;
+537	    final textTheme = theme.textTheme;
+538	
+539	    return GestureDetector(
+540	      onTap: onTap,
+541	      child: Container(
+542	        padding: const EdgeInsets.all(AppTheme.spaceSm),
+543	        decoration: BoxDecoration(
+544	          border: Border.all(color: colorScheme.outline),
+545	          borderRadius: BorderRadius.circular(AppTheme.radiusMd),
+546	        ),
+547	        child: Column(
+548	          crossAxisAlignment: CrossAxisAlignment.start,
+549	          children: [
+550	            Row(
+551	              crossAxisAlignment: CrossAxisAlignment.center,
+552	              children: [
+553	                Container(
+554	                  width: 32,
+555	                  height: 32,
+556	                  decoration: BoxDecoration(
+557	                    color: colorScheme.tertiary,
+558	                    shape: BoxShape.circle,
+559	                  ),
+560	                  child: Center(
+561	                    child: Text(
+562	                      '$number',
+563	                      style: textTheme.labelLarge?.copyWith(
+564	                        color: colorScheme.surface,
+565	                      ),
+566	                    ),
+567	                  ),
+568	                ),
+569	                const SizedBox(width: AppTheme.spaceSm),
+570	                Expanded(
+571	                  child: Text(
+572	                    title,
+573	                    style: textTheme.titleMedium?.copyWith(
+574	                      color: colorScheme.onSurface,
+575	                    ),
+576	                  ),
+577	                ),
+578	                Icon(
+579	                  isExpanded ? Icons.expand_less : Icons.expand_more,
+580	                  size: 20,
+581	                  color: colorScheme.onSurfaceVariant,
+582	                ),
+583	              ],
+584	            ),
+585	            if (isExpanded) ...[
+586	              const SizedBox(height: AppTheme.spaceXs),
+587	              Padding(
+588	                padding: const EdgeInsets.only(left: 44),
+589	                child: Text(
+590	                  detail,
+591	                  style: textTheme.bodyMedium?.copyWith(
+592	                    color: colorScheme.onSurface,
+593	                  ),
+594	                ),
+595	              ),
+596	            ],
+597	          ],
+598	        ),
+599	      ),
+600	    );
+601	  }
+602	}
+603	
+604	class _DueDateSummaryCard extends StatelessWidget {
+605	  final int currentWeek;
+606	
+607	  const _DueDateSummaryCard({required this.currentWeek});
+608	
+609	  @override
+610	  Widget build(BuildContext context) {
+611	    final theme = Theme.of(context);
+612	    final colorScheme = theme.colorScheme;
+613	    final textTheme = theme.textTheme;
+614	
+615	    final trimester = _getTrimester(currentWeek);
+616	    final dueDate = DateTime(2026, 1, 15);
+617	    final daysRemaining = dueDate.difference(DateTime.now()).inDays;
+618	
+619	    return Container(
+620	      decoration: BoxDecoration(
+621	        color: colorScheme.surface,
+622	        borderRadius: const BorderRadius.only(
+623	          topLeft: Radius.circular(28),
+624	          topRight: Radius.circular(28),
+625	        ),
+626	        boxShadow: const [
+627	          BoxShadow(
+628	            color: AppTheme.shadow,
+629	            blurRadius: 24,
+630	            offset: Offset(0, 8),
+631	          ),
+632	        ],
+633	      ),
+634	      child: SafeArea(
+635	        top: false,
+636	        child: Padding(
+637	          padding: const EdgeInsets.symmetric(
+638	            horizontal: AppTheme.spaceLg,
+639	            vertical: AppTheme.spaceMd,
+640	          ),
+641	          child: Row(
+642	            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+643	            crossAxisAlignment: CrossAxisAlignment.center,
+644	            children: [
+645	              Column(
+646	                crossAxisAlignment: CrossAxisAlignment.start,
+647	                mainAxisSize: MainAxisSize.min,
+648	                children: [
+649	                  Container(
+650	                    padding: const EdgeInsets.symmetric(
+651	                      horizontal: AppTheme.spaceSm,
+652	                      vertical: AppTheme.spaceXxs,
+653	                    ),
+654	                    decoration: BoxDecoration(
+655	                      color: colorScheme.primary,
+656	                      borderRadius: BorderRadius.circular(AppTheme.radiusPill),
+657	                    ),
+658	                    child: Row(
+659	                      mainAxisSize: MainAxisSize.min,
+660	                      children: [
+661	                        Icon(
+662	                          Icons.star,
+663	                          size: 16,
+664	                          color: colorScheme.onPrimary,
+665	                        ),
+666	                        const SizedBox(width: AppTheme.spaceXxs),
+667	                        Text(
+668	                          trimester,
+669	                          style: textTheme.labelMedium?.copyWith(
+670	                            color: colorScheme.onPrimary,
+671	                          ),
+672	                        ),
+673	                      ],
+674	                    ),
+675	                  ),
+676	                  const SizedBox(height: AppTheme.spaceXs),
+677	                  Text(
+678	                    'Due Date',
+679	                    style: textTheme.labelSmall?.copyWith(
+680	                      color: colorScheme.onSurfaceVariant,
+681	                    ),
+682	                  ),
+683	                  Text(
+684	                    '${dueDate.month}/${dueDate.day}/${dueDate.year}',
+685	                    style: textTheme.titleMedium?.copyWith(
+686	                      color: colorScheme.onSurface,
+687	                    ),
+688	                  ),
+689	                ],
+690	              ),
+691	              Column(
+692	                crossAxisAlignment: CrossAxisAlignment.end,
+693	                mainAxisSize: MainAxisSize.min,
+694	                children: [
+695	                  Text(
+696	                    '$daysRemaining',
+697	                    style: textTheme.headlineLarge?.copyWith(
+698	                      color: AppTheme.success,
+699	                    ),
+700	                  ),
+701	                  Text(
+702	                    'days to go',
+703	                    style: textTheme.bodyMedium?.copyWith(
+704	                      color: colorScheme.onSurfaceVariant,
+705	                    ),
+706	                  ),
+707	                ],
+708	              ),
+709	            ],
+710	          ),
+711	        ),
+712	      ),
+713	    );
+714	  }
+715	
+716	  String _getTrimester(int week) {
+717	    if (week <= 13) return 'First Trimester';
+718	    if (week <= 26) return 'Second Trimester';
+719	    return 'Third Trimester';
+720	  }
+721	}
+[2026-05-19T00:34:54.901Z] [STDOUT] {"type":"user","message":{"role":"user","content":[{"tool_use_id":"call_function_kfyszzewlemw_2","type":"tool_result","content":".stitch/designs/home/widgets.jsonl\n.stitch/designs/browse/widgets.jsonl\n.stitch/designs/library/widgets.jsonl\n.stitch/designs/profile/widgets.jsonl\n.stitch/designs/cycle-tracking/widgets.jsonl\n.stitch/designs/weight-nutrition/widgets.jsonl"}]},"parent_tool_use_id":null,"session_id":"496ab247-646c-45c0-a04a-f48f95d2e8ea","uuid":"5c2cdfe2-37eb-48d9-85a0-da459013d45f","timestamp":"2026-05-19T00:34:54.901Z","tool_use_result":{"filenames":[".stitch/designs/home/widgets.jsonl",".stitch/designs/browse/widgets.jsonl",".stitch/designs/library/widgets.jsonl",".stitch/designs/profile/widgets.jsonl",".stitch/designs/cycle-tracking/widgets.jsonl",".stitch/designs/weight-nutrition/widgets.jsonl"],"durationMs":38,"numFiles":6,"truncated":false}}
+[2026-05-19T00:34:54.902Z] [STREAM_EVENT] {"type":"user","message":{"role":"user","content":[{"tool_use_id":"call_function_kfyszzewlemw_2","type":"tool_result","content":".stitch/designs/home/widgets.jsonl\n.stitch/designs/browse/widgets.jsonl\n.stitch/designs/library/widgets.jsonl\n.stitch/designs/profile/widgets.jsonl\n.stitch/designs/cycle-tracking/widgets.jsonl\n.stitch/designs/weight-nutrition/widgets.jsonl"}]},"parent_tool_use_id":null,"session_id":"496ab247-646c-45c0-a04a-f48f95d2e8ea","uuid":"5c2cdfe2-37eb-48d9-85a0-da459013d45f","timestamp":"2026-05-19T00:34:54.901Z","tool_use_result":{"filenames":[".stitch/designs/home/widgets.jsonl",".stitch/designs/browse/widgets.jsonl",".stitch/designs/library/widgets.jsonl",".stitch/designs/profile/widgets.jsonl",".stitch/designs/cycle-tracking/widgets.jsonl",".stitch/designs/weight-nutrition/widgets.jsonl"],"durationMs":38,"numFiles":6,"truncated":false}}
+[2026-05-19T00:34:54.902Z] [TOOL_RESULT] .stitch/designs/home/widgets.jsonl
+.stitch/designs/browse/widgets.jsonl
+.stitch/designs/library/widgets.jsonl
+.stitch/designs/profile/widgets.jsonl
+.stitch/designs/cycle-tracking/widgets.jsonl
+.stitch/designs/weight-nutrition/widgets.jsonl
+[2026-05-19T00:35:04.482Z] [STDOUT] {"type":"assistant","message":{"id":"065ae32f6f70919aec146d827f46022d","type":"message","role":"assistant","content":[{"type":"thinking","thinking":"Let me analyze the pregnancy_progress_screen.dart file and identify widget subtrees that should be extracted.\n\nLooking at the code:\n\n1. `_WeekPage` (lines 81-144) - ~63 lines. Contains the week page with hero card and content cards. It's a self-contained visual block with its own data/state concerns. However, it's part of the main screen flow.\n\n2. `_WeekHeroCard` (lines 146-247) - ~101 lines. Self-contained visual block with gradient background, fruit emoji, week display, trimester badge. Could be reused.\n\n3. `_BodyChangesCard` (lines 249-338) - ~89 lines. Self-contained card with bullet list of body changes. Could potentially be reused.\n\n4. `_BabyDevelopmentCard` (lines 340-395) - ~55 lines. Self-contained card with baby's development info. Could potentially be reused.\n\n5. `_SelfCareTipsCard` (lines 397-516) - ~119 lines. Self-contained card with expandable tips. Has its own state (`_expandedIndex`). Could potentially be reused.\n\n6. `_ExpandableTipTile` (lines 518-602) - ~84 lines. This is a reusable component inside SelfCareTipsCard - it has number, title, detail, isExpanded state. Could be reused across screens.\n\n7. `_DueDateSummaryCard` (lines 604-721) - ~117 lines. Self-contained visual block at the bottom of the screen showing due date and days remaining. Could potentially be reused.\n\nLet me check an existing widgets.jsonl file to understand the format better.","signature":"3b861c6834ff0a7f95c9ee72c3377f9a248dc6dd3b9d45c628a85fb071fb9ad9"}],"model":"MiniMax-M2.7","stop_reason":null,"stop_sequence":null,"usage":{"input_tokens":7802,"output_tokens":0,"cache_creation_input_tokens":0,"cache_read_input_tokens":23239},"service_tier":"standard","context_management":null},"parent_tool_use_id":null,"session_id":"496ab247-646c-45c0-a04a-f48f95d2e8ea","uuid":"07702b30-2be9-4d69-b7fc-2b78cebb367e"}
+[2026-05-19T00:35:04.483Z] [STREAM_EVENT] {"type":"assistant","message":{"id":"065ae32f6f70919aec146d827f46022d","type":"message","role":"assistant","content":[{"type":"thinking","thinking":"Let me analyze the pregnancy_progress_screen.dart file and identify widget subtrees that should be extracted.\n\nLooking at the code:\n\n1. `_WeekPage` (lines 81-144) - ~63 lines. Contains the week page with hero card and content cards. It's a self-contained visual block with its own data/state concerns. However, it's part of the main screen flow.\n\n2. `_WeekHeroCard` (lines 146-247) - ~101 lines. Self-contained visual block with gradient background, fruit emoji, week display, trimester badge. Could be reused.\n\n3. `_BodyChangesCard` (lines 249-338) - ~89 lines. Self-contained card with bullet list of body changes. Could potentially be reused.\n\n4. `_BabyDevelopmentCard` (lines 340-395) - ~55 lines. Self-contained card with baby's development info. Could potentially be reused.\n\n5. `_SelfCareTipsCard` (lines 397-516) - ~119 lines. Self-contained card with expandable tips. Has its own state (`_expandedIndex`). Could potentially be reused.\n\n6. `_ExpandableTipTile` (lines 518-602) - ~84 lines. This is a reusable component inside SelfCareTipsCard - it has number, title, detail, isExpanded state. Could be reused across screens.\n\n7. `_DueDateSummaryCard` (lines 604-721) - ~117 lines. Self-contained visual block at the bottom of the screen showing due date and days remaining. Could potentially be reused.\n\nLet me check an existing widgets.jsonl file to understand the format better.","signature":"3b861c6834ff0a7f95c9ee72c3377f9a248dc6dd3b9d45c628a85fb071fb9ad9"}],"model":"MiniMax-M2.7","stop_reason":null,"stop_sequence":null,"usage":{"input_tokens":7802,"output_tokens":0,"cache_creation_input_tokens":0,"cache_read_input_tokens":23239},"service_tier":"standard","context_management":null},"parent_tool_use_id":null,"session_id":"496ab247-646c-45c0-a04a-f48f95d2e8ea","uuid":"07702b30-2be9-4d69-b7fc-2b78cebb367e"}
+[2026-05-19T00:35:04.483Z] [THINKING] Let me analyze the pregnancy_progress_screen.dart file and identify widget subtrees that should be extracted.
+
+Looking at the code:
+
+1. `_WeekPage` (lines 81-144) - ~63 lines. Contains the week page with hero card and content cards. It's a self-contained visual block with its own data/state concerns. However, it's part of the main screen flow.
+
+2. `_WeekHeroCard` (lines 146-247) - ~101 lines. Self-contained visual block with gradient background, fruit emoji, week display, trimester badge. Could be reused.
+
+3. `_BodyChangesCard` (lines 249-338) - ~89 lines. Self-contained card with bullet list of body changes. Could potentially be reused.
+
+4. `_BabyDevelopmentCard` (lines 340-395) - ~55 lines. Self-contained card with baby's development info. Could potentially be reused.
+
+5. `_SelfCareTipsCard` (lines 397-516) - ~119 lines. Self-contained card with expandable tips. Has its own state (`_expandedIndex`). Could potentially be reused.
+
+6. `_ExpandableTipTile` (lines 518-602) - ~84 lines. This is a reusable component inside SelfCareTipsCard - it has number, title, detail, isExpanded state. Could be reused across screens.
+
+7. `_DueDateSummaryCard` (lines 604-721) - ~117 lines. Self-contained visual block at the bottom of the screen showing due date and days remaining. Could potentially be reused.
+
+Let me check an existing widgets.jsonl file to understand the format better.
+[2026-05-19T00:35:05.034Z] [STDOUT] {"type":"assistant","message":{"id":"065ae32f6f70919aec146d827f46022d","type":"message","role":"assistant","content":[{"type":"text","text":"Let me examine an existing widgets.jsonl file to understand the format conventions.\n"}],"model":"MiniMax-M2.7","stop_reason":null,"stop_sequence":null,"usage":{"input_tokens":7802,"output_tokens":0,"cache_creation_input_tokens":0,"cache_read_input_tokens":23239},"service_tier":"standard","context_management":null},"parent_tool_use_id":null,"session_id":"496ab247-646c-45c0-a04a-f48f95d2e8ea","uuid":"44c68438-bae7-4947-9e02-ca01f57fd099"}
+[2026-05-19T00:35:05.034Z] [STREAM_EVENT] {"type":"assistant","message":{"id":"065ae32f6f70919aec146d827f46022d","type":"message","role":"assistant","content":[{"type":"text","text":"Let me examine an existing widgets.jsonl file to understand the format conventions.\n"}],"model":"MiniMax-M2.7","stop_reason":null,"stop_sequence":null,"usage":{"input_tokens":7802,"output_tokens":0,"cache_creation_input_tokens":0,"cache_read_input_tokens":23239},"service_tier":"standard","context_management":null},"parent_tool_use_id":null,"session_id":"496ab247-646c-45c0-a04a-f48f95d2e8ea","uuid":"44c68438-bae7-4947-9e02-ca01f57fd099"}
+[2026-05-19T00:35:05.034Z] [TEXT_BLOCK] Let me examine an existing widgets.jsonl file to understand the format conventions.
+
+[2026-05-19T00:35:05.119Z] [STDOUT] {"type":"assistant","message":{"id":"065ae32f6f70919aec146d827f46022d","type":"message","role":"assistant","content":[{"type":"tool_use","id":"call_function_0b4bah15kkso_1","name":"Read","input":{"file_path":"/Users/minh/Documents/openplayboosks/examples/baby-app/.stitch/designs/home/widgets.jsonl"}}],"model":"MiniMax-M2.7","stop_reason":null,"stop_sequence":null,"usage":{"input_tokens":7802,"output_tokens":0,"cache_creation_input_tokens":0,"cache_read_input_tokens":23239},"service_tier":"standard","context_management":null},"parent_tool_use_id":null,"session_id":"496ab247-646c-45c0-a04a-f48f95d2e8ea","uuid":"6f0efec9-49ae-4ec6-8cf9-61661aca6646"}
+[2026-05-19T00:35:05.120Z] [STREAM_EVENT] {"type":"assistant","message":{"id":"065ae32f6f70919aec146d827f46022d","type":"message","role":"assistant","content":[{"type":"tool_use","id":"call_function_0b4bah15kkso_1","name":"Read","input":{"file_path":"/Users/minh/Documents/openplayboosks/examples/baby-app/.stitch/designs/home/widgets.jsonl"}}],"model":"MiniMax-M2.7","stop_reason":null,"stop_sequence":null,"usage":{"input_tokens":7802,"output_tokens":0,"cache_creation_input_tokens":0,"cache_read_input_tokens":23239},"service_tier":"standard","context_management":null},"parent_tool_use_id":null,"session_id":"496ab247-646c-45c0-a04a-f48f95d2e8ea","uuid":"6f0efec9-49ae-4ec6-8cf9-61661aca6646"}
+[2026-05-19T00:35:05.120Z] [TOOL_USE] Tool: Read
+Input: {
+  "file_path": "/Users/minh/Documents/openplayboosks/examples/baby-app/.stitch/designs/home/widgets.jsonl"
+}
+[2026-05-19T00:35:05.124Z] [STDOUT] {"type":"user","message":{"role":"user","content":[{"tool_use_id":"call_function_0b4bah15kkso_1","type":"tool_result","content":"1\t{\"name\": \"MoodCard\", \"grep\": \"How are you feeling today?\", \"description\": \"Card showing mood check-in with emoji buttons for daily tracking\", \"shared\": true}\n2\t{\"name\": \"MoodButton\", \"grep\": \"Terrible\", \"description\": \"Individual mood emoji button with label and selection state\", \"shared\": true}\n3\t{\"name\": \"ChecklistSection\", \"grep\": \"Today's Checklist\", \"description\": \"Horizontal scrollable checklist section with progress counter\", \"shared\": false}\n4\t{\"name\": \"ChecklistChip\", \"grep\": \"Weight logged\", \"description\": \"Pill-shaped chip showing task completion status with check icon\", \"shared\": true}\n5\t{\"name\": \"QuickActionsSection\", \"grep\": \"Quick Actions\", \"description\": \"2x2 grid of quick action buttons for common tasks\", \"shared\": false}\n6\t{\"name\": \"QuickActionButton\", \"grep\": \"Log Weight\", \"description\": \"Action button with icon and label, supports outlined variant\", \"shared\": true}\n7\t{\"name\": \"WeeklyTipCard\", \"grep\": \"Weekly Tip\", \"description\": \"Gradient card displaying weekly health tip with icon and text\", \"shared\": false}\n8\t{\"name\": \"BottomNavBar\", \"grep\": \"Icons.home\", \"description\": \"Bottom navigation bar with app destinations\", \"shared\": true}\n9\t{\"name\": \"NavDestination\", \"grep\": \"Nav item structure\", \"description\": \"Navigation item with icon, label, and active state styling\", \"shared\": true}"}]},"parent_tool_use_id":null,"session_id":"496ab247-646c-45c0-a04a-f48f95d2e8ea","uuid":"ece930d7-2de9-40c5-a573-a0ad085481fa","timestamp":"2026-05-19T00:35:05.124Z","tool_use_result":{"type":"text","file":{"filePath":"/Users/minh/Documents/openplayboosks/examples/baby-app/.stitch/designs/home/widgets.jsonl","content":"{\"name\": \"MoodCard\", \"grep\": \"How are you feeling today?\", \"description\": \"Card showing mood check-in with emoji buttons for daily tracking\", \"shared\": true}\n{\"name\": \"MoodButton\", \"grep\": \"Terrible\", \"description\": \"Individual mood emoji button with label and selection state\", \"shared\": true}\n{\"name\": \"ChecklistSection\", \"grep\": \"Today's Checklist\", \"description\": \"Horizontal scrollable checklist section with progress counter\", \"shared\": false}\n{\"name\": \"ChecklistChip\", \"grep\": \"Weight logged\", \"description\": \"Pill-shaped chip showing task completion status with check icon\", \"shared\": true}\n{\"name\": \"QuickActionsSection\", \"grep\": \"Quick Actions\", \"description\": \"2x2 grid of quick action buttons for common tasks\", \"shared\": false}\n{\"name\": \"QuickActionButton\", \"grep\": \"Log Weight\", \"description\": \"Action button with icon and label, supports outlined variant\", \"shared\": true}\n{\"name\": \"WeeklyTipCard\", \"grep\": \"Weekly Tip\", \"description\": \"Gradient card displaying weekly health tip with icon and text\", \"shared\": false}\n{\"name\": \"BottomNavBar\", \"grep\": \"Icons.home\", \"description\": \"Bottom navigation bar with app destinations\", \"shared\": true}\n{\"name\": \"NavDestination\", \"grep\": \"Nav item structure\", \"description\": \"Navigation item with icon, label, and active state styling\", \"shared\": true}","numLines":9,"startLine":1,"totalLines":9}}}
+[2026-05-19T00:35:05.125Z] [STREAM_EVENT] {"type":"user","message":{"role":"user","content":[{"tool_use_id":"call_function_0b4bah15kkso_1","type":"tool_result","content":"1\t{\"name\": \"MoodCard\", \"grep\": \"How are you feeling today?\", \"description\": \"Card showing mood check-in with emoji buttons for daily tracking\", \"shared\": true}\n2\t{\"name\": \"MoodButton\", \"grep\": \"Terrible\", \"description\": \"Individual mood emoji button with label and selection state\", \"shared\": true}\n3\t{\"name\": \"ChecklistSection\", \"grep\": \"Today's Checklist\", \"description\": \"Horizontal scrollable checklist section with progress counter\", \"shared\": false}\n4\t{\"name\": \"ChecklistChip\", \"grep\": \"Weight logged\", \"description\": \"Pill-shaped chip showing task completion status with check icon\", \"shared\": true}\n5\t{\"name\": \"QuickActionsSection\", \"grep\": \"Quick Actions\", \"description\": \"2x2 grid of quick action buttons for common tasks\", \"shared\": false}\n6\t{\"name\": \"QuickActionButton\", \"grep\": \"Log Weight\", \"description\": \"Action button with icon and label, supports outlined variant\", \"shared\": true}\n7\t{\"name\": \"WeeklyTipCard\", \"grep\": \"Weekly Tip\", \"description\": \"Gradient card displaying weekly health tip with icon and text\", \"shared\": false}\n8\t{\"name\": \"BottomNavBar\", \"grep\": \"Icons.home\", \"description\": \"Bottom navigation bar with app destinations\", \"shared\": true}\n9\t{\"name\": \"NavDestination\", \"grep\": \"Nav item structure\", \"description\": \"Navigation item with icon, label, and active state styling\", \"shared\": true}"}]},"parent_tool_use_id":null,"session_id":"496ab247-646c-45c0-a04a-f48f95d2e8ea","uuid":"ece930d7-2de9-40c5-a573-a0ad085481fa","timestamp":"2026-05-19T00:35:05.124Z","tool_use_result":{"type":"text","file":{"filePath":"/Users/minh/Documents/openplayboosks/examples/baby-app/.stitch/designs/home/widgets.jsonl","content":"{\"name\": \"MoodCard\", \"grep\": \"How are you feeling today?\", \"description\": \"Card showing mood check-in with emoji buttons for daily tracking\", \"shared\": true}\n{\"name\": \"MoodButton\", \"grep\": \"Terrible\", \"description\": \"Individual mood emoji button with label and selection state\", \"shared\": true}\n{\"name\": \"ChecklistSection\", \"grep\": \"Today's Checklist\", \"description\": \"Horizontal scrollable checklist section with progress counter\", \"shared\": false}\n{\"name\": \"ChecklistChip\", \"grep\": \"Weight logged\", \"description\": \"Pill-shaped chip showing task completion status with check icon\", \"shared\": true}\n{\"name\": \"QuickActionsSection\", \"grep\": \"Quick Actions\", \"description\": \"2x2 grid of quick action buttons for common tasks\", \"shared\": false}\n{\"name\": \"QuickActionButton\", \"grep\": \"Log Weight\", \"description\": \"Action button with icon and label, supports outlined variant\", \"shared\": true}\n{\"name\": \"WeeklyTipCard\", \"grep\": \"Weekly Tip\", \"description\": \"Gradient card displaying weekly health tip with icon and text\", \"shared\": false}\n{\"name\": \"BottomNavBar\", \"grep\": \"Icons.home\", \"description\": \"Bottom navigation bar with app destinations\", \"shared\": true}\n{\"name\": \"NavDestination\", \"grep\": \"Nav item structure\", \"description\": \"Navigation item with icon, label, and active state styling\", \"shared\": true}","numLines":9,"startLine":1,"totalLines":9}}}
+[2026-05-19T00:35:05.125Z] [TOOL_RESULT] 1	{"name": "MoodCard", "grep": "How are you feeling today?", "description": "Card showing mood check-in with emoji buttons for daily tracking", "shared": true}
+2	{"name": "MoodButton", "grep": "Terrible", "description": "Individual mood emoji button with label and selection state", "shared": true}
+3	{"name": "ChecklistSection", "grep": "Today's Checklist", "description": "Horizontal scrollable checklist section with progress counter", "shared": false}
+4	{"name": "ChecklistChip", "grep": "Weight logged", "description": "Pill-shaped chip showing task completion status with check icon", "shared": true}
+5	{"name": "QuickActionsSection", "grep": "Quick Actions", "description": "2x2 grid of quick action buttons for common tasks", "shared": false}
+6	{"name": "QuickActionButton", "grep": "Log Weight", "description": "Action button with icon and label, supports outlined variant", "shared": true}
+7	{"name": "WeeklyTipCard", "grep": "Weekly Tip", "description": "Gradient card displaying weekly health tip with icon and text", "shared": false}
+8	{"name": "BottomNavBar", "grep": "Icons.home", "description": "Bottom navigation bar with app destinations", "shared": true}
+9	{"name": "NavDestination", "grep": "Nav item structure", "description": "Navigation item with icon, label, and active state styling", "shared": true}
+[2026-05-19T00:35:23.625Z] [STDOUT] {"type":"assistant","message":{"id":"065ae339440a6a13ee7b8e33bbdb3083","type":"message","role":"assistant","content":[{"type":"thinking","thinking":"Now I have a good understanding of the format and conventions. Let me analyze the pregnancy_progress_screen.dart file to identify extractable widget regions.\n\nLooking at the file, I can identify the following widget candidates:\n\n1. **_WeekHeroCard** (lines 146-247) - Self-contained visual block, 100+ lines, shows week info with fruit emoji, gradient background. Could be reused. shared: true\n\n2. **_BodyChangesCard** (lines 249-338) - Self-contained card showing body changes, 90 lines. shared: true\n\n3. **_BabyDevelopmentCard** (lines 340-395) - Self-contained card showing baby development, ~55 lines. shared: true\n\n4. **_SelfCareTipsCard** (lines 397-516) - Self-contained card with expandable tips, 120+ lines. Has its own state (_expandedIndex). shared: true\n\n5. **_ExpandableTipTile** (lines 518-602) - Reusable component within SelfCareTipsCard, 85 lines. shared: true\n\n6. **_DueDateSummaryCard** (lines 604-721) - Self-contained bottom summary card, 117 lines. shared: true\n\nLet me consider extraction criteria:\n- Self-contained visual block: All of these qualify\n- 15+ lines: All exceed this\n- Could be reused: All seem reusable across screens\n- Own data/state concerns: Several have their own logic\n\nLooking at the existing widgets.jsonl, I see `shared: false` for screen-specific sections like `ChecklistSection` and `QuickActionsSection`. Let me think about which should be shared vs not:\n\n- `_WeekHeroCard` - Reusable across any week-based pregnancy app\n- `_BodyChangesCard` - Reusable pregnancy-related content\n- `_BabyDevelopmentCard` - Reusable pregnancy-related content\n\n\n- `_SelfCareTipsCard` - Reusable pregnancy-related content\n- `_ExpandableTipTile` - Highly reusable, generic expandable tile\n- `_DueDateSummaryCard` - Seems screen-specific (bottom bar for this particular screen)\n\nWait, looking more carefully, `_DueDateSummaryCard` seems very specific to this screen's layout. But then again, `BottomNavBar` is marked as `shared: true` and `NavDestination` is also shared. So the pattern seems to be about potential for reuse even if currently only used in one screen.\n\nLet me finalize my analysis. All of these have good reuse potential, but some are more generic. `_ExpandableTipTile` is particularly generic and could be used in many contexts beyond pregnancy apps.\n\nI'll mark all of them as `shared: true` since they all have potential for reuse beyond this specific screen.\n\nLooking more carefully at extraction criteria:\n- Simple `Text`, `Icon`, or `SizedBox` - these are all complex cards\n- Layout wrappers - none of these are just wrappers\n- Under 10 lines - all exceed 10 lines\n\nAll 6 widgets are good candidates for extraction.\n","signature":"31d3d017fa59e83bbfb1f29192e458620b3844fc81b70d8e64b9f6970537b183"}],"model":"MiniMax-M2.7","stop_reason":null,"stop_sequence":null,"usage":{"input_tokens":19743,"output_tokens":0,"cache_creation_input_tokens":0,"cache_read_input_tokens":0},"service_tier":"standard","context_management":null},"parent_tool_use_id":null,"session_id":"496ab247-646c-45c0-a04a-f48f95d2e8ea","uuid":"566b1867-0a88-4796-9671-92fcfe1326dd"}
+[2026-05-19T00:35:23.626Z] [STREAM_EVENT] {"type":"assistant","message":{"id":"065ae339440a6a13ee7b8e33bbdb3083","type":"message","role":"assistant","content":[{"type":"thinking","thinking":"Now I have a good understanding of the format and conventions. Let me analyze the pregnancy_progress_screen.dart file to identify extractable widget regions.\n\nLooking at the file, I can identify the following widget candidates:\n\n1. **_WeekHeroCard** (lines 146-247) - Self-contained visual block, 100+ lines, shows week info with fruit emoji, gradient background. Could be reused. shared: true\n\n2. **_BodyChangesCard** (lines 249-338) - Self-contained card showing body changes, 90 lines. shared: true\n\n3. **_BabyDevelopmentCard** (lines 340-395) - Self-contained card showing baby development, ~55 lines. shared: true\n\n4. **_SelfCareTipsCard** (lines 397-516) - Self-contained card with expandable tips, 120+ lines. Has its own state (_expandedIndex). shared: true\n\n5. **_ExpandableTipTile** (lines 518-602) - Reusable component within SelfCareTipsCard, 85 lines. shared: true\n\n6. **_DueDateSummaryCard** (lines 604-721) - Self-contained bottom summary card, 117 lines. shared: true\n\nLet me consider extraction criteria:\n- Self-contained visual block: All of these qualify\n- 15+ lines: All exceed this\n- Could be reused: All seem reusable across screens\n- Own data/state concerns: Several have their own logic\n\nLooking at the existing widgets.jsonl, I see `shared: false` for screen-specific sections like `ChecklistSection` and `QuickActionsSection`. Let me think about which should be shared vs not:\n\n- `_WeekHeroCard` - Reusable across any week-based pregnancy app\n- `_BodyChangesCard` - Reusable pregnancy-related content\n- `_BabyDevelopmentCard` - Reusable pregnancy-related content\n\n\n- `_SelfCareTipsCard` - Reusable pregnancy-related content\n- `_ExpandableTipTile` - Highly reusable, generic expandable tile\n- `_DueDateSummaryCard` - Seems screen-specific (bottom bar for this particular screen)\n\nWait, looking more carefully, `_DueDateSummaryCard` seems very specific to this screen's layout. But then again, `BottomNavBar` is marked as `shared: true` and `NavDestination` is also shared. So the pattern seems to be about potential for reuse even if currently only used in one screen.\n\nLet me finalize my analysis. All of these have good reuse potential, but some are more generic. `_ExpandableTipTile` is particularly generic and could be used in many contexts beyond pregnancy apps.\n\nI'll mark all of them as `shared: true` since they all have potential for reuse beyond this specific screen.\n\nLooking more carefully at extraction criteria:\n- Simple `Text`, `Icon`, or `SizedBox` - these are all complex cards\n- Layout wrappers - none of these are just wrappers\n- Under 10 lines - all exceed 10 lines\n\nAll 6 widgets are good candidates for extraction.\n","signature":"31d3d017fa59e83bbfb1f29192e458620b3844fc81b70d8e64b9f6970537b183"}],"model":"MiniMax-M2.7","stop_reason":null,"stop_sequence":null,"usage":{"input_tokens":19743,"output_tokens":0,"cache_creation_input_tokens":0,"cache_read_input_tokens":0},"service_tier":"standard","context_management":null},"parent_tool_use_id":null,"session_id":"496ab247-646c-45c0-a04a-f48f95d2e8ea","uuid":"566b1867-0a88-4796-9671-92fcfe1326dd"}
+[2026-05-19T00:35:23.627Z] [THINKING] Now I have a good understanding of the format and conventions. Let me analyze the pregnancy_progress_screen.dart file to identify extractable widget regions.
+
+Looking at the file, I can identify the following widget candidates:
+
+1. **_WeekHeroCard** (lines 146-247) - Self-contained visual block, 100+ lines, shows week info with fruit emoji, gradient background. Could be reused. shared: true
+
+2. **_BodyChangesCard** (lines 249-338) - Self-contained card showing body changes, 90 lines. shared: true
+
+3. **_BabyDevelopmentCard** (lines 340-395) - Self-contained card showing baby development, ~55 lines. shared: true
+
+4. **_SelfCareTipsCard** (lines 397-516) - Self-contained card with expandable tips, 120+ lines. Has its own state (_expandedIndex). shared: true
+
+5. **_ExpandableTipTile** (lines 518-602) - Reusable component within SelfCareTipsCard, 85 lines. shared: true
+
+6. **_DueDateSummaryCard** (lines 604-721) - Self-contained bottom summary card, 117 lines. shared: true
+
+Let me consider extraction criteria:
+- Self-contained visual block: All of these qualify
+- 15+ lines: All exceed this
+- Could be reused: All seem reusable across screens
+- Own data/state concerns: Several have their own logic
+
+Looking at the existing widgets.jsonl, I see `shared: false` for screen-specific sections like `ChecklistSection` and `QuickActionsSection`. Let me think about which should be shared vs not:
+
+- `_WeekHeroCard` - Reusable across any week-based pregnancy app
+- `_BodyChangesCard` - Reusable pregnancy-related content
+- `_BabyDevelopmentCard` - Reusable pregnancy-related content
+
+
+- `_SelfCareTipsCard` - Reusable pregnancy-related content
+- `_ExpandableTipTile` - Highly reusable, generic expandable tile
+- `_DueDateSummaryCard` - Seems screen-specific (bottom bar for this particular screen)
+
+Wait, looking more carefully, `_DueDateSummaryCard` seems very specific to this screen's layout. But then again, `BottomNavBar` is marked as `shared: true` and `NavDestination` is also shared. So the pattern seems to be about potential for reuse even if currently only used in one screen.
+
+Let me finalize my analysis. All of these have good reuse potential, but some are more generic. `_ExpandableTipTile` is particularly generic and could be used in many contexts beyond pregnancy apps.
+
+I'll mark all of them as `shared: true` since they all have potential for reuse beyond this specific screen.
+
+Looking more carefully at extraction criteria:
+- Simple `Text`, `Icon`, or `SizedBox` - these are all complex cards
+- Layout wrappers - none of these are just wrappers
+- Under 10 lines - all exceed 10 lines
+
+All 6 widgets are good candidates for extraction.
+
+[2026-05-19T00:35:28.430Z] [STDOUT] {"type":"assistant","message":{"id":"065ae339440a6a13ee7b8e33bbdb3083","type":"message","role":"assistant","content":[{"type":"text","text":"\n\nNow I have a clear understanding of the source file and the expected JSONL format. Let me analyze the screen to identify extractable widget regions.\n\n## Analysis Summary\n\nThe `pregnancy_progress_screen.dart` contains 6 extractable widget regions:\n\n| Widget | Lines | Description |\n|--------|-------|-------------|\n| `_WeekHeroCard` | 102 | Hero section showing week number, trimester, fruit emoji, and due date with gradient background |\n| `_BodyChangesCard` | 90 | Card listing body changes for the week with bullet points |\n| `_BabyDevelopmentCard` | 56 | Card showing baby's developmental milestones |\n| `_SelfCareTipsCard` | 120 | Card with expandable self-care tip tiles (has own state) |\n| `_ExpandableTipTile` | 85 | Reusable expandable tile component with number badge, title, and detail |\n| `_DueDateSummaryCard` | 117 | Bottom summary bar showing trimester badge and days remaining |\n\nAll 6 widgets meet the extraction criteria:\n- Self-contained visual blocks (cards/sections)\n- All exceed 15+ lines\n- All have reusable potential across screens\n- All have their own data/state concerns\n\n### Critical Files for Implementation\n\n1. **`lib/screens/pregnancy_progress/pregnancy_progress_screen.dart`** — Source file containing all 6 widget classes to extract\n2. **`.stitch/designs/pregnancy-progress/widgets.jsonl`** — Target output file (does not exist yet, must be created)\n3. **`.stitch/designs/home/widgets.jsonl`** — Reference for JSONL format conventions\n4. **`lib/theme/app_theme.dart`** — Theme constants referenced by all widget classes (spacing, radius, shadows)\n5. **`lib/screens/pregnancy_progress/`** — Target directory where extracted widget files would be placed\n\n---\n\n**Note:** Per the task instructions, this is a READ-ONLY planning task. The `.stitch/designs/pregnancy-progress/widgets.jsonl` file does not exist yet and would need to be created with the following content:\n\n```jsonl\n{\"name\": \"WeekHeroCard\", \"grep\": \"Week $week\", \"description\": \"Hero card showing current week with fruit emoji, trimester badge, and due date countdown\", \"shared\": true}\n{\"name\": \"BodyChangesCard\", \"grep\": \"Body Changes\", \"description\": \"Card listing body changes for the current pregnancy week with bullet points\", \"shared\": true}\n{\"name\": \"BabyDevelopmentCard\", \"grep\": \"Baby's Development\", \"description\": \"Card displaying baby's developmental milestones for the current week\", \"shared\": true}\n{\"name\": \"SelfCareTipsCard\", \"grep\": \"Self-Care Tips\", \"description\": \"Expandable tips card with numbered tiles showing self-care recommendations\", \"shared\": true}\n{\"name\": \"ExpandableTipTile\", \"grep\": \"isExpanded\", \"description\": \"Expandable tile with number badge, title, and collapsible detail text\", \"shared\": true}\n{\"name\": \"DueDateSummaryCard\", \"grep\": \"days to go\", \"description\": \"Bottom summary bar showing trimester badge and countdown to due date\", \"shared\": true}\n```"}],"model":"MiniMax-M2.7","stop_reason":null,"stop_sequence":null,"usage":{"input_tokens":19743,"output_tokens":0,"cache_creation_input_tokens":0,"cache_read_input_tokens":0},"service_tier":"standard","context_management":null},"parent_tool_use_id":null,"session_id":"496ab247-646c-45c0-a04a-f48f95d2e8ea","uuid":"01daa8ef-92b6-49a9-ae69-66177bf0d97b"}
+[2026-05-19T00:35:28.431Z] [STREAM_EVENT] {"type":"assistant","message":{"id":"065ae339440a6a13ee7b8e33bbdb3083","type":"message","role":"assistant","content":[{"type":"text","text":"\n\nNow I have a clear understanding of the source file and the expected JSONL format. Let me analyze the screen to identify extractable widget regions.\n\n## Analysis Summary\n\nThe `pregnancy_progress_screen.dart` contains 6 extractable widget regions:\n\n| Widget | Lines | Description |\n|--------|-------|-------------|\n| `_WeekHeroCard` | 102 | Hero section showing week number, trimester, fruit emoji, and due date with gradient background |\n| `_BodyChangesCard` | 90 | Card listing body changes for the week with bullet points |\n| `_BabyDevelopmentCard` | 56 | Card showing baby's developmental milestones |\n| `_SelfCareTipsCard` | 120 | Card with expandable self-care tip tiles (has own state) |\n| `_ExpandableTipTile` | 85 | Reusable expandable tile component with number badge, title, and detail |\n| `_DueDateSummaryCard` | 117 | Bottom summary bar showing trimester badge and days remaining |\n\nAll 6 widgets meet the extraction criteria:\n- Self-contained visual blocks (cards/sections)\n- All exceed 15+ lines\n- All have reusable potential across screens\n- All have their own data/state concerns\n\n### Critical Files for Implementation\n\n1. **`lib/screens/pregnancy_progress/pregnancy_progress_screen.dart`** — Source file containing all 6 widget classes to extract\n2. **`.stitch/designs/pregnancy-progress/widgets.jsonl`** — Target output file (does not exist yet, must be created)\n3. **`.stitch/designs/home/widgets.jsonl`** — Reference for JSONL format conventions\n4. **`lib/theme/app_theme.dart`** — Theme constants referenced by all widget classes (spacing, radius, shadows)\n5. **`lib/screens/pregnancy_progress/`** — Target directory where extracted widget files would be placed\n\n---\n\n**Note:** Per the task instructions, this is a READ-ONLY planning task. The `.stitch/designs/pregnancy-progress/widgets.jsonl` file does not exist yet and would need to be created with the following content:\n\n```jsonl\n{\"name\": \"WeekHeroCard\", \"grep\": \"Week $week\", \"description\": \"Hero card showing current week with fruit emoji, trimester badge, and due date countdown\", \"shared\": true}\n{\"name\": \"BodyChangesCard\", \"grep\": \"Body Changes\", \"description\": \"Card listing body changes for the current pregnancy week with bullet points\", \"shared\": true}\n{\"name\": \"BabyDevelopmentCard\", \"grep\": \"Baby's Development\", \"description\": \"Card displaying baby's developmental milestones for the current week\", \"shared\": true}\n{\"name\": \"SelfCareTipsCard\", \"grep\": \"Self-Care Tips\", \"description\": \"Expandable tips card with numbered tiles showing self-care recommendations\", \"shared\": true}\n{\"name\": \"ExpandableTipTile\", \"grep\": \"isExpanded\", \"description\": \"Expandable tile with number badge, title, and collapsible detail text\", \"shared\": true}\n{\"name\": \"DueDateSummaryCard\", \"grep\": \"days to go\", \"description\": \"Bottom summary bar showing trimester badge and countdown to due date\", \"shared\": true}\n```"}],"model":"MiniMax-M2.7","stop_reason":null,"stop_sequence":null,"usage":{"input_tokens":19743,"output_tokens":0,"cache_creation_input_tokens":0,"cache_read_input_tokens":0},"service_tier":"standard","context_management":null},"parent_tool_use_id":null,"session_id":"496ab247-646c-45c0-a04a-f48f95d2e8ea","uuid":"01daa8ef-92b6-49a9-ae69-66177bf0d97b"}
+[2026-05-19T00:35:28.431Z] [TEXT_BLOCK] 
+
+Now I have a clear understanding of the source file and the expected JSONL format. Let me analyze the screen to identify extractable widget regions.
+
+## Analysis Summary
+
+The `pregnancy_progress_screen.dart` contains 6 extractable widget regions:
+
+| Widget | Lines | Description |
+|--------|-------|-------------|
+| `_WeekHeroCard` | 102 | Hero section showing week number, trimester, fruit emoji, and due date with gradient background |
+| `_BodyChangesCard` | 90 | Card listing body changes for the week with bullet points |
+| `_BabyDevelopmentCard` | 56 | Card showing baby's developmental milestones |
+| `_SelfCareTipsCard` | 120 | Card with expandable self-care tip tiles (has own state) |
+| `_ExpandableTipTile` | 85 | Reusable expandable tile component with number badge, title, and detail |
+| `_DueDateSummaryCard` | 117 | Bottom summary bar showing trimester badge and days remaining |
+
+All 6 widgets meet the extraction criteria:
+- Self-contained visual blocks (cards/sections)
+- All exceed 15+ lines
+- All have reusable potential across screens
+- All have their own data/state concerns
+
+### Critical Files for Implementation
+
+1. **`lib/screens/pregnancy_progress/pregnancy_progress_screen.dart`** — Source file containing all 6 widget classes to extract
+2. **`.stitch/designs/pregnancy-progress/widgets.jsonl`** — Target output file (does not exist yet, must be created)
+3. **`.stitch/designs/home/widgets.jsonl`** — Reference for JSONL format conventions
+4. **`lib/theme/app_theme.dart`** — Theme constants referenced by all widget classes (spacing, radius, shadows)
+5. **`lib/screens/pregnancy_progress/`** — Target directory where extracted widget files would be placed
+
+---
+
+**Note:** Per the task instructions, this is a READ-ONLY planning task. The `.stitch/designs/pregnancy-progress/widgets.jsonl` file does not exist yet and would need to be created with the following content:
+
+```jsonl
+{"name": "WeekHeroCard", "grep": "Week $week", "description": "Hero card showing current week with fruit emoji, trimester badge, and due date countdown", "shared": true}
+{"name": "BodyChangesCard", "grep": "Body Changes", "description": "Card listing body changes for the current pregnancy week with bullet points", "shared": true}
+{"name": "BabyDevelopmentCard", "grep": "Baby's Development", "description": "Card displaying baby's developmental milestones for the current week", "shared": true}
+{"name": "SelfCareTipsCard", "grep": "Self-Care Tips", "description": "Expandable tips card with numbered tiles showing self-care recommendations", "shared": true}
+{"name": "ExpandableTipTile", "grep": "isExpanded", "description": "Expandable tile with number badge, title, and collapsible detail text", "shared": true}
+{"name": "DueDateSummaryCard", "grep": "days to go", "description": "Bottom summary bar showing trimester badge and countdown to due date", "shared": true}
+```
+[2026-05-19T00:35:28.434Z] [STDOUT] {"type":"result","subtype":"success","is_error":false,"api_error_status":null,"duration_ms":40386,"duration_api_ms":40236,"ttft_ms":6182,"num_turns":4,"result":"\n\nNow I have a clear understanding of the source file and the expected JSONL format. Let me analyze the screen to identify extractable widget regions.\n\n## Analysis Summary\n\nThe `pregnancy_progress_screen.dart` contains 6 extractable widget regions:\n\n| Widget | Lines | Description |\n|--------|-------|-------------|\n| `_WeekHeroCard` | 102 | Hero section showing week number, trimester, fruit emoji, and due date with gradient background |\n| `_BodyChangesCard` | 90 | Card listing body changes for the week with bullet points |\n| `_BabyDevelopmentCard` | 56 | Card showing baby's developmental milestones |\n| `_SelfCareTipsCard` | 120 | Card with expandable self-care tip tiles (has own state) |\n| `_ExpandableTipTile` | 85 | Reusable expandable tile component with number badge, title, and detail |\n| `_DueDateSummaryCard` | 117 | Bottom summary bar showing trimester badge and days remaining |\n\nAll 6 widgets meet the extraction criteria:\n- Self-contained visual blocks (cards/sections)\n- All exceed 15+ lines\n- All have reusable potential across screens\n- All have their own data/state concerns\n\n### Critical Files for Implementation\n\n1. **`lib/screens/pregnancy_progress/pregnancy_progress_screen.dart`** — Source file containing all 6 widget classes to extract\n2. **`.stitch/designs/pregnancy-progress/widgets.jsonl`** — Target output file (does not exist yet, must be created)\n3. **`.stitch/designs/home/widgets.jsonl`** — Reference for JSONL format conventions\n4. **`lib/theme/app_theme.dart`** — Theme constants referenced by all widget classes (spacing, radius, shadows)\n5. **`lib/screens/pregnancy_progress/`** — Target directory where extracted widget files would be placed\n\n---\n\n**Note:** Per the task instructions, this is a READ-ONLY planning task. The `.stitch/designs/pregnancy-progress/widgets.jsonl` file does not exist yet and would need to be created with the following content:\n\n```jsonl\n{\"name\": \"WeekHeroCard\", \"grep\": \"Week $week\", \"description\": \"Hero card showing current week with fruit emoji, trimester badge, and due date countdown\", \"shared\": true}\n{\"name\": \"BodyChangesCard\", \"grep\": \"Body Changes\", \"description\": \"Card listing body changes for the current pregnancy week with bullet points\", \"shared\": true}\n{\"name\": \"BabyDevelopmentCard\", \"grep\": \"Baby's Development\", \"description\": \"Card displaying baby's developmental milestones for the current week\", \"shared\": true}\n{\"name\": \"SelfCareTipsCard\", \"grep\": \"Self-Care Tips\", \"description\": \"Expandable tips card with numbered tiles showing self-care recommendations\", \"shared\": true}\n{\"name\": \"ExpandableTipTile\", \"grep\": \"isExpanded\", \"description\": \"Expandable tile with number badge, title, and collapsible detail text\", \"shared\": true}\n{\"name\": \"DueDateSummaryCard\", \"grep\": \"days to go\", \"description\": \"Bottom summary bar showing trimester badge and countdown to due date\", \"shared\": true}\n```","stop_reason":"end_turn","session_id":"496ab247-646c-45c0-a04a-f48f95d2e8ea","total_cost_usd":0.2698885,"usage":{"input_tokens":37696,"cache_creation_input_tokens":2006,"cache_read_input_tokens":48142,"output_tokens":1792,"server_tool_use":{"web_search_requests":0,"web_fetch_requests":0},"service_tier":"standard","cache_creation":{"ephemeral_1h_input_tokens":0,"ephemeral_5m_input_tokens":0},"inference_geo":"","iterations":[],"speed":"standard"},"modelUsage":{"MiniMax-M2.7":{"inputTokens":37696,"outputTokens":1792,"cacheReadInputTokens":48142,"cacheCreationInputTokens":2006,"webSearchRequests":0,"costUSD":0.2698885,"contextWindow":200000,"maxOutputTokens":32000}},"permission_denials":[],"terminal_reason":"completed","fast_mode_state":"off","uuid":"0df8f5a8-8517-446b-8dd0-8b0cfc1549c7"}
+[2026-05-19T00:35:28.434Z] [STREAM_EVENT] {"type":"result","subtype":"success","is_error":false,"api_error_status":null,"duration_ms":40386,"duration_api_ms":40236,"ttft_ms":6182,"num_turns":4,"result":"\n\nNow I have a clear understanding of the source file and the expected JSONL format. Let me analyze the screen to identify extractable widget regions.\n\n## Analysis Summary\n\nThe `pregnancy_progress_screen.dart` contains 6 extractable widget regions:\n\n| Widget | Lines | Description |\n|--------|-------|-------------|\n| `_WeekHeroCard` | 102 | Hero section showing week number, trimester, fruit emoji, and due date with gradient background |\n| `_BodyChangesCard` | 90 | Card listing body changes for the week with bullet points |\n| `_BabyDevelopmentCard` | 56 | Card showing baby's developmental milestones |\n| `_SelfCareTipsCard` | 120 | Card with expandable self-care tip tiles (has own state) |\n| `_ExpandableTipTile` | 85 | Reusable expandable tile component with number badge, title, and detail |\n| `_DueDateSummaryCard` | 117 | Bottom summary bar showing trimester badge and days remaining |\n\nAll 6 widgets meet the extraction criteria:\n- Self-contained visual blocks (cards/sections)\n- All exceed 15+ lines\n- All have reusable potential across screens\n- All have their own data/state concerns\n\n### Critical Files for Implementation\n\n1. **`lib/screens/pregnancy_progress/pregnancy_progress_screen.dart`** — Source file containing all 6 widget classes to extract\n2. **`.stitch/designs/pregnancy-progress/widgets.jsonl`** — Target output file (does not exist yet, must be created)\n3. **`.stitch/designs/home/widgets.jsonl`** — Reference for JSONL format conventions\n4. **`lib/theme/app_theme.dart`** — Theme constants referenced by all widget classes (spacing, radius, shadows)\n5. **`lib/screens/pregnancy_progress/`** — Target directory where extracted widget files would be placed\n\n---\n\n**Note:** Per the task instructions, this is a READ-ONLY planning task. The `.stitch/designs/pregnancy-progress/widgets.jsonl` file does not exist yet and would need to be created with the following content:\n\n```jsonl\n{\"name\": \"WeekHeroCard\", \"grep\": \"Week $week\", \"description\": \"Hero card showing current week with fruit emoji, trimester badge, and due date countdown\", \"shared\": true}\n{\"name\": \"BodyChangesCard\", \"grep\": \"Body Changes\", \"description\": \"Card listing body changes for the current pregnancy week with bullet points\", \"shared\": true}\n{\"name\": \"BabyDevelopmentCard\", \"grep\": \"Baby's Development\", \"description\": \"Card displaying baby's developmental milestones for the current week\", \"shared\": true}\n{\"name\": \"SelfCareTipsCard\", \"grep\": \"Self-Care Tips\", \"description\": \"Expandable tips card with numbered tiles showing self-care recommendations\", \"shared\": true}\n{\"name\": \"ExpandableTipTile\", \"grep\": \"isExpanded\", \"description\": \"Expandable tile with number badge, title, and collapsible detail text\", \"shared\": true}\n{\"name\": \"DueDateSummaryCard\", \"grep\": \"days to go\", \"description\": \"Bottom summary bar showing trimester badge and countdown to due date\", \"shared\": true}\n```","stop_reason":"end_turn","session_id":"496ab247-646c-45c0-a04a-f48f95d2e8ea","total_cost_usd":0.2698885,"usage":{"input_tokens":37696,"cache_creation_input_tokens":2006,"cache_read_input_tokens":48142,"output_tokens":1792,"server_tool_use":{"web_search_requests":0,"web_fetch_requests":0},"service_tier":"standard","cache_creation":{"ephemeral_1h_input_tokens":0,"ephemeral_5m_input_tokens":0},"inference_geo":"","iterations":[],"speed":"standard"},"modelUsage":{"MiniMax-M2.7":{"inputTokens":37696,"outputTokens":1792,"cacheReadInputTokens":48142,"cacheCreationInputTokens":2006,"webSearchRequests":0,"costUSD":0.2698885,"contextWindow":200000,"maxOutputTokens":32000}},"permission_denials":[],"terminal_reason":"completed","fast_mode_state":"off","uuid":"0df8f5a8-8517-446b-8dd0-8b0cfc1549c7"}
+[2026-05-19T00:35:28.435Z] [FINAL_RESULT] 
+
+Now I have a clear understanding of the source file and the expected JSONL format. Let me analyze the screen to identify extractable widget regions.
+
+## Analysis Summary
+
+The `pregnancy_progress_screen.dart` contains 6 extractable widget regions:
+
+| Widget | Lines | Description |
+|--------|-------|-------------|
+| `_WeekHeroCard` | 102 | Hero section showing week number, trimester, fruit emoji, and due date with gradient background |
+| `_BodyChangesCard` | 90 | Card listing body changes for the week with bullet points |
+| `_BabyDevelopmentCard` | 56 | Card showing baby's developmental milestones |
+| `_SelfCareTipsCard` | 120 | Card with expandable self-care tip tiles (has own state) |
+| `_ExpandableTipTile` | 85 | Reusable expandable tile component with number badge, title, and detail |
+| `_DueDateSummaryCard` | 117 | Bottom summary bar showing trimester badge and days remaining |
+
+All 6 widgets meet the extraction criteria:
+- Self-contained visual blocks (cards/sections)
+- All exceed 15+ lines
+- All have reusable potential across screens
+- All have their own data/state concerns
+
+### Critical Files for Implementation
+
+1. **`lib/screens/pregnancy_progress/pregnancy_progress_screen.dart`** — Source file containing all 6 widget classes to extract
+2. **`.stitch/designs/pregnancy-progress/widgets.jsonl`** — Target output file (does not exist yet, must be created)
+3. **`.stitch/designs/home/widgets.jsonl`** — Reference for JSONL format conventions
+4. **`lib/theme/app_theme.dart`** — Theme constants referenced by all widget classes (spacing, radius, shadows)
+5. **`lib/screens/pregnancy_progress/`** — Target directory where extracted widget files would be placed
+
+---
+
+**Note:** Per the task instructions, this is a READ-ONLY planning task. The `.stitch/designs/pregnancy-progress/widgets.jsonl` file does not exist yet and would need to be created with the following content:
+
+```jsonl
+{"name": "WeekHeroCard", "grep": "Week $week", "description": "Hero card showing current week with fruit emoji, trimester badge, and due date countdown", "shared": true}
+{"name": "BodyChangesCard", "grep": "Body Changes", "description": "Card listing body changes for the current pregnancy week with bullet points", "shared": true}
+{"name": "BabyDevelopmentCard", "grep": "Baby's Development", "description": "Card displaying baby's developmental milestones for the current week", "shared": true}
+{"name": "SelfCareTipsCard", "grep": "Self-Care Tips", "description": "Expandable tips card with numbered tiles showing self-care recommendations", "shared": true}
+{"name": "ExpandableTipTile", "grep": "isExpanded", "description": "Expandable tile with number badge, title, and collapsible detail text", "shared": true}
+{"name": "DueDateSummaryCard", "grep": "days to go", "description": "Bottom summary bar showing trimester badge and countdown to due date", "shared": true}
+```
+[2026-05-19T00:35:28.445Z] [EXIT] code=0 (success with result=true)

@@ -1,0 +1,3 @@
+[2026-05-19T02:56:29.912Z] [AGENT_START] agent run_task: Split widget: RelatedArticleCard
+[2026-05-19T02:56:29.912Z] [CLAUDEFN_START] Split widget: RelatedArticleCard (runAgent)
+[2026-05-19T03:02:17.801Z] [AGENT_COMPLETE] claude run_task completed in 347886ms

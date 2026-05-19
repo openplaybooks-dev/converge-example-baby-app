@@ -1,0 +1,2 @@
+{"type":"file-exists","path":".stitch/designs/education/widgets.jsonl","cmd":"test -f \".stitch/designs/education/widgets.jsonl\"","id":"file-exists:test -f \".stitch/designs/education/widgets.jsonl\"","ok":true,"output":"","exitCode":0,"collectedAt":"2026-05-19T02:09:37.833Z"}
+{"type":"file-exists","path":".stitch/designs/education/widgets.jsonl","cmd":"test -f \".stitch/designs/education/widgets.jsonl\"","id":"file-exists:test -f \".stitch/designs/education/widgets.jsonl\"","ok":true,"output":"","exitCode":0,"collectedAt":"2026-05-19T02:09:37.835Z"}

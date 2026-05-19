@@ -1,0 +1,23 @@
+{
+  "taskId": "002-browse-06-lift",
+  "attemptNumber": 1,
+  "inputs": [
+    {
+      "pattern": ".stitch/designs/browse/widgets.jsonl",
+      "count": 1,
+      "samples": [
+        ".stitch/designs/browse/widgets.jsonl"
+      ]
+    },
+    {
+      "pattern": "lib/screens/browse/_widgets/**/*.dart",
+      "count": 0,
+      "samples": []
+    }
+  ],
+  "outputs": [
+    "lib/widgets/**/*.dart"
+  ],
+  "blocked": true,
+  "blockedReason": "Missing required inputs: lib/screens/browse/_widgets/**/*.dart"
+}

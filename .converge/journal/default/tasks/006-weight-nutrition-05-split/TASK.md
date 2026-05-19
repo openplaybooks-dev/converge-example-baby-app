@@ -1,0 +1,56 @@
+---
+id: 006-weight-nutrition-05-split
+title: "Split: Weight & Nutrition"
+description: Extract widgets from Weight & Nutrition screen into local widgets/
+inputs:
+  - .stitch/designs/weight-nutrition/widgets.jsonl
+outputs:
+  - lib/screens/weight_nutrition/_widgets/**/*.dart
+seed:
+  mode: cli
+tags:
+  - split
+  - screen-weight-nutrition
+vars:
+  screenId: weight-nutrition
+  title: Weight & Nutrition
+  screenPath: lib/screens/weight_nutrition/weight_nutrition_screen.dart
+  widgetsJsonPath: .stitch/designs/weight-nutrition/widgets.jsonl
+  localWidgetsDir: lib/screens/weight_nutrition/_widgets
+---
+
+# Split: Weight & Nutrition
+
+Extract each widget identified in `.stitch/designs/weight-nutrition/widgets.jsonl` into its own file under `lib/screens/weight_nutrition/_widgets/` — one spawn per widget.
+
+```bash
+TEMPLATES=".converge/playbooks/default/templates"
+WIDGETS=".stitch/designs/weight-nutrition/widgets.jsonl"
+LOCAL_DIR="lib/screens/weight_nutrition/_widgets"
+SCREEN_PATH="lib/screens/weight_nutrition/weight_nutrition_screen.dart"
+SID="weight-nutrition"
+TITLE="Weight & Nutrition"
+
+[ -f "${WIDGETS}" ] || exit 0
+
+I=0
+while IFS= read -r W; do
+  [ -z "${W}" ] && continue
+  I=$((I + 1))
+  P=$(printf '%03d' "${I}")
+  WID=$(echo "${W}"      | jq -r '.id // .name')
+  WNAME=$(echo "${W}"    | jq -r '.name // .id')
+  WIDGET_FILE="${LOCAL_DIR}/${WNAME}.dart"
+  converge spawn template \
+    --path "${TEMPLATES}/screen-widget-split/TASK.md" \
+    --id "${SID}-split-${P}-${WID}" \
+    --var "screenId=${SID}" \
+    --var "screenTitle=${TITLE}" \
+    --var "screenPath=${SCREEN_PATH}" \
+    --var "widgetId=${WID}" \
+    --var "widgetName=${WNAME}" \
+    --var "widgetFile=${WIDGET_FILE}"
+done < "${WIDGETS}"
+```
+
+If the widgets file is missing or empty, exit with no spawns.

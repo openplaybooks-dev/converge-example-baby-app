@@ -1,0 +1,18 @@
+[
+  {
+    "id": "spec-exists",
+    "description": "SPEC.md exists for settings",
+    "cmd": "test -f .stitch/designs/settings/SPEC.md",
+    "passed": true,
+    "exit_code": 0,
+    "output": ""
+  },
+  {
+    "id": "spec-has-content",
+    "description": "SPEC.md has >50 lines",
+    "cmd": "test $(wc -l < .stitch/designs/settings/SPEC.md) -gt 50",
+    "passed": true,
+    "exit_code": 0,
+    "output": ""
+  }
+]

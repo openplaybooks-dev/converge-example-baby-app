@@ -1,0 +1,1185 @@
+[
+  {
+    "line": "converge spawn template --path .converge/playbooks/default/templates/screen-01-spec/TASK.md --id 001-home-01-spec --var screenId=home --var title=Home --var route=/ --var widgetName=Home --var specPath=.stitch/designs/home/SPEC.md",
+    "parsed": {
+      "kind": "template",
+      "path": ".converge/playbooks/default/templates/screen-01-spec/TASK.md",
+      "vars": {
+        "screenId": "home",
+        "title": "Home",
+        "route": "/",
+        "widgetName": "Home",
+        "specPath": ".stitch/designs/home/SPEC.md"
+      },
+      "id": "001-home-01-spec"
+    }
+  },
+  {
+    "line": "converge spawn template --path .converge/playbooks/default/templates/screen-02-design/TASK.md --id 001-home-02-design --var screenId=home --var title=Home --var specPath=.stitch/designs/home/SPEC.md --var metaPath=.stitch/designs/home/META.md --var designPath=.stitch/designs/home/design.html",
+    "parsed": {
+      "kind": "template",
+      "path": ".converge/playbooks/default/templates/screen-02-design/TASK.md",
+      "vars": {
+        "screenId": "home",
+        "title": "Home",
+        "specPath": ".stitch/designs/home/SPEC.md",
+        "metaPath": ".stitch/designs/home/META.md",
+        "designPath": ".stitch/designs/home/design.html"
+      },
+      "id": "001-home-02-design"
+    }
+  },
+  {
+    "line": "converge spawn template --path .converge/playbooks/default/templates/screen-03-convert/TASK.md --id 001-home-03-convert --var screenId=home --var title=Home --var route=/ --var widgetName=Home --var specPath=.stitch/designs/home/SPEC.md --var designPath=.stitch/designs/home/design.html --var screenPath=lib/screens/home/home_screen.dart",
+    "parsed": {
+      "kind": "template",
+      "path": ".converge/playbooks/default/templates/screen-03-convert/TASK.md",
+      "vars": {
+        "screenId": "home",
+        "title": "Home",
+        "route": "/",
+        "widgetName": "Home",
+        "specPath": ".stitch/designs/home/SPEC.md",
+        "designPath": ".stitch/designs/home/design.html",
+        "screenPath": "lib/screens/home/home_screen.dart"
+      },
+      "id": "001-home-03-convert"
+    }
+  },
+  {
+    "line": "converge spawn template --path .converge/playbooks/default/templates/screen-04-analyze/TASK.md --id 001-home-04-analyze --var screenId=home --var title=Home --var screenPath=lib/screens/home/home_screen.dart --var widgetsJsonPath=.stitch/designs/home/widgets.jsonl",
+    "parsed": {
+      "kind": "template",
+      "path": ".converge/playbooks/default/templates/screen-04-analyze/TASK.md",
+      "vars": {
+        "screenId": "home",
+        "title": "Home",
+        "screenPath": "lib/screens/home/home_screen.dart",
+        "widgetsJsonPath": ".stitch/designs/home/widgets.jsonl"
+      },
+      "id": "001-home-04-analyze"
+    }
+  },
+  {
+    "line": "converge spawn template --path .converge/playbooks/default/templates/screen-05-split/TASK.md --id 001-home-05-split --var screenId=home --var title=Home --var screenPath=lib/screens/home/home_screen.dart --var widgetsJsonPath=.stitch/designs/home/widgets.jsonl --var localWidgetsDir=lib/screens/home/_widgets",
+    "parsed": {
+      "kind": "template",
+      "path": ".converge/playbooks/default/templates/screen-05-split/TASK.md",
+      "vars": {
+        "screenId": "home",
+        "title": "Home",
+        "screenPath": "lib/screens/home/home_screen.dart",
+        "widgetsJsonPath": ".stitch/designs/home/widgets.jsonl",
+        "localWidgetsDir": "lib/screens/home/_widgets"
+      },
+      "id": "001-home-05-split"
+    }
+  },
+  {
+    "line": "converge spawn template --path .converge/playbooks/default/templates/screen-06-lift/TASK.md --id 001-home-06-lift --var screenId=home --var title=Home --var screenPath=lib/screens/home/home_screen.dart --var widgetsJsonPath=.stitch/designs/home/widgets.jsonl --var localWidgetsDir=lib/screens/home/_widgets",
+    "parsed": {
+      "kind": "template",
+      "path": ".converge/playbooks/default/templates/screen-06-lift/TASK.md",
+      "vars": {
+        "screenId": "home",
+        "title": "Home",
+        "screenPath": "lib/screens/home/home_screen.dart",
+        "widgetsJsonPath": ".stitch/designs/home/widgets.jsonl",
+        "localWidgetsDir": "lib/screens/home/_widgets"
+      },
+      "id": "001-home-06-lift"
+    }
+  },
+  {
+    "line": "converge spawn template --path .converge/playbooks/default/templates/screen-01-spec/TASK.md --id 002-browse-01-spec --var screenId=browse --var title=Browse --var route=/browse --var widgetName=Browse --var specPath=.stitch/designs/browse/SPEC.md",
+    "parsed": {
+      "kind": "template",
+      "path": ".converge/playbooks/default/templates/screen-01-spec/TASK.md",
+      "vars": {
+        "screenId": "browse",
+        "title": "Browse",
+        "route": "/browse",
+        "widgetName": "Browse",
+        "specPath": ".stitch/designs/browse/SPEC.md"
+      },
+      "id": "002-browse-01-spec"
+    }
+  },
+  {
+    "line": "converge spawn template --path .converge/playbooks/default/templates/screen-02-design/TASK.md --id 002-browse-02-design --var screenId=browse --var title=Browse --var specPath=.stitch/designs/browse/SPEC.md --var metaPath=.stitch/designs/browse/META.md --var designPath=.stitch/designs/browse/design.html",
+    "parsed": {
+      "kind": "template",
+      "path": ".converge/playbooks/default/templates/screen-02-design/TASK.md",
+      "vars": {
+        "screenId": "browse",
+        "title": "Browse",
+        "specPath": ".stitch/designs/browse/SPEC.md",
+        "metaPath": ".stitch/designs/browse/META.md",
+        "designPath": ".stitch/designs/browse/design.html"
+      },
+      "id": "002-browse-02-design"
+    }
+  },
+  {
+    "line": "converge spawn template --path .converge/playbooks/default/templates/screen-03-convert/TASK.md --id 002-browse-03-convert --var screenId=browse --var title=Browse --var route=/browse --var widgetName=Browse --var specPath=.stitch/designs/browse/SPEC.md --var designPath=.stitch/designs/browse/design.html --var screenPath=lib/screens/browse/browse_screen.dart",
+    "parsed": {
+      "kind": "template",
+      "path": ".converge/playbooks/default/templates/screen-03-convert/TASK.md",
+      "vars": {
+        "screenId": "browse",
+        "title": "Browse",
+        "route": "/browse",
+        "widgetName": "Browse",
+        "specPath": ".stitch/designs/browse/SPEC.md",
+        "designPath": ".stitch/designs/browse/design.html",
+        "screenPath": "lib/screens/browse/browse_screen.dart"
+      },
+      "id": "002-browse-03-convert"
+    }
+  },
+  {
+    "line": "converge spawn template --path .converge/playbooks/default/templates/screen-04-analyze/TASK.md --id 002-browse-04-analyze --var screenId=browse --var title=Browse --var screenPath=lib/screens/browse/browse_screen.dart --var widgetsJsonPath=.stitch/designs/browse/widgets.jsonl",
+    "parsed": {
+      "kind": "template",
+      "path": ".converge/playbooks/default/templates/screen-04-analyze/TASK.md",
+      "vars": {
+        "screenId": "browse",
+        "title": "Browse",
+        "screenPath": "lib/screens/browse/browse_screen.dart",
+        "widgetsJsonPath": ".stitch/designs/browse/widgets.jsonl"
+      },
+      "id": "002-browse-04-analyze"
+    }
+  },
+  {
+    "line": "converge spawn template --path .converge/playbooks/default/templates/screen-05-split/TASK.md --id 002-browse-05-split --var screenId=browse --var title=Browse --var screenPath=lib/screens/browse/browse_screen.dart --var widgetsJsonPath=.stitch/designs/browse/widgets.jsonl --var localWidgetsDir=lib/screens/browse/_widgets",
+    "parsed": {
+      "kind": "template",
+      "path": ".converge/playbooks/default/templates/screen-05-split/TASK.md",
+      "vars": {
+        "screenId": "browse",
+        "title": "Browse",
+        "screenPath": "lib/screens/browse/browse_screen.dart",
+        "widgetsJsonPath": ".stitch/designs/browse/widgets.jsonl",
+        "localWidgetsDir": "lib/screens/browse/_widgets"
+      },
+      "id": "002-browse-05-split"
+    }
+  },
+  {
+    "line": "converge spawn template --path .converge/playbooks/default/templates/screen-06-lift/TASK.md --id 002-browse-06-lift --var screenId=browse --var title=Browse --var screenPath=lib/screens/browse/browse_screen.dart --var widgetsJsonPath=.stitch/designs/browse/widgets.jsonl --var localWidgetsDir=lib/screens/browse/_widgets",
+    "parsed": {
+      "kind": "template",
+      "path": ".converge/playbooks/default/templates/screen-06-lift/TASK.md",
+      "vars": {
+        "screenId": "browse",
+        "title": "Browse",
+        "screenPath": "lib/screens/browse/browse_screen.dart",
+        "widgetsJsonPath": ".stitch/designs/browse/widgets.jsonl",
+        "localWidgetsDir": "lib/screens/browse/_widgets"
+      },
+      "id": "002-browse-06-lift"
+    }
+  },
+  {
+    "line": "converge spawn template --path .converge/playbooks/default/templates/screen-01-spec/TASK.md --id 003-library-01-spec --var screenId=library --var title=Library --var route=/library --var widgetName=Library --var specPath=.stitch/designs/library/SPEC.md",
+    "parsed": {
+      "kind": "template",
+      "path": ".converge/playbooks/default/templates/screen-01-spec/TASK.md",
+      "vars": {
+        "screenId": "library",
+        "title": "Library",
+        "route": "/library",
+        "widgetName": "Library",
+        "specPath": ".stitch/designs/library/SPEC.md"
+      },
+      "id": "003-library-01-spec"
+    }
+  },
+  {
+    "line": "converge spawn template --path .converge/playbooks/default/templates/screen-02-design/TASK.md --id 003-library-02-design --var screenId=library --var title=Library --var specPath=.stitch/designs/library/SPEC.md --var metaPath=.stitch/designs/library/META.md --var designPath=.stitch/designs/library/design.html",
+    "parsed": {
+      "kind": "template",
+      "path": ".converge/playbooks/default/templates/screen-02-design/TASK.md",
+      "vars": {
+        "screenId": "library",
+        "title": "Library",
+        "specPath": ".stitch/designs/library/SPEC.md",
+        "metaPath": ".stitch/designs/library/META.md",
+        "designPath": ".stitch/designs/library/design.html"
+      },
+      "id": "003-library-02-design"
+    }
+  },
+  {
+    "line": "converge spawn template --path .converge/playbooks/default/templates/screen-03-convert/TASK.md --id 003-library-03-convert --var screenId=library --var title=Library --var route=/library --var widgetName=Library --var specPath=.stitch/designs/library/SPEC.md --var designPath=.stitch/designs/library/design.html --var screenPath=lib/screens/library/library_screen.dart",
+    "parsed": {
+      "kind": "template",
+      "path": ".converge/playbooks/default/templates/screen-03-convert/TASK.md",
+      "vars": {
+        "screenId": "library",
+        "title": "Library",
+        "route": "/library",
+        "widgetName": "Library",
+        "specPath": ".stitch/designs/library/SPEC.md",
+        "designPath": ".stitch/designs/library/design.html",
+        "screenPath": "lib/screens/library/library_screen.dart"
+      },
+      "id": "003-library-03-convert"
+    }
+  },
+  {
+    "line": "converge spawn template --path .converge/playbooks/default/templates/screen-04-analyze/TASK.md --id 003-library-04-analyze --var screenId=library --var title=Library --var screenPath=lib/screens/library/library_screen.dart --var widgetsJsonPath=.stitch/designs/library/widgets.jsonl",
+    "parsed": {
+      "kind": "template",
+      "path": ".converge/playbooks/default/templates/screen-04-analyze/TASK.md",
+      "vars": {
+        "screenId": "library",
+        "title": "Library",
+        "screenPath": "lib/screens/library/library_screen.dart",
+        "widgetsJsonPath": ".stitch/designs/library/widgets.jsonl"
+      },
+      "id": "003-library-04-analyze"
+    }
+  },
+  {
+    "line": "converge spawn template --path .converge/playbooks/default/templates/screen-05-split/TASK.md --id 003-library-05-split --var screenId=library --var title=Library --var screenPath=lib/screens/library/library_screen.dart --var widgetsJsonPath=.stitch/designs/library/widgets.jsonl --var localWidgetsDir=lib/screens/library/_widgets",
+    "parsed": {
+      "kind": "template",
+      "path": ".converge/playbooks/default/templates/screen-05-split/TASK.md",
+      "vars": {
+        "screenId": "library",
+        "title": "Library",
+        "screenPath": "lib/screens/library/library_screen.dart",
+        "widgetsJsonPath": ".stitch/designs/library/widgets.jsonl",
+        "localWidgetsDir": "lib/screens/library/_widgets"
+      },
+      "id": "003-library-05-split"
+    }
+  },
+  {
+    "line": "converge spawn template --path .converge/playbooks/default/templates/screen-06-lift/TASK.md --id 003-library-06-lift --var screenId=library --var title=Library --var screenPath=lib/screens/library/library_screen.dart --var widgetsJsonPath=.stitch/designs/library/widgets.jsonl --var localWidgetsDir=lib/screens/library/_widgets",
+    "parsed": {
+      "kind": "template",
+      "path": ".converge/playbooks/default/templates/screen-06-lift/TASK.md",
+      "vars": {
+        "screenId": "library",
+        "title": "Library",
+        "screenPath": "lib/screens/library/library_screen.dart",
+        "widgetsJsonPath": ".stitch/designs/library/widgets.jsonl",
+        "localWidgetsDir": "lib/screens/library/_widgets"
+      },
+      "id": "003-library-06-lift"
+    }
+  },
+  {
+    "line": "converge spawn template --path .converge/playbooks/default/templates/screen-01-spec/TASK.md --id 004-profile-01-spec --var screenId=profile --var title=Profile --var route=/profile --var widgetName=Profile --var specPath=.stitch/designs/profile/SPEC.md",
+    "parsed": {
+      "kind": "template",
+      "path": ".converge/playbooks/default/templates/screen-01-spec/TASK.md",
+      "vars": {
+        "screenId": "profile",
+        "title": "Profile",
+        "route": "/profile",
+        "widgetName": "Profile",
+        "specPath": ".stitch/designs/profile/SPEC.md"
+      },
+      "id": "004-profile-01-spec"
+    }
+  },
+  {
+    "line": "converge spawn template --path .converge/playbooks/default/templates/screen-02-design/TASK.md --id 004-profile-02-design --var screenId=profile --var title=Profile --var specPath=.stitch/designs/profile/SPEC.md --var metaPath=.stitch/designs/profile/META.md --var designPath=.stitch/designs/profile/design.html",
+    "parsed": {
+      "kind": "template",
+      "path": ".converge/playbooks/default/templates/screen-02-design/TASK.md",
+      "vars": {
+        "screenId": "profile",
+        "title": "Profile",
+        "specPath": ".stitch/designs/profile/SPEC.md",
+        "metaPath": ".stitch/designs/profile/META.md",
+        "designPath": ".stitch/designs/profile/design.html"
+      },
+      "id": "004-profile-02-design"
+    }
+  },
+  {
+    "line": "converge spawn template --path .converge/playbooks/default/templates/screen-03-convert/TASK.md --id 004-profile-03-convert --var screenId=profile --var title=Profile --var route=/profile --var widgetName=Profile --var specPath=.stitch/designs/profile/SPEC.md --var designPath=.stitch/designs/profile/design.html --var screenPath=lib/screens/profile/profile_screen.dart",
+    "parsed": {
+      "kind": "template",
+      "path": ".converge/playbooks/default/templates/screen-03-convert/TASK.md",
+      "vars": {
+        "screenId": "profile",
+        "title": "Profile",
+        "route": "/profile",
+        "widgetName": "Profile",
+        "specPath": ".stitch/designs/profile/SPEC.md",
+        "designPath": ".stitch/designs/profile/design.html",
+        "screenPath": "lib/screens/profile/profile_screen.dart"
+      },
+      "id": "004-profile-03-convert"
+    }
+  },
+  {
+    "line": "converge spawn template --path .converge/playbooks/default/templates/screen-04-analyze/TASK.md --id 004-profile-04-analyze --var screenId=profile --var title=Profile --var screenPath=lib/screens/profile/profile_screen.dart --var widgetsJsonPath=.stitch/designs/profile/widgets.jsonl",
+    "parsed": {
+      "kind": "template",
+      "path": ".converge/playbooks/default/templates/screen-04-analyze/TASK.md",
+      "vars": {
+        "screenId": "profile",
+        "title": "Profile",
+        "screenPath": "lib/screens/profile/profile_screen.dart",
+        "widgetsJsonPath": ".stitch/designs/profile/widgets.jsonl"
+      },
+      "id": "004-profile-04-analyze"
+    }
+  },
+  {
+    "line": "converge spawn template --path .converge/playbooks/default/templates/screen-05-split/TASK.md --id 004-profile-05-split --var screenId=profile --var title=Profile --var screenPath=lib/screens/profile/profile_screen.dart --var widgetsJsonPath=.stitch/designs/profile/widgets.jsonl --var localWidgetsDir=lib/screens/profile/_widgets",
+    "parsed": {
+      "kind": "template",
+      "path": ".converge/playbooks/default/templates/screen-05-split/TASK.md",
+      "vars": {
+        "screenId": "profile",
+        "title": "Profile",
+        "screenPath": "lib/screens/profile/profile_screen.dart",
+        "widgetsJsonPath": ".stitch/designs/profile/widgets.jsonl",
+        "localWidgetsDir": "lib/screens/profile/_widgets"
+      },
+      "id": "004-profile-05-split"
+    }
+  },
+  {
+    "line": "converge spawn template --path .converge/playbooks/default/templates/screen-06-lift/TASK.md --id 004-profile-06-lift --var screenId=profile --var title=Profile --var screenPath=lib/screens/profile/profile_screen.dart --var widgetsJsonPath=.stitch/designs/profile/widgets.jsonl --var localWidgetsDir=lib/screens/profile/_widgets",
+    "parsed": {
+      "kind": "template",
+      "path": ".converge/playbooks/default/templates/screen-06-lift/TASK.md",
+      "vars": {
+        "screenId": "profile",
+        "title": "Profile",
+        "screenPath": "lib/screens/profile/profile_screen.dart",
+        "widgetsJsonPath": ".stitch/designs/profile/widgets.jsonl",
+        "localWidgetsDir": "lib/screens/profile/_widgets"
+      },
+      "id": "004-profile-06-lift"
+    }
+  },
+  {
+    "line": "converge spawn template --path .converge/playbooks/default/templates/screen-01-spec/TASK.md --id 005-cycle-tracking-01-spec --var screenId=cycle-tracking --var title=Cycle\\ Tracking --var route=/cycle-tracking --var widgetName=CycleTracking --var specPath=.stitch/designs/cycle-tracking/SPEC.md",
+    "parsed": {
+      "kind": "template",
+      "path": ".converge/playbooks/default/templates/screen-01-spec/TASK.md",
+      "vars": {
+        "screenId": "cycle-tracking",
+        "title": "Cycle Tracking",
+        "route": "/cycle-tracking",
+        "widgetName": "CycleTracking",
+        "specPath": ".stitch/designs/cycle-tracking/SPEC.md"
+      },
+      "id": "005-cycle-tracking-01-spec"
+    }
+  },
+  {
+    "line": "converge spawn template --path .converge/playbooks/default/templates/screen-02-design/TASK.md --id 005-cycle-tracking-02-design --var screenId=cycle-tracking --var title=Cycle\\ Tracking --var specPath=.stitch/designs/cycle-tracking/SPEC.md --var metaPath=.stitch/designs/cycle-tracking/META.md --var designPath=.stitch/designs/cycle-tracking/design.html",
+    "parsed": {
+      "kind": "template",
+      "path": ".converge/playbooks/default/templates/screen-02-design/TASK.md",
+      "vars": {
+        "screenId": "cycle-tracking",
+        "title": "Cycle Tracking",
+        "specPath": ".stitch/designs/cycle-tracking/SPEC.md",
+        "metaPath": ".stitch/designs/cycle-tracking/META.md",
+        "designPath": ".stitch/designs/cycle-tracking/design.html"
+      },
+      "id": "005-cycle-tracking-02-design"
+    }
+  },
+  {
+    "line": "converge spawn template --path .converge/playbooks/default/templates/screen-03-convert/TASK.md --id 005-cycle-tracking-03-convert --var screenId=cycle-tracking --var title=Cycle\\ Tracking --var route=/cycle-tracking --var widgetName=CycleTracking --var specPath=.stitch/designs/cycle-tracking/SPEC.md --var designPath=.stitch/designs/cycle-tracking/design.html --var screenPath=lib/screens/cycle_tracking/cycle_tracking_screen.dart",
+    "parsed": {
+      "kind": "template",
+      "path": ".converge/playbooks/default/templates/screen-03-convert/TASK.md",
+      "vars": {
+        "screenId": "cycle-tracking",
+        "title": "Cycle Tracking",
+        "route": "/cycle-tracking",
+        "widgetName": "CycleTracking",
+        "specPath": ".stitch/designs/cycle-tracking/SPEC.md",
+        "designPath": ".stitch/designs/cycle-tracking/design.html",
+        "screenPath": "lib/screens/cycle_tracking/cycle_tracking_screen.dart"
+      },
+      "id": "005-cycle-tracking-03-convert"
+    }
+  },
+  {
+    "line": "converge spawn template --path .converge/playbooks/default/templates/screen-04-analyze/TASK.md --id 005-cycle-tracking-04-analyze --var screenId=cycle-tracking --var title=Cycle\\ Tracking --var screenPath=lib/screens/cycle_tracking/cycle_tracking_screen.dart --var widgetsJsonPath=.stitch/designs/cycle-tracking/widgets.jsonl",
+    "parsed": {
+      "kind": "template",
+      "path": ".converge/playbooks/default/templates/screen-04-analyze/TASK.md",
+      "vars": {
+        "screenId": "cycle-tracking",
+        "title": "Cycle Tracking",
+        "screenPath": "lib/screens/cycle_tracking/cycle_tracking_screen.dart",
+        "widgetsJsonPath": ".stitch/designs/cycle-tracking/widgets.jsonl"
+      },
+      "id": "005-cycle-tracking-04-analyze"
+    }
+  },
+  {
+    "line": "converge spawn template --path .converge/playbooks/default/templates/screen-05-split/TASK.md --id 005-cycle-tracking-05-split --var screenId=cycle-tracking --var title=Cycle\\ Tracking --var screenPath=lib/screens/cycle_tracking/cycle_tracking_screen.dart --var widgetsJsonPath=.stitch/designs/cycle-tracking/widgets.jsonl --var localWidgetsDir=lib/screens/cycle_tracking/_widgets",
+    "parsed": {
+      "kind": "template",
+      "path": ".converge/playbooks/default/templates/screen-05-split/TASK.md",
+      "vars": {
+        "screenId": "cycle-tracking",
+        "title": "Cycle Tracking",
+        "screenPath": "lib/screens/cycle_tracking/cycle_tracking_screen.dart",
+        "widgetsJsonPath": ".stitch/designs/cycle-tracking/widgets.jsonl",
+        "localWidgetsDir": "lib/screens/cycle_tracking/_widgets"
+      },
+      "id": "005-cycle-tracking-05-split"
+    }
+  },
+  {
+    "line": "converge spawn template --path .converge/playbooks/default/templates/screen-06-lift/TASK.md --id 005-cycle-tracking-06-lift --var screenId=cycle-tracking --var title=Cycle\\ Tracking --var screenPath=lib/screens/cycle_tracking/cycle_tracking_screen.dart --var widgetsJsonPath=.stitch/designs/cycle-tracking/widgets.jsonl --var localWidgetsDir=lib/screens/cycle_tracking/_widgets",
+    "parsed": {
+      "kind": "template",
+      "path": ".converge/playbooks/default/templates/screen-06-lift/TASK.md",
+      "vars": {
+        "screenId": "cycle-tracking",
+        "title": "Cycle Tracking",
+        "screenPath": "lib/screens/cycle_tracking/cycle_tracking_screen.dart",
+        "widgetsJsonPath": ".stitch/designs/cycle-tracking/widgets.jsonl",
+        "localWidgetsDir": "lib/screens/cycle_tracking/_widgets"
+      },
+      "id": "005-cycle-tracking-06-lift"
+    }
+  },
+  {
+    "line": "converge spawn template --path .converge/playbooks/default/templates/screen-01-spec/TASK.md --id 006-weight-nutrition-01-spec --var screenId=weight-nutrition --var title=Weight\\ \\&\\ Nutrition --var route=/weight-nutrition --var widgetName=WeightNutrition --var specPath=.stitch/designs/weight-nutrition/SPEC.md",
+    "parsed": {
+      "kind": "template",
+      "path": ".converge/playbooks/default/templates/screen-01-spec/TASK.md",
+      "vars": {
+        "screenId": "weight-nutrition",
+        "title": "Weight & Nutrition",
+        "route": "/weight-nutrition",
+        "widgetName": "WeightNutrition",
+        "specPath": ".stitch/designs/weight-nutrition/SPEC.md"
+      },
+      "id": "006-weight-nutrition-01-spec"
+    }
+  },
+  {
+    "line": "converge spawn template --path .converge/playbooks/default/templates/screen-02-design/TASK.md --id 006-weight-nutrition-02-design --var screenId=weight-nutrition --var title=Weight\\ \\&\\ Nutrition --var specPath=.stitch/designs/weight-nutrition/SPEC.md --var metaPath=.stitch/designs/weight-nutrition/META.md --var designPath=.stitch/designs/weight-nutrition/design.html",
+    "parsed": {
+      "kind": "template",
+      "path": ".converge/playbooks/default/templates/screen-02-design/TASK.md",
+      "vars": {
+        "screenId": "weight-nutrition",
+        "title": "Weight & Nutrition",
+        "specPath": ".stitch/designs/weight-nutrition/SPEC.md",
+        "metaPath": ".stitch/designs/weight-nutrition/META.md",
+        "designPath": ".stitch/designs/weight-nutrition/design.html"
+      },
+      "id": "006-weight-nutrition-02-design"
+    }
+  },
+  {
+    "line": "converge spawn template --path .converge/playbooks/default/templates/screen-03-convert/TASK.md --id 006-weight-nutrition-03-convert --var screenId=weight-nutrition --var title=Weight\\ \\&\\ Nutrition --var route=/weight-nutrition --var widgetName=WeightNutrition --var specPath=.stitch/designs/weight-nutrition/SPEC.md --var designPath=.stitch/designs/weight-nutrition/design.html --var screenPath=lib/screens/weight_nutrition/weight_nutrition_screen.dart",
+    "parsed": {
+      "kind": "template",
+      "path": ".converge/playbooks/default/templates/screen-03-convert/TASK.md",
+      "vars": {
+        "screenId": "weight-nutrition",
+        "title": "Weight & Nutrition",
+        "route": "/weight-nutrition",
+        "widgetName": "WeightNutrition",
+        "specPath": ".stitch/designs/weight-nutrition/SPEC.md",
+        "designPath": ".stitch/designs/weight-nutrition/design.html",
+        "screenPath": "lib/screens/weight_nutrition/weight_nutrition_screen.dart"
+      },
+      "id": "006-weight-nutrition-03-convert"
+    }
+  },
+  {
+    "line": "converge spawn template --path .converge/playbooks/default/templates/screen-04-analyze/TASK.md --id 006-weight-nutrition-04-analyze --var screenId=weight-nutrition --var title=Weight\\ \\&\\ Nutrition --var screenPath=lib/screens/weight_nutrition/weight_nutrition_screen.dart --var widgetsJsonPath=.stitch/designs/weight-nutrition/widgets.jsonl",
+    "parsed": {
+      "kind": "template",
+      "path": ".converge/playbooks/default/templates/screen-04-analyze/TASK.md",
+      "vars": {
+        "screenId": "weight-nutrition",
+        "title": "Weight & Nutrition",
+        "screenPath": "lib/screens/weight_nutrition/weight_nutrition_screen.dart",
+        "widgetsJsonPath": ".stitch/designs/weight-nutrition/widgets.jsonl"
+      },
+      "id": "006-weight-nutrition-04-analyze"
+    }
+  },
+  {
+    "line": "converge spawn template --path .converge/playbooks/default/templates/screen-05-split/TASK.md --id 006-weight-nutrition-05-split --var screenId=weight-nutrition --var title=Weight\\ \\&\\ Nutrition --var screenPath=lib/screens/weight_nutrition/weight_nutrition_screen.dart --var widgetsJsonPath=.stitch/designs/weight-nutrition/widgets.jsonl --var localWidgetsDir=lib/screens/weight_nutrition/_widgets",
+    "parsed": {
+      "kind": "template",
+      "path": ".converge/playbooks/default/templates/screen-05-split/TASK.md",
+      "vars": {
+        "screenId": "weight-nutrition",
+        "title": "Weight & Nutrition",
+        "screenPath": "lib/screens/weight_nutrition/weight_nutrition_screen.dart",
+        "widgetsJsonPath": ".stitch/designs/weight-nutrition/widgets.jsonl",
+        "localWidgetsDir": "lib/screens/weight_nutrition/_widgets"
+      },
+      "id": "006-weight-nutrition-05-split"
+    }
+  },
+  {
+    "line": "converge spawn template --path .converge/playbooks/default/templates/screen-06-lift/TASK.md --id 006-weight-nutrition-06-lift --var screenId=weight-nutrition --var title=Weight\\ \\&\\ Nutrition --var screenPath=lib/screens/weight_nutrition/weight_nutrition_screen.dart --var widgetsJsonPath=.stitch/designs/weight-nutrition/widgets.jsonl --var localWidgetsDir=lib/screens/weight_nutrition/_widgets",
+    "parsed": {
+      "kind": "template",
+      "path": ".converge/playbooks/default/templates/screen-06-lift/TASK.md",
+      "vars": {
+        "screenId": "weight-nutrition",
+        "title": "Weight & Nutrition",
+        "screenPath": "lib/screens/weight_nutrition/weight_nutrition_screen.dart",
+        "widgetsJsonPath": ".stitch/designs/weight-nutrition/widgets.jsonl",
+        "localWidgetsDir": "lib/screens/weight_nutrition/_widgets"
+      },
+      "id": "006-weight-nutrition-06-lift"
+    }
+  },
+  {
+    "line": "converge spawn template --path .converge/playbooks/default/templates/screen-01-spec/TASK.md --id 007-pregnancy-progress-01-spec --var screenId=pregnancy-progress --var title=My\\ Pregnancy --var route=/pregnancy-progress --var widgetName=PregnancyProgress --var specPath=.stitch/designs/pregnancy-progress/SPEC.md",
+    "parsed": {
+      "kind": "template",
+      "path": ".converge/playbooks/default/templates/screen-01-spec/TASK.md",
+      "vars": {
+        "screenId": "pregnancy-progress",
+        "title": "My Pregnancy",
+        "route": "/pregnancy-progress",
+        "widgetName": "PregnancyProgress",
+        "specPath": ".stitch/designs/pregnancy-progress/SPEC.md"
+      },
+      "id": "007-pregnancy-progress-01-spec"
+    }
+  },
+  {
+    "line": "converge spawn template --path .converge/playbooks/default/templates/screen-02-design/TASK.md --id 007-pregnancy-progress-02-design --var screenId=pregnancy-progress --var title=My\\ Pregnancy --var specPath=.stitch/designs/pregnancy-progress/SPEC.md --var metaPath=.stitch/designs/pregnancy-progress/META.md --var designPath=.stitch/designs/pregnancy-progress/design.html",
+    "parsed": {
+      "kind": "template",
+      "path": ".converge/playbooks/default/templates/screen-02-design/TASK.md",
+      "vars": {
+        "screenId": "pregnancy-progress",
+        "title": "My Pregnancy",
+        "specPath": ".stitch/designs/pregnancy-progress/SPEC.md",
+        "metaPath": ".stitch/designs/pregnancy-progress/META.md",
+        "designPath": ".stitch/designs/pregnancy-progress/design.html"
+      },
+      "id": "007-pregnancy-progress-02-design"
+    }
+  },
+  {
+    "line": "converge spawn template --path .converge/playbooks/default/templates/screen-03-convert/TASK.md --id 007-pregnancy-progress-03-convert --var screenId=pregnancy-progress --var title=My\\ Pregnancy --var route=/pregnancy-progress --var widgetName=PregnancyProgress --var specPath=.stitch/designs/pregnancy-progress/SPEC.md --var designPath=.stitch/designs/pregnancy-progress/design.html --var screenPath=lib/screens/pregnancy_progress/pregnancy_progress_screen.dart",
+    "parsed": {
+      "kind": "template",
+      "path": ".converge/playbooks/default/templates/screen-03-convert/TASK.md",
+      "vars": {
+        "screenId": "pregnancy-progress",
+        "title": "My Pregnancy",
+        "route": "/pregnancy-progress",
+        "widgetName": "PregnancyProgress",
+        "specPath": ".stitch/designs/pregnancy-progress/SPEC.md",
+        "designPath": ".stitch/designs/pregnancy-progress/design.html",
+        "screenPath": "lib/screens/pregnancy_progress/pregnancy_progress_screen.dart"
+      },
+      "id": "007-pregnancy-progress-03-convert"
+    }
+  },
+  {
+    "line": "converge spawn template --path .converge/playbooks/default/templates/screen-04-analyze/TASK.md --id 007-pregnancy-progress-04-analyze --var screenId=pregnancy-progress --var title=My\\ Pregnancy --var screenPath=lib/screens/pregnancy_progress/pregnancy_progress_screen.dart --var widgetsJsonPath=.stitch/designs/pregnancy-progress/widgets.jsonl",
+    "parsed": {
+      "kind": "template",
+      "path": ".converge/playbooks/default/templates/screen-04-analyze/TASK.md",
+      "vars": {
+        "screenId": "pregnancy-progress",
+        "title": "My Pregnancy",
+        "screenPath": "lib/screens/pregnancy_progress/pregnancy_progress_screen.dart",
+        "widgetsJsonPath": ".stitch/designs/pregnancy-progress/widgets.jsonl"
+      },
+      "id": "007-pregnancy-progress-04-analyze"
+    }
+  },
+  {
+    "line": "converge spawn template --path .converge/playbooks/default/templates/screen-05-split/TASK.md --id 007-pregnancy-progress-05-split --var screenId=pregnancy-progress --var title=My\\ Pregnancy --var screenPath=lib/screens/pregnancy_progress/pregnancy_progress_screen.dart --var widgetsJsonPath=.stitch/designs/pregnancy-progress/widgets.jsonl --var localWidgetsDir=lib/screens/pregnancy_progress/_widgets",
+    "parsed": {
+      "kind": "template",
+      "path": ".converge/playbooks/default/templates/screen-05-split/TASK.md",
+      "vars": {
+        "screenId": "pregnancy-progress",
+        "title": "My Pregnancy",
+        "screenPath": "lib/screens/pregnancy_progress/pregnancy_progress_screen.dart",
+        "widgetsJsonPath": ".stitch/designs/pregnancy-progress/widgets.jsonl",
+        "localWidgetsDir": "lib/screens/pregnancy_progress/_widgets"
+      },
+      "id": "007-pregnancy-progress-05-split"
+    }
+  },
+  {
+    "line": "converge spawn template --path .converge/playbooks/default/templates/screen-06-lift/TASK.md --id 007-pregnancy-progress-06-lift --var screenId=pregnancy-progress --var title=My\\ Pregnancy --var screenPath=lib/screens/pregnancy_progress/pregnancy_progress_screen.dart --var widgetsJsonPath=.stitch/designs/pregnancy-progress/widgets.jsonl --var localWidgetsDir=lib/screens/pregnancy_progress/_widgets",
+    "parsed": {
+      "kind": "template",
+      "path": ".converge/playbooks/default/templates/screen-06-lift/TASK.md",
+      "vars": {
+        "screenId": "pregnancy-progress",
+        "title": "My Pregnancy",
+        "screenPath": "lib/screens/pregnancy_progress/pregnancy_progress_screen.dart",
+        "widgetsJsonPath": ".stitch/designs/pregnancy-progress/widgets.jsonl",
+        "localWidgetsDir": "lib/screens/pregnancy_progress/_widgets"
+      },
+      "id": "007-pregnancy-progress-06-lift"
+    }
+  },
+  {
+    "line": "converge spawn template --path .converge/playbooks/default/templates/screen-01-spec/TASK.md --id 008-mindfulness-01-spec --var screenId=mindfulness --var title=Mindfulness --var route=/mindfulness --var widgetName=Mindfulness --var specPath=.stitch/designs/mindfulness/SPEC.md",
+    "parsed": {
+      "kind": "template",
+      "path": ".converge/playbooks/default/templates/screen-01-spec/TASK.md",
+      "vars": {
+        "screenId": "mindfulness",
+        "title": "Mindfulness",
+        "route": "/mindfulness",
+        "widgetName": "Mindfulness",
+        "specPath": ".stitch/designs/mindfulness/SPEC.md"
+      },
+      "id": "008-mindfulness-01-spec"
+    }
+  },
+  {
+    "line": "converge spawn template --path .converge/playbooks/default/templates/screen-02-design/TASK.md --id 008-mindfulness-02-design --var screenId=mindfulness --var title=Mindfulness --var specPath=.stitch/designs/mindfulness/SPEC.md --var metaPath=.stitch/designs/mindfulness/META.md --var designPath=.stitch/designs/mindfulness/design.html",
+    "parsed": {
+      "kind": "template",
+      "path": ".converge/playbooks/default/templates/screen-02-design/TASK.md",
+      "vars": {
+        "screenId": "mindfulness",
+        "title": "Mindfulness",
+        "specPath": ".stitch/designs/mindfulness/SPEC.md",
+        "metaPath": ".stitch/designs/mindfulness/META.md",
+        "designPath": ".stitch/designs/mindfulness/design.html"
+      },
+      "id": "008-mindfulness-02-design"
+    }
+  },
+  {
+    "line": "converge spawn template --path .converge/playbooks/default/templates/screen-03-convert/TASK.md --id 008-mindfulness-03-convert --var screenId=mindfulness --var title=Mindfulness --var route=/mindfulness --var widgetName=Mindfulness --var specPath=.stitch/designs/mindfulness/SPEC.md --var designPath=.stitch/designs/mindfulness/design.html --var screenPath=lib/screens/mindfulness/mindfulness_screen.dart",
+    "parsed": {
+      "kind": "template",
+      "path": ".converge/playbooks/default/templates/screen-03-convert/TASK.md",
+      "vars": {
+        "screenId": "mindfulness",
+        "title": "Mindfulness",
+        "route": "/mindfulness",
+        "widgetName": "Mindfulness",
+        "specPath": ".stitch/designs/mindfulness/SPEC.md",
+        "designPath": ".stitch/designs/mindfulness/design.html",
+        "screenPath": "lib/screens/mindfulness/mindfulness_screen.dart"
+      },
+      "id": "008-mindfulness-03-convert"
+    }
+  },
+  {
+    "line": "converge spawn template --path .converge/playbooks/default/templates/screen-04-analyze/TASK.md --id 008-mindfulness-04-analyze --var screenId=mindfulness --var title=Mindfulness --var screenPath=lib/screens/mindfulness/mindfulness_screen.dart --var widgetsJsonPath=.stitch/designs/mindfulness/widgets.jsonl",
+    "parsed": {
+      "kind": "template",
+      "path": ".converge/playbooks/default/templates/screen-04-analyze/TASK.md",
+      "vars": {
+        "screenId": "mindfulness",
+        "title": "Mindfulness",
+        "screenPath": "lib/screens/mindfulness/mindfulness_screen.dart",
+        "widgetsJsonPath": ".stitch/designs/mindfulness/widgets.jsonl"
+      },
+      "id": "008-mindfulness-04-analyze"
+    }
+  },
+  {
+    "line": "converge spawn template --path .converge/playbooks/default/templates/screen-05-split/TASK.md --id 008-mindfulness-05-split --var screenId=mindfulness --var title=Mindfulness --var screenPath=lib/screens/mindfulness/mindfulness_screen.dart --var widgetsJsonPath=.stitch/designs/mindfulness/widgets.jsonl --var localWidgetsDir=lib/screens/mindfulness/_widgets",
+    "parsed": {
+      "kind": "template",
+      "path": ".converge/playbooks/default/templates/screen-05-split/TASK.md",
+      "vars": {
+        "screenId": "mindfulness",
+        "title": "Mindfulness",
+        "screenPath": "lib/screens/mindfulness/mindfulness_screen.dart",
+        "widgetsJsonPath": ".stitch/designs/mindfulness/widgets.jsonl",
+        "localWidgetsDir": "lib/screens/mindfulness/_widgets"
+      },
+      "id": "008-mindfulness-05-split"
+    }
+  },
+  {
+    "line": "converge spawn template --path .converge/playbooks/default/templates/screen-06-lift/TASK.md --id 008-mindfulness-06-lift --var screenId=mindfulness --var title=Mindfulness --var screenPath=lib/screens/mindfulness/mindfulness_screen.dart --var widgetsJsonPath=.stitch/designs/mindfulness/widgets.jsonl --var localWidgetsDir=lib/screens/mindfulness/_widgets",
+    "parsed": {
+      "kind": "template",
+      "path": ".converge/playbooks/default/templates/screen-06-lift/TASK.md",
+      "vars": {
+        "screenId": "mindfulness",
+        "title": "Mindfulness",
+        "screenPath": "lib/screens/mindfulness/mindfulness_screen.dart",
+        "widgetsJsonPath": ".stitch/designs/mindfulness/widgets.jsonl",
+        "localWidgetsDir": "lib/screens/mindfulness/_widgets"
+      },
+      "id": "008-mindfulness-06-lift"
+    }
+  },
+  {
+    "line": "converge spawn template --path .converge/playbooks/default/templates/screen-01-spec/TASK.md --id 009-health-log-01-spec --var screenId=health-log --var title=Health\\ Log --var route=/health-log --var widgetName=HealthLog --var specPath=.stitch/designs/health-log/SPEC.md",
+    "parsed": {
+      "kind": "template",
+      "path": ".converge/playbooks/default/templates/screen-01-spec/TASK.md",
+      "vars": {
+        "screenId": "health-log",
+        "title": "Health Log",
+        "route": "/health-log",
+        "widgetName": "HealthLog",
+        "specPath": ".stitch/designs/health-log/SPEC.md"
+      },
+      "id": "009-health-log-01-spec"
+    }
+  },
+  {
+    "line": "converge spawn template --path .converge/playbooks/default/templates/screen-02-design/TASK.md --id 009-health-log-02-design --var screenId=health-log --var title=Health\\ Log --var specPath=.stitch/designs/health-log/SPEC.md --var metaPath=.stitch/designs/health-log/META.md --var designPath=.stitch/designs/health-log/design.html",
+    "parsed": {
+      "kind": "template",
+      "path": ".converge/playbooks/default/templates/screen-02-design/TASK.md",
+      "vars": {
+        "screenId": "health-log",
+        "title": "Health Log",
+        "specPath": ".stitch/designs/health-log/SPEC.md",
+        "metaPath": ".stitch/designs/health-log/META.md",
+        "designPath": ".stitch/designs/health-log/design.html"
+      },
+      "id": "009-health-log-02-design"
+    }
+  },
+  {
+    "line": "converge spawn template --path .converge/playbooks/default/templates/screen-03-convert/TASK.md --id 009-health-log-03-convert --var screenId=health-log --var title=Health\\ Log --var route=/health-log --var widgetName=HealthLog --var specPath=.stitch/designs/health-log/SPEC.md --var designPath=.stitch/designs/health-log/design.html --var screenPath=lib/screens/health_log/health_log_screen.dart",
+    "parsed": {
+      "kind": "template",
+      "path": ".converge/playbooks/default/templates/screen-03-convert/TASK.md",
+      "vars": {
+        "screenId": "health-log",
+        "title": "Health Log",
+        "route": "/health-log",
+        "widgetName": "HealthLog",
+        "specPath": ".stitch/designs/health-log/SPEC.md",
+        "designPath": ".stitch/designs/health-log/design.html",
+        "screenPath": "lib/screens/health_log/health_log_screen.dart"
+      },
+      "id": "009-health-log-03-convert"
+    }
+  },
+  {
+    "line": "converge spawn template --path .converge/playbooks/default/templates/screen-04-analyze/TASK.md --id 009-health-log-04-analyze --var screenId=health-log --var title=Health\\ Log --var screenPath=lib/screens/health_log/health_log_screen.dart --var widgetsJsonPath=.stitch/designs/health-log/widgets.jsonl",
+    "parsed": {
+      "kind": "template",
+      "path": ".converge/playbooks/default/templates/screen-04-analyze/TASK.md",
+      "vars": {
+        "screenId": "health-log",
+        "title": "Health Log",
+        "screenPath": "lib/screens/health_log/health_log_screen.dart",
+        "widgetsJsonPath": ".stitch/designs/health-log/widgets.jsonl"
+      },
+      "id": "009-health-log-04-analyze"
+    }
+  },
+  {
+    "line": "converge spawn template --path .converge/playbooks/default/templates/screen-05-split/TASK.md --id 009-health-log-05-split --var screenId=health-log --var title=Health\\ Log --var screenPath=lib/screens/health_log/health_log_screen.dart --var widgetsJsonPath=.stitch/designs/health-log/widgets.jsonl --var localWidgetsDir=lib/screens/health_log/_widgets",
+    "parsed": {
+      "kind": "template",
+      "path": ".converge/playbooks/default/templates/screen-05-split/TASK.md",
+      "vars": {
+        "screenId": "health-log",
+        "title": "Health Log",
+        "screenPath": "lib/screens/health_log/health_log_screen.dart",
+        "widgetsJsonPath": ".stitch/designs/health-log/widgets.jsonl",
+        "localWidgetsDir": "lib/screens/health_log/_widgets"
+      },
+      "id": "009-health-log-05-split"
+    }
+  },
+  {
+    "line": "converge spawn template --path .converge/playbooks/default/templates/screen-06-lift/TASK.md --id 009-health-log-06-lift --var screenId=health-log --var title=Health\\ Log --var screenPath=lib/screens/health_log/health_log_screen.dart --var widgetsJsonPath=.stitch/designs/health-log/widgets.jsonl --var localWidgetsDir=lib/screens/health_log/_widgets",
+    "parsed": {
+      "kind": "template",
+      "path": ".converge/playbooks/default/templates/screen-06-lift/TASK.md",
+      "vars": {
+        "screenId": "health-log",
+        "title": "Health Log",
+        "screenPath": "lib/screens/health_log/health_log_screen.dart",
+        "widgetsJsonPath": ".stitch/designs/health-log/widgets.jsonl",
+        "localWidgetsDir": "lib/screens/health_log/_widgets"
+      },
+      "id": "009-health-log-06-lift"
+    }
+  },
+  {
+    "line": "converge spawn template --path .converge/playbooks/default/templates/screen-01-spec/TASK.md --id 010-mood-wellness-01-spec --var screenId=mood-wellness --var title=Mood\\ \\&\\ Wellness --var route=/mood-wellness --var widgetName=MoodWellness --var specPath=.stitch/designs/mood-wellness/SPEC.md",
+    "parsed": {
+      "kind": "template",
+      "path": ".converge/playbooks/default/templates/screen-01-spec/TASK.md",
+      "vars": {
+        "screenId": "mood-wellness",
+        "title": "Mood & Wellness",
+        "route": "/mood-wellness",
+        "widgetName": "MoodWellness",
+        "specPath": ".stitch/designs/mood-wellness/SPEC.md"
+      },
+      "id": "010-mood-wellness-01-spec"
+    }
+  },
+  {
+    "line": "converge spawn template --path .converge/playbooks/default/templates/screen-02-design/TASK.md --id 010-mood-wellness-02-design --var screenId=mood-wellness --var title=Mood\\ \\&\\ Wellness --var specPath=.stitch/designs/mood-wellness/SPEC.md --var metaPath=.stitch/designs/mood-wellness/META.md --var designPath=.stitch/designs/mood-wellness/design.html",
+    "parsed": {
+      "kind": "template",
+      "path": ".converge/playbooks/default/templates/screen-02-design/TASK.md",
+      "vars": {
+        "screenId": "mood-wellness",
+        "title": "Mood & Wellness",
+        "specPath": ".stitch/designs/mood-wellness/SPEC.md",
+        "metaPath": ".stitch/designs/mood-wellness/META.md",
+        "designPath": ".stitch/designs/mood-wellness/design.html"
+      },
+      "id": "010-mood-wellness-02-design"
+    }
+  },
+  {
+    "line": "converge spawn template --path .converge/playbooks/default/templates/screen-03-convert/TASK.md --id 010-mood-wellness-03-convert --var screenId=mood-wellness --var title=Mood\\ \\&\\ Wellness --var route=/mood-wellness --var widgetName=MoodWellness --var specPath=.stitch/designs/mood-wellness/SPEC.md --var designPath=.stitch/designs/mood-wellness/design.html --var screenPath=lib/screens/mood_wellness/mood_wellness_screen.dart",
+    "parsed": {
+      "kind": "template",
+      "path": ".converge/playbooks/default/templates/screen-03-convert/TASK.md",
+      "vars": {
+        "screenId": "mood-wellness",
+        "title": "Mood & Wellness",
+        "route": "/mood-wellness",
+        "widgetName": "MoodWellness",
+        "specPath": ".stitch/designs/mood-wellness/SPEC.md",
+        "designPath": ".stitch/designs/mood-wellness/design.html",
+        "screenPath": "lib/screens/mood_wellness/mood_wellness_screen.dart"
+      },
+      "id": "010-mood-wellness-03-convert"
+    }
+  },
+  {
+    "line": "converge spawn template --path .converge/playbooks/default/templates/screen-04-analyze/TASK.md --id 010-mood-wellness-04-analyze --var screenId=mood-wellness --var title=Mood\\ \\&\\ Wellness --var screenPath=lib/screens/mood_wellness/mood_wellness_screen.dart --var widgetsJsonPath=.stitch/designs/mood-wellness/widgets.jsonl",
+    "parsed": {
+      "kind": "template",
+      "path": ".converge/playbooks/default/templates/screen-04-analyze/TASK.md",
+      "vars": {
+        "screenId": "mood-wellness",
+        "title": "Mood & Wellness",
+        "screenPath": "lib/screens/mood_wellness/mood_wellness_screen.dart",
+        "widgetsJsonPath": ".stitch/designs/mood-wellness/widgets.jsonl"
+      },
+      "id": "010-mood-wellness-04-analyze"
+    }
+  },
+  {
+    "line": "converge spawn template --path .converge/playbooks/default/templates/screen-05-split/TASK.md --id 010-mood-wellness-05-split --var screenId=mood-wellness --var title=Mood\\ \\&\\ Wellness --var screenPath=lib/screens/mood_wellness/mood_wellness_screen.dart --var widgetsJsonPath=.stitch/designs/mood-wellness/widgets.jsonl --var localWidgetsDir=lib/screens/mood_wellness/_widgets",
+    "parsed": {
+      "kind": "template",
+      "path": ".converge/playbooks/default/templates/screen-05-split/TASK.md",
+      "vars": {
+        "screenId": "mood-wellness",
+        "title": "Mood & Wellness",
+        "screenPath": "lib/screens/mood_wellness/mood_wellness_screen.dart",
+        "widgetsJsonPath": ".stitch/designs/mood-wellness/widgets.jsonl",
+        "localWidgetsDir": "lib/screens/mood_wellness/_widgets"
+      },
+      "id": "010-mood-wellness-05-split"
+    }
+  },
+  {
+    "line": "converge spawn template --path .converge/playbooks/default/templates/screen-06-lift/TASK.md --id 010-mood-wellness-06-lift --var screenId=mood-wellness --var title=Mood\\ \\&\\ Wellness --var screenPath=lib/screens/mood_wellness/mood_wellness_screen.dart --var widgetsJsonPath=.stitch/designs/mood-wellness/widgets.jsonl --var localWidgetsDir=lib/screens/mood_wellness/_widgets",
+    "parsed": {
+      "kind": "template",
+      "path": ".converge/playbooks/default/templates/screen-06-lift/TASK.md",
+      "vars": {
+        "screenId": "mood-wellness",
+        "title": "Mood & Wellness",
+        "screenPath": "lib/screens/mood_wellness/mood_wellness_screen.dart",
+        "widgetsJsonPath": ".stitch/designs/mood-wellness/widgets.jsonl",
+        "localWidgetsDir": "lib/screens/mood_wellness/_widgets"
+      },
+      "id": "010-mood-wellness-06-lift"
+    }
+  },
+  {
+    "line": "converge spawn template --path .converge/playbooks/default/templates/screen-01-spec/TASK.md --id 011-education-01-spec --var screenId=education --var title=Education --var route=/education --var widgetName=Education --var specPath=.stitch/designs/education/SPEC.md",
+    "parsed": {
+      "kind": "template",
+      "path": ".converge/playbooks/default/templates/screen-01-spec/TASK.md",
+      "vars": {
+        "screenId": "education",
+        "title": "Education",
+        "route": "/education",
+        "widgetName": "Education",
+        "specPath": ".stitch/designs/education/SPEC.md"
+      },
+      "id": "011-education-01-spec"
+    }
+  },
+  {
+    "line": "converge spawn template --path .converge/playbooks/default/templates/screen-02-design/TASK.md --id 011-education-02-design --var screenId=education --var title=Education --var specPath=.stitch/designs/education/SPEC.md --var metaPath=.stitch/designs/education/META.md --var designPath=.stitch/designs/education/design.html",
+    "parsed": {
+      "kind": "template",
+      "path": ".converge/playbooks/default/templates/screen-02-design/TASK.md",
+      "vars": {
+        "screenId": "education",
+        "title": "Education",
+        "specPath": ".stitch/designs/education/SPEC.md",
+        "metaPath": ".stitch/designs/education/META.md",
+        "designPath": ".stitch/designs/education/design.html"
+      },
+      "id": "011-education-02-design"
+    }
+  },
+  {
+    "line": "converge spawn template --path .converge/playbooks/default/templates/screen-03-convert/TASK.md --id 011-education-03-convert --var screenId=education --var title=Education --var route=/education --var widgetName=Education --var specPath=.stitch/designs/education/SPEC.md --var designPath=.stitch/designs/education/design.html --var screenPath=lib/screens/education/education_screen.dart",
+    "parsed": {
+      "kind": "template",
+      "path": ".converge/playbooks/default/templates/screen-03-convert/TASK.md",
+      "vars": {
+        "screenId": "education",
+        "title": "Education",
+        "route": "/education",
+        "widgetName": "Education",
+        "specPath": ".stitch/designs/education/SPEC.md",
+        "designPath": ".stitch/designs/education/design.html",
+        "screenPath": "lib/screens/education/education_screen.dart"
+      },
+      "id": "011-education-03-convert"
+    }
+  },
+  {
+    "line": "converge spawn template --path .converge/playbooks/default/templates/screen-04-analyze/TASK.md --id 011-education-04-analyze --var screenId=education --var title=Education --var screenPath=lib/screens/education/education_screen.dart --var widgetsJsonPath=.stitch/designs/education/widgets.jsonl",
+    "parsed": {
+      "kind": "template",
+      "path": ".converge/playbooks/default/templates/screen-04-analyze/TASK.md",
+      "vars": {
+        "screenId": "education",
+        "title": "Education",
+        "screenPath": "lib/screens/education/education_screen.dart",
+        "widgetsJsonPath": ".stitch/designs/education/widgets.jsonl"
+      },
+      "id": "011-education-04-analyze"
+    }
+  },
+  {
+    "line": "converge spawn template --path .converge/playbooks/default/templates/screen-05-split/TASK.md --id 011-education-05-split --var screenId=education --var title=Education --var screenPath=lib/screens/education/education_screen.dart --var widgetsJsonPath=.stitch/designs/education/widgets.jsonl --var localWidgetsDir=lib/screens/education/_widgets",
+    "parsed": {
+      "kind": "template",
+      "path": ".converge/playbooks/default/templates/screen-05-split/TASK.md",
+      "vars": {
+        "screenId": "education",
+        "title": "Education",
+        "screenPath": "lib/screens/education/education_screen.dart",
+        "widgetsJsonPath": ".stitch/designs/education/widgets.jsonl",
+        "localWidgetsDir": "lib/screens/education/_widgets"
+      },
+      "id": "011-education-05-split"
+    }
+  },
+  {
+    "line": "converge spawn template --path .converge/playbooks/default/templates/screen-06-lift/TASK.md --id 011-education-06-lift --var screenId=education --var title=Education --var screenPath=lib/screens/education/education_screen.dart --var widgetsJsonPath=.stitch/designs/education/widgets.jsonl --var localWidgetsDir=lib/screens/education/_widgets",
+    "parsed": {
+      "kind": "template",
+      "path": ".converge/playbooks/default/templates/screen-06-lift/TASK.md",
+      "vars": {
+        "screenId": "education",
+        "title": "Education",
+        "screenPath": "lib/screens/education/education_screen.dart",
+        "widgetsJsonPath": ".stitch/designs/education/widgets.jsonl",
+        "localWidgetsDir": "lib/screens/education/_widgets"
+      },
+      "id": "011-education-06-lift"
+    }
+  },
+  {
+    "line": "converge spawn template --path .converge/playbooks/default/templates/screen-01-spec/TASK.md --id 012-article-reader-01-spec --var screenId=article-reader --var title=Article\\ Reader --var route=/article-reader/:id --var widgetName=ArticleReader --var specPath=.stitch/designs/article-reader/SPEC.md",
+    "parsed": {
+      "kind": "template",
+      "path": ".converge/playbooks/default/templates/screen-01-spec/TASK.md",
+      "vars": {
+        "screenId": "article-reader",
+        "title": "Article Reader",
+        "route": "/article-reader/:id",
+        "widgetName": "ArticleReader",
+        "specPath": ".stitch/designs/article-reader/SPEC.md"
+      },
+      "id": "012-article-reader-01-spec"
+    }
+  },
+  {
+    "line": "converge spawn template --path .converge/playbooks/default/templates/screen-02-design/TASK.md --id 012-article-reader-02-design --var screenId=article-reader --var title=Article\\ Reader --var specPath=.stitch/designs/article-reader/SPEC.md --var metaPath=.stitch/designs/article-reader/META.md --var designPath=.stitch/designs/article-reader/design.html",
+    "parsed": {
+      "kind": "template",
+      "path": ".converge/playbooks/default/templates/screen-02-design/TASK.md",
+      "vars": {
+        "screenId": "article-reader",
+        "title": "Article Reader",
+        "specPath": ".stitch/designs/article-reader/SPEC.md",
+        "metaPath": ".stitch/designs/article-reader/META.md",
+        "designPath": ".stitch/designs/article-reader/design.html"
+      },
+      "id": "012-article-reader-02-design"
+    }
+  },
+  {
+    "line": "converge spawn template --path .converge/playbooks/default/templates/screen-03-convert/TASK.md --id 012-article-reader-03-convert --var screenId=article-reader --var title=Article\\ Reader --var route=/article-reader/:id --var widgetName=ArticleReader --var specPath=.stitch/designs/article-reader/SPEC.md --var designPath=.stitch/designs/article-reader/design.html --var screenPath=lib/screens/article_reader/article_reader_screen.dart",
+    "parsed": {
+      "kind": "template",
+      "path": ".converge/playbooks/default/templates/screen-03-convert/TASK.md",
+      "vars": {
+        "screenId": "article-reader",
+        "title": "Article Reader",
+        "route": "/article-reader/:id",
+        "widgetName": "ArticleReader",
+        "specPath": ".stitch/designs/article-reader/SPEC.md",
+        "designPath": ".stitch/designs/article-reader/design.html",
+        "screenPath": "lib/screens/article_reader/article_reader_screen.dart"
+      },
+      "id": "012-article-reader-03-convert"
+    }
+  },
+  {
+    "line": "converge spawn template --path .converge/playbooks/default/templates/screen-04-analyze/TASK.md --id 012-article-reader-04-analyze --var screenId=article-reader --var title=Article\\ Reader --var screenPath=lib/screens/article_reader/article_reader_screen.dart --var widgetsJsonPath=.stitch/designs/article-reader/widgets.jsonl",
+    "parsed": {
+      "kind": "template",
+      "path": ".converge/playbooks/default/templates/screen-04-analyze/TASK.md",
+      "vars": {
+        "screenId": "article-reader",
+        "title": "Article Reader",
+        "screenPath": "lib/screens/article_reader/article_reader_screen.dart",
+        "widgetsJsonPath": ".stitch/designs/article-reader/widgets.jsonl"
+      },
+      "id": "012-article-reader-04-analyze"
+    }
+  },
+  {
+    "line": "converge spawn template --path .converge/playbooks/default/templates/screen-05-split/TASK.md --id 012-article-reader-05-split --var screenId=article-reader --var title=Article\\ Reader --var screenPath=lib/screens/article_reader/article_reader_screen.dart --var widgetsJsonPath=.stitch/designs/article-reader/widgets.jsonl --var localWidgetsDir=lib/screens/article_reader/_widgets",
+    "parsed": {
+      "kind": "template",
+      "path": ".converge/playbooks/default/templates/screen-05-split/TASK.md",
+      "vars": {
+        "screenId": "article-reader",
+        "title": "Article Reader",
+        "screenPath": "lib/screens/article_reader/article_reader_screen.dart",
+        "widgetsJsonPath": ".stitch/designs/article-reader/widgets.jsonl",
+        "localWidgetsDir": "lib/screens/article_reader/_widgets"
+      },
+      "id": "012-article-reader-05-split"
+    }
+  },
+  {
+    "line": "converge spawn template --path .converge/playbooks/default/templates/screen-06-lift/TASK.md --id 012-article-reader-06-lift --var screenId=article-reader --var title=Article\\ Reader --var screenPath=lib/screens/article_reader/article_reader_screen.dart --var widgetsJsonPath=.stitch/designs/article-reader/widgets.jsonl --var localWidgetsDir=lib/screens/article_reader/_widgets",
+    "parsed": {
+      "kind": "template",
+      "path": ".converge/playbooks/default/templates/screen-06-lift/TASK.md",
+      "vars": {
+        "screenId": "article-reader",
+        "title": "Article Reader",
+        "screenPath": "lib/screens/article_reader/article_reader_screen.dart",
+        "widgetsJsonPath": ".stitch/designs/article-reader/widgets.jsonl",
+        "localWidgetsDir": "lib/screens/article_reader/_widgets"
+      },
+      "id": "012-article-reader-06-lift"
+    }
+  },
+  {
+    "line": "converge spawn template --path .converge/playbooks/default/templates/screen-01-spec/TASK.md --id 013-settings-01-spec --var screenId=settings --var title=Settings --var route=/settings --var widgetName=Settings --var specPath=.stitch/designs/settings/SPEC.md",
+    "parsed": {
+      "kind": "template",
+      "path": ".converge/playbooks/default/templates/screen-01-spec/TASK.md",
+      "vars": {
+        "screenId": "settings",
+        "title": "Settings",
+        "route": "/settings",
+        "widgetName": "Settings",
+        "specPath": ".stitch/designs/settings/SPEC.md"
+      },
+      "id": "013-settings-01-spec"
+    }
+  },
+  {
+    "line": "converge spawn template --path .converge/playbooks/default/templates/screen-02-design/TASK.md --id 013-settings-02-design --var screenId=settings --var title=Settings --var specPath=.stitch/designs/settings/SPEC.md --var metaPath=.stitch/designs/settings/META.md --var designPath=.stitch/designs/settings/design.html",
+    "parsed": {
+      "kind": "template",
+      "path": ".converge/playbooks/default/templates/screen-02-design/TASK.md",
+      "vars": {
+        "screenId": "settings",
+        "title": "Settings",
+        "specPath": ".stitch/designs/settings/SPEC.md",
+        "metaPath": ".stitch/designs/settings/META.md",
+        "designPath": ".stitch/designs/settings/design.html"
+      },
+      "id": "013-settings-02-design"
+    }
+  },
+  {
+    "line": "converge spawn template --path .converge/playbooks/default/templates/screen-03-convert/TASK.md --id 013-settings-03-convert --var screenId=settings --var title=Settings --var route=/settings --var widgetName=Settings --var specPath=.stitch/designs/settings/SPEC.md --var designPath=.stitch/designs/settings/design.html --var screenPath=lib/screens/settings/settings_screen.dart",
+    "parsed": {
+      "kind": "template",
+      "path": ".converge/playbooks/default/templates/screen-03-convert/TASK.md",
+      "vars": {
+        "screenId": "settings",
+        "title": "Settings",
+        "route": "/settings",
+        "widgetName": "Settings",
+        "specPath": ".stitch/designs/settings/SPEC.md",
+        "designPath": ".stitch/designs/settings/design.html",
+        "screenPath": "lib/screens/settings/settings_screen.dart"
+      },
+      "id": "013-settings-03-convert"
+    }
+  },
+  {
+    "line": "converge spawn template --path .converge/playbooks/default/templates/screen-04-analyze/TASK.md --id 013-settings-04-analyze --var screenId=settings --var title=Settings --var screenPath=lib/screens/settings/settings_screen.dart --var widgetsJsonPath=.stitch/designs/settings/widgets.jsonl",
+    "parsed": {
+      "kind": "template",
+      "path": ".converge/playbooks/default/templates/screen-04-analyze/TASK.md",
+      "vars": {
+        "screenId": "settings",
+        "title": "Settings",
+        "screenPath": "lib/screens/settings/settings_screen.dart",
+        "widgetsJsonPath": ".stitch/designs/settings/widgets.jsonl"
+      },
+      "id": "013-settings-04-analyze"
+    }
+  },
+  {
+    "line": "converge spawn template --path .converge/playbooks/default/templates/screen-05-split/TASK.md --id 013-settings-05-split --var screenId=settings --var title=Settings --var screenPath=lib/screens/settings/settings_screen.dart --var widgetsJsonPath=.stitch/designs/settings/widgets.jsonl --var localWidgetsDir=lib/screens/settings/_widgets",
+    "parsed": {
+      "kind": "template",
+      "path": ".converge/playbooks/default/templates/screen-05-split/TASK.md",
+      "vars": {
+        "screenId": "settings",
+        "title": "Settings",
+        "screenPath": "lib/screens/settings/settings_screen.dart",
+        "widgetsJsonPath": ".stitch/designs/settings/widgets.jsonl",
+        "localWidgetsDir": "lib/screens/settings/_widgets"
+      },
+      "id": "013-settings-05-split"
+    }
+  },
+  {
+    "line": "converge spawn template --path .converge/playbooks/default/templates/screen-06-lift/TASK.md --id 013-settings-06-lift --var screenId=settings --var title=Settings --var screenPath=lib/screens/settings/settings_screen.dart --var widgetsJsonPath=.stitch/designs/settings/widgets.jsonl --var localWidgetsDir=lib/screens/settings/_widgets",
+    "parsed": {
+      "kind": "template",
+      "path": ".converge/playbooks/default/templates/screen-06-lift/TASK.md",
+      "vars": {
+        "screenId": "settings",
+        "title": "Settings",
+        "screenPath": "lib/screens/settings/settings_screen.dart",
+        "widgetsJsonPath": ".stitch/designs/settings/widgets.jsonl",
+        "localWidgetsDir": "lib/screens/settings/_widgets"
+      },
+      "id": "013-settings-06-lift"
+    }
+  }
+]

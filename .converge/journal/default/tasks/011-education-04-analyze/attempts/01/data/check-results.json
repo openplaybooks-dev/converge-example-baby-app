@@ -1,0 +1,10 @@
+[
+  {
+    "id": "widgets-json-exists",
+    "description": "widgets.jsonl exists for education",
+    "cmd": "test -f .stitch/designs/education/widgets.jsonl",
+    "passed": true,
+    "exit_code": 0,
+    "output": ""
+  }
+]

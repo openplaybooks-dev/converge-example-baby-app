@@ -1,0 +1,18 @@
+[
+  {
+    "id": "widget-exists",
+    "description": "Widget file exists",
+    "cmd": "test -f lib/screens/article_reader/_widgets/RelatedArticleCard.dart",
+    "passed": true,
+    "exit_code": 0,
+    "output": ""
+  },
+  {
+    "id": "dart-valid",
+    "description": "Dart analysis passes",
+    "cmd": "dart analyze lib/screens/article_reader/_widgets/RelatedArticleCard.dart",
+    "passed": true,
+    "exit_code": 0,
+    "output": "Analyzing RelatedArticleCard.dart...\n\n   info - RelatedArticleCard.dart:1:1 - The file name 'RelatedArticleCard.dart' isn't a lower_case_with_underscores identifier. Try changing the name to follow the lower_case_with_underscores style. - file_names\n\n1 issue found."
+  }
+]

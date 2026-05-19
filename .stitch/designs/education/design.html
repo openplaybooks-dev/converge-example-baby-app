@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=375, initial-scale=1.0">
+  <title>Education — Baby Bump Design</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'lavender': '#7C3AED',
+            'lavender-tint': '#F5F3FF',
+            'lavender-light': '#A78BFA',
+            'blush': '#F9A8D4',
+            'mint': '#6EE7B7',
+            'mist': '#FAFAFA',
+            'graphite': '#1F2937',
+            'stone': '#6B7280',
+            'misty-border': '#E5E7EB',
+            'coral': '#EF4444',
+            'warm-white': '#FFFFFF',
+          },
+          fontFamily: {
+            'nunito': ['Nunito', 'system-ui', 'sans-serif'],
+          },
+          borderRadius: {
+            'card': '16px',
+            'sheet': '28px',
+            'pill': '999px',
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Nunito', system-ui, sans-serif;
+      background: #E8E8E8;
+      display: flex;
+      justify-content: center;
+      padding: 32px 16px;
+      min-height: 100vh;
+    }
+    .phone {
+      width: 375px;
+      min-height: 812px;
+      border-radius: 40px;
+      overflow: hidden;
+      position: relative;
+      box-shadow: 0 24px 64px rgba(0,0,0,0.2);
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+    .card-shadow {
+      box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    }
+    .card-tap:active {
+      transform: scale(0.98);
+      transition: transform 200ms ease-out;
+    }
+    .icon-btn:active {
+      transform: scale(0.95);
+      transition: transform 200ms ease-out;
+    }
+    @keyframes fade-in {
+      from { opacity: 0; transform: translateY(8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .animate-fade-in {
+      animation: fade-in 300ms ease-out backwards;
+    }
+    @keyframes stagger-in {
+      from { opacity: 0; transform: translateY(12px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .stagger-item {
+      animation: stagger-in 300ms ease-out backwards;
+    }
+    @keyframes slide-in-right {
+      from { opacity: 0; transform: translateX(20px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+    .slide-in {
+      animation: slide-in-right 300ms ease-out backwards;
+    }
+  </style>
+</head>
+<body>
+  <div class="phone">
+
+    <!-- Scaffold with CustomScrollView -->
+    <div data-flutter="scaffold" class="scaffold" style="display: flex; flex-direction: column; min-height: 100vh; background-color: #F5F3FF;">
+
+      <!-- AppBar -->
+      <header data-flutter="app-bar" class="flex items-center h-14 px-4 bg-lavender-tint">
+        <button data-flutter="icon-btn" aria-label="Go back" class="icon-btn w-12 h-12 flex items-center justify-center rounded-full hover:bg-lavender/10">
+          <svg class="w-6 h-6 text-graphite" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+          </svg>
+        </button>
+        <h1 class="flex-1 text-xl font-semibold text-graphite text-center pr-12">Education</h1>
+        <button data-flutter="icon-btn" aria-label="Search articles" class="icon-btn w-12 h-12 flex items-center justify-center rounded-full hover:bg-lavender/10">
+          <svg class="w-6 h-6 text-graphite" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+          </svg>
+        </button>
+      </header>
+
+      <!-- Body - scrollable content -->
+      <main data-flutter="custom-scroll" class="flex-1 overflow-y-auto pb-24">
+
+        <!-- Section 1: Featured Article Hero -->
+        <section class="px-4 mt-6">
+          <div data-flutter="card" data-color="primary" class="card-tap bg-mist rounded-card card-shadow overflow-hidden cursor-pointer animate-fade-in" style="animation-delay: 0ms;" data-route="/article-reader/featured-1">
+            <!-- Hero image area -->
+            <div class="relative h-[180px] bg-gradient-to-br from-lavender to-lavender-light rounded-t-card overflow-hidden">
+              <!-- Topic badge -->
+              <div class="absolute top-3 left-3" data-flutter="chip" data-color="primary" data-selected="true">
+                <span class="bg-lavender text-white text-xs font-semibold px-3 py-1 rounded-full">Nutrition</span>
+              </div>
+              <!-- Bookmark icon -->
+              <button data-flutter="icon-btn" aria-label="Bookmark article" class="absolute top-3 right-3 w-10 h-10 flex items-center justify-center rounded-full bg-white/30 backdrop-blur-sm hover:bg-white/50">
+                <svg class="w-5 h-5 text-lavender" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"/>
+                </svg>
+              </button>
+              <!-- Placeholder icon -->
+              <div class="absolute inset-0 flex items-center justify-center">
+                <svg class="w-16 h-16 text-white/40" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+                </svg>
+              </div>
+            </div>
+            <!-- Content -->
+            <div class="p-4">
+              <span class="text-[11px] font-medium text-stone uppercase tracking-wide">Featured Article</span>
+              <h2 class="text-2xl font-bold text-graphite mt-1 mb-2" style="line-height: 32px;">Understanding Iron Needs During Pregnancy</h2>
+              <div data-flutter="row" data-spacing="xs" class="flex items-center gap-1 text-stone">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                </svg>
+                <span class="text-xs">5 min read</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Section 2: Topics Grid -->
+        <section class="mt-8 px-4">
+          <h2 class="text-lg font-semibold text-graphite mb-4">Topics</h2>
+          <div data-flutter="grid" data-columns="2" data-spacing="sm" class="grid grid-cols-2 gap-3">
+
+            <!-- Nutrition -->
+            <div data-flutter="card" data-color="primary" class="card-tap bg-mist rounded-card card-shadow p-4 cursor-pointer stagger-item flex flex-col items-center gap-3" style="animation-delay: 50ms;" data-route="/education/nutrition">
+              <div class="w-12 h-12 rounded-full bg-lavender/15 flex items-center justify-center">
+                <svg class="w-6 h-6 text-lavender" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+                </svg>
+              </div>
+              <span class="text-base font-semibold text-graphite">Nutrition</span>
+            </div>
+
+            <!-- Body Changes -->
+            <div data-flutter="card" data-color="secondary" class="card-tap bg-mist rounded-card card-shadow p-4 cursor-pointer stagger-item flex flex-col items-center gap-3" style="animation-delay: 100ms;" data-route="/education/body-changes">
+              <div class="w-12 h-12 rounded-full bg-blush/20 flex items-center justify-center">
+                <svg class="w-6 h-6 text-blush" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+                </svg>
+              </div>
+              <span class="text-base font-semibold text-graphite">Body Changes</span>
+            </div>
+
+            <!-- Maternal Care -->
+            <div data-flutter="card" data-color="primary" class="card-tap bg-mist rounded-card card-shadow p-4 cursor-pointer stagger-item flex flex-col items-center gap-3" style="animation-delay: 150ms;" data-route="/education/maternal-care">
+              <div class="w-12 h-12 rounded-full bg-lavender/15 flex items-center justify-center">
+                <svg class="w-6 h-6 text-lavender" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+                </svg>
+              </div>
+              <span class="text-base font-semibold text-graphite">Maternal Care</span>
+            </div>
+
+            <!-- Exercise -->
+            <div data-flutter="card" data-color="tertiary" class="card-tap bg-mist rounded-card card-shadow p-4 cursor-pointer stagger-item flex flex-col items-center gap-3" style="animation-delay: 200ms;" data-route="/education/exercise">
+              <div class="w-12 h-12 rounded-full bg-mint/20 flex items-center justify-center">
+                <svg class="w-6 h-6 text-mint" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                </svg>
+              </div>
+              <span class="text-base font-semibold text-graphite">Exercise</span>
+            </div>
+
+            <!-- Mental Health -->
+            <div data-flutter="card" data-color="secondary" class="card-tap bg-mist rounded-card card-shadow p-4 cursor-pointer stagger-item flex flex-col items-center gap-3" style="animation-delay: 250ms;" data-route="/education/mental-health">
+              <div class="w-12 h-12 rounded-full bg-blush/20 flex items-center justify-center">
+                <svg class="w-6 h-6 text-blush" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+                </svg>
+              </div>
+              <span class="text-base font-semibold text-graphite">Mental Health</span>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- Section 3: Recent Articles -->
+        <section class="mt-8">
+          <div class="flex justify-between items-center px-4 mb-4">
+            <h2 class="text-lg font-semibold text-graphite">Recent Articles</h2>
+          </div>
+
+          <div data-flutter="horizontal-scroll" class="overflow-x-auto">
+            <div data-flutter="row" data-spacing="sm" class="flex px-4">
+
+              <!-- Article Card 1 -->
+              <div data-flutter="card" data-color="primary" class="card-tap bg-mist rounded-card card-shadow w-[160px] shrink-0 cursor-pointer slide-in overflow-hidden" style="animation-delay: 300ms;" data-route="/article-reader/art-1">
+                <!-- Image area -->
+                <div class="h-20 bg-lavender/10 rounded-t-card flex items-center justify-center">
+                  <svg class="w-8 h-8 text-lavender/40" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+                  </svg>
+                </div>
+                <div class="p-3">
+                  <h3 class="text-sm font-semibold text-graphite mb-1 line-clamp-2" style="line-height: 20px;">Morning Sickness Remedies That Work</h3>
+                  <span class="text-[11px] font-medium text-lavender bg-lavender/10 px-2 py-0.5 rounded-full">Nutrition</span>
+                  <div class="flex items-center gap-1 mt-2 text-stone">
+                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
+                    <span class="text-[11px]">4 min</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Article Card 2 -->
+              <div data-flutter="card" data-color="secondary" class="card-tap bg-mist rounded-card card-shadow w-[160px] shrink-0 cursor-pointer slide-in overflow-hidden" style="animation-delay: 350ms;" data-route="/article-reader/art-2">
+                <div class="h-20 bg-blush/10 rounded-t-card flex items-center justify-center">
+                  <svg class="w-8 h-8 text-blush/40" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+                  </svg>
+                </div>
+                <div class="p-3">
+                  <h3 class="text-sm font-semibold text-graphite mb-1 line-clamp-2" style="line-height: 20px;">Managing Pregnancy Back Pain</h3>
+                  <span class="text-[11px] font-medium text-blush bg-blush/10 px-2 py-0.5 rounded-full">Body Changes</span>
+                  <div class="flex items-center gap-1 mt-2 text-stone">
+                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
+                    <span class="text-[11px]">6 min</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Article Card 3 -->
+              <div data-flutter="card" data-color="primary" class="card-tap bg-mist rounded-card card-shadow w-[160px] shrink-0 cursor-pointer slide-in overflow-hidden" style="animation-delay: 400ms;" data-route="/article-reader/art-3">
+                <div class="h-20 bg-lavender/10 rounded-t-card flex items-center justify-center">
+                  <svg class="w-8 h-8 text-lavender/40" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+                  </svg>
+                </div>
+                <div class="p-3">
+                  <h3 class="text-sm font-semibold text-graphite mb-1 line-clamp-2" style="line-height: 20px;">Prenatal Vitamins: What to Take</h3>
+                  <span class="text-[11px] font-medium text-lavender bg-lavender/10 px-2 py-0.5 rounded-full">Maternal Care</span>
+                  <div class="flex items-center gap-1 mt-2 text-stone">
+                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
+                    <span class="text-[11px]">5 min</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Article Card 4 -->
+              <div data-flutter="card" data-color="tertiary" class="card-tap bg-mist rounded-card card-shadow w-[160px] shrink-0 cursor-pointer slide-in overflow-hidden" style="animation-delay: 450ms;" data-route="/article-reader/art-4">
+                <div class="h-20 bg-mint/10 rounded-t-card flex items-center justify-center">
+                  <svg class="w-8 h-8 text-mint/40" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                  </svg>
+                </div>
+                <div class="p-3">
+                  <h3 class="text-sm font-semibold text-graphite mb-1 line-clamp-2" style="line-height: 20px;">Safe Pregnancy Exercises</h3>
+                  <span class="text-[11px] font-medium text-mint bg-mint/10 px-2 py-0.5 rounded-full">Exercise</span>
+                  <div class="flex items-center gap-1 mt-2 text-stone">
+                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
+                    <span class="text-[11px]">7 min</span>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </section>
+
+        <!-- Bottom padding for safe area -->
+        <div class="h-6"></div>
+
+      </main>
+
+    </div>
+  </div>
+</body>
+</html>

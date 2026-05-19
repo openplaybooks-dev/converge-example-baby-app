@@ -1,0 +1,34 @@
+{
+  "attemptNumber": 1,
+  "startedAt": "2026-05-19T01:31:06.044Z",
+  "completedAt": "2026-05-19T01:31:26.841Z",
+  "spawnedTasks": [
+    {
+      "id": "mood-wellness-split-001-TodaysMoodCard",
+      "writeToPath": ".converge/journal/default/tasks/mood-wellness-split-001-TodaysMoodCard/TASK.md"
+    },
+    {
+      "id": "mood-wellness-split-002-MoodEmoji",
+      "writeToPath": ".converge/journal/default/tasks/mood-wellness-split-002-MoodEmoji/TASK.md"
+    },
+    {
+      "id": "mood-wellness-split-003-MoodTrendChart",
+      "writeToPath": ".converge/journal/default/tasks/mood-wellness-split-003-MoodTrendChart/TASK.md"
+    },
+    {
+      "id": "mood-wellness-split-004-EnergyTrendChart",
+      "writeToPath": ".converge/journal/default/tasks/mood-wellness-split-004-EnergyTrendChart/TASK.md"
+    },
+    {
+      "id": "mood-wellness-split-005-WellnessTipCard",
+      "writeToPath": ".converge/journal/default/tasks/mood-wellness-split-005-WellnessTipCard/TASK.md"
+    },
+    {
+      "id": "mood-wellness-split-006-ChartChip",
+      "writeToPath": ".converge/journal/default/tasks/mood-wellness-split-006-ChartChip/TASK.md"
+    }
+  ],
+  "status": "success",
+  "spawnCount": 6,
+  "durationMs": 20797
+}

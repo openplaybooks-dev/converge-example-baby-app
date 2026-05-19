@@ -1,0 +1,17 @@
+{
+  "taskId": "002-browse-05-split",
+  "attemptNumber": 9262,
+  "inputs": [
+    {
+      "pattern": ".stitch/designs/browse/widgets.jsonl",
+      "count": 1,
+      "samples": [
+        ".stitch/designs/browse/widgets.jsonl"
+      ]
+    }
+  ],
+  "outputs": [
+    "lib/screens/browse/_widgets/**/*.dart"
+  ],
+  "blocked": false
+}

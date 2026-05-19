@@ -1,0 +1,339 @@
+{
+  "iteration": 2,
+  "stallCount": 0,
+  "nodes": [
+    {
+      "id": "check-seed-seeded",
+      "handler": "check-seed-seeded",
+      "status": "done",
+      "origin": "initial",
+      "data": {
+        "priority": 100
+      },
+      "result": {
+        "action": "continue",
+        "durationMs": 0
+      }
+    },
+    {
+      "id": "check-outputs-exist",
+      "handler": "check-outputs-exist",
+      "status": "done",
+      "origin": "initial",
+      "data": {
+        "priority": 99
+      },
+      "result": {
+        "action": "continue",
+        "durationMs": 0
+      }
+    },
+    {
+      "id": "detect-gaps",
+      "handler": "detect-gaps",
+      "status": "done",
+      "origin": "initial",
+      "data": {
+        "priority": 98
+      },
+      "result": {
+        "action": "continue",
+        "gaps": [
+          {
+            "id": "010-mood-wellness-04-analyze-plan-missing",
+            "type": "incomplete",
+            "level": "task",
+            "scope": "010-mood-wellness-04-analyze",
+            "severity": "high",
+            "description": "[010-mood-wellness-04-analyze] Generating plan",
+            "source": "unit",
+            "detected": "2026-05-19T01:28:11.266Z",
+            "resolved": false,
+            "checks": [],
+            "metadata": {
+              "gapKind": "plan",
+              "unitPath": "/Users/minh/Documents/openplayboosks/examples/baby-app/.converge/journal/default/tasks/010-mood-wellness-04-analyze/TASK.md",
+              "taskId": "010-mood-wellness-04-analyze",
+              "taskTitle": "Analyze: Mood & Wellness"
+            }
+          }
+        ],
+        "durationMs": 0
+      }
+    },
+    {
+      "id": "signal-done",
+      "handler": "signal-done",
+      "status": "buffered",
+      "origin": "initial",
+      "data": {
+        "priority": 97,
+        "applicable": "noGapsAndExecuted"
+      }
+    },
+    {
+      "id": "resolve-plan",
+      "handler": "resolve-plan",
+      "status": "done",
+      "origin": "initial",
+      "data": {
+        "priority": 90
+      },
+      "result": {
+        "action": "continue",
+        "durationMs": 143324
+      }
+    },
+    {
+      "id": "run-executor",
+      "handler": "run-executor",
+      "status": "done",
+      "origin": "initial",
+      "data": {
+        "priority": 65
+      },
+      "result": {
+        "action": "continue",
+        "durationMs": 0
+      }
+    },
+    {
+      "id": "verify",
+      "handler": "verify",
+      "status": "done",
+      "origin": "initial",
+      "data": {
+        "priority": 50
+      },
+      "result": {
+        "action": "continue",
+        "gaps": [
+          {
+            "id": "010-mood-wellness-04-analyze-missing-output-.stitch/designs/mood-wellness/widgets.jsonl",
+            "type": "incomplete",
+            "level": "task",
+            "scope": "010-mood-wellness-04-analyze",
+            "severity": "high",
+            "description": "[010-mood-wellness-04-analyze] Task output not created: .stitch/designs/mood-wellness/widgets.jsonl",
+            "source": "unit",
+            "detected": "2026-05-19T01:30:34.600Z",
+            "resolved": false,
+            "checks": [],
+            "metadata": {
+              "gapKind": "output",
+              "unitPath": "/Users/minh/Documents/openplayboosks/examples/baby-app/.converge/journal/default/tasks/010-mood-wellness-04-analyze/TASK.md",
+              "taskId": "010-mood-wellness-04-analyze",
+              "taskTitle": "Analyze: Mood & Wellness",
+              "taskPrompt": "# Analyze: Mood & Wellness\n\nAnalyze the screen widget and identify extractable widget regions.\n\n## Input\n- `lib/screens/mood_wellness/mood_wellness_screen.dart` — The screen widget file\n\n## Task\n\nRead the screen file and identify widget subtrees that should be extracted into separate widget files.\n\nWrite `.stitch/designs/mood-wellness/widgets.jsonl` with one JSON object per line (JSONL format):\n\n```jsonl\n{\"name\": \"WidgetName\", \"grep\": \"unique string to locate in source\", \"description\": \"what it renders\", \"shared\": false}\n{\"name\": \"AnotherWidget\", \"grep\": \"unique string\", \"description\": \"what it renders\", \"shared\": true}\n```\n\n## Extraction Criteria\n\nExtract a region when:\n- It's a self-contained visual block (card, list item, section header)\n- It has 15+ lines of widget code\n- It could be reused across screens (`shared: true`)\n- It has its own data/state concerns\n\nDo NOT extract:\n- Simple `Text`, `Icon`, or `SizedBox` widgets\n- Layout wrappers (`Padding`, `Center`)\n- Anything under 10 lines\n\n## Success Criteria\n\n- `.stitch/designs/mood-wellness/widgets.jsonl` exists with valid JSONL\n- Each entry has: name, grep, description, shared\n- Widget names use PascalCase",
+              "taskInputs": [
+                "lib/screens/mood_wellness/mood_wellness_screen.dart"
+              ],
+              "factId": "file-exists:test -f \".stitch/designs/mood-wellness/widgets.jsonl\"",
+              "awaitingUserInput": false
+            }
+          },
+          {
+            "id": "010-mood-wellness-04-analyze-check-failed-widgets-json-exists",
+            "type": "incomplete",
+            "level": "task",
+            "scope": "010-mood-wellness-04-analyze",
+            "severity": "high",
+            "description": "[010-mood-wellness-04-analyze] Check failed: widgets.jsonl exists for mood-wellness",
+            "source": "unit",
+            "detected": "2026-05-19T01:30:34.603Z",
+            "resolved": false,
+            "checks": [],
+            "metadata": {
+              "gapKind": "check-failed",
+              "checkId": "widgets-json-exists",
+              "checkCmd": "test -f .stitch/designs/mood-wellness/widgets.jsonl",
+              "checkDescription": "widgets.jsonl exists for mood-wellness",
+              "checkOutput": "",
+              "checkExitCode": 1,
+              "taskPrompt": "# Analyze: Mood & Wellness\n\nAnalyze the screen widget and identify extractable widget regions.\n\n## Input\n- `lib/screens/mood_wellness/mood_wellness_screen.dart` — The screen widget file\n\n## Task\n\nRead the screen file and identify widget subtrees that should be extracted into separate widget files.\n\nWrite `.stitch/designs/mood-wellness/widgets.jsonl` with one JSON object per line (JSONL format):\n\n```jsonl\n{\"name\": \"WidgetName\", \"grep\": \"unique string to locate in source\", \"description\": \"what it renders\", \"shared\": false}\n{\"name\": \"AnotherWidget\", \"grep\": \"unique string\", \"description\": \"what it renders\", \"shared\": true}\n```\n\n## Extraction Criteria\n\nExtract a region when:\n- It's a self-contained visual block (card, list item, section header)\n- It has 15+ lines of widget code\n- It could be reused across screens (`shared: true`)\n- It has its own data/state concerns\n\nDo NOT extract:\n- Simple `Text`, `Icon`, or `SizedBox` widgets\n- Layout wrappers (`Padding`, `Center`)\n- Anything under 10 lines\n\n## Success Criteria\n\n- `.stitch/designs/mood-wellness/widgets.jsonl` exists with valid JSONL\n- Each entry has: name, grep, description, shared\n- Widget names use PascalCase",
+              "taskId": "010-mood-wellness-04-analyze",
+              "taskTitle": "Analyze: Mood & Wellness",
+              "unitPath": "/Users/minh/Documents/openplayboosks/examples/baby-app/.converge/journal/default/tasks/010-mood-wellness-04-analyze/TASK.md",
+              "factId": "check:widgets-json-exists"
+            }
+          }
+        ],
+        "durationMs": 11
+      }
+    },
+    {
+      "id": "check-stall",
+      "handler": "check-stall",
+      "status": "done",
+      "origin": "initial",
+      "data": {
+        "priority": 45
+      },
+      "result": {
+        "action": "continue",
+        "durationMs": 0
+      }
+    },
+    {
+      "id": "advance-attempt",
+      "handler": "advance-attempt",
+      "status": "done",
+      "origin": "initial",
+      "data": {
+        "priority": 40
+      },
+      "result": {
+        "action": "continue",
+        "durationMs": 0
+      }
+    },
+    {
+      "id": "repair-loop",
+      "handler": "repair-loop",
+      "status": "done",
+      "origin": "initial",
+      "data": {
+        "priority": 55
+      },
+      "result": {
+        "action": "continue",
+        "durationMs": 6
+      }
+    },
+    {
+      "id": "run-strategy:task-run#35",
+      "handler": "run-strategy",
+      "status": "done",
+      "origin": "planned",
+      "data": {
+        "strategy": "task-run",
+        "priority": 55
+      },
+      "result": {
+        "action": "continue",
+        "durationMs": 30999
+      }
+    },
+    {
+      "id": "check-seed-seeded#2",
+      "handler": "check-seed-seeded",
+      "status": "done",
+      "origin": "reactive",
+      "data": {
+        "priority": 100
+      },
+      "result": {
+        "action": "continue",
+        "durationMs": 0
+      }
+    },
+    {
+      "id": "check-outputs-exist#2",
+      "handler": "check-outputs-exist",
+      "status": "done",
+      "origin": "reactive",
+      "data": {
+        "priority": 99
+      },
+      "result": {
+        "action": "done",
+        "success": true,
+        "reason": "Outputs already present",
+        "durationMs": 33
+      }
+    },
+    {
+      "id": "detect-gaps#2",
+      "handler": "detect-gaps",
+      "status": "buffered",
+      "origin": "reactive",
+      "data": {
+        "priority": 98
+      }
+    },
+    {
+      "id": "signal-done#2",
+      "handler": "signal-done",
+      "status": "buffered",
+      "origin": "reactive",
+      "data": {
+        "priority": 97,
+        "applicable": "noGapsAndExecuted"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "from": "_start",
+      "to": "check-seed-seeded",
+      "iteration": 1,
+      "ts": "2026-05-19T01:28:11.266Z"
+    },
+    {
+      "from": "check-seed-seeded",
+      "to": "check-outputs-exist",
+      "iteration": 1,
+      "ts": "2026-05-19T01:28:11.266Z"
+    },
+    {
+      "from": "check-outputs-exist",
+      "to": "detect-gaps",
+      "iteration": 1,
+      "ts": "2026-05-19T01:28:11.267Z"
+    },
+    {
+      "from": "detect-gaps",
+      "to": "resolve-plan",
+      "iteration": 1,
+      "ts": "2026-05-19T01:30:34.591Z"
+    },
+    {
+      "from": "resolve-plan",
+      "to": "run-executor",
+      "iteration": 1,
+      "ts": "2026-05-19T01:30:34.592Z"
+    },
+    {
+      "from": "run-executor",
+      "to": "verify",
+      "iteration": 1,
+      "ts": "2026-05-19T01:30:34.603Z"
+    },
+    {
+      "from": "verify",
+      "to": "repair-loop",
+      "iteration": 1,
+      "ts": "2026-05-19T01:30:34.610Z"
+    },
+    {
+      "from": "repair-loop",
+      "to": "run-strategy:task-run#35",
+      "iteration": 1,
+      "ts": "2026-05-19T01:31:05.610Z"
+    },
+    {
+      "from": "run-strategy:task-run#35",
+      "to": "check-stall",
+      "iteration": 1,
+      "ts": "2026-05-19T01:31:05.613Z"
+    },
+    {
+      "from": "check-stall",
+      "to": "advance-attempt",
+      "iteration": 1,
+      "ts": "2026-05-19T01:31:05.615Z"
+    },
+    {
+      "from": "advance-attempt",
+      "to": "check-seed-seeded#2",
+      "iteration": 2,
+      "ts": "2026-05-19T01:31:05.618Z"
+    },
+    {
+      "from": "check-seed-seeded#2",
+      "to": "check-outputs-exist#2",
+      "iteration": 2,
+      "ts": "2026-05-19T01:31:05.651Z"
+    }
+  ]
+}

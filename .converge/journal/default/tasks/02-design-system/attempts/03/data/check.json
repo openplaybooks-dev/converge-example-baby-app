@@ -1,0 +1,15 @@
+{
+  "taskId": "02-design-system",
+  "checks": [
+    {
+      "id": "design-md-exists",
+      "description": "Design system specification exists",
+      "cmd": "test -f .stitch/system/DESIGN.md"
+    },
+    {
+      "id": "meta-md-exists",
+      "description": "META.md exists",
+      "cmd": "test -f .stitch/system/META.md"
+    }
+  ]
+}

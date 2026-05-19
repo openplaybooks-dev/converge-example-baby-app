@@ -1,0 +1,17 @@
+{
+  "taskId": "001-home-04-analyze",
+  "attemptNumber": 1,
+  "inputs": [
+    {
+      "pattern": "lib/screens/home/home_screen.dart",
+      "count": 1,
+      "samples": [
+        "lib/screens/home/home_screen.dart"
+      ]
+    }
+  ],
+  "outputs": [
+    ".stitch/designs/home/widgets.jsonl"
+  ],
+  "blocked": false
+}

@@ -1,0 +1,23 @@
+{
+  "taskId": "005-cycle-tracking-06-lift",
+  "attemptNumber": 1,
+  "inputs": [
+    {
+      "pattern": ".stitch/designs/cycle-tracking/widgets.jsonl",
+      "count": 1,
+      "samples": [
+        ".stitch/designs/cycle-tracking/widgets.jsonl"
+      ]
+    },
+    {
+      "pattern": "lib/screens/cycle_tracking/_widgets/**/*.dart",
+      "count": 0,
+      "samples": []
+    }
+  ],
+  "outputs": [
+    "lib/widgets/**/*.dart"
+  ],
+  "blocked": true,
+  "blockedReason": "Missing required inputs: lib/screens/cycle_tracking/_widgets/**/*.dart"
+}

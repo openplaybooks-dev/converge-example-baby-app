@@ -1,0 +1,17 @@
+{
+  "taskId": "011-education-05-split",
+  "attemptNumber": 1,
+  "inputs": [
+    {
+      "pattern": ".stitch/designs/education/widgets.jsonl",
+      "count": 1,
+      "samples": [
+        ".stitch/designs/education/widgets.jsonl"
+      ]
+    }
+  ],
+  "outputs": [
+    "lib/screens/education/_widgets/**/*.dart"
+  ],
+  "blocked": false
+}

@@ -1,0 +1,10 @@
+[
+  {
+    "id": "widgets-json-exists",
+    "description": "widgets.jsonl exists for article-reader",
+    "cmd": "test -f .stitch/designs/article-reader/widgets.jsonl",
+    "passed": true,
+    "exit_code": 0,
+    "output": ""
+  }
+]

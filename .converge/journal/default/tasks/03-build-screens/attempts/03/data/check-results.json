@@ -1,0 +1,26 @@
+[
+  {
+    "id": "screens-json-exists",
+    "description": "Screen definitions exist",
+    "cmd": "test -f .stitch/screens.json",
+    "passed": true,
+    "exit_code": 0,
+    "output": ""
+  },
+  {
+    "id": "screens-created",
+    "description": "At least one screen widget was created",
+    "cmd": "find lib/screens -name '*.dart' -type f | wc -l | awk '{if ($1 > 0) exit 0; exit 1}'",
+    "passed": false,
+    "exit_code": 1,
+    "output": "find: lib/screens: No such file or directory"
+  },
+  {
+    "id": "dart-analysis-valid",
+    "description": "All generated code passes analysis",
+    "cmd": "dart analyze lib/",
+    "passed": false,
+    "exit_code": 64,
+    "output": "Directory or file doesn't exist: lib/\n\nUsage: dart analyze [arguments] [<directory>]\n-h, --help                   Print this usage information.\n    --fatal-infos            Treat info level issues as fatal.\n    --[no-]fatal-warnings    Treat warning level issues as fatal.\n                             (defaults to on)\n\nRun \"dart help\" to see global options."
+  }
+]

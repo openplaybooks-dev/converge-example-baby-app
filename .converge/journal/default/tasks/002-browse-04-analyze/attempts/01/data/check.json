@@ -1,0 +1,10 @@
+{
+  "taskId": "002-browse-04-analyze",
+  "checks": [
+    {
+      "id": "widgets-json-exists",
+      "description": "widgets.jsonl exists for browse",
+      "cmd": "test -f .stitch/designs/browse/widgets.jsonl"
+    }
+  ]
+}

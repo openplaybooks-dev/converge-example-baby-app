@@ -1,0 +1,6 @@
+[
+  {
+    "path": "lib/screens/pregnancy_progress/_widgets/**/*.dart",
+    "exists": false
+  }
+]

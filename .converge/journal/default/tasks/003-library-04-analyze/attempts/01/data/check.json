@@ -1,0 +1,10 @@
+{
+  "taskId": "003-library-04-analyze",
+  "checks": [
+    {
+      "id": "widgets-json-exists",
+      "description": "widgets.jsonl exists for library",
+      "cmd": "test -f .stitch/designs/library/widgets.jsonl"
+    }
+  ]
+}

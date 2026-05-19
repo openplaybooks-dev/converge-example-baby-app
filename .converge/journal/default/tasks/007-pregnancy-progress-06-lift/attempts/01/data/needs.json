@@ -1,0 +1,23 @@
+{
+  "taskId": "007-pregnancy-progress-06-lift",
+  "attemptNumber": 1,
+  "inputs": [
+    {
+      "pattern": ".stitch/designs/pregnancy-progress/widgets.jsonl",
+      "count": 1,
+      "samples": [
+        ".stitch/designs/pregnancy-progress/widgets.jsonl"
+      ]
+    },
+    {
+      "pattern": "lib/screens/pregnancy_progress/_widgets/**/*.dart",
+      "count": 0,
+      "samples": []
+    }
+  ],
+  "outputs": [
+    "lib/widgets/**/*.dart"
+  ],
+  "blocked": true,
+  "blockedReason": "Missing required inputs: lib/screens/pregnancy_progress/_widgets/**/*.dart"
+}

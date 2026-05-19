@@ -1,0 +1,17 @@
+{
+  "taskId": "002-browse-04-analyze",
+  "attemptNumber": 1,
+  "inputs": [
+    {
+      "pattern": "lib/screens/browse/browse_screen.dart",
+      "count": 1,
+      "samples": [
+        "lib/screens/browse/browse_screen.dart"
+      ]
+    }
+  ],
+  "outputs": [
+    ".stitch/designs/browse/widgets.jsonl"
+  ],
+  "blocked": false
+}

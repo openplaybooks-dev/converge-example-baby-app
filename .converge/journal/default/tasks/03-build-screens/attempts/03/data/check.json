@@ -1,0 +1,20 @@
+{
+  "taskId": "03-build-screens",
+  "checks": [
+    {
+      "id": "screens-json-exists",
+      "description": "Screen definitions exist",
+      "cmd": "test -f .stitch/screens.json"
+    },
+    {
+      "id": "screens-created",
+      "description": "At least one screen widget was created",
+      "cmd": "find lib/screens -name '*.dart' -type f | wc -l | awk '{if ($1 > 0) exit 0; exit 1}'"
+    },
+    {
+      "id": "dart-analysis-valid",
+      "description": "All generated code passes analysis",
+      "cmd": "dart analyze lib/"
+    }
+  ]
+}

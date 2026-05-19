@@ -1,0 +1,23 @@
+{
+  "taskId": "009-health-log-06-lift",
+  "attemptNumber": 1,
+  "inputs": [
+    {
+      "pattern": ".stitch/designs/health-log/widgets.jsonl",
+      "count": 1,
+      "samples": [
+        ".stitch/designs/health-log/widgets.jsonl"
+      ]
+    },
+    {
+      "pattern": "lib/screens/health_log/_widgets/**/*.dart",
+      "count": 0,
+      "samples": []
+    }
+  ],
+  "outputs": [
+    "lib/widgets/**/*.dart"
+  ],
+  "blocked": true,
+  "blockedReason": "Missing required inputs: lib/screens/health_log/_widgets/**/*.dart"
+}

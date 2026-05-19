@@ -1,0 +1,17 @@
+{"ts":"2026-05-18T15:09:38.248Z","iter":1,"gaps":3,"stall":0,"node":"action","handler":"advance-attempt","status":"done","result":"continue"}
+{"ts":"2026-05-18T15:09:38.248Z","iter":1,"gaps":3,"stall":0,"node":"action","handler":"check-seed-seeded","status":"start"}
+{"ts":"2026-05-18T15:09:38.249Z","iter":1,"gaps":3,"stall":0,"node":"action","handler":"check-seed-seeded","status":"done","result":"continue"}
+{"ts":"2026-05-18T15:09:38.249Z","iter":2,"gaps":3,"stall":0,"node":"action","handler":"check-outputs-exist","status":"start"}
+{"ts":"2026-05-18T15:09:38.315Z","iter":2,"gaps":3,"stall":0,"node":"action","handler":"check-outputs-exist","status":"done","result":"continue"}
+{"ts":"2026-05-18T15:09:38.315Z","iter":2,"gaps":3,"stall":0,"node":"action","handler":"detect-gaps","status":"start"}
+{"ts":"2026-05-18T15:09:38.374Z","iter":2,"gaps":3,"stall":0,"node":"action","handler":"detect-gaps","status":"done","result":"continue","newGaps":3}
+{"ts":"2026-05-18T15:09:38.375Z","iter":2,"gaps":3,"stall":0,"node":"action","handler":"repair-loop","status":"start"}
+{"ts":"2026-05-18T15:09:38.376Z","iter":2,"gaps":3,"stall":0,"node":"action","handler":"repair-loop","status":"done","result":"continue"}
+{"ts":"2026-05-18T15:09:38.377Z","iter":2,"gaps":3,"stall":0,"node":"action","handler":"run-strategy","status":"start"}
+{"ts":"2026-05-18T15:11:08.364Z","iter":2,"gaps":3,"stall":0,"node":"action","handler":"run-strategy","status":"done","result":"continue"}
+{"ts":"2026-05-18T15:11:08.365Z","iter":2,"gaps":3,"stall":0,"node":"action","handler":"verify","status":"start"}
+{"ts":"2026-05-18T15:11:08.417Z","iter":2,"gaps":3,"stall":0,"node":"action","handler":"verify","status":"done","result":"done","reason":"All gaps resolved","newGaps":0}
+{"ts":"2026-05-18T15:28:08.809Z","iter":1,"gaps":0,"stall":0,"node":"action","handler":"check-seed-seeded","status":"start"}
+{"ts":"2026-05-18T15:28:08.809Z","iter":1,"gaps":0,"stall":0,"node":"action","handler":"check-seed-seeded","status":"done","result":"continue"}
+{"ts":"2026-05-18T15:28:08.810Z","iter":1,"gaps":0,"stall":0,"node":"action","handler":"check-outputs-exist","status":"start"}
+{"ts":"2026-05-18T15:28:08.879Z","iter":1,"gaps":0,"stall":0,"node":"action","handler":"check-outputs-exist","status":"done","result":"done","reason":"Outputs already present"}

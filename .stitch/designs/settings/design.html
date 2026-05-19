@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Baby Bump - Settings</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --color-primary: #7C3AED;
+      --color-secondary: #F9A8D4;
+      --color-tertiary: #6EE7B7;
+      --color-background: #F5F3FF;
+      --color-surface: #FAFAFA;
+      --color-text-primary: #1F2937;
+      --color-text-secondary: #6B7280;
+      --color-border: #E5E7EB;
+      --color-error: #EF4444;
+      --color-white: #FFFFFF;
+      --radius-card: 16px;
+      --radius-list-item: 12px;
+      --spacing-unit: 8px;
+      --font-family: 'Nunito', sans-serif;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+
+    body {
+      font-family: var(--font-family);
+      background: #1E1B2E;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 20px 0;
+    }
+
+    .phone {
+      width: 375px;
+      min-height: 812px;
+      background: var(--color-background);
+      border-radius: 40px;
+      overflow: hidden;
+      position: relative;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.4);
+    }
+
+    .status-bar {
+      height: 44px;
+      background: var(--color-background);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 24px;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--color-text-primary);
+    }
+
+    .status-bar-icons {
+      display: flex;
+      gap: 6px;
+      align-items: center;
+    }
+
+    .status-bar-icons svg {
+      width: 18px;
+      height: 18px;
+    }
+
+    .app-bar {
+      height: 56px;
+      display: flex;
+      align-items: center;
+      padding: 0 8px;
+      background: var(--color-background);
+    }
+
+    .back-btn {
+      width: 48px;
+      height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      border-radius: 50%;
+      transition: background 200ms ease-out;
+    }
+
+    .back-btn:active {
+      background: rgba(124, 58, 237, 0.1);
+    }
+
+    .back-btn svg {
+      width: 24px;
+      height: 24px;
+      color: var(--color-text-primary);
+    }
+
+    .app-bar-title {
+      flex: 1;
+      font-size: 20px;
+      font-weight: 600;
+      color: var(--color-text-primary);
+      text-align: center;
+      padding-right: 48px;
+    }
+
+    .content {
+      padding: 0 16px 24px;
+      overflow-y: auto;
+    }
+
+    .section {
+      margin-top: 24px;
+    }
+
+    .card {
+      background: var(--color-surface);
+      border-radius: var(--radius-card);
+      padding: 16px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    }
+
+    .section-header {
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--color-text-primary);
+      line-height: 24px;
+      margin-bottom: 12px;
+    }
+
+    .list-item {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 12px;
+      background: transparent;
+      border: none;
+      width: 100%;
+      padding: 12px 0;
+      cursor: pointer;
+      font-family: var(--font-family);
+      text-align: left;
+      min-height: 56px;
+      transition: opacity 200ms ease-out;
+    }
+
+    .list-item:not(:last-child) {
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    .list-item:active {
+      opacity: 0.7;
+    }
+
+    .list-item-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      background: rgba(124, 58, 237, 0.1);
+    }
+
+    .list-item-icon svg {
+      width: 20px;
+      height: 20px;
+      color: var(--color-primary);
+    }
+
+    .list-item-icon.destructive {
+      background: rgba(239, 68, 68, 0.1);
+    }
+
+    .list-item-icon.destructive svg {
+      color: var(--color-error);
+    }
+
+    .list-item-content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .list-item-title {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--color-text-primary);
+      line-height: 20px;
+    }
+
+    .list-item-description {
+      font-size: 14px;
+      font-weight: 400;
+      color: var(--color-text-secondary);
+      line-height: 20px;
+    }
+
+    .list-item-value {
+      font-size: 14px;
+      font-weight: 400;
+      color: var(--color-text-secondary);
+      flex-shrink: 0;
+    }
+
+    .list-item-chevron {
+      color: var(--color-text-secondary);
+      flex-shrink: 0;
+    }
+
+    .list-item-chevron svg {
+      width: 20px;
+      height: 20px;
+    }
+
+    /* Switch styles */
+    .switch-row {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 12px;
+      padding: 12px 0;
+      min-height: 56px;
+    }
+
+    .switch-row:not(:last-child) {
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    .switch-content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .switch-label {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--color-text-primary);
+      line-height: 20px;
+    }
+
+    .switch-description {
+      font-size: 14px;
+      font-weight: 400;
+      color: var(--color-text-secondary);
+      line-height: 20px;
+    }
+
+    .switch-track {
+      width: 52px;
+      height: 32px;
+      border-radius: 16px;
+      background: var(--color-border);
+      position: relative;
+      cursor: pointer;
+      transition: background 200ms ease-out;
+      flex-shrink: 0;
+    }
+
+    .switch-track.active {
+      background: var(--color-primary);
+    }
+
+    .switch-thumb {
+      position: absolute;
+      top: 4px;
+      left: 4px;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: var(--color-white);
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+      transition: transform 200ms ease-out;
+    }
+
+    .switch-track.active .switch-thumb {
+      transform: translateX(20px);
+    }
+
+    /* Action rows */
+    .action-row {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 12px;
+      padding: 12px 0;
+      min-height: 56px;
+      cursor: pointer;
+      background: transparent;
+      border: none;
+      width: 100%;
+      font-family: var(--font-family);
+      text-align: left;
+      transition: opacity 200ms ease-out;
+    }
+
+    .action-row:not(:last-child) {
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    .action-row:active {
+      opacity: 0.7;
+    }
+
+    .action-row.destructive .action-label {
+      color: var(--color-error);
+    }
+
+    .action-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .action-icon.export {
+      background: rgba(110, 231, 183, 0.2);
+    }
+
+    .action-icon.export svg {
+      color: var(--color-tertiary);
+    }
+
+    .action-icon.clear {
+      background: rgba(239, 68, 68, 0.1);
+    }
+
+    .action-icon.clear svg {
+      color: var(--color-error);
+    }
+
+    .action-icon svg {
+      width: 20px;
+      height: 20px;
+    }
+
+    .action-content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .action-label {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--color-text-primary);
+      line-height: 20px;
+    }
+
+    .action-description {
+      font-size: 14px;
+      font-weight: 400;
+      color: var(--color-text-secondary);
+      line-height: 20px;
+    }
+
+    .action-chevron {
+      color: var(--color-text-secondary);
+      flex-shrink: 0;
+    }
+
+    .action-chevron svg {
+      width: 20px;
+      height: 20px;
+    }
+
+    /* About section */
+    .about-row {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 12px;
+      padding: 12px 0;
+      min-height: 48px;
+    }
+
+    .about-row:not(:last-child) {
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    .about-row:last-child {
+      border-bottom: none;
+    }
+
+    .about-label {
+      flex: 1;
+      font-size: 14px;
+      font-weight: 400;
+      color: var(--color-text-secondary);
+    }
+
+    .about-value {
+      font-size: 14px;
+      font-weight: 400;
+      color: var(--color-text-primary);
+    }
+
+    .about-link {
+      flex: 1;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 8px;
+      background: transparent;
+      border: none;
+      font-family: var(--font-family);
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--color-primary);
+      cursor: pointer;
+      padding: 0;
+      min-height: 48px;
+      text-align: left;
+      transition: opacity 200ms ease-out;
+    }
+
+    .about-link:active {
+      opacity: 0.6;
+    }
+
+    .about-link svg {
+      width: 20px;
+      height: 20px;
+      color: var(--color-primary);
+    }
+
+    .home-indicator {
+      position: absolute;
+      bottom: 8px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 134px;
+      height: 5px;
+      background: var(--color-text-primary);
+      border-radius: 3px;
+      opacity: 0.2;
+    }
+  </style>
+</head>
+<body>
+  <div class="phone scaffold" data-flutter="scaffold" data-color="primary">
+    <div class="status-bar">
+      <span>9:41</span>
+      <div class="status-bar-icons">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M5 12.55a11 11 0 0 1 14.08 0M1.42 9a16 16 0 0 1 21.16 0M8.53 16.11a6 6 0 0 1 6.95 0M12 20h.01"/>
+        </svg>
+        <svg viewBox="0 0 24 24" fill="currentColor">
+          <rect x="2" y="7" width="18" height="10" rx="2" stroke="currentColor" stroke-width="2" fill="none"/>
+          <rect x="4" y="9" width="14" height="6" rx="1" fill="currentColor"/>
+        </svg>
+      </div>
+    </div>
+
+    <header class="app-bar" data-flutter="app-bar">
+      <button class="back-btn" aria-label="Go back">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M19 12H5M12 19l-7-7 7-7"/>
+        </svg>
+      </button>
+      <h1 class="app-bar-title">Settings</h1>
+    </header>
+
+    <main class="content">
+      <!-- Section 1: Profile -->
+      <section class="section">
+        <div class="card">
+          <div class="section-header">Profile</div>
+
+          <button class="list-item" aria-label="Name, Sarah, double tap to edit">
+            <div class="list-item-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="8" r="4"/>
+                <path d="M4 20c0-4 4-6 8-6s8 2 8 6"/>
+              </svg>
+            </div>
+            <div class="list-item-content">
+              <span class="list-item-title">Name</span>
+              <span class="list-item-description">Sarah</span>
+            </div>
+            <div class="list-item-chevron">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M9 18l6-6-6-6"/>
+              </svg>
+            </div>
+          </button>
+
+          <button class="list-item" aria-label="Due date, December 15 2026, double tap to change">
+            <div class="list-item-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                <line x1="16" y1="2" x2="16" y2="6"/>
+                <line x1="8" y1="2" x2="8" y2="6"/>
+                <line x1="3" y1="10" x2="21" y2="10"/>
+              </svg>
+            </div>
+            <div class="list-item-content">
+              <span class="list-item-title">Due Date</span>
+              <span class="list-item-description">December 15, 2026</span>
+            </div>
+            <div class="list-item-chevron">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M9 18l6-6-6-6"/>
+              </svg>
+            </div>
+          </button>
+        </div>
+      </section>
+
+      <!-- Section 2: Notifications -->
+      <section class="section">
+        <div class="card">
+          <div class="section-header">Notifications</div>
+
+          <div class="switch-row">
+            <div class="switch-content">
+              <span class="switch-label">Daily Reminders</span>
+              <span class="switch-description">Morning check-in and daily tips</span>
+            </div>
+            <button class="switch-track active" role="switch" aria-checked="true" aria-label="Daily Reminders, notifications enabled, double tap to toggle">
+              <div class="switch-thumb"></div>
+            </button>
+          </div>
+
+          <div class="switch-row">
+            <div class="switch-content">
+              <span class="switch-label">Symptom Alerts</span>
+              <span class="switch-description">Track and log symptom changes</span>
+            </div>
+            <button class="switch-track active" role="switch" aria-checked="true" aria-label="Symptom Alerts, notifications enabled, double tap to toggle">
+              <div class="switch-thumb"></div>
+            </button>
+          </div>
+
+          <div class="switch-row">
+            <div class="switch-content">
+              <span class="switch-label">Appointment Reminders</span>
+              <span class="switch-description">Upcoming prenatal visit alerts</span>
+            </div>
+            <button class="switch-track" role="switch" aria-checked="false" aria-label="Appointment Reminders, notifications disabled, double tap to toggle">
+              <div class="switch-thumb"></div>
+            </button>
+          </div>
+
+          <div class="switch-row">
+            <div class="switch-content">
+              <span class="switch-label">Weekly Digest</span>
+              <span class="switch-description">Summary of your pregnancy journey</span>
+            </div>
+            <button class="switch-track" role="switch" aria-checked="false" aria-label="Weekly Digest, notifications disabled, double tap to toggle">
+              <div class="switch-thumb"></div>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 3: Data -->
+      <section class="section">
+        <div class="card">
+          <div class="section-header">Data</div>
+
+          <button class="action-row" aria-label="Export data, double tap to save and share your data">
+            <div class="action-icon export">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                <polyline points="7 10 12 15 17 10"/>
+                <line x1="12" y1="15" x2="12" y2="3"/>
+              </svg>
+            </div>
+            <div class="action-content">
+              <span class="action-label">Export Data</span>
+              <span class="action-description">Save and share your data as JSON</span>
+            </div>
+            <div class="action-chevron">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M9 18l6-6-6-6"/>
+              </svg>
+            </div>
+          </button>
+
+          <button class="action-row destructive" aria-label="Clear all data, double tap to delete all app data. This action cannot be undone.">
+            <div class="action-icon clear">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="3 6 5 6 21 6"/>
+                <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/>
+                <line x1="10" y1="11" x2="10" y2="17"/>
+                <line x1="14" y1="11" x2="14" y2="17"/>
+              </svg>
+            </div>
+            <div class="action-content">
+              <span class="action-label">Clear All Data</span>
+              <span class="action-description">Delete all app data permanently</span>
+            </div>
+            <div class="action-chevron">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M9 18l6-6-6-6"/>
+              </svg>
+            </div>
+          </button>
+        </div>
+      </section>
+
+      <!-- Section 4: About -->
+      <section class="section">
+        <div class="card">
+          <div class="section-header">About</div>
+
+          <div class="about-row">
+            <span class="about-label">Version</span>
+            <span class="about-value">1.0.0</span>
+          </div>
+
+          <button class="about-link" aria-label="Privacy policy, opens in browser">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            </svg>
+            Privacy Policy
+            <svg style="margin-left: auto" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M9 18l6-6-6-6"/>
+            </svg>
+          </button>
+
+          <button class="about-link" aria-label="Terms of service, opens in browser">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+              <polyline points="14 2 14 8 20 8"/>
+              <line x1="16" y1="13" x2="8" y2="13"/>
+              <line x1="16" y1="17" x2="8" y2="17"/>
+              <polyline points="10 9 9 9 8 9"/>
+            </svg>
+            Terms of Service
+            <svg style="margin-left: auto" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M9 18l6-6-6-6"/>
+            </svg>
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <div class="home-indicator"></div>
+  </div>
+</body>
+</html>

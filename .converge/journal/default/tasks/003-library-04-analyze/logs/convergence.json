@@ -1,0 +1,339 @@
+{
+  "iteration": 2,
+  "stallCount": 0,
+  "nodes": [
+    {
+      "id": "check-seed-seeded",
+      "handler": "check-seed-seeded",
+      "status": "done",
+      "origin": "initial",
+      "data": {
+        "priority": 100
+      },
+      "result": {
+        "action": "continue",
+        "durationMs": 0
+      }
+    },
+    {
+      "id": "check-outputs-exist",
+      "handler": "check-outputs-exist",
+      "status": "done",
+      "origin": "initial",
+      "data": {
+        "priority": 99
+      },
+      "result": {
+        "action": "continue",
+        "durationMs": 0
+      }
+    },
+    {
+      "id": "detect-gaps",
+      "handler": "detect-gaps",
+      "status": "done",
+      "origin": "initial",
+      "data": {
+        "priority": 98
+      },
+      "result": {
+        "action": "continue",
+        "gaps": [
+          {
+            "id": "003-library-04-analyze-plan-missing",
+            "type": "incomplete",
+            "level": "task",
+            "scope": "003-library-04-analyze",
+            "severity": "high",
+            "description": "[003-library-04-analyze] Generating plan",
+            "source": "unit",
+            "detected": "2026-05-18T23:30:03.377Z",
+            "resolved": false,
+            "checks": [],
+            "metadata": {
+              "gapKind": "plan",
+              "unitPath": "/Users/minh/Documents/openplayboosks/examples/baby-app/.converge/journal/default/tasks/003-library-04-analyze/TASK.md",
+              "taskId": "003-library-04-analyze",
+              "taskTitle": "Analyze: Library"
+            }
+          }
+        ],
+        "durationMs": 0
+      }
+    },
+    {
+      "id": "signal-done",
+      "handler": "signal-done",
+      "status": "buffered",
+      "origin": "initial",
+      "data": {
+        "priority": 97,
+        "applicable": "noGapsAndExecuted"
+      }
+    },
+    {
+      "id": "resolve-plan",
+      "handler": "resolve-plan",
+      "status": "done",
+      "origin": "initial",
+      "data": {
+        "priority": 90
+      },
+      "result": {
+        "action": "continue",
+        "durationMs": 19767
+      }
+    },
+    {
+      "id": "run-executor",
+      "handler": "run-executor",
+      "status": "done",
+      "origin": "initial",
+      "data": {
+        "priority": 65
+      },
+      "result": {
+        "action": "continue",
+        "durationMs": 0
+      }
+    },
+    {
+      "id": "verify",
+      "handler": "verify",
+      "status": "done",
+      "origin": "initial",
+      "data": {
+        "priority": 50
+      },
+      "result": {
+        "action": "continue",
+        "gaps": [
+          {
+            "id": "003-library-04-analyze-missing-output-.stitch/designs/library/widgets.jsonl",
+            "type": "incomplete",
+            "level": "task",
+            "scope": "003-library-04-analyze",
+            "severity": "high",
+            "description": "[003-library-04-analyze] Task output not created: .stitch/designs/library/widgets.jsonl",
+            "source": "unit",
+            "detected": "2026-05-18T23:30:23.157Z",
+            "resolved": false,
+            "checks": [],
+            "metadata": {
+              "gapKind": "output",
+              "unitPath": "/Users/minh/Documents/openplayboosks/examples/baby-app/.converge/journal/default/tasks/003-library-04-analyze/TASK.md",
+              "taskId": "003-library-04-analyze",
+              "taskTitle": "Analyze: Library",
+              "taskPrompt": "# Analyze: Library\n\nAnalyze the screen widget and identify extractable widget regions.\n\n## Input\n- `lib/screens/library/library_screen.dart` — The screen widget file\n\n## Task\n\nRead the screen file and identify widget subtrees that should be extracted into separate widget files.\n\nWrite `.stitch/designs/library/widgets.jsonl` with one JSON object per line (JSONL format):\n\n```jsonl\n{\"name\": \"WidgetName\", \"grep\": \"unique string to locate in source\", \"description\": \"what it renders\", \"shared\": false}\n{\"name\": \"AnotherWidget\", \"grep\": \"unique string\", \"description\": \"what it renders\", \"shared\": true}\n```\n\n## Extraction Criteria\n\nExtract a region when:\n- It's a self-contained visual block (card, list item, section header)\n- It has 15+ lines of widget code\n- It could be reused across screens (`shared: true`)\n- It has its own data/state concerns\n\nDo NOT extract:\n- Simple `Text`, `Icon`, or `SizedBox` widgets\n- Layout wrappers (`Padding`, `Center`)\n- Anything under 10 lines\n\n## Success Criteria\n\n- `.stitch/designs/library/widgets.jsonl` exists with valid JSONL\n- Each entry has: name, grep, description, shared\n- Widget names use PascalCase",
+              "taskInputs": [
+                "lib/screens/library/library_screen.dart"
+              ],
+              "factId": "file-exists:test -f \".stitch/designs/library/widgets.jsonl\"",
+              "awaitingUserInput": false
+            }
+          },
+          {
+            "id": "003-library-04-analyze-check-failed-widgets-json-exists",
+            "type": "incomplete",
+            "level": "task",
+            "scope": "003-library-04-analyze",
+            "severity": "high",
+            "description": "[003-library-04-analyze] Check failed: widgets.jsonl exists for library",
+            "source": "unit",
+            "detected": "2026-05-18T23:30:23.160Z",
+            "resolved": false,
+            "checks": [],
+            "metadata": {
+              "gapKind": "check-failed",
+              "checkId": "widgets-json-exists",
+              "checkCmd": "test -f .stitch/designs/library/widgets.jsonl",
+              "checkDescription": "widgets.jsonl exists for library",
+              "checkOutput": "",
+              "checkExitCode": 1,
+              "taskPrompt": "# Analyze: Library\n\nAnalyze the screen widget and identify extractable widget regions.\n\n## Input\n- `lib/screens/library/library_screen.dart` — The screen widget file\n\n## Task\n\nRead the screen file and identify widget subtrees that should be extracted into separate widget files.\n\nWrite `.stitch/designs/library/widgets.jsonl` with one JSON object per line (JSONL format):\n\n```jsonl\n{\"name\": \"WidgetName\", \"grep\": \"unique string to locate in source\", \"description\": \"what it renders\", \"shared\": false}\n{\"name\": \"AnotherWidget\", \"grep\": \"unique string\", \"description\": \"what it renders\", \"shared\": true}\n```\n\n## Extraction Criteria\n\nExtract a region when:\n- It's a self-contained visual block (card, list item, section header)\n- It has 15+ lines of widget code\n- It could be reused across screens (`shared: true`)\n- It has its own data/state concerns\n\nDo NOT extract:\n- Simple `Text`, `Icon`, or `SizedBox` widgets\n- Layout wrappers (`Padding`, `Center`)\n- Anything under 10 lines\n\n## Success Criteria\n\n- `.stitch/designs/library/widgets.jsonl` exists with valid JSONL\n- Each entry has: name, grep, description, shared\n- Widget names use PascalCase",
+              "taskId": "003-library-04-analyze",
+              "taskTitle": "Analyze: Library",
+              "unitPath": "/Users/minh/Documents/openplayboosks/examples/baby-app/.converge/journal/default/tasks/003-library-04-analyze/TASK.md",
+              "factId": "check:widgets-json-exists"
+            }
+          }
+        ],
+        "durationMs": 13
+      }
+    },
+    {
+      "id": "check-stall",
+      "handler": "check-stall",
+      "status": "done",
+      "origin": "initial",
+      "data": {
+        "priority": 45
+      },
+      "result": {
+        "action": "continue",
+        "durationMs": 0
+      }
+    },
+    {
+      "id": "advance-attempt",
+      "handler": "advance-attempt",
+      "status": "done",
+      "origin": "initial",
+      "data": {
+        "priority": 40
+      },
+      "result": {
+        "action": "continue",
+        "durationMs": 0
+      }
+    },
+    {
+      "id": "repair-loop",
+      "handler": "repair-loop",
+      "status": "done",
+      "origin": "initial",
+      "data": {
+        "priority": 55
+      },
+      "result": {
+        "action": "continue",
+        "durationMs": 6
+      }
+    },
+    {
+      "id": "run-strategy:task-run#8",
+      "handler": "run-strategy",
+      "status": "done",
+      "origin": "planned",
+      "data": {
+        "strategy": "task-run",
+        "priority": 55
+      },
+      "result": {
+        "action": "continue",
+        "durationMs": 19118
+      }
+    },
+    {
+      "id": "check-seed-seeded#2",
+      "handler": "check-seed-seeded",
+      "status": "done",
+      "origin": "reactive",
+      "data": {
+        "priority": 100
+      },
+      "result": {
+        "action": "continue",
+        "durationMs": 0
+      }
+    },
+    {
+      "id": "check-outputs-exist#2",
+      "handler": "check-outputs-exist",
+      "status": "done",
+      "origin": "reactive",
+      "data": {
+        "priority": 99
+      },
+      "result": {
+        "action": "done",
+        "success": true,
+        "reason": "Outputs already present",
+        "durationMs": 10
+      }
+    },
+    {
+      "id": "detect-gaps#2",
+      "handler": "detect-gaps",
+      "status": "buffered",
+      "origin": "reactive",
+      "data": {
+        "priority": 98
+      }
+    },
+    {
+      "id": "signal-done#2",
+      "handler": "signal-done",
+      "status": "buffered",
+      "origin": "reactive",
+      "data": {
+        "priority": 97,
+        "applicable": "noGapsAndExecuted"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "from": "_start",
+      "to": "check-seed-seeded",
+      "iteration": 1,
+      "ts": "2026-05-18T23:30:03.377Z"
+    },
+    {
+      "from": "check-seed-seeded",
+      "to": "check-outputs-exist",
+      "iteration": 1,
+      "ts": "2026-05-18T23:30:03.377Z"
+    },
+    {
+      "from": "check-outputs-exist",
+      "to": "detect-gaps",
+      "iteration": 1,
+      "ts": "2026-05-18T23:30:03.377Z"
+    },
+    {
+      "from": "detect-gaps",
+      "to": "resolve-plan",
+      "iteration": 1,
+      "ts": "2026-05-18T23:30:23.146Z"
+    },
+    {
+      "from": "resolve-plan",
+      "to": "run-executor",
+      "iteration": 1,
+      "ts": "2026-05-18T23:30:23.146Z"
+    },
+    {
+      "from": "run-executor",
+      "to": "verify",
+      "iteration": 1,
+      "ts": "2026-05-18T23:30:23.161Z"
+    },
+    {
+      "from": "verify",
+      "to": "repair-loop",
+      "iteration": 1,
+      "ts": "2026-05-18T23:30:23.167Z"
+    },
+    {
+      "from": "repair-loop",
+      "to": "run-strategy:task-run#8",
+      "iteration": 1,
+      "ts": "2026-05-18T23:30:42.287Z"
+    },
+    {
+      "from": "run-strategy:task-run#8",
+      "to": "check-stall",
+      "iteration": 1,
+      "ts": "2026-05-18T23:30:42.288Z"
+    },
+    {
+      "from": "check-stall",
+      "to": "advance-attempt",
+      "iteration": 1,
+      "ts": "2026-05-18T23:30:42.289Z"
+    },
+    {
+      "from": "advance-attempt",
+      "to": "check-seed-seeded#2",
+      "iteration": 2,
+      "ts": "2026-05-18T23:30:42.289Z"
+    },
+    {
+      "from": "check-seed-seeded#2",
+      "to": "check-outputs-exist#2",
+      "iteration": 2,
+      "ts": "2026-05-18T23:30:42.300Z"
+    }
+  ]
+}

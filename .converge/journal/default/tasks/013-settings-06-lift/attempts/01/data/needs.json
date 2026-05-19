@@ -1,0 +1,23 @@
+{
+  "taskId": "013-settings-06-lift",
+  "attemptNumber": 1,
+  "inputs": [
+    {
+      "pattern": ".stitch/designs/settings/widgets.jsonl",
+      "count": 1,
+      "samples": [
+        ".stitch/designs/settings/widgets.jsonl"
+      ]
+    },
+    {
+      "pattern": "lib/screens/settings/_widgets/**/*.dart",
+      "count": 0,
+      "samples": []
+    }
+  ],
+  "outputs": [
+    "lib/widgets/**/*.dart"
+  ],
+  "blocked": true,
+  "blockedReason": "Missing required inputs: lib/screens/settings/_widgets/**/*.dart"
+}

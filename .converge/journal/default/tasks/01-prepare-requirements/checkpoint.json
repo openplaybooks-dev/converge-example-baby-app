@@ -1,0 +1,16 @@
+{
+  "status": "complete",
+  "completedAt": "2026-05-18T22:59:00.296Z",
+  "progress": {
+    "totalChildren": 4,
+    "completedChildren": 4,
+    "failedChildren": 0,
+    "childTaskIds": [
+      "001-gather-idea",
+      "002-generate-prd",
+      "003-generate-ux",
+      "004-breakdown-ux-to-screens"
+    ],
+    "lastProgressUpdate": "2026-05-19T23:15:00.099Z"
+  }
+}

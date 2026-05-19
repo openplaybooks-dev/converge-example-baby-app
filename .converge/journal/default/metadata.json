@@ -1,0 +1,16 @@
+{
+  "executionId": "latest",
+  "projectName": "default",
+  "startTime": "2026-05-18T23:18:20.120Z",
+  "status": "partial-completed",
+  "config": {
+    "maxIterations": 0,
+    "maxAttemptsPerTask": 2
+  },
+  "environment": {
+    "nodeVersion": "v22.19.0",
+    "platform": "darwin"
+  },
+  "endTime": "2026-05-19T05:43:02.026Z",
+  "note": "status patched from \"running\" to \"partial-completed\" by scripts/extract-metrics.mjs after run halted at 03-build-screens"
+}

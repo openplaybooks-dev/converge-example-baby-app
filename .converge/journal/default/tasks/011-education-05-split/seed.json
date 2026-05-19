@@ -1,0 +1,24 @@
+{
+  "seeded": true,
+  "seededAt": "2026-05-19T02:09:37.835Z",
+  "spawnCount": 4,
+  "keepLooping": false,
+  "subtasks": [
+    {
+      "id": "education-split-001-FeaturedArticleCard",
+      "writeToPath": ".converge/journal/default/tasks/education-split-001-FeaturedArticleCard/TASK.md"
+    },
+    {
+      "id": "education-split-002-TopicCard",
+      "writeToPath": ".converge/journal/default/tasks/education-split-002-TopicCard/TASK.md"
+    },
+    {
+      "id": "education-split-003-RecentArticleCard",
+      "writeToPath": ".converge/journal/default/tasks/education-split-003-RecentArticleCard/TASK.md"
+    },
+    {
+      "id": "education-split-004-SearchOverlay",
+      "writeToPath": ".converge/journal/default/tasks/education-split-004-SearchOverlay/TASK.md"
+    }
+  ]
+}

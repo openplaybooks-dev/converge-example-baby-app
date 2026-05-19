@@ -1,0 +1,34 @@
+[
+  {
+    "id": "screen-exists",
+    "description": "Screen widget file exists",
+    "cmd": "test -f lib/screens/education/education_screen.dart",
+    "passed": true,
+    "exit_code": 0,
+    "output": ""
+  },
+  {
+    "id": "dart-valid",
+    "description": "Dart analysis passes",
+    "cmd": "dart analyze lib/screens/education/education_screen.dart",
+    "passed": true,
+    "exit_code": 0,
+    "output": "Analyzing education_screen.dart...\n\n   info - education_screen.dart:78:21 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors\n   info - education_screen.dart:83:21 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors\n   info - education_screen.dart:88:21 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors\n   info - education_screen.dart:93:21 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors\n   info - education_screen.dart:98:21 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors\n   info - education_screen.dart:141:21 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors\n   info - education_screen.dart:146:21 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors\n   info - education_screen.dart:151:21 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors\n   info - education_screen.dart:288:25 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors\n   info - education_screen.dart:492:27 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors\n   info - education_screen.dart:585:31 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors\n   info - education_screen.dart:589:31 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors\n   info - education_screen.dart:593:31 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors\n   info - education_screen.dart:627:28 - Missing a required trailing comma. Try adding a trailing comma. - require_trailing_commas\n\n14 issues found."
+  },
+  {
+    "id": "uses-theme",
+    "description": "Uses Theme.of(context) for styling",
+    "cmd": "grep -q 'Theme.of(context)' lib/screens/education/education_screen.dart",
+    "passed": true,
+    "exit_code": 0,
+    "output": ""
+  },
+  {
+    "id": "no-hardcoded-colors",
+    "description": "No hardcoded colors — uses colorScheme",
+    "cmd": "! grep -qE 'Color\\(0x|Colors\\.' lib/screens/education/education_screen.dart",
+    "passed": true,
+    "exit_code": 0,
+    "output": ""
+  }
+]

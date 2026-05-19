@@ -1,0 +1,20 @@
+{
+  "seeded": true,
+  "seededAt": "2026-05-19T01:08:30.667Z",
+  "spawnCount": 3,
+  "keepLooping": false,
+  "subtasks": [
+    {
+      "id": "health-log-split-001-SummaryStatsCard",
+      "writeToPath": ".converge/journal/default/tasks/health-log-split-001-SummaryStatsCard/TASK.md"
+    },
+    {
+      "id": "health-log-split-002-HealthEntryCard",
+      "writeToPath": ".converge/journal/default/tasks/health-log-split-002-HealthEntryCard/TASK.md"
+    },
+    {
+      "id": "health-log-split-003-AddEntryFab",
+      "writeToPath": ".converge/journal/default/tasks/health-log-split-003-AddEntryFab/TASK.md"
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "taskId": "003-library-03-convert",
+  "attemptNumber": 1,
+  "inputs": [
+    {
+      "pattern": ".stitch/designs/library/design.html",
+      "count": 1,
+      "samples": [
+        ".stitch/designs/library/design.html"
+      ]
+    },
+    {
+      "pattern": ".stitch/designs/library/SPEC.md",
+      "count": 1,
+      "samples": [
+        ".stitch/designs/library/SPEC.md"
+      ]
+    },
+    {
+      "pattern": ".stitch/system/DESIGN.md",
+      "count": 1,
+      "samples": [
+        ".stitch/system/DESIGN.md"
+      ]
+    }
+  ],
+  "outputs": [
+    "lib/screens/library/library_screen.dart"
+  ],
+  "blocked": false
+}

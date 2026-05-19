@@ -1,0 +1,17 @@
+{
+  "taskId": "006-weight-nutrition-05-split",
+  "attemptNumber": 1,
+  "inputs": [
+    {
+      "pattern": ".stitch/designs/weight-nutrition/widgets.jsonl",
+      "count": 1,
+      "samples": [
+        ".stitch/designs/weight-nutrition/widgets.jsonl"
+      ]
+    }
+  ],
+  "outputs": [
+    "lib/screens/weight_nutrition/_widgets/**/*.dart"
+  ],
+  "blocked": false
+}

@@ -1,0 +1,4 @@
+[2026-05-19T02:49:41.286Z] [INFO] Starting sendFeedback session=8b8a3435-9f29-46cf-b64e-dabc962bf8bc
+[2026-05-19T02:49:41.286Z] [INFO] Timeout=60000ms (activity-based idle timeout); wallClockTimeout=900000ms
+[2026-05-19T02:49:41.596Z] [STDERR] No conversation found with session ID: 8b8a3435-9f29-46cf-b64e-dabc962bf8bc
+[2026-05-19T02:49:41.601Z] [EXIT] code=1 error=No conversation found with session ID: 8b8a3435-9f29-46cf-b64e-dabc962bf8bc

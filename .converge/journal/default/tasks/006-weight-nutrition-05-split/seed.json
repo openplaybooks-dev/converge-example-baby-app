@@ -1,0 +1,60 @@
+{
+  "seeded": true,
+  "seededAt": "2026-05-19T00:22:48.240Z",
+  "spawnCount": 13,
+  "keepLooping": false,
+  "subtasks": [
+    {
+      "id": "weight-nutrition-split-001-WeightProgressChart",
+      "writeToPath": ".converge/journal/default/tasks/weight-nutrition-split-001-WeightProgressChart/TASK.md"
+    },
+    {
+      "id": "weight-nutrition-split-002-WeightToggleChip",
+      "writeToPath": ".converge/journal/default/tasks/weight-nutrition-split-002-WeightToggleChip/TASK.md"
+    },
+    {
+      "id": "weight-nutrition-split-003-LatestEntryCard",
+      "writeToPath": ".converge/journal/default/tasks/weight-nutrition-split-003-LatestEntryCard/TASK.md"
+    },
+    {
+      "id": "weight-nutrition-split-004-WeightDeltaIndicator",
+      "writeToPath": ".converge/journal/default/tasks/weight-nutrition-split-004-WeightDeltaIndicator/TASK.md"
+    },
+    {
+      "id": "weight-nutrition-split-005-NutritionTipsCard",
+      "writeToPath": ".converge/journal/default/tasks/weight-nutrition-split-005-NutritionTipsCard/TASK.md"
+    },
+    {
+      "id": "weight-nutrition-split-006-TipListItem",
+      "writeToPath": ".converge/journal/default/tasks/weight-nutrition-split-006-TipListItem/TASK.md"
+    },
+    {
+      "id": "weight-nutrition-split-007-WeightLogList",
+      "writeToPath": ".converge/journal/default/tasks/weight-nutrition-split-007-WeightLogList/TASK.md"
+    },
+    {
+      "id": "weight-nutrition-split-008-WeightLogItem",
+      "writeToPath": ".converge/journal/default/tasks/weight-nutrition-split-008-WeightLogItem/TASK.md"
+    },
+    {
+      "id": "weight-nutrition-split-009-AddWeightSheet",
+      "writeToPath": ".converge/journal/default/tasks/weight-nutrition-split-009-AddWeightSheet/TASK.md"
+    },
+    {
+      "id": "weight-nutrition-split-010-WeightInputField",
+      "writeToPath": ".converge/journal/default/tasks/weight-nutrition-split-010-WeightInputField/TASK.md"
+    },
+    {
+      "id": "weight-nutrition-split-011-DatePickerField",
+      "writeToPath": ".converge/journal/default/tasks/weight-nutrition-split-011-DatePickerField/TASK.md"
+    },
+    {
+      "id": "weight-nutrition-split-012-NotesInputField",
+      "writeToPath": ".converge/journal/default/tasks/weight-nutrition-split-012-NotesInputField/TASK.md"
+    },
+    {
+      "id": "weight-nutrition-split-013-EntryDetailSheet",
+      "writeToPath": ".converge/journal/default/tasks/weight-nutrition-split-013-EntryDetailSheet/TASK.md"
+    }
+  ]
+}

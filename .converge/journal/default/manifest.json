@@ -1,0 +1,5048 @@
+{
+  "metadata": {
+    "playbook": "default",
+    "playbook_hash": "sha256:99f8f53a9499210042a195f89182048c4f61ce5695af5cfb4ccc80bc1f1265f9",
+    "generated_at": "2026-05-18T23:18:20.079Z",
+    "converge_version": "0.1.0",
+    "frontier_count": 0
+  },
+  "nodes": {
+    "03-build-screens": {
+      "id": "03-build-screens",
+      "depends_on": [
+        "02-design-system-diverge"
+      ],
+      "depended_on_by": [
+        "05-add-behavior",
+        "001-home-01-spec",
+        "001-home-02-design",
+        "001-home-03-convert",
+        "001-home-04-analyze",
+        "001-home-05-split",
+        "001-home-06-lift",
+        "002-browse-01-spec",
+        "002-browse-02-design",
+        "002-browse-03-convert",
+        "002-browse-04-analyze",
+        "002-browse-05-split",
+        "002-browse-06-lift",
+        "003-library-01-spec",
+        "003-library-02-design",
+        "003-library-03-convert",
+        "003-library-04-analyze",
+        "003-library-05-split",
+        "003-library-06-lift",
+        "004-profile-01-spec",
+        "004-profile-02-design",
+        "004-profile-03-convert",
+        "004-profile-04-analyze",
+        "004-profile-05-split",
+        "004-profile-06-lift",
+        "005-cycle-tracking-01-spec",
+        "005-cycle-tracking-02-design",
+        "005-cycle-tracking-03-convert",
+        "005-cycle-tracking-04-analyze",
+        "005-cycle-tracking-05-split",
+        "005-cycle-tracking-06-lift",
+        "006-weight-nutrition-01-spec",
+        "006-weight-nutrition-02-design",
+        "006-weight-nutrition-03-convert",
+        "006-weight-nutrition-04-analyze",
+        "006-weight-nutrition-05-split",
+        "006-weight-nutrition-06-lift",
+        "007-pregnancy-progress-01-spec",
+        "007-pregnancy-progress-02-design",
+        "007-pregnancy-progress-03-convert",
+        "007-pregnancy-progress-04-analyze",
+        "007-pregnancy-progress-05-split",
+        "007-pregnancy-progress-06-lift",
+        "008-mindfulness-01-spec",
+        "008-mindfulness-02-design",
+        "008-mindfulness-03-convert",
+        "008-mindfulness-04-analyze",
+        "008-mindfulness-05-split",
+        "008-mindfulness-06-lift",
+        "009-health-log-01-spec",
+        "009-health-log-02-design",
+        "009-health-log-03-convert",
+        "009-health-log-04-analyze",
+        "009-health-log-05-split",
+        "009-health-log-06-lift",
+        "010-mood-wellness-01-spec",
+        "010-mood-wellness-02-design",
+        "010-mood-wellness-03-convert",
+        "010-mood-wellness-04-analyze",
+        "010-mood-wellness-05-split",
+        "010-mood-wellness-06-lift",
+        "011-education-01-spec",
+        "011-education-02-design",
+        "011-education-03-convert",
+        "011-education-04-analyze",
+        "011-education-05-split",
+        "011-education-06-lift",
+        "012-article-reader-01-spec",
+        "012-article-reader-02-design",
+        "012-article-reader-03-convert",
+        "012-article-reader-04-analyze",
+        "012-article-reader-05-split",
+        "012-article-reader-06-lift",
+        "013-settings-01-spec",
+        "013-settings-02-design",
+        "013-settings-03-convert",
+        "013-settings-04-analyze",
+        "013-settings-05-split",
+        "013-settings-06-lift"
+      ],
+      "tags": [
+        "screens",
+        "flutter"
+      ],
+      "checks": [
+        "screens-json-exists",
+        "screens-created",
+        "dart-analysis-valid"
+      ],
+      "inputs": [
+        ".stitch/screens.json",
+        ".stitch/system/DESIGN.md",
+        ".stitch/UX.md"
+      ],
+      "outputs": [
+        "lib/screens/**/*.dart",
+        "lib/widgets/**/*.dart",
+        "lib/router/app_router.dart"
+      ],
+      "frontmatter_hash": "",
+      "body_hash": "",
+      "checks_hash": "",
+      "inputs_hash": "",
+      "upstream_hash": "",
+      "state": "concrete",
+      "path": "/Users/minh/Documents/openplayboosks/examples/baby-app/.converge/playbooks/default/tasks/03-build-screens/TASK.md",
+      "seed": null
+    },
+    "07-build-overlays": {
+      "id": "07-build-overlays",
+      "depends_on": [
+        "06-wire-screens-diverge"
+      ],
+      "depended_on_by": [
+        "08-generate-assets"
+      ],
+      "tags": [
+        "overlays",
+        "flutter"
+      ],
+      "checks": [
+        "overlays-created",
+        "dart-analysis-valid"
+      ],
+      "inputs": [
+        ".stitch/screens.json",
+        ".stitch/SITE.md",
+        ".stitch/system/DESIGN.md",
+        ".stitch/UX.md"
+      ],
+      "outputs": [
+        "lib/widgets/overlays/**/*.dart"
+      ],
+      "frontmatter_hash": "",
+      "body_hash": "",
+      "checks_hash": "",
+      "inputs_hash": "",
+      "upstream_hash": "",
+      "state": "concrete",
+      "path": "/Users/minh/Documents/openplayboosks/examples/baby-app/.converge/playbooks/default/tasks/07-build-overlays/TASK.md",
+      "seed": null
+    },
+    "08-generate-assets": {
+      "id": "08-generate-assets",
+      "depends_on": [
+        "07-build-overlays"
+      ],
+      "depended_on_by": [
+        "09-generate-tests"
+      ],
+      "tags": [
+        "assets",
+        "svg",
+        "illustrations",
+        "icons"
+      ],
+      "checks": [
+        "weeks-generated",
+        "empty-states-generated",
+        "icons-generated",
+        "dart-analysis-valid"
+      ],
+      "inputs": [
+        ".stitch/system/DESIGN.md",
+        "lib/models/*.dart",
+        "lib/screens/**/*.dart"
+      ],
+      "outputs": [
+        "assets/illustrations/baby-sizes/**/*.svg",
+        "assets/illustrations/empty-states/**/*.svg",
+        "assets/icons/**/*.svg",
+        "lib/widgets/assets/**/*.dart"
+      ],
+      "frontmatter_hash": "",
+      "body_hash": "",
+      "checks_hash": "",
+      "inputs_hash": "",
+      "upstream_hash": "",
+      "state": "concrete",
+      "path": "/Users/minh/Documents/openplayboosks/examples/baby-app/.converge/playbooks/default/tasks/08-generate-assets/TASK.md",
+      "seed": null
+    },
+    "09-generate-tests": {
+      "id": "09-generate-tests",
+      "depends_on": [
+        "08-generate-assets"
+      ],
+      "depended_on_by": [],
+      "tags": [
+        "tests",
+        "flutter"
+      ],
+      "checks": [
+        "widget-tests-created",
+        "smoke-test-created",
+        "tests-pass"
+      ],
+      "inputs": [
+        ".stitch/screens.json",
+        "lib/router/app_router.dart",
+        "lib/screens/**/*.dart"
+      ],
+      "outputs": [
+        "test/screens/**/*_test.dart",
+        "test/smoke_test.dart"
+      ],
+      "frontmatter_hash": "",
+      "body_hash": "",
+      "checks_hash": "",
+      "inputs_hash": "",
+      "upstream_hash": "",
+      "state": "concrete",
+      "path": "/Users/minh/Documents/openplayboosks/examples/baby-app/.converge/playbooks/default/tasks/09-generate-tests/TASK.md",
+      "seed": null
+    },
+    "001-gather-idea": {
+      "id": "001-gather-idea",
+      "depends_on": [
+        "01-prepare-requirements-diverge"
+      ],
+      "depended_on_by": [
+        "002-generate-prd"
+      ],
+      "tags": [
+        "requirements"
+      ],
+      "checks": [
+        "idea-md-exists",
+        "idea-has-purpose"
+      ],
+      "inputs": [],
+      "outputs": [
+        "idea.md"
+      ],
+      "frontmatter_hash": "",
+      "body_hash": "",
+      "checks_hash": "",
+      "inputs_hash": "",
+      "upstream_hash": "",
+      "state": "concrete",
+      "path": "/Users/minh/Documents/openplayboosks/examples/baby-app/.converge/playbooks/default/tasks/01-prepare-requirements/001-gather-idea/TASK.md",
+      "seed": null
+    },
+    "002-generate-prd": {
+      "id": "002-generate-prd",
+      "depends_on": [
+        "01-prepare-requirements-diverge",
+        "001-gather-idea"
+      ],
+      "depended_on_by": [
+        "003-generate-ux"
+      ],
+      "tags": [
+        "requirements",
+        "prd"
+      ],
+      "checks": [
+        "prd-exists",
+        "prd-has-sections",
+        "prd-matches-idea"
+      ],
+      "inputs": [
+        "idea.md"
+      ],
+      "outputs": [
+        "PRD.md"
+      ],
+      "frontmatter_hash": "",
+      "body_hash": "",
+      "checks_hash": "",
+      "inputs_hash": "",
+      "upstream_hash": "",
+      "state": "concrete",
+      "path": "/Users/minh/Documents/openplayboosks/examples/baby-app/.converge/playbooks/default/tasks/01-prepare-requirements/002-generate-prd/TASK.md",
+      "seed": null
+    },
+    "003-generate-ux": {
+      "id": "003-generate-ux",
+      "depends_on": [
+        "01-prepare-requirements-diverge",
+        "002-generate-prd"
+      ],
+      "depended_on_by": [
+        "004-breakdown-ux-to-screens"
+      ],
+      "tags": [
+        "requirements",
+        "ux"
+      ],
+      "checks": [
+        "ux-md-exists",
+        "ux-has-screens",
+        "ux-matches-idea"
+      ],
+      "inputs": [
+        "PRD.md"
+      ],
+      "outputs": [
+        ".stitch/UX.md"
+      ],
+      "frontmatter_hash": "",
+      "body_hash": "",
+      "checks_hash": "",
+      "inputs_hash": "",
+      "upstream_hash": "",
+      "state": "concrete",
+      "path": "/Users/minh/Documents/openplayboosks/examples/baby-app/.converge/playbooks/default/tasks/01-prepare-requirements/003-generate-ux/TASK.md",
+      "seed": null
+    },
+    "004-breakdown-ux-to-screens": {
+      "id": "004-breakdown-ux-to-screens",
+      "depends_on": [
+        "01-prepare-requirements-diverge",
+        "003-generate-ux"
+      ],
+      "depended_on_by": [],
+      "tags": [
+        "screens",
+        "sitemap",
+        "structure"
+      ],
+      "checks": [],
+      "inputs": [
+        ".stitch/UX.md"
+      ],
+      "outputs": [
+        ".stitch/SITE.md",
+        ".stitch/screens.json"
+      ],
+      "frontmatter_hash": "",
+      "body_hash": "",
+      "checks_hash": "",
+      "inputs_hash": "",
+      "upstream_hash": "",
+      "state": "concrete",
+      "path": "/Users/minh/Documents/openplayboosks/examples/baby-app/.converge/playbooks/default/tasks/01-prepare-requirements/004-breakdown-ux-to-screens/TASK.md",
+      "seed": null
+    },
+    "002-generate-design-system": {
+      "id": "002-generate-design-system",
+      "depends_on": [
+        "02-design-system-diverge"
+      ],
+      "depended_on_by": [
+        "005-generate-design-references"
+      ],
+      "tags": [
+        "design",
+        "design-system"
+      ],
+      "checks": [
+        "design-md-exists",
+        "design-md-has-colors",
+        "design-md-has-typography"
+      ],
+      "inputs": [
+        ".stitch/UX.md",
+        ".stitch/screens.json"
+      ],
+      "outputs": [
+        ".stitch/system/DESIGN.md"
+      ],
+      "frontmatter_hash": "",
+      "body_hash": "",
+      "checks_hash": "",
+      "inputs_hash": "",
+      "upstream_hash": "",
+      "state": "concrete",
+      "path": "/Users/minh/Documents/openplayboosks/examples/baby-app/.converge/playbooks/default/tasks/02-design-system/002-generate-design-system/TASK.md",
+      "seed": null
+    },
+    "005-generate-design-references": {
+      "id": "005-generate-design-references",
+      "depends_on": [
+        "02-design-system-diverge",
+        "002-generate-design-system"
+      ],
+      "depended_on_by": [],
+      "tags": [
+        "design",
+        "html",
+        "references"
+      ],
+      "checks": [
+        "meta-md-exists",
+        "single-screen-exists",
+        "multi-state-exists",
+        "celebration-exists",
+        "html-has-tokens"
+      ],
+      "inputs": [
+        ".stitch/system/DESIGN.md",
+        ".stitch/screens.json",
+        ".stitch/UX.md"
+      ],
+      "outputs": [
+        ".stitch/system/META.md",
+        ".stitch/system/single-screen.html",
+        ".stitch/system/multi-state-screen.html",
+        ".stitch/system/celebration-screen.html"
+      ],
+      "frontmatter_hash": "",
+      "body_hash": "",
+      "checks_hash": "",
+      "inputs_hash": "",
+      "upstream_hash": "",
+      "state": "concrete",
+      "path": "/Users/minh/Documents/openplayboosks/examples/baby-app/.converge/playbooks/default/tasks/02-design-system/005-generate-design-references/TASK.md",
+      "seed": null
+    },
+    "001-analyze-data-models": {
+      "id": "001-analyze-data-models",
+      "depends_on": [
+        "05-add-behavior-diverge"
+      ],
+      "depended_on_by": [
+        "002-create-models"
+      ],
+      "tags": [
+        "analysis",
+        "data-modeling"
+      ],
+      "checks": [],
+      "inputs": [
+        "lib/screens/**/*.dart",
+        "lib/widgets/**/*.dart",
+        ".stitch/UX.md",
+        ".stitch/system/*.html"
+      ],
+      "outputs": [
+        "data-models.md"
+      ],
+      "frontmatter_hash": "",
+      "body_hash": "",
+      "checks_hash": "",
+      "inputs_hash": "",
+      "upstream_hash": "",
+      "state": "concrete",
+      "path": "/Users/minh/Documents/openplayboosks/examples/baby-app/.converge/playbooks/default/tasks/05-add-behavior/001-analyze-data-models/TASK.md",
+      "seed": null
+    },
+    "002-create-models": {
+      "id": "002-create-models",
+      "depends_on": [
+        "05-add-behavior-diverge",
+        "001-analyze-data-models"
+      ],
+      "depended_on_by": [
+        "003-create-mock-data",
+        "004-implement-providers"
+      ],
+      "tags": [
+        "models",
+        "dart",
+        "freezed",
+        "implementation"
+      ],
+      "checks": [
+        "models-dir-exists",
+        "dart-analysis"
+      ],
+      "inputs": [
+        "data-models.md"
+      ],
+      "outputs": [
+        "lib/models/**/*.dart"
+      ],
+      "frontmatter_hash": "",
+      "body_hash": "",
+      "checks_hash": "",
+      "inputs_hash": "",
+      "upstream_hash": "",
+      "state": "concrete",
+      "path": "/Users/minh/Documents/openplayboosks/examples/baby-app/.converge/playbooks/default/tasks/05-add-behavior/002-create-models/TASK.md",
+      "seed": null
+    },
+    "003-create-mock-data": {
+      "id": "003-create-mock-data",
+      "depends_on": [
+        "05-add-behavior-diverge",
+        "002-create-models"
+      ],
+      "depended_on_by": [
+        "004-implement-providers"
+      ],
+      "tags": [
+        "mock-data",
+        "development",
+        "testing"
+      ],
+      "checks": [
+        "file-exists",
+        "file-size",
+        "dart-analysis"
+      ],
+      "inputs": [
+        "data-models.md",
+        "lib/models/**/*.dart"
+      ],
+      "outputs": [
+        "lib/data/mock_data.dart"
+      ],
+      "frontmatter_hash": "",
+      "body_hash": "",
+      "checks_hash": "",
+      "inputs_hash": "",
+      "upstream_hash": "",
+      "state": "concrete",
+      "path": "/Users/minh/Documents/openplayboosks/examples/baby-app/.converge/playbooks/default/tasks/05-add-behavior/003-create-mock-data/TASK.md",
+      "seed": null
+    },
+    "001-connect-providers": {
+      "id": "001-connect-providers",
+      "depends_on": [
+        "06-wire-screens-diverge"
+      ],
+      "depended_on_by": [
+        "002-analyze-navigations"
+      ],
+      "tags": [
+        "providers",
+        "riverpod",
+        "data-binding"
+      ],
+      "checks": [
+        "screens-use-consumer-widget",
+        "screens-watch-providers",
+        "dart-analysis-valid"
+      ],
+      "inputs": [
+        ".stitch/screens.json",
+        "lib/providers/**/*.dart"
+      ],
+      "outputs": [
+        "lib/screens/**/*.dart"
+      ],
+      "frontmatter_hash": "",
+      "body_hash": "",
+      "checks_hash": "",
+      "inputs_hash": "",
+      "upstream_hash": "",
+      "state": "concrete",
+      "path": "/Users/minh/Documents/openplayboosks/examples/baby-app/.converge/playbooks/default/tasks/06-wire-screens/001-connect-providers/TASK.md",
+      "seed": null
+    },
+    "002-analyze-navigations": {
+      "id": "002-analyze-navigations",
+      "depends_on": [
+        "06-wire-screens-diverge",
+        "001-connect-providers"
+      ],
+      "depended_on_by": [
+        "003-wire-per-screen"
+      ],
+      "tags": [
+        "navigation",
+        "analysis"
+      ],
+      "checks": [
+        "manifest-exists",
+        "manifest-has-screens",
+        "manifest-has-elements",
+        "every-element-has-id"
+      ],
+      "inputs": [
+        ".stitch/screens.json",
+        "lib/screens/**/*.dart",
+        "lib/widgets/**/*.dart",
+        "lib/router/app_router.dart"
+      ],
+      "outputs": [
+        "navigations.json",
+        "lib/screens/**/*.dart",
+        "lib/widgets/**/*.dart"
+      ],
+      "frontmatter_hash": "",
+      "body_hash": "",
+      "checks_hash": "",
+      "inputs_hash": "",
+      "upstream_hash": "",
+      "state": "concrete",
+      "path": "/Users/minh/Documents/openplayboosks/examples/baby-app/.converge/playbooks/default/tasks/06-wire-screens/002-analyze-navigations/TASK.md",
+      "seed": null
+    },
+    "004-verify": {
+      "id": "004-verify",
+      "depends_on": [
+        "06-wire-screens-diverge",
+        "003-wire-per-screen-diverge"
+      ],
+      "depended_on_by": [],
+      "tags": [
+        "verification",
+        "quality"
+      ],
+      "checks": [
+        "no-empty-handlers",
+        "dart-analysis-valid"
+      ],
+      "inputs": [
+        "lib/screens/**/*.dart",
+        "lib/widgets/**/*.dart",
+        "lib/providers/**/*.dart",
+        "navigations.json"
+      ],
+      "outputs": [],
+      "frontmatter_hash": "",
+      "body_hash": "",
+      "checks_hash": "",
+      "inputs_hash": "",
+      "upstream_hash": "",
+      "state": "concrete",
+      "path": "/Users/minh/Documents/openplayboosks/examples/baby-app/.converge/playbooks/default/tasks/06-wire-screens/004-verify/TASK.md",
+      "seed": null
+    },
+    "001-provider-PregnancyProfile": {
+      "id": "001-provider-PregnancyProfile",
+      "depends_on": [
+        "004-implement-providers-diverge"
+      ],
+      "depended_on_by": [],
+      "tags": [],
+      "checks": [
+        "file-exists",
+        "dart-valid"
+      ],
+      "inputs": [],
+      "outputs": [],
+      "frontmatter_hash": "",
+      "body_hash": "",
+      "checks_hash": "",
+      "inputs_hash": "",
+      "upstream_hash": "",
+      "state": "concrete",
+      "path": "/Users/minh/Documents/openplayboosks/examples/baby-app/.converge/playbooks/default/tasks/05-add-behavior/004-implement-providers/tasks/001-provider-PregnancyProfile/TASK.md",
+      "seed": null
+    },
+    "002-provider-WeightEntry": {
+      "id": "002-provider-WeightEntry",
+      "depends_on": [
+        "004-implement-providers-diverge"
+      ],
+      "depended_on_by": [],
+      "tags": [],
+      "checks": [
+        "file-exists",
+        "dart-valid"
+      ],
+      "inputs": [],
+      "outputs": [],
+      "frontmatter_hash": "",
+      "body_hash": "",
+      "checks_hash": "",
+      "inputs_hash": "",
+      "upstream_hash": "",
+      "state": "concrete",
+      "path": "/Users/minh/Documents/openplayboosks/examples/baby-app/.converge/playbooks/default/tasks/05-add-behavior/004-implement-providers/tasks/002-provider-WeightEntry/TASK.md",
+      "seed": null
+    },
+    "003-provider-CycleEntry": {
+      "id": "003-provider-CycleEntry",
+      "depends_on": [
+        "004-implement-providers-diverge"
+      ],
+      "depended_on_by": [],
+      "tags": [],
+      "checks": [
+        "file-exists",
+        "dart-valid"
+      ],
+      "inputs": [],
+      "outputs": [],
+      "frontmatter_hash": "",
+      "body_hash": "",
+      "checks_hash": "",
+      "inputs_hash": "",
+      "upstream_hash": "",
+      "state": "concrete",
+      "path": "/Users/minh/Documents/openplayboosks/examples/baby-app/.converge/playbooks/default/tasks/05-add-behavior/004-implement-providers/tasks/003-provider-CycleEntry/TASK.md",
+      "seed": null
+    },
+    "004-provider-MoodEntry": {
+      "id": "004-provider-MoodEntry",
+      "depends_on": [
+        "004-implement-providers-diverge"
+      ],
+      "depended_on_by": [],
+      "tags": [],
+      "checks": [
+        "file-exists",
+        "dart-valid"
+      ],
+      "inputs": [],
+      "outputs": [],
+      "frontmatter_hash": "",
+      "body_hash": "",
+      "checks_hash": "",
+      "inputs_hash": "",
+      "upstream_hash": "",
+      "state": "concrete",
+      "path": "/Users/minh/Documents/openplayboosks/examples/baby-app/.converge/playbooks/default/tasks/05-add-behavior/004-implement-providers/tasks/004-provider-MoodEntry/TASK.md",
+      "seed": null
+    },
+    "005-provider-SymptomEntry": {
+      "id": "005-provider-SymptomEntry",
+      "depends_on": [
+        "004-implement-providers-diverge"
+      ],
+      "depended_on_by": [],
+      "tags": [],
+      "checks": [
+        "file-exists",
+        "dart-valid"
+      ],
+      "inputs": [],
+      "outputs": [],
+      "frontmatter_hash": "",
+      "body_hash": "",
+      "checks_hash": "",
+      "inputs_hash": "",
+      "upstream_hash": "",
+      "state": "concrete",
+      "path": "/Users/minh/Documents/openplayboosks/examples/baby-app/.converge/playbooks/default/tasks/05-add-behavior/004-implement-providers/tasks/005-provider-SymptomEntry/TASK.md",
+      "seed": null
+    },
+    "006-provider-DoctorVisit": {
+      "id": "006-provider-DoctorVisit",
+      "depends_on": [
+        "004-implement-providers-diverge"
+      ],
+      "depended_on_by": [],
+      "tags": [],
+      "checks": [
+        "file-exists",
+        "dart-valid"
+      ],
+      "inputs": [],
+      "outputs": [],
+      "frontmatter_hash": "",
+      "body_hash": "",
+      "checks_hash": "",
+      "inputs_hash": "",
+      "upstream_hash": "",
+      "state": "concrete",
+      "path": "/Users/minh/Documents/openplayboosks/examples/baby-app/.converge/playbooks/default/tasks/05-add-behavior/004-implement-providers/tasks/006-provider-DoctorVisit/TASK.md",
+      "seed": null
+    },
+    "007-provider-Reminder": {
+      "id": "007-provider-Reminder",
+      "depends_on": [
+        "004-implement-providers-diverge"
+      ],
+      "depended_on_by": [],
+      "tags": [],
+      "checks": [
+        "file-exists",
+        "dart-valid"
+      ],
+      "inputs": [],
+      "outputs": [],
+      "frontmatter_hash": "",
+      "body_hash": "",
+      "checks_hash": "",
+      "inputs_hash": "",
+      "upstream_hash": "",
+      "state": "concrete",
+      "path": "/Users/minh/Documents/openplayboosks/examples/baby-app/.converge/playbooks/default/tasks/05-add-behavior/004-implement-providers/tasks/007-provider-Reminder/TASK.md",
+      "seed": null
+    },
+    "008-provider-WeekContent": {
+      "id": "008-provider-WeekContent",
+      "depends_on": [
+        "004-implement-providers-diverge"
+      ],
+      "depended_on_by": [],
+      "tags": [],
+      "checks": [
+        "file-exists",
+        "dart-valid"
+      ],
+      "inputs": [],
+      "outputs": [],
+      "frontmatter_hash": "",
+      "body_hash": "",
+      "checks_hash": "",
+      "inputs_hash": "",
+      "upstream_hash": "",
+      "state": "concrete",
+      "path": "/Users/minh/Documents/openplayboosks/examples/baby-app/.converge/playbooks/default/tasks/05-add-behavior/004-implement-providers/tasks/008-provider-WeekContent/TASK.md",
+      "seed": null
+    },
+    "009-provider-InfoItem": {
+      "id": "009-provider-InfoItem",
+      "depends_on": [
+        "004-implement-providers-diverge"
+      ],
+      "depended_on_by": [],
+      "tags": [],
+      "checks": [
+        "file-exists",
+        "dart-valid"
+      ],
+      "inputs": [],
+      "outputs": [],
+      "frontmatter_hash": "",
+      "body_hash": "",
+      "checks_hash": "",
+      "inputs_hash": "",
+      "upstream_hash": "",
+      "state": "concrete",
+      "path": "/Users/minh/Documents/openplayboosks/examples/baby-app/.converge/playbooks/default/tasks/05-add-behavior/004-implement-providers/tasks/009-provider-InfoItem/TASK.md",
+      "seed": null
+    },
+    "010-provider-SelfCareCheckState": {
+      "id": "010-provider-SelfCareCheckState",
+      "depends_on": [
+        "004-implement-providers-diverge"
+      ],
+      "depended_on_by": [],
+      "tags": [],
+      "checks": [
+        "file-exists",
+        "dart-valid"
+      ],
+      "inputs": [],
+      "outputs": [],
+      "frontmatter_hash": "",
+      "body_hash": "",
+      "checks_hash": "",
+      "inputs_hash": "",
+      "upstream_hash": "",
+      "state": "concrete",
+      "path": "/Users/minh/Documents/openplayboosks/examples/baby-app/.converge/playbooks/default/tasks/05-add-behavior/004-implement-providers/tasks/010-provider-SelfCareCheckState/TASK.md",
+      "seed": null
+    },
+    "011-provider-Article": {
+      "id": "011-provider-Article",
+      "depends_on": [
+        "004-implement-providers-diverge"
+      ],
+      "depended_on_by": [],
+      "tags": [],
+      "checks": [
+        "file-exists",
+        "dart-valid"
+      ],
+      "inputs": [],
+      "outputs": [],
+      "frontmatter_hash": "",
+      "body_hash": "",
+      "checks_hash": "",
+      "inputs_hash": "",
+      "upstream_hash": "",
+      "state": "concrete",
+      "path": "/Users/minh/Documents/openplayboosks/examples/baby-app/.converge/playbooks/default/tasks/05-add-behavior/004-implement-providers/tasks/011-provider-Article/TASK.md",
+      "seed": null
+    },
+    "012-provider-Exercise": {
+      "id": "012-provider-Exercise",
+      "depends_on": [
+        "004-implement-providers-diverge"
+      ],
+      "depended_on_by": [],
+      "tags": [],
+      "checks": [
+        "file-exists",
+        "dart-valid"
+      ],
+      "inputs": [],
+      "outputs": [],
+      "frontmatter_hash": "",
+      "body_hash": "",
+      "checks_hash": "",
+      "inputs_hash": "",
+      "upstream_hash": "",
+      "state": "concrete",
+      "path": "/Users/minh/Documents/openplayboosks/examples/baby-app/.converge/playbooks/default/tasks/05-add-behavior/004-implement-providers/tasks/012-provider-Exercise/TASK.md",
+      "seed": null
+    },
+    "013-provider-UserPreferences": {
+      "id": "013-provider-UserPreferences",
+      "depends_on": [
+        "004-implement-providers-diverge"
+      ],
+      "depended_on_by": [],
+      "tags": [],
+      "checks": [
+        "file-exists",
+        "dart-valid"
+      ],
+      "inputs": [],
+      "outputs": [],
+      "frontmatter_hash": "",
+      "body_hash": "",
+      "checks_hash": "",
+      "inputs_hash": "",
+      "upstream_hash": "",
+      "state": "concrete",
+      "path": "/Users/minh/Documents/openplayboosks/examples/baby-app/.converge/playbooks/default/tasks/05-add-behavior/004-implement-providers/tasks/013-provider-UserPreferences/TASK.md",
+      "seed": null
+    },
+    "001-BookmarkButton-onPressed-1": {
+      "id": "001-BookmarkButton-onPressed-1",
+      "depends_on": [
+        "003-wire-per-screen-diverge"
+      ],
+      "depended_on_by": [],
+      "tags": [],
+      "checks": [
+        "handler-wired"
+      ],
+      "inputs": [],
+      "outputs": [],
+      "frontmatter_hash": "",
+      "body_hash": "",
+      "checks_hash": "",
+      "inputs_hash": "",
+      "upstream_hash": "",
+      "state": "concrete",
+      "path": "/Users/minh/Documents/openplayboosks/examples/baby-app/.converge/playbooks/default/tasks/06-wire-screens/003-wire-per-screen/tasks/001-BookmarkButton-onPressed-1/TASK.md",
+      "seed": null
+    },
+    "001-BottomNav-onDestinationSelected-1": {
+      "id": "001-BottomNav-onDestinationSelected-1",
+      "depends_on": [
+        "003-wire-per-screen-diverge"
+      ],
+      "depended_on_by": [],
+      "tags": [],
+      "checks": [
+        "handler-wired"
+      ],
+      "inputs": [],
+      "outputs": [],
+      "frontmatter_hash": "",
+      "body_hash": "",
+      "checks_hash": "",
+      "inputs_hash": "",
+      "upstream_hash": "",
+      "state": "concrete",
+      "path": "/Users/minh/Documents/openplayboosks/examples/baby-app/.converge/playbooks/default/tasks/06-wire-screens/003-wire-per-screen/tasks/001-BottomNav-onDestinationSelected-1/TASK.md",
+      "seed": null
+    },
+    "001-ExerciseGuideItem-onTap-1": {
+      "id": "001-ExerciseGuideItem-onTap-1",
+      "depends_on": [
+        "003-wire-per-screen-diverge"
+      ],
+      "depended_on_by": [],
+      "tags": [],
+      "checks": [
+        "handler-wired"
+      ],
+      "inputs": [],
+      "outputs": [],
+      "frontmatter_hash": "",
+      "body_hash": "",
+      "checks_hash": "",
+      "inputs_hash": "",
+      "upstream_hash": "",
+      "state": "concrete",
+      "path": "/Users/minh/Documents/openplayboosks/examples/baby-app/.converge/playbooks/default/tasks/06-wire-screens/003-wire-per-screen/tasks/001-ExerciseGuideItem-onTap-1/TASK.md",
+      "seed": null
+    },
+    "001-ExportData-onTap-1": {
+      "id": "001-ExportData-onTap-1",
+      "depends_on": [
+        "003-wire-per-screen-diverge"
+      ],
+      "depended_on_by": [],
+      "tags": [],
+      "checks": [
+        "handler-wired"
+      ],
+      "inputs": [],
+      "outputs": [],
+      "frontmatter_hash": "",
+      "body_hash": "",
+      "checks_hash": "",
+      "inputs_hash": "",
+      "upstream_hash": "",
+      "state": "concrete",
+      "path": "/Users/minh/Documents/openplayboosks/examples/baby-app/.converge/playbooks/default/tasks/06-wire-screens/003-wire-per-screen/tasks/001-ExportData-onTap-1/TASK.md",
+      "seed": null
+    },
+    "001-FAB-onPressed-1": {
+      "id": "001-FAB-onPressed-1",
+      "depends_on": [
+        "003-wire-per-screen-diverge"
+      ],
+      "depended_on_by": [],
+      "tags": [],
+      "checks": [
+        "handler-wired"
+      ],
+      "inputs": [],
+      "outputs": [],
+      "frontmatter_hash": "",
+      "body_hash": "",
+      "checks_hash": "",
+      "inputs_hash": "",
+      "upstream_hash": "",
+      "state": "concrete",
+      "path": "/Users/minh/Documents/openplayboosks/examples/baby-app/.converge/playbooks/default/tasks/06-wire-screens/003-wire-per-screen/tasks/001-FAB-onPressed-1/TASK.md",
+      "seed": null
+    },
+    "001-FeaturedExerciseCard-onTap-1": {
+      "id": "001-FeaturedExerciseCard-onTap-1",
+      "depends_on": [
+        "003-wire-per-screen-diverge"
+      ],
+      "depended_on_by": [],
+      "tags": [],
+      "checks": [
+        "handler-wired"
+      ],
+      "inputs": [],
+      "outputs": [],
+      "frontmatter_hash": "",
+      "body_hash": "",
+      "checks_hash": "",
+      "inputs_hash": "",
+      "upstream_hash": "",
+      "state": "concrete",
+      "path": "/Users/minh/Documents/openplayboosks/examples/baby-app/.converge/playbooks/default/tasks/06-wire-screens/003-wire-per-screen/tasks/001-FeaturedExerciseCard-onTap-1/TASK.md",
+      "seed": null
+    },
+    "001-ModeSelectorPill-onTap-1": {
+      "id": "001-ModeSelectorPill-onTap-1",
+      "depends_on": [
+        "003-wire-per-screen-diverge"
+      ],
+      "depended_on_by": [],
+      "tags": [],
+      "checks": [
+        "handler-wired"
+      ],
+      "inputs": [],
+      "outputs": [],
+      "frontmatter_hash": "",
+      "body_hash": "",
+      "checks_hash": "",
+      "inputs_hash": "",
+      "upstream_hash": "",
+      "state": "concrete",
+      "path": "/Users/minh/Documents/openplayboosks/examples/baby-app/.converge/playbooks/default/tasks/06-wire-screens/003-wire-per-screen/tasks/001-ModeSelectorPill-onTap-1/TASK.md",
+      "seed": null
+    },
+    "001-SearchButton-onPressed-1": {
+      "id": "001-SearchButton-onPressed-1",
+      "depends_on": [
+        "003-wire-per-screen-diverge"
+      ],
+      "depended_on_by": [],
+      "tags": [],
+      "checks": [
+        "handler-wired"
+      ],
+      "inputs": [],
+      "outputs": [],
+      "frontmatter_hash": "",
+      "body_hash": "",
+      "checks_hash": "",
+      "inputs_hash": "",
+      "upstream_hash": "",
+      "state": "concrete",
+      "path": "/Users/minh/Documents/openplayboosks/examples/baby-app/.converge/playbooks/default/tasks/06-wire-screens/003-wire-per-screen/tasks/001-SearchButton-onPressed-1/TASK.md",
+      "seed": null
+    },
+    "001-StartExerciseButton-onPressed-1": {
+      "id": "001-StartExerciseButton-onPressed-1",
+      "depends_on": [
+        "003-wire-per-screen-diverge"
+      ],
+      "depended_on_by": [],
+      "tags": [],
+      "checks": [
+        "handler-wired"
+      ],
+      "inputs": [],
+      "outputs": [],
+      "frontmatter_hash": "",
+      "body_hash": "",
+      "checks_hash": "",
+      "inputs_hash": "",
+      "upstream_hash": "",
+      "state": "concrete",
+      "path": "/Users/minh/Documents/openplayboosks/examples/baby-app/.converge/playbooks/default/tasks/06-wire-screens/003-wire-per-screen/tasks/001-StartExerciseButton-onPressed-1/TASK.md",
+      "seed": null
+    },
+    "001-home": {
+      "id": "001-home",
+      "depends_on": [
+        "003-wire-per-screen-diverge"
+      ],
+      "depended_on_by": [
+        "002-cycle-tracking"
+      ],
+      "tags": [
+        "screen",
+        "home"
+      ],
+      "checks": [],
+      "inputs": [],
+      "outputs": [],
+      "frontmatter_hash": "",
+      "body_hash": "",
+      "checks_hash": "",
+      "inputs_hash": "",
+      "upstream_hash": "",
+      "state": "concrete",
+      "path": "/Users/minh/Documents/openplayboosks/examples/baby-app/.converge/playbooks/default/tasks/06-wire-screens/003-wire-per-screen/tasks/001-home/TASK.md",
+      "seed": null
+    },
+    "002-ExerciseCard-onTap-1": {
+      "id": "002-ExerciseCard-onTap-1",
+      "depends_on": [
+        "003-wire-per-screen-diverge"
+      ],
+      "depended_on_by": [],
+      "tags": [],
+      "checks": [
+        "handler-wired"
+      ],
+      "inputs": [],
+      "outputs": [],
+      "frontmatter_hash": "",
+      "body_hash": "",
+      "checks_hash": "",
+      "inputs_hash": "",
+      "upstream_hash": "",
+      "state": "concrete",
+      "path": "/Users/minh/Documents/openplayboosks/examples/baby-app/.converge/playbooks/default/tasks/06-wire-screens/003-wire-per-screen/tasks/002-ExerciseCard-onTap-1/TASK.md",
+      "seed": null
+    },
+    "002-FAB-onPressed-1": {
+      "id": "002-FAB-onPressed-1",
+      "depends_on": [
+        "003-wire-per-screen-diverge"
+      ],
+      "depended_on_by": [],
+      "tags": [],
+      "checks": [
+        "handler-wired"
+      ],
+      "inputs": [],
+      "outputs": [],
+      "frontmatter_hash": "",
+      "body_hash": "",
+      "checks_hash": "",
+      "inputs_hash": "",
+      "upstream_hash": "",
+      "state": "concrete",
+      "path": "/Users/minh/Documents/openplayboosks/examples/baby-app/.converge/playbooks/default/tasks/06-wire-screens/003-wire-per-screen/tasks/002-FAB-onPressed-1/TASK.md",
+      "seed": null
+    },
+    "002-FeaturedArticleCard-onTap-1": {
+      "id": "002-FeaturedArticleCard-onTap-1",
+      "depends_on": [
+        "003-wire-per-screen-diverge"
+      ],
+      "depended_on_by": [],
+      "tags": [],
+      "checks": [
+        "handler-wired"
+      ],
+      "inputs": [],
+      "outputs": [],
+      "frontmatter_hash": "",
+      "body_hash": "",
+      "checks_hash": "",
+      "inputs_hash": "",
+      "upstream_hash": "",
+      "state": "concrete",
+      "path": "/Users/minh/Documents/openplayboosks/examples/baby-app/.converge/playbooks/default/tasks/06-wire-screens/003-wire-per-screen/tasks/002-FeaturedArticleCard-onTap-1/TASK.md",
+      "seed": null
+    },
+    "002-PrimaryCta-onPressed-1": {
+      "id": "002-PrimaryCta-onPressed-1",
+      "depends_on": [
+        "003-wire-per-screen-diverge"
+      ],
+      "depended_on_by": [],
+      "tags": [],
+      "checks": [
+        "handler-wired"
+      ],
+      "inputs": [],
+      "outputs": [],
+      "frontmatter_hash": "",
+      "body_hash": "",
+      "checks_hash": "",
+      "inputs_hash": "",
+      "upstream_hash": "",
+      "state": "concrete",
+      "path": "/Users/minh/Documents/openplayboosks/examples/baby-app/.converge/playbooks/default/tasks/06-wire-screens/003-wire-per-screen/tasks/002-PrimaryCta-onPressed-1/TASK.md",
+      "seed": null
+    },
+    "002-RelatedArticleCard-onTap-1": {
+      "id": "002-RelatedArticleCard-onTap-1",
+      "depends_on": [
+        "003-wire-per-screen-diverge"
+      ],
+      "depended_on_by": [],
+      "tags": [],
+      "checks": [
+        "handler-wired"
+      ],
+      "inputs": [],
+      "outputs": [],
+      "frontmatter_hash": "",
+      "body_hash": "",
+      "checks_hash": "",
+      "inputs_hash": "",
+      "upstream_hash": "",
+      "state": "concrete",
+      "path": "/Users/minh/Documents/openplayboosks/examples/baby-app/.converge/playbooks/default/tasks/06-wire-screens/003-wire-per-screen/tasks/002-RelatedArticleCard-onTap-1/TASK.md",
+      "seed": null
+    },
+    "002-cycle-tracking": {
+      "id": "002-cycle-tracking",
+      "depends_on": [
+        "003-wire-per-screen-diverge",
+        "001-home"
+      ],
+      "depended_on_by": [
+        "003-weight-nutrition"
+      ],
+      "tags": [
+        "screen",
+        "cycle-tracking"
+      ],
+      "checks": [],
+      "inputs": [],
+      "outputs": [],
+      "frontmatter_hash": "",
+      "body_hash": "",
+      "checks_hash": "",
+      "inputs_hash": "",
+      "upstream_hash": "",
+      "state": "concrete",
+      "path": "/Users/minh/Documents/openplayboosks/examples/baby-app/.converge/playbooks/default/tasks/06-wire-screens/003-wire-per-screen/tasks/002-cycle-tracking/TASK.md",
+      "seed": null
+    },
+    "003-ArticleCard-onTap-1": {
+      "id": "003-ArticleCard-onTap-1",
+      "depends_on": [
+        "003-wire-per-screen-diverge"
+      ],
+      "depended_on_by": [],
+      "tags": [],
+      "checks": [
+        "handler-wired"
+      ],
+      "inputs": [],
+      "outputs": [],
+      "frontmatter_hash": "",
+      "body_hash": "",
+      "checks_hash": "",
+      "inputs_hash": "",
+      "upstream_hash": "",
+      "state": "concrete",
+      "path": "/Users/minh/Documents/openplayboosks/examples/baby-app/.converge/playbooks/default/tasks/06-wire-screens/003-wire-per-screen/tasks/003-ArticleCard-onTap-1/TASK.md",
+      "seed": null
+    },
+    "003-MoodBanner-onTap-1": {
+      "id": "003-MoodBanner-onTap-1",
+      "depends_on": [
+        "003-wire-per-screen-diverge"
+      ],
+      "depended_on_by": [],
+      "tags": [],
+      "checks": [
+        "handler-wired"
+      ],
+      "inputs": [],
+      "outputs": [],
+      "frontmatter_hash": "",
+      "body_hash": "",
+      "checks_hash": "",
+      "inputs_hash": "",
+      "upstream_hash": "",
+      "state": "concrete",
+      "path": "/Users/minh/Documents/openplayboosks/examples/baby-app/.converge/playbooks/default/tasks/06-wire-screens/003-wire-per-screen/tasks/003-MoodBanner-onTap-1/TASK.md",
+      "seed": null
+    },
+    "003-weight-nutrition": {
+      "id": "003-weight-nutrition",
+      "depends_on": [
+        "003-wire-per-screen-diverge",
+        "002-cycle-tracking"
+      ],
+      "depended_on_by": [
+        "004-pregnancy-progress"
+      ],
+      "tags": [
+        "screen",
+        "weight-nutrition"
+      ],
+      "checks": [],
+      "inputs": [],
+      "outputs": [],
+      "frontmatter_hash": "",
+      "body_hash": "",
+      "checks_hash": "",
+      "inputs_hash": "",
+      "upstream_hash": "",
+      "state": "concrete",
+      "path": "/Users/minh/Documents/openplayboosks/examples/baby-app/.converge/playbooks/default/tasks/06-wire-screens/003-wire-per-screen/tasks/003-weight-nutrition/TASK.md",
+      "seed": null
+    },
+    "004-BookmarkedArticleCard-onTap-1": {
+      "id": "004-BookmarkedArticleCard-onTap-1",
+      "depends_on": [
+        "003-wire-per-screen-diverge"
+      ],
+      "depended_on_by": [],
+      "tags": [],
+      "checks": [
+        "handler-wired"
+      ],
+      "inputs": [],
+      "outputs": [],
+      "frontmatter_hash": "",
+      "body_hash": "",
+      "checks_hash": "",
+      "inputs_hash": "",
+      "upstream_hash": "",
+      "state": "concrete",
+      "path": "/Users/minh/Documents/openplayboosks/examples/baby-app/.converge/playbooks/default/tasks/06-wire-screens/003-wire-per-screen/tasks/004-BookmarkedArticleCard-onTap-1/TASK.md",
+      "seed": null
+    },
+    "004-pregnancy-progress": {
+      "id": "004-pregnancy-progress",
+      "depends_on": [
+        "003-wire-per-screen-diverge",
+        "003-weight-nutrition"
+      ],
+      "depended_on_by": [
+        "005-mindfulness"
+      ],
+      "tags": [
+        "screen",
+        "pregnancy-progress"
+      ],
+      "checks": [],
+      "inputs": [],
+      "outputs": [],
+      "frontmatter_hash": "",
+      "body_hash": "",
+      "checks_hash": "",
+      "inputs_hash": "",
+      "upstream_hash": "",
+      "state": "concrete",
+      "path": "/Users/minh/Documents/openplayboosks/examples/baby-app/.converge/playbooks/default/tasks/06-wire-screens/003-wire-per-screen/tasks/004-pregnancy-progress/TASK.md",
+      "seed": null
+    },
+    "005-mindfulness": {
+      "id": "005-mindfulness",
+      "depends_on": [
+        "003-wire-per-screen-diverge",
+        "004-pregnancy-progress"
+      ],
+      "depended_on_by": [
+        "006-exercise-detail"
+      ],
+      "tags": [
+        "screen",
+        "mindfulness"
+      ],
+      "checks": [],
+      "inputs": [],
+      "outputs": [],
+      "frontmatter_hash": "",
+      "body_hash": "",
+      "checks_hash": "",
+      "inputs_hash": "",
+      "upstream_hash": "",
+      "state": "concrete",
+      "path": "/Users/minh/Documents/openplayboosks/examples/baby-app/.converge/playbooks/default/tasks/06-wire-screens/003-wire-per-screen/tasks/005-mindfulness/TASK.md",
+      "seed": null
+    },
+    "006-exercise-detail": {
+      "id": "006-exercise-detail",
+      "depends_on": [
+        "003-wire-per-screen-diverge",
+        "005-mindfulness"
+      ],
+      "depended_on_by": [
+        "007-health-log"
+      ],
+      "tags": [
+        "screen",
+        "exercise-detail"
+      ],
+      "checks": [],
+      "inputs": [],
+      "outputs": [],
+      "frontmatter_hash": "",
+      "body_hash": "",
+      "checks_hash": "",
+      "inputs_hash": "",
+      "upstream_hash": "",
+      "state": "concrete",
+      "path": "/Users/minh/Documents/openplayboosks/examples/baby-app/.converge/playbooks/default/tasks/06-wire-screens/003-wire-per-screen/tasks/006-exercise-detail/TASK.md",
+      "seed": null
+    },
+    "007-health-log": {
+      "id": "007-health-log",
+      "depends_on": [
+        "003-wire-per-screen-diverge",
+        "006-exercise-detail"
+      ],
+      "depended_on_by": [
+        "008-mood-wellness"
+      ],
+      "tags": [
+        "screen",
+        "health-log"
+      ],
+      "checks": [],
+      "inputs": [],
+      "outputs": [],
+      "frontmatter_hash": "",
+      "body_hash": "",
+      "checks_hash": "",
+      "inputs_hash": "",
+      "upstream_hash": "",
+      "state": "concrete",
+      "path": "/Users/minh/Documents/openplayboosks/examples/baby-app/.converge/playbooks/default/tasks/06-wire-screens/003-wire-per-screen/tasks/007-health-log/TASK.md",
+      "seed": null
+    },
+    "008-mood-wellness": {
+      "id": "008-mood-wellness",
+      "depends_on": [
+        "003-wire-per-screen-diverge",
+        "007-health-log"
+      ],
+      "depended_on_by": [
+        "009-education"
+      ],
+      "tags": [
+        "screen",
+        "mood-wellness"
+      ],
+      "checks": [],
+      "inputs": [],
+      "outputs": [],
+      "frontmatter_hash": "",
+      "body_hash": "",
+      "checks_hash": "",
+      "inputs_hash": "",
+      "upstream_hash": "",
+      "state": "concrete",
+      "path": "/Users/minh/Documents/openplayboosks/examples/baby-app/.converge/playbooks/default/tasks/06-wire-screens/003-wire-per-screen/tasks/008-mood-wellness/TASK.md",
+      "seed": null
+    },
+    "009-education": {
+      "id": "009-education",
+      "depends_on": [
+        "003-wire-per-screen-diverge",
+        "008-mood-wellness"
+      ],
+      "depended_on_by": [
+        "010-article-reader"
+      ],
+      "tags": [
+        "screen",
+        "education"
+      ],
+      "checks": [],
+      "inputs": [],
+      "outputs": [],
+      "frontmatter_hash": "",
+      "body_hash": "",
+      "checks_hash": "",
+      "inputs_hash": "",
+      "upstream_hash": "",
+      "state": "concrete",
+      "path": "/Users/minh/Documents/openplayboosks/examples/baby-app/.converge/playbooks/default/tasks/06-wire-screens/003-wire-per-screen/tasks/009-education/TASK.md",
+      "seed": null
+    },
+    "010-article-reader": {
+      "id": "010-article-reader",
+      "depends_on": [
+        "003-wire-per-screen-diverge",
+        "009-education"
+      ],
+      "depended_on_by": [
+        "011-settings"
+      ],
+      "tags": [
+        "screen",
+        "article-reader"
+      ],
+      "checks": [],
+      "inputs": [],
+      "outputs": [],
+      "frontmatter_hash": "",
+      "body_hash": "",
+      "checks_hash": "",
+      "inputs_hash": "",
+      "upstream_hash": "",
+      "state": "concrete",
+      "path": "/Users/minh/Documents/openplayboosks/examples/baby-app/.converge/playbooks/default/tasks/06-wire-screens/003-wire-per-screen/tasks/010-article-reader/TASK.md",
+      "seed": null
+    },
+    "011-settings": {
+      "id": "011-settings",
+      "depends_on": [
+        "003-wire-per-screen-diverge",
+        "010-article-reader"
+      ],
+      "depended_on_by": [],
+      "tags": [
+        "screen",
+        "settings"
+      ],
+      "checks": [],
+      "inputs": [],
+      "outputs": [],
+      "frontmatter_hash": "",
+      "body_hash": "",
+      "checks_hash": "",
+      "inputs_hash": "",
+      "upstream_hash": "",
+      "state": "concrete",
+      "path": "/Users/minh/Documents/openplayboosks/examples/baby-app/.converge/playbooks/default/tasks/06-wire-screens/003-wire-per-screen/tasks/011-settings/TASK.md",
+      "seed": null
+    },
+    "01-prepare-requirements-diverge": {
+      "id": "01-prepare-requirements-diverge",
+      "depends_on": [],
+      "depended_on_by": [
+        "02-design-system",
+        "001-gather-idea",
+        "002-generate-prd",
+        "003-generate-ux",
+        "004-breakdown-ux-to-screens"
+      ],
+      "tags": [],
+      "checks": [
+        "ux-spec-exists",
+        "screens-json-exists"
+      ],
+      "inputs": [],
+      "outputs": [
+        "PRD.md",
+        ".stitch/UX.md",
+        ".stitch/screens.json",
+        ".stitch/SITE.md"
+      ],
+      "frontmatter_hash": "",
+      "body_hash": "",
+      "checks_hash": "",
+      "inputs_hash": "",
+      "upstream_hash": "",
+      "state": "concrete",
+      "path": "/Users/minh/Documents/openplayboosks/examples/baby-app/.converge/playbooks/default/tasks/01-prepare-requirements/TASK.md",
+      "seed": null
+    },
+    "01-prepare-requirements-converge": {
+      "id": "01-prepare-requirements-converge",
+      "depends_on": [
+        "02-design-system-diverge",
+        "001-gather-idea",
+        "001-gather-idea",
+        "002-generate-prd",
+        "002-generate-prd",
+        "003-generate-ux",
+        "003-generate-ux",
+        "004-breakdown-ux-to-screens",
+        "004-breakdown-ux-to-screens"
+      ],
+      "depended_on_by": [
+        "02-design-system-converge"
+      ],
+      "tags": [],
+      "checks": [
+        "ux-spec-exists",
+        "screens-json-exists"
+      ],
+      "inputs": [],
+      "outputs": [
+        "PRD.md",
+        ".stitch/UX.md",
+        ".stitch/screens.json",
+        ".stitch/SITE.md"
+      ],
+      "frontmatter_hash": "",
+      "body_hash": "",
+      "checks_hash": "",
+      "inputs_hash": "",
+      "upstream_hash": "",
+      "state": "concrete",
+      "path": "/Users/minh/Documents/openplayboosks/examples/baby-app/.converge/playbooks/default/tasks/01-prepare-requirements/TASK.md",
+      "seed": null
+    },
+    "02-design-system-diverge": {
+      "id": "02-design-system-diverge",
+      "depends_on": [
+        "01-prepare-requirements-diverge"
+      ],
+      "depended_on_by": [
+        "03-build-screens",
+        "002-generate-design-system",
+        "005-generate-design-references",
+        "01-prepare-requirements-converge"
+      ],
+      "tags": [],
+      "checks": [
+        "design-md-exists",
+        "meta-md-exists"
+      ],
+      "inputs": [],
+      "outputs": [
+        ".stitch/system/DESIGN.md",
+        ".stitch/system/META.md"
+      ],
+      "frontmatter_hash": "",
+      "body_hash": "",
+      "checks_hash": "",
+      "inputs_hash": "",
+      "upstream_hash": "",
+      "state": "concrete",
+      "path": "/Users/minh/Documents/openplayboosks/examples/baby-app/.converge/playbooks/default/tasks/02-design-system/TASK.md",
+      "seed": null
+    },
+    "02-design-system-converge": {
+      "id": "02-design-system-converge",
+      "depends_on": [
+        "03-build-screens",
+        "002-generate-design-system",
+        "002-generate-design-system",
+        "005-generate-design-references",
+        "005-generate-design-references",
+        "01-prepare-requirements-converge"
+      ],
+      "depended_on_by": [
+        "root-converge"
+      ],
+      "tags": [],
+      "checks": [
+        "design-md-exists",
+        "meta-md-exists"
+      ],
+      "inputs": [],
+      "outputs": [
+        ".stitch/system/DESIGN.md",
+        ".stitch/system/META.md"
+      ],
+      "frontmatter_hash": "",
+      "body_hash": "",
+      "checks_hash": "",
+      "inputs_hash": "",
+      "upstream_hash": "",
+      "state": "concrete",
+      "path": "/Users/minh/Documents/openplayboosks/examples/baby-app/.converge/playbooks/default/tasks/02-design-system/TASK.md",
+      "seed": null
+    },
+    "05-add-behavior-diverge": {
+      "id": "05-add-behavior-diverge",
+      "depends_on": [
+        "03-build-screens"
+      ],
+      "depended_on_by": [
+        "06-wire-screens",
+        "001-analyze-data-models",
+        "002-create-models",
+        "003-create-mock-data",
+        "004-implement-providers"
+      ],
+      "tags": [],
+      "checks": [
+        "models-exist",
+        "providers-exist",
+        "dart-analysis-valid"
+      ],
+      "inputs": [],
+      "outputs": [
+        "data-models.md",
+        "lib/models/**/*.dart",
+        "lib/data/mock_data.dart",
+        "lib/providers/**/*.dart"
+      ],
+      "frontmatter_hash": "",
+      "body_hash": "",
+      "checks_hash": "",
+      "inputs_hash": "",
+      "upstream_hash": "",
+      "state": "concrete",
+      "path": "/Users/minh/Documents/openplayboosks/examples/baby-app/.converge/playbooks/default/tasks/05-add-behavior/TASK.md",
+      "seed": null
+    },
+    "05-add-behavior-converge": {
+      "id": "05-add-behavior-converge",
+      "depends_on": [
+        "06-wire-screens-diverge",
+        "001-analyze-data-models",
+        "001-analyze-data-models",
+        "002-create-models",
+        "002-create-models",
+        "003-create-mock-data",
+        "003-create-mock-data",
+        "004-implement-providers-diverge",
+        "004-implement-providers-diverge"
+      ],
+      "depended_on_by": [
+        "06-wire-screens-converge",
+        "004-implement-providers-converge"
+      ],
+      "tags": [],
+      "checks": [
+        "models-exist",
+        "providers-exist",
+        "dart-analysis-valid"
+      ],
+      "inputs": [],
+      "outputs": [
+        "data-models.md",
+        "lib/models/**/*.dart",
+        "lib/data/mock_data.dart",
+        "lib/providers/**/*.dart"
+      ],
+      "frontmatter_hash": "",
+      "body_hash": "",
+      "checks_hash": "",
+      "inputs_hash": "",
+      "upstream_hash": "",
+      "state": "concrete",
+      "path": "/Users/minh/Documents/openplayboosks/examples/baby-app/.converge/playbooks/default/tasks/05-add-behavior/TASK.md",
+      "seed": null
+    },
+    "06-wire-screens-diverge": {
+      "id": "06-wire-screens-diverge",
+      "depends_on": [
+        "05-add-behavior-diverge"
+      ],
+      "depended_on_by": [
+        "07-build-overlays",
+        "001-connect-providers",
+        "002-analyze-navigations",
+        "003-wire-per-screen",
+        "004-verify",
+        "05-add-behavior-converge"
+      ],
+      "tags": [],
+      "checks": [
+        "no-empty-handlers",
+        "dart-analysis-valid"
+      ],
+      "inputs": [],
+      "outputs": [
+        "lib/screens/**/*.dart",
+        "navigations.json"
+      ],
+      "frontmatter_hash": "",
+      "body_hash": "",
+      "checks_hash": "",
+      "inputs_hash": "",
+      "upstream_hash": "",
+      "state": "concrete",
+      "path": "/Users/minh/Documents/openplayboosks/examples/baby-app/.converge/playbooks/default/tasks/06-wire-screens/TASK.md",
+      "seed": null
+    },
+    "06-wire-screens-converge": {
+      "id": "06-wire-screens-converge",
+      "depends_on": [
+        "07-build-overlays",
+        "001-connect-providers",
+        "001-connect-providers",
+        "002-analyze-navigations",
+        "002-analyze-navigations",
+        "003-wire-per-screen-diverge",
+        "003-wire-per-screen-diverge",
+        "004-verify",
+        "004-verify",
+        "05-add-behavior-converge"
+      ],
+      "depended_on_by": [
+        "003-wire-per-screen-converge"
+      ],
+      "tags": [],
+      "checks": [
+        "no-empty-handlers",
+        "dart-analysis-valid"
+      ],
+      "inputs": [],
+      "outputs": [
+        "lib/screens/**/*.dart",
+        "navigations.json"
+      ],
+      "frontmatter_hash": "",
+      "body_hash": "",
+      "checks_hash": "",
+      "inputs_hash": "",
+      "upstream_hash": "",
+      "state": "concrete",
+      "path": "/Users/minh/Documents/openplayboosks/examples/baby-app/.converge/playbooks/default/tasks/06-wire-screens/TASK.md",
+      "seed": null
+    },
+    "004-implement-providers-diverge": {
+      "id": "004-implement-providers-diverge",
+      "depends_on": [
+        "05-add-behavior-diverge",
+        "002-create-models",
+        "003-create-mock-data"
+      ],
+      "depended_on_by": [
+        "001-provider-PregnancyProfile",
+        "002-provider-WeightEntry",
+        "003-provider-CycleEntry",
+        "004-provider-MoodEntry",
+        "005-provider-SymptomEntry",
+        "006-provider-DoctorVisit",
+        "007-provider-Reminder",
+        "008-provider-WeekContent",
+        "009-provider-InfoItem",
+        "010-provider-SelfCareCheckState",
+        "011-provider-Article",
+        "012-provider-Exercise",
+        "013-provider-UserPreferences",
+        "05-add-behavior-converge"
+      ],
+      "tags": [
+        "riverpod",
+        "state-management",
+        "providers"
+      ],
+      "checks": [],
+      "inputs": [],
+      "outputs": [],
+      "frontmatter_hash": "",
+      "body_hash": "",
+      "checks_hash": "",
+      "inputs_hash": "",
+      "upstream_hash": "",
+      "state": "concrete",
+      "path": "/Users/minh/Documents/openplayboosks/examples/baby-app/.converge/playbooks/default/tasks/05-add-behavior/004-implement-providers/TASK.md",
+      "seed": null
+    },
+    "004-implement-providers-converge": {
+      "id": "004-implement-providers-converge",
+      "depends_on": [
+        "001-provider-PregnancyProfile",
+        "001-provider-PregnancyProfile",
+        "002-provider-WeightEntry",
+        "002-provider-WeightEntry",
+        "003-provider-CycleEntry",
+        "003-provider-CycleEntry",
+        "004-provider-MoodEntry",
+        "004-provider-MoodEntry",
+        "005-provider-SymptomEntry",
+        "005-provider-SymptomEntry",
+        "006-provider-DoctorVisit",
+        "006-provider-DoctorVisit",
+        "007-provider-Reminder",
+        "007-provider-Reminder",
+        "008-provider-WeekContent",
+        "008-provider-WeekContent",
+        "009-provider-InfoItem",
+        "009-provider-InfoItem",
+        "010-provider-SelfCareCheckState",
+        "010-provider-SelfCareCheckState",
+        "011-provider-Article",
+        "011-provider-Article",
+        "012-provider-Exercise",
+        "012-provider-Exercise",
+        "013-provider-UserPreferences",
+        "013-provider-UserPreferences",
+        "05-add-behavior-converge"
+      ],
+      "depended_on_by": [
+        "root-converge"
+      ],
+      "tags": [
+        "riverpod",
+        "state-management",
+        "providers"
+      ],
+      "checks": [],
+      "inputs": [],
+      "outputs": [],
+      "frontmatter_hash": "",
+      "body_hash": "",
+      "checks_hash": "",
+      "inputs_hash": "",
+      "upstream_hash": "",
+      "state": "concrete",
+      "path": "/Users/minh/Documents/openplayboosks/examples/baby-app/.converge/playbooks/default/tasks/05-add-behavior/004-implement-providers/TASK.md",
+      "seed": null
+    },
+    "003-wire-per-screen-diverge": {
+      "id": "003-wire-per-screen-diverge",
+      "depends_on": [
+        "06-wire-screens-diverge",
+        "002-analyze-navigations"
+      ],
+      "depended_on_by": [
+        "004-verify",
+        "001-BookmarkButton-onPressed-1",
+        "001-BottomNav-onDestinationSelected-1",
+        "001-ExerciseGuideItem-onTap-1",
+        "001-ExportData-onTap-1",
+        "001-FAB-onPressed-1",
+        "001-FeaturedExerciseCard-onTap-1",
+        "001-ModeSelectorPill-onTap-1",
+        "001-SearchButton-onPressed-1",
+        "001-StartExerciseButton-onPressed-1",
+        "001-home",
+        "002-ExerciseCard-onTap-1",
+        "002-FAB-onPressed-1",
+        "002-FeaturedArticleCard-onTap-1",
+        "002-PrimaryCta-onPressed-1",
+        "002-RelatedArticleCard-onTap-1",
+        "002-cycle-tracking",
+        "003-ArticleCard-onTap-1",
+        "003-MoodBanner-onTap-1",
+        "003-weight-nutrition",
+        "004-BookmarkedArticleCard-onTap-1",
+        "004-pregnancy-progress",
+        "005-mindfulness",
+        "006-exercise-detail",
+        "007-health-log",
+        "008-mood-wellness",
+        "009-education",
+        "010-article-reader",
+        "011-settings",
+        "06-wire-screens-converge"
+      ],
+      "tags": [
+        "navigation",
+        "interactions",
+        "wiring"
+      ],
+      "checks": [],
+      "inputs": [
+        "navigations.json",
+        "lib/router/app_router.dart"
+      ],
+      "outputs": [
+        "lib/screens/**/*.dart",
+        "lib/widgets/**/*.dart"
+      ],
+      "frontmatter_hash": "",
+      "body_hash": "",
+      "checks_hash": "",
+      "inputs_hash": "",
+      "upstream_hash": "",
+      "state": "concrete",
+      "path": "/Users/minh/Documents/openplayboosks/examples/baby-app/.converge/playbooks/default/tasks/06-wire-screens/003-wire-per-screen/TASK.md",
+      "seed": null
+    },
+    "003-wire-per-screen-converge": {
+      "id": "003-wire-per-screen-converge",
+      "depends_on": [
+        "004-verify",
+        "001-BookmarkButton-onPressed-1",
+        "001-BookmarkButton-onPressed-1",
+        "001-BottomNav-onDestinationSelected-1",
+        "001-BottomNav-onDestinationSelected-1",
+        "001-ExerciseGuideItem-onTap-1",
+        "001-ExerciseGuideItem-onTap-1",
+        "001-ExportData-onTap-1",
+        "001-ExportData-onTap-1",
+        "001-FAB-onPressed-1",
+        "001-FAB-onPressed-1",
+        "001-FeaturedExerciseCard-onTap-1",
+        "001-FeaturedExerciseCard-onTap-1",
+        "001-ModeSelectorPill-onTap-1",
+        "001-ModeSelectorPill-onTap-1",
+        "001-SearchButton-onPressed-1",
+        "001-SearchButton-onPressed-1",
+        "001-StartExerciseButton-onPressed-1",
+        "001-StartExerciseButton-onPressed-1",
+        "001-home",
+        "001-home",
+        "002-ExerciseCard-onTap-1",
+        "002-ExerciseCard-onTap-1",
+        "002-FAB-onPressed-1",
+        "002-FAB-onPressed-1",
+        "002-FeaturedArticleCard-onTap-1",
+        "002-FeaturedArticleCard-onTap-1",
+        "002-PrimaryCta-onPressed-1",
+        "002-PrimaryCta-onPressed-1",
+        "002-RelatedArticleCard-onTap-1",
+        "002-RelatedArticleCard-onTap-1",
+        "002-cycle-tracking",
+        "002-cycle-tracking",
+        "003-ArticleCard-onTap-1",
+        "003-ArticleCard-onTap-1",
+        "003-MoodBanner-onTap-1",
+        "003-MoodBanner-onTap-1",
+        "003-weight-nutrition",
+        "003-weight-nutrition",
+        "004-BookmarkedArticleCard-onTap-1",
+        "004-BookmarkedArticleCard-onTap-1",
+        "004-pregnancy-progress",
+        "004-pregnancy-progress",
+        "005-mindfulness",
+        "005-mindfulness",
+        "006-exercise-detail",
+        "006-exercise-detail",
+        "007-health-log",
+        "007-health-log",
+        "008-mood-wellness",
+        "008-mood-wellness",
+        "009-education",
+        "009-education",
+        "010-article-reader",
+        "010-article-reader",
+        "011-settings",
+        "011-settings",
+        "06-wire-screens-converge"
+      ],
+      "depended_on_by": [
+        "root-converge"
+      ],
+      "tags": [
+        "navigation",
+        "interactions",
+        "wiring"
+      ],
+      "checks": [],
+      "inputs": [
+        "navigations.json",
+        "lib/router/app_router.dart"
+      ],
+      "outputs": [
+        "lib/screens/**/*.dart",
+        "lib/widgets/**/*.dart"
+      ],
+      "frontmatter_hash": "",
+      "body_hash": "",
+      "checks_hash": "",
+      "inputs_hash": "",
+      "upstream_hash": "",
+      "state": "concrete",
+      "path": "/Users/minh/Documents/openplayboosks/examples/baby-app/.converge/playbooks/default/tasks/06-wire-screens/003-wire-per-screen/TASK.md",
+      "seed": null
+    },
+    "root-diverge": {
+      "id": "root-diverge",
+      "depends_on": [],
+      "depended_on_by": [],
+      "tags": [],
+      "checks": [],
+      "inputs": [],
+      "outputs": [],
+      "frontmatter_hash": "",
+      "body_hash": "",
+      "checks_hash": "",
+      "inputs_hash": "",
+      "upstream_hash": "",
+      "state": "concrete",
+      "path": "<virtual:default/root>",
+      "seed": null
+    },
+    "root-converge": {
+      "id": "root-converge",
+      "depends_on": [
+        "09-generate-tests",
+        "02-design-system-converge",
+        "004-implement-providers-converge",
+        "003-wire-per-screen-converge"
+      ],
+      "depended_on_by": [],
+      "tags": [],
+      "checks": [],
+      "inputs": [],
+      "outputs": [],
+      "frontmatter_hash": "",
+      "body_hash": "",
+      "checks_hash": "",
+      "inputs_hash": "",
+      "upstream_hash": "",
+      "state": "concrete",
+      "path": "<virtual:default/root>",
+      "seed": null
+    },
+    "001-home-01-spec": {
+      "id": "001-home-01-spec",
+      "depends_on": [
+        "03-build-screens"
+      ],
+      "depended_on_by": [],
+      "tags": [
+        "spec",
+        "screen-home"
+      ],
+      "checks": [
+        "spec-exists",
+        "spec-has-content"
+      ],
+      "inputs": [
+        ".stitch/system/DESIGN.md",
+        ".stitch/UX.md",
+        ".stitch/screens.json"
+      ],
+      "outputs": [
+        ".stitch/designs/home/SPEC.md"
+      ],
+      "frontmatter_hash": "",
+      "body_hash": "",
+      "checks_hash": "",
+      "inputs_hash": "",
+      "upstream_hash": "",
+      "state": "concrete",
+      "path": "/Users/minh/Documents/openplayboosks/examples/baby-app/.converge/journal/default/tasks/001-home-01-spec/TASK.md",
+      "seed": null
+    },
+    "001-home-02-design": {
+      "id": "001-home-02-design",
+      "depends_on": [
+        "03-build-screens"
+      ],
+      "depended_on_by": [],
+      "tags": [
+        "design",
+        "html",
+        "screen-home"
+      ],
+      "checks": [
+        "design-exists",
+        "meta-exists",
+        "uses-glossary",
+        "has-data-attributes"
+      ],
+      "inputs": [
+        ".stitch/designs/home/SPEC.md",
+        ".stitch/system/DESIGN.md",
+        ".stitch/system/META.md"
+      ],
+      "outputs": [
+        ".stitch/designs/home/META.md",
+        ".stitch/designs/home/design.html"
+      ],
+      "frontmatter_hash": "",
+      "body_hash": "",
+      "checks_hash": "",
+      "inputs_hash": "",
+      "upstream_hash": "",
+      "state": "concrete",
+      "path": "/Users/minh/Documents/openplayboosks/examples/baby-app/.converge/journal/default/tasks/001-home-02-design/TASK.md",
+      "seed": null
+    },
+    "001-home-03-convert": {
+      "id": "001-home-03-convert",
+      "depends_on": [
+        "03-build-screens"
+      ],
+      "depended_on_by": [],
+      "tags": [
+        "convert",
+        "flutter",
+        "screen-home"
+      ],
+      "checks": [
+        "screen-exists",
+        "dart-valid",
+        "uses-theme",
+        "no-hardcoded-colors"
+      ],
+      "inputs": [
+        ".stitch/designs/home/design.html",
+        ".stitch/designs/home/SPEC.md",
+        ".stitch/system/DESIGN.md"
+      ],
+      "outputs": [
+        "lib/screens/home/home_screen.dart"
+      ],
+      "frontmatter_hash": "",
+      "body_hash": "",
+      "checks_hash": "",
+      "inputs_hash": "",
+      "upstream_hash": "",
+      "state": "concrete",
+      "path": "/Users/minh/Documents/openplayboosks/examples/baby-app/.converge/journal/default/tasks/001-home-03-convert/TASK.md",
+      "seed": null
+    },
+    "001-home-04-analyze": {
+      "id": "001-home-04-analyze",
+      "depends_on": [
+        "03-build-screens"
+      ],
+      "depended_on_by": [],
+      "tags": [
+        "analyze",
+        "screen-home"
+      ],
+      "checks": [
+        "widgets-json-exists"
+      ],
+      "inputs": [
+        "lib/screens/home/home_screen.dart"
+      ],
+      "outputs": [
+        ".stitch/designs/home/widgets.jsonl"
+      ],
+      "frontmatter_hash": "",
+      "body_hash": "",
+      "checks_hash": "",
+      "inputs_hash": "",
+      "upstream_hash": "",
+      "state": "concrete",
+      "path": "/Users/minh/Documents/openplayboosks/examples/baby-app/.converge/journal/default/tasks/001-home-04-analyze/TASK.md",
+      "seed": null
+    },
+    "001-home-05-split": {
+      "id": "001-home-05-split",
+      "depends_on": [
+        "03-build-screens"
+      ],
+      "depended_on_by": [],
+      "tags": [
+        "split",
+        "screen-home"
+      ],
+      "checks": [],
+      "inputs": [
+        ".stitch/designs/home/widgets.jsonl"
+      ],
+      "outputs": [
+        "lib/screens/home/_widgets/**/*.dart"
+      ],
+      "frontmatter_hash": "",
+      "body_hash": "",
+      "checks_hash": "",
+      "inputs_hash": "",
+      "upstream_hash": "",
+      "state": "concrete",
+      "path": "/Users/minh/Documents/openplayboosks/examples/baby-app/.converge/journal/default/tasks/001-home-05-split/TASK.md",
+      "seed": null
+    },
+    "001-home-06-lift": {
+      "id": "001-home-06-lift",
+      "depends_on": [
+        "03-build-screens"
+      ],
+      "depended_on_by": [],
+      "tags": [
+        "lift",
+        "screen-home"
+      ],
+      "checks": [],
+      "inputs": [
+        ".stitch/designs/home/widgets.jsonl",
+        "lib/screens/home/_widgets/**/*.dart"
+      ],
+      "outputs": [
+        "lib/widgets/**/*.dart"
+      ],
+      "frontmatter_hash": "",
+      "body_hash": "",
+      "checks_hash": "",
+      "inputs_hash": "",
+      "upstream_hash": "",
+      "state": "concrete",
+      "path": "/Users/minh/Documents/openplayboosks/examples/baby-app/.converge/journal/default/tasks/001-home-06-lift/TASK.md",
+      "seed": null
+    },
+    "002-browse-01-spec": {
+      "id": "002-browse-01-spec",
+      "depends_on": [
+        "03-build-screens"
+      ],
+      "depended_on_by": [],
+      "tags": [
+        "spec",
+        "screen-browse"
+      ],
+      "checks": [
+        "spec-exists",
+        "spec-has-content"
+      ],
+      "inputs": [
+        ".stitch/system/DESIGN.md",
+        ".stitch/UX.md",
+        ".stitch/screens.json"
+      ],
+      "outputs": [
+        ".stitch/designs/browse/SPEC.md"
+      ],
+      "frontmatter_hash": "",
+      "body_hash": "",
+      "checks_hash": "",
+      "inputs_hash": "",
+      "upstream_hash": "",
+      "state": "concrete",
+      "path": "/Users/minh/Documents/openplayboosks/examples/baby-app/.converge/journal/default/tasks/002-browse-01-spec/TASK.md",
+      "seed": null
+    },
+    "002-browse-02-design": {
+      "id": "002-browse-02-design",
+      "depends_on": [
+        "03-build-screens"
+      ],
+      "depended_on_by": [],
+      "tags": [
+        "design",
+        "html",
+        "screen-browse"
+      ],
+      "checks": [
+        "design-exists",
+        "meta-exists",
+        "uses-glossary",
+        "has-data-attributes"
+      ],
+      "inputs": [
+        ".stitch/designs/browse/SPEC.md",
+        ".stitch/system/DESIGN.md",
+        ".stitch/system/META.md"
+      ],
+      "outputs": [
+        ".stitch/designs/browse/META.md",
+        ".stitch/designs/browse/design.html"
+      ],
+      "frontmatter_hash": "",
+      "body_hash": "",
+      "checks_hash": "",
+      "inputs_hash": "",
+      "upstream_hash": "",
+      "state": "concrete",
+      "path": "/Users/minh/Documents/openplayboosks/examples/baby-app/.converge/journal/default/tasks/002-browse-02-design/TASK.md",
+      "seed": null
+    },
+    "002-browse-03-convert": {
+      "id": "002-browse-03-convert",
+      "depends_on": [
+        "03-build-screens"
+      ],
+      "depended_on_by": [],
+      "tags": [
+        "convert",
+        "flutter",
+        "screen-browse"
+      ],
+      "checks": [
+        "screen-exists",
+        "dart-valid",
+        "uses-theme",
+        "no-hardcoded-colors"
+      ],
+      "inputs": [
+        ".stitch/designs/browse/design.html",
+        ".stitch/designs/browse/SPEC.md",
+        ".stitch/system/DESIGN.md"
+      ],
+      "outputs": [
+        "lib/screens/browse/browse_screen.dart"
+      ],
+      "frontmatter_hash": "",
+      "body_hash": "",
+      "checks_hash": "",
+      "inputs_hash": "",
+      "upstream_hash": "",
+      "state": "concrete",
+      "path": "/Users/minh/Documents/openplayboosks/examples/baby-app/.converge/journal/default/tasks/002-browse-03-convert/TASK.md",
+      "seed": null
+    },
+    "002-browse-04-analyze": {
+      "id": "002-browse-04-analyze",
+      "depends_on": [
+        "03-build-screens"
+      ],
+      "depended_on_by": [],
+      "tags": [
+        "analyze",
+        "screen-browse"
+      ],
+      "checks": [
+        "widgets-json-exists"
+      ],
+      "inputs": [
+        "lib/screens/browse/browse_screen.dart"
+      ],
+      "outputs": [
+        ".stitch/designs/browse/widgets.jsonl"
+      ],
+      "frontmatter_hash": "",
+      "body_hash": "",
+      "checks_hash": "",
+      "inputs_hash": "",
+      "upstream_hash": "",
+      "state": "concrete",
+      "path": "/Users/minh/Documents/openplayboosks/examples/baby-app/.converge/journal/default/tasks/002-browse-04-analyze/TASK.md",
+      "seed": null
+    },
+    "002-browse-05-split": {
+      "id": "002-browse-05-split",
+      "depends_on": [
+        "03-build-screens"
+      ],
+      "depended_on_by": [],
+      "tags": [
+        "split",
+        "screen-browse"
+      ],
+      "checks": [],
+      "inputs": [
+        ".stitch/designs/browse/widgets.jsonl"
+      ],
+      "outputs": [
+        "lib/screens/browse/_widgets/**/*.dart"
+      ],
+      "frontmatter_hash": "",
+      "body_hash": "",
+      "checks_hash": "",
+      "inputs_hash": "",
+      "upstream_hash": "",
+      "state": "concrete",
+      "path": "/Users/minh/Documents/openplayboosks/examples/baby-app/.converge/journal/default/tasks/002-browse-05-split/TASK.md",
+      "seed": null
+    },
+    "002-browse-06-lift": {
+      "id": "002-browse-06-lift",
+      "depends_on": [
+        "03-build-screens"
+      ],
+      "depended_on_by": [],
+      "tags": [
+        "lift",
+        "screen-browse"
+      ],
+      "checks": [],
+      "inputs": [
+        ".stitch/designs/browse/widgets.jsonl",
+        "lib/screens/browse/_widgets/**/*.dart"
+      ],
+      "outputs": [
+        "lib/widgets/**/*.dart"
+      ],
+      "frontmatter_hash": "",
+      "body_hash": "",
+      "checks_hash": "",
+      "inputs_hash": "",
+      "upstream_hash": "",
+      "state": "concrete",
+      "path": "/Users/minh/Documents/openplayboosks/examples/baby-app/.converge/journal/default/tasks/002-browse-06-lift/TASK.md",
+      "seed": null
+    },
+    "003-library-01-spec": {
+      "id": "003-library-01-spec",
+      "depends_on": [
+        "03-build-screens"
+      ],
+      "depended_on_by": [],
+      "tags": [
+        "spec",
+        "screen-library"
+      ],
+      "checks": [
+        "spec-exists",
+        "spec-has-content"
+      ],
+      "inputs": [
+        ".stitch/system/DESIGN.md",
+        ".stitch/UX.md",
+        ".stitch/screens.json"
+      ],
+      "outputs": [
+        ".stitch/designs/library/SPEC.md"
+      ],
+      "frontmatter_hash": "",
+      "body_hash": "",
+      "checks_hash": "",
+      "inputs_hash": "",
+      "upstream_hash": "",
+      "state": "concrete",
+      "path": "/Users/minh/Documents/openplayboosks/examples/baby-app/.converge/journal/default/tasks/003-library-01-spec/TASK.md",
+      "seed": null
+    },
+    "003-library-02-design": {
+      "id": "003-library-02-design",
+      "depends_on": [
+        "03-build-screens"
+      ],
+      "depended_on_by": [],
+      "tags": [
+        "design",
+        "html",
+        "screen-library"
+      ],
+      "checks": [
+        "design-exists",
+        "meta-exists",
+        "uses-glossary",
+        "has-data-attributes"
+      ],
+      "inputs": [
+        ".stitch/designs/library/SPEC.md",
+        ".stitch/system/DESIGN.md",
+        ".stitch/system/META.md"
+      ],
+      "outputs": [
+        ".stitch/designs/library/META.md",
+        ".stitch/designs/library/design.html"
+      ],
+      "frontmatter_hash": "",
+      "body_hash": "",
+      "checks_hash": "",
+      "inputs_hash": "",
+      "upstream_hash": "",
+      "state": "concrete",
+      "path": "/Users/minh/Documents/openplayboosks/examples/baby-app/.converge/journal/default/tasks/003-library-02-design/TASK.md",
+      "seed": null
+    },
+    "003-library-03-convert": {
+      "id": "003-library-03-convert",
+      "depends_on": [
+        "03-build-screens"
+      ],
+      "depended_on_by": [],
+      "tags": [
+        "convert",
+        "flutter",
+        "screen-library"
+      ],
+      "checks": [
+        "screen-exists",
+        "dart-valid",
+        "uses-theme",
+        "no-hardcoded-colors"
+      ],
+      "inputs": [
+        ".stitch/designs/library/design.html",
+        ".stitch/designs/library/SPEC.md",
+        ".stitch/system/DESIGN.md"
+      ],
+      "outputs": [
+        "lib/screens/library/library_screen.dart"
+      ],
+      "frontmatter_hash": "",
+      "body_hash": "",
+      "checks_hash": "",
+      "inputs_hash": "",
+      "upstream_hash": "",
+      "state": "concrete",
+      "path": "/Users/minh/Documents/openplayboosks/examples/baby-app/.converge/journal/default/tasks/003-library-03-convert/TASK.md",
+      "seed": null
+    },
+    "003-library-04-analyze": {
+      "id": "003-library-04-analyze",
+      "depends_on": [
+        "03-build-screens"
+      ],
+      "depended_on_by": [],
+      "tags": [
+        "analyze",
+        "screen-library"
+      ],
+      "checks": [
+        "widgets-json-exists"
+      ],
+      "inputs": [
+        "lib/screens/library/library_screen.dart"
+      ],
+      "outputs": [
+        ".stitch/designs/library/widgets.jsonl"
+      ],
+      "frontmatter_hash": "",
+      "body_hash": "",
+      "checks_hash": "",
+      "inputs_hash": "",
+      "upstream_hash": "",
+      "state": "concrete",
+      "path": "/Users/minh/Documents/openplayboosks/examples/baby-app/.converge/journal/default/tasks/003-library-04-analyze/TASK.md",
+      "seed": null
+    },
+    "003-library-05-split": {
+      "id": "003-library-05-split",
+      "depends_on": [
+        "03-build-screens"
+      ],
+      "depended_on_by": [],
+      "tags": [
+        "split",
+        "screen-library"
+      ],
+      "checks": [],
+      "inputs": [
+        ".stitch/designs/library/widgets.jsonl"
+      ],
+      "outputs": [
+        "lib/screens/library/_widgets/**/*.dart"
+      ],
+      "frontmatter_hash": "",
+      "body_hash": "",
+      "checks_hash": "",
+      "inputs_hash": "",
+      "upstream_hash": "",
+      "state": "concrete",
+      "path": "/Users/minh/Documents/openplayboosks/examples/baby-app/.converge/journal/default/tasks/003-library-05-split/TASK.md",
+      "seed": null
+    },
+    "003-library-06-lift": {
+      "id": "003-library-06-lift",
+      "depends_on": [
+        "03-build-screens"
+      ],
+      "depended_on_by": [],
+      "tags": [
+        "lift",
+        "screen-library"
+      ],
+      "checks": [],
+      "inputs": [
+        ".stitch/designs/library/widgets.jsonl",
+        "lib/screens/library/_widgets/**/*.dart"
+      ],
+      "outputs": [
+        "lib/widgets/**/*.dart"
+      ],
+      "frontmatter_hash": "",
+      "body_hash": "",
+      "checks_hash": "",
+      "inputs_hash": "",
+      "upstream_hash": "",
+      "state": "concrete",
+      "path": "/Users/minh/Documents/openplayboosks/examples/baby-app/.converge/journal/default/tasks/003-library-06-lift/TASK.md",
+      "seed": null
+    },
+    "004-profile-01-spec": {
+      "id": "004-profile-01-spec",
+      "depends_on": [
+        "03-build-screens"
+      ],
+      "depended_on_by": [],
+      "tags": [
+        "spec",
+        "screen-profile"
+      ],
+      "checks": [
+        "spec-exists",
+        "spec-has-content"
+      ],
+      "inputs": [
+        ".stitch/system/DESIGN.md",
+        ".stitch/UX.md",
+        ".stitch/screens.json"
+      ],
+      "outputs": [
+        ".stitch/designs/profile/SPEC.md"
+      ],
+      "frontmatter_hash": "",
+      "body_hash": "",
+      "checks_hash": "",
+      "inputs_hash": "",
+      "upstream_hash": "",
+      "state": "concrete",
+      "path": "/Users/minh/Documents/openplayboosks/examples/baby-app/.converge/journal/default/tasks/004-profile-01-spec/TASK.md",
+      "seed": null
+    },
+    "004-profile-02-design": {
+      "id": "004-profile-02-design",
+      "depends_on": [
+        "03-build-screens"
+      ],
+      "depended_on_by": [],
+      "tags": [
+        "design",
+        "html",
+        "screen-profile"
+      ],
+      "checks": [
+        "design-exists",
+        "meta-exists",
+        "uses-glossary",
+        "has-data-attributes"
+      ],
+      "inputs": [
+        ".stitch/designs/profile/SPEC.md",
+        ".stitch/system/DESIGN.md",
+        ".stitch/system/META.md"
+      ],
+      "outputs": [
+        ".stitch/designs/profile/META.md",
+        ".stitch/designs/profile/design.html"
+      ],
+      "frontmatter_hash": "",
+      "body_hash": "",
+      "checks_hash": "",
+      "inputs_hash": "",
+      "upstream_hash": "",
+      "state": "concrete",
+      "path": "/Users/minh/Documents/openplayboosks/examples/baby-app/.converge/journal/default/tasks/004-profile-02-design/TASK.md",
+      "seed": null
+    },
+    "004-profile-03-convert": {
+      "id": "004-profile-03-convert",
+      "depends_on": [
+        "03-build-screens"
+      ],
+      "depended_on_by": [],
+      "tags": [
+        "convert",
+        "flutter",
+        "screen-profile"
+      ],
+      "checks": [
+        "screen-exists",
+        "dart-valid",
+        "uses-theme",
+        "no-hardcoded-colors"
+      ],
+      "inputs": [
+        ".stitch/designs/profile/design.html",
+        ".stitch/designs/profile/SPEC.md",
+        ".stitch/system/DESIGN.md"
+      ],
+      "outputs": [
+        "lib/screens/profile/profile_screen.dart"
+      ],
+      "frontmatter_hash": "",
+      "body_hash": "",
+      "checks_hash": "",
+      "inputs_hash": "",
+      "upstream_hash": "",
+      "state": "concrete",
+      "path": "/Users/minh/Documents/openplayboosks/examples/baby-app/.converge/journal/default/tasks/004-profile-03-convert/TASK.md",
+      "seed": null
+    },
+    "004-profile-04-analyze": {
+      "id": "004-profile-04-analyze",
+      "depends_on": [
+        "03-build-screens"
+      ],
+      "depended_on_by": [],
+      "tags": [
+        "analyze",
+        "screen-profile"
+      ],
+      "checks": [
+        "widgets-json-exists"
+      ],
+      "inputs": [
+        "lib/screens/profile/profile_screen.dart"
+      ],
+      "outputs": [
+        ".stitch/designs/profile/widgets.jsonl"
+      ],
+      "frontmatter_hash": "",
+      "body_hash": "",
+      "checks_hash": "",
+      "inputs_hash": "",
+      "upstream_hash": "",
+      "state": "concrete",
+      "path": "/Users/minh/Documents/openplayboosks/examples/baby-app/.converge/journal/default/tasks/004-profile-04-analyze/TASK.md",
+      "seed": null
+    },
+    "004-profile-05-split": {
+      "id": "004-profile-05-split",
+      "depends_on": [
+        "03-build-screens"
+      ],
+      "depended_on_by": [],
+      "tags": [
+        "split",
+        "screen-profile"
+      ],
+      "checks": [],
+      "inputs": [
+        ".stitch/designs/profile/widgets.jsonl"
+      ],
+      "outputs": [
+        "lib/screens/profile/_widgets/**/*.dart"
+      ],
+      "frontmatter_hash": "",
+      "body_hash": "",
+      "checks_hash": "",
+      "inputs_hash": "",
+      "upstream_hash": "",
+      "state": "concrete",
+      "path": "/Users/minh/Documents/openplayboosks/examples/baby-app/.converge/journal/default/tasks/004-profile-05-split/TASK.md",
+      "seed": null
+    },
+    "004-profile-06-lift": {
+      "id": "004-profile-06-lift",
+      "depends_on": [
+        "03-build-screens"
+      ],
+      "depended_on_by": [],
+      "tags": [
+        "lift",
+        "screen-profile"
+      ],
+      "checks": [],
+      "inputs": [
+        ".stitch/designs/profile/widgets.jsonl",
+        "lib/screens/profile/_widgets/**/*.dart"
+      ],
+      "outputs": [
+        "lib/widgets/**/*.dart"
+      ],
+      "frontmatter_hash": "",
+      "body_hash": "",
+      "checks_hash": "",
+      "inputs_hash": "",
+      "upstream_hash": "",
+      "state": "concrete",
+      "path": "/Users/minh/Documents/openplayboosks/examples/baby-app/.converge/journal/default/tasks/004-profile-06-lift/TASK.md",
+      "seed": null
+    },
+    "005-cycle-tracking-01-spec": {
+      "id": "005-cycle-tracking-01-spec",
+      "depends_on": [
+        "03-build-screens"
+      ],
+      "depended_on_by": [],
+      "tags": [
+        "spec",
+        "screen-cycle-tracking"
+      ],
+      "checks": [
+        "spec-exists",
+        "spec-has-content"
+      ],
+      "inputs": [
+        ".stitch/system/DESIGN.md",
+        ".stitch/UX.md",
+        ".stitch/screens.json"
+      ],
+      "outputs": [
+        ".stitch/designs/cycle-tracking/SPEC.md"
+      ],
+      "frontmatter_hash": "",
+      "body_hash": "",
+      "checks_hash": "",
+      "inputs_hash": "",
+      "upstream_hash": "",
+      "state": "concrete",
+      "path": "/Users/minh/Documents/openplayboosks/examples/baby-app/.converge/journal/default/tasks/005-cycle-tracking-01-spec/TASK.md",
+      "seed": null
+    },
+    "005-cycle-tracking-02-design": {
+      "id": "005-cycle-tracking-02-design",
+      "depends_on": [
+        "03-build-screens"
+      ],
+      "depended_on_by": [],
+      "tags": [
+        "design",
+        "html",
+        "screen-cycle-tracking"
+      ],
+      "checks": [
+        "design-exists",
+        "meta-exists",
+        "uses-glossary",
+        "has-data-attributes"
+      ],
+      "inputs": [
+        ".stitch/designs/cycle-tracking/SPEC.md",
+        ".stitch/system/DESIGN.md",
+        ".stitch/system/META.md"
+      ],
+      "outputs": [
+        ".stitch/designs/cycle-tracking/META.md",
+        ".stitch/designs/cycle-tracking/design.html"
+      ],
+      "frontmatter_hash": "",
+      "body_hash": "",
+      "checks_hash": "",
+      "inputs_hash": "",
+      "upstream_hash": "",
+      "state": "concrete",
+      "path": "/Users/minh/Documents/openplayboosks/examples/baby-app/.converge/journal/default/tasks/005-cycle-tracking-02-design/TASK.md",
+      "seed": null
+    },
+    "005-cycle-tracking-03-convert": {
+      "id": "005-cycle-tracking-03-convert",
+      "depends_on": [
+        "03-build-screens"
+      ],
+      "depended_on_by": [],
+      "tags": [
+        "convert",
+        "flutter",
+        "screen-cycle-tracking"
+      ],
+      "checks": [
+        "screen-exists",
+        "dart-valid",
+        "uses-theme",
+        "no-hardcoded-colors"
+      ],
+      "inputs": [
+        ".stitch/designs/cycle-tracking/design.html",
+        ".stitch/designs/cycle-tracking/SPEC.md",
+        ".stitch/system/DESIGN.md"
+      ],
+      "outputs": [
+        "lib/screens/cycle_tracking/cycle_tracking_screen.dart"
+      ],
+      "frontmatter_hash": "",
+      "body_hash": "",
+      "checks_hash": "",
+      "inputs_hash": "",
+      "upstream_hash": "",
+      "state": "concrete",
+      "path": "/Users/minh/Documents/openplayboosks/examples/baby-app/.converge/journal/default/tasks/005-cycle-tracking-03-convert/TASK.md",
+      "seed": null
+    },
+    "005-cycle-tracking-04-analyze": {
+      "id": "005-cycle-tracking-04-analyze",
+      "depends_on": [
+        "03-build-screens"
+      ],
+      "depended_on_by": [],
+      "tags": [
+        "analyze",
+        "screen-cycle-tracking"
+      ],
+      "checks": [
+        "widgets-json-exists"
+      ],
+      "inputs": [
+        "lib/screens/cycle_tracking/cycle_tracking_screen.dart"
+      ],
+      "outputs": [
+        ".stitch/designs/cycle-tracking/widgets.jsonl"
+      ],
+      "frontmatter_hash": "",
+      "body_hash": "",
+      "checks_hash": "",
+      "inputs_hash": "",
+      "upstream_hash": "",
+      "state": "concrete",
+      "path": "/Users/minh/Documents/openplayboosks/examples/baby-app/.converge/journal/default/tasks/005-cycle-tracking-04-analyze/TASK.md",
+      "seed": null
+    },
+    "005-cycle-tracking-05-split": {
+      "id": "005-cycle-tracking-05-split",
+      "depends_on": [
+        "03-build-screens"
+      ],
+      "depended_on_by": [],
+      "tags": [
+        "split",
+        "screen-cycle-tracking"
+      ],
+      "checks": [],
+      "inputs": [
+        ".stitch/designs/cycle-tracking/widgets.jsonl"
+      ],
+      "outputs": [
+        "lib/screens/cycle_tracking/_widgets/**/*.dart"
+      ],
+      "frontmatter_hash": "",
+      "body_hash": "",
+      "checks_hash": "",
+      "inputs_hash": "",
+      "upstream_hash": "",
+      "state": "concrete",
+      "path": "/Users/minh/Documents/openplayboosks/examples/baby-app/.converge/journal/default/tasks/005-cycle-tracking-05-split/TASK.md",
+      "seed": null
+    },
+    "005-cycle-tracking-06-lift": {
+      "id": "005-cycle-tracking-06-lift",
+      "depends_on": [
+        "03-build-screens"
+      ],
+      "depended_on_by": [],
+      "tags": [
+        "lift",
+        "screen-cycle-tracking"
+      ],
+      "checks": [],
+      "inputs": [
+        ".stitch/designs/cycle-tracking/widgets.jsonl",
+        "lib/screens/cycle_tracking/_widgets/**/*.dart"
+      ],
+      "outputs": [
+        "lib/widgets/**/*.dart"
+      ],
+      "frontmatter_hash": "",
+      "body_hash": "",
+      "checks_hash": "",
+      "inputs_hash": "",
+      "upstream_hash": "",
+      "state": "concrete",
+      "path": "/Users/minh/Documents/openplayboosks/examples/baby-app/.converge/journal/default/tasks/005-cycle-tracking-06-lift/TASK.md",
+      "seed": null
+    },
+    "006-weight-nutrition-01-spec": {
+      "id": "006-weight-nutrition-01-spec",
+      "depends_on": [
+        "03-build-screens"
+      ],
+      "depended_on_by": [],
+      "tags": [
+        "spec",
+        "screen-weight-nutrition"
+      ],
+      "checks": [
+        "spec-exists",
+        "spec-has-content"
+      ],
+      "inputs": [
+        ".stitch/system/DESIGN.md",
+        ".stitch/UX.md",
+        ".stitch/screens.json"
+      ],
+      "outputs": [
+        ".stitch/designs/weight-nutrition/SPEC.md"
+      ],
+      "frontmatter_hash": "",
+      "body_hash": "",
+      "checks_hash": "",
+      "inputs_hash": "",
+      "upstream_hash": "",
+      "state": "concrete",
+      "path": "/Users/minh/Documents/openplayboosks/examples/baby-app/.converge/journal/default/tasks/006-weight-nutrition-01-spec/TASK.md",
+      "seed": null
+    },
+    "006-weight-nutrition-02-design": {
+      "id": "006-weight-nutrition-02-design",
+      "depends_on": [
+        "03-build-screens"
+      ],
+      "depended_on_by": [],
+      "tags": [
+        "design",
+        "html",
+        "screen-weight-nutrition"
+      ],
+      "checks": [
+        "design-exists",
+        "meta-exists",
+        "uses-glossary",
+        "has-data-attributes"
+      ],
+      "inputs": [
+        ".stitch/designs/weight-nutrition/SPEC.md",
+        ".stitch/system/DESIGN.md",
+        ".stitch/system/META.md"
+      ],
+      "outputs": [
+        ".stitch/designs/weight-nutrition/META.md",
+        ".stitch/designs/weight-nutrition/design.html"
+      ],
+      "frontmatter_hash": "",
+      "body_hash": "",
+      "checks_hash": "",
+      "inputs_hash": "",
+      "upstream_hash": "",
+      "state": "concrete",
+      "path": "/Users/minh/Documents/openplayboosks/examples/baby-app/.converge/journal/default/tasks/006-weight-nutrition-02-design/TASK.md",
+      "seed": null
+    },
+    "006-weight-nutrition-03-convert": {
+      "id": "006-weight-nutrition-03-convert",
+      "depends_on": [
+        "03-build-screens"
+      ],
+      "depended_on_by": [],
+      "tags": [
+        "convert",
+        "flutter",
+        "screen-weight-nutrition"
+      ],
+      "checks": [
+        "screen-exists",
+        "dart-valid",
+        "uses-theme",
+        "no-hardcoded-colors"
+      ],
+      "inputs": [
+        ".stitch/designs/weight-nutrition/design.html",
+        ".stitch/designs/weight-nutrition/SPEC.md",
+        ".stitch/system/DESIGN.md"
+      ],
+      "outputs": [
+        "lib/screens/weight_nutrition/weight_nutrition_screen.dart"
+      ],
+      "frontmatter_hash": "",
+      "body_hash": "",
+      "checks_hash": "",
+      "inputs_hash": "",
+      "upstream_hash": "",
+      "state": "concrete",
+      "path": "/Users/minh/Documents/openplayboosks/examples/baby-app/.converge/journal/default/tasks/006-weight-nutrition-03-convert/TASK.md",
+      "seed": null
+    },
+    "006-weight-nutrition-04-analyze": {
+      "id": "006-weight-nutrition-04-analyze",
+      "depends_on": [
+        "03-build-screens"
+      ],
+      "depended_on_by": [],
+      "tags": [
+        "analyze",
+        "screen-weight-nutrition"
+      ],
+      "checks": [
+        "widgets-json-exists"
+      ],
+      "inputs": [
+        "lib/screens/weight_nutrition/weight_nutrition_screen.dart"
+      ],
+      "outputs": [
+        ".stitch/designs/weight-nutrition/widgets.jsonl"
+      ],
+      "frontmatter_hash": "",
+      "body_hash": "",
+      "checks_hash": "",
+      "inputs_hash": "",
+      "upstream_hash": "",
+      "state": "concrete",
+      "path": "/Users/minh/Documents/openplayboosks/examples/baby-app/.converge/journal/default/tasks/006-weight-nutrition-04-analyze/TASK.md",
+      "seed": null
+    },
+    "006-weight-nutrition-05-split": {
+      "id": "006-weight-nutrition-05-split",
+      "depends_on": [
+        "03-build-screens"
+      ],
+      "depended_on_by": [],
+      "tags": [
+        "split",
+        "screen-weight-nutrition"
+      ],
+      "checks": [],
+      "inputs": [
+        ".stitch/designs/weight-nutrition/widgets.jsonl"
+      ],
+      "outputs": [
+        "lib/screens/weight_nutrition/_widgets/**/*.dart"
+      ],
+      "frontmatter_hash": "",
+      "body_hash": "",
+      "checks_hash": "",
+      "inputs_hash": "",
+      "upstream_hash": "",
+      "state": "concrete",
+      "path": "/Users/minh/Documents/openplayboosks/examples/baby-app/.converge/journal/default/tasks/006-weight-nutrition-05-split/TASK.md",
+      "seed": null
+    },
+    "006-weight-nutrition-06-lift": {
+      "id": "006-weight-nutrition-06-lift",
+      "depends_on": [
+        "03-build-screens"
+      ],
+      "depended_on_by": [],
+      "tags": [
+        "lift",
+        "screen-weight-nutrition"
+      ],
+      "checks": [],
+      "inputs": [
+        ".stitch/designs/weight-nutrition/widgets.jsonl",
+        "lib/screens/weight_nutrition/_widgets/**/*.dart"
+      ],
+      "outputs": [
+        "lib/widgets/**/*.dart"
+      ],
+      "frontmatter_hash": "",
+      "body_hash": "",
+      "checks_hash": "",
+      "inputs_hash": "",
+      "upstream_hash": "",
+      "state": "concrete",
+      "path": "/Users/minh/Documents/openplayboosks/examples/baby-app/.converge/journal/default/tasks/006-weight-nutrition-06-lift/TASK.md",
+      "seed": null
+    },
+    "007-pregnancy-progress-01-spec": {
+      "id": "007-pregnancy-progress-01-spec",
+      "depends_on": [
+        "03-build-screens"
+      ],
+      "depended_on_by": [],
+      "tags": [
+        "spec",
+        "screen-pregnancy-progress"
+      ],
+      "checks": [
+        "spec-exists",
+        "spec-has-content"
+      ],
+      "inputs": [
+        ".stitch/system/DESIGN.md",
+        ".stitch/UX.md",
+        ".stitch/screens.json"
+      ],
+      "outputs": [
+        ".stitch/designs/pregnancy-progress/SPEC.md"
+      ],
+      "frontmatter_hash": "",
+      "body_hash": "",
+      "checks_hash": "",
+      "inputs_hash": "",
+      "upstream_hash": "",
+      "state": "concrete",
+      "path": "/Users/minh/Documents/openplayboosks/examples/baby-app/.converge/journal/default/tasks/007-pregnancy-progress-01-spec/TASK.md",
+      "seed": null
+    },
+    "007-pregnancy-progress-02-design": {
+      "id": "007-pregnancy-progress-02-design",
+      "depends_on": [
+        "03-build-screens"
+      ],
+      "depended_on_by": [],
+      "tags": [
+        "design",
+        "html",
+        "screen-pregnancy-progress"
+      ],
+      "checks": [
+        "design-exists",
+        "meta-exists",
+        "uses-glossary",
+        "has-data-attributes"
+      ],
+      "inputs": [
+        ".stitch/designs/pregnancy-progress/SPEC.md",
+        ".stitch/system/DESIGN.md",
+        ".stitch/system/META.md"
+      ],
+      "outputs": [
+        ".stitch/designs/pregnancy-progress/META.md",
+        ".stitch/designs/pregnancy-progress/design.html"
+      ],
+      "frontmatter_hash": "",
+      "body_hash": "",
+      "checks_hash": "",
+      "inputs_hash": "",
+      "upstream_hash": "",
+      "state": "concrete",
+      "path": "/Users/minh/Documents/openplayboosks/examples/baby-app/.converge/journal/default/tasks/007-pregnancy-progress-02-design/TASK.md",
+      "seed": null
+    },
+    "007-pregnancy-progress-03-convert": {
+      "id": "007-pregnancy-progress-03-convert",
+      "depends_on": [
+        "03-build-screens"
+      ],
+      "depended_on_by": [],
+      "tags": [
+        "convert",
+        "flutter",
+        "screen-pregnancy-progress"
+      ],
+      "checks": [
+        "screen-exists",
+        "dart-valid",
+        "uses-theme",
+        "no-hardcoded-colors"
+      ],
+      "inputs": [
+        ".stitch/designs/pregnancy-progress/design.html",
+        ".stitch/designs/pregnancy-progress/SPEC.md",
+        ".stitch/system/DESIGN.md"
+      ],
+      "outputs": [
+        "lib/screens/pregnancy_progress/pregnancy_progress_screen.dart"
+      ],
+      "frontmatter_hash": "",
+      "body_hash": "",
+      "checks_hash": "",
+      "inputs_hash": "",
+      "upstream_hash": "",
+      "state": "concrete",
+      "path": "/Users/minh/Documents/openplayboosks/examples/baby-app/.converge/journal/default/tasks/007-pregnancy-progress-03-convert/TASK.md",
+      "seed": null
+    },
+    "007-pregnancy-progress-04-analyze": {
+      "id": "007-pregnancy-progress-04-analyze",
+      "depends_on": [
+        "03-build-screens"
+      ],
+      "depended_on_by": [],
+      "tags": [
+        "analyze",
+        "screen-pregnancy-progress"
+      ],
+      "checks": [
+        "widgets-json-exists"
+      ],
+      "inputs": [
+        "lib/screens/pregnancy_progress/pregnancy_progress_screen.dart"
+      ],
+      "outputs": [
+        ".stitch/designs/pregnancy-progress/widgets.jsonl"
+      ],
+      "frontmatter_hash": "",
+      "body_hash": "",
+      "checks_hash": "",
+      "inputs_hash": "",
+      "upstream_hash": "",
+      "state": "concrete",
+      "path": "/Users/minh/Documents/openplayboosks/examples/baby-app/.converge/journal/default/tasks/007-pregnancy-progress-04-analyze/TASK.md",
+      "seed": null
+    },
+    "007-pregnancy-progress-05-split": {
+      "id": "007-pregnancy-progress-05-split",
+      "depends_on": [
+        "03-build-screens"
+      ],
+      "depended_on_by": [],
+      "tags": [
+        "split",
+        "screen-pregnancy-progress"
+      ],
+      "checks": [],
+      "inputs": [
+        ".stitch/designs/pregnancy-progress/widgets.jsonl"
+      ],
+      "outputs": [
+        "lib/screens/pregnancy_progress/_widgets/**/*.dart"
+      ],
+      "frontmatter_hash": "",
+      "body_hash": "",
+      "checks_hash": "",
+      "inputs_hash": "",
+      "upstream_hash": "",
+      "state": "concrete",
+      "path": "/Users/minh/Documents/openplayboosks/examples/baby-app/.converge/journal/default/tasks/007-pregnancy-progress-05-split/TASK.md",
+      "seed": null
+    },
+    "007-pregnancy-progress-06-lift": {
+      "id": "007-pregnancy-progress-06-lift",
+      "depends_on": [
+        "03-build-screens"
+      ],
+      "depended_on_by": [],
+      "tags": [
+        "lift",
+        "screen-pregnancy-progress"
+      ],
+      "checks": [],
+      "inputs": [
+        ".stitch/designs/pregnancy-progress/widgets.jsonl",
+        "lib/screens/pregnancy_progress/_widgets/**/*.dart"
+      ],
+      "outputs": [
+        "lib/widgets/**/*.dart"
+      ],
+      "frontmatter_hash": "",
+      "body_hash": "",
+      "checks_hash": "",
+      "inputs_hash": "",
+      "upstream_hash": "",
+      "state": "concrete",
+      "path": "/Users/minh/Documents/openplayboosks/examples/baby-app/.converge/journal/default/tasks/007-pregnancy-progress-06-lift/TASK.md",
+      "seed": null
+    },
+    "008-mindfulness-01-spec": {
+      "id": "008-mindfulness-01-spec",
+      "depends_on": [
+        "03-build-screens"
+      ],
+      "depended_on_by": [],
+      "tags": [
+        "spec",
+        "screen-mindfulness"
+      ],
+      "checks": [
+        "spec-exists",
+        "spec-has-content"
+      ],
+      "inputs": [
+        ".stitch/system/DESIGN.md",
+        ".stitch/UX.md",
+        ".stitch/screens.json"
+      ],
+      "outputs": [
+        ".stitch/designs/mindfulness/SPEC.md"
+      ],
+      "frontmatter_hash": "",
+      "body_hash": "",
+      "checks_hash": "",
+      "inputs_hash": "",
+      "upstream_hash": "",
+      "state": "concrete",
+      "path": "/Users/minh/Documents/openplayboosks/examples/baby-app/.converge/journal/default/tasks/008-mindfulness-01-spec/TASK.md",
+      "seed": null
+    },
+    "008-mindfulness-02-design": {
+      "id": "008-mindfulness-02-design",
+      "depends_on": [
+        "03-build-screens"
+      ],
+      "depended_on_by": [],
+      "tags": [
+        "design",
+        "html",
+        "screen-mindfulness"
+      ],
+      "checks": [
+        "design-exists",
+        "meta-exists",
+        "uses-glossary",
+        "has-data-attributes"
+      ],
+      "inputs": [
+        ".stitch/designs/mindfulness/SPEC.md",
+        ".stitch/system/DESIGN.md",
+        ".stitch/system/META.md"
+      ],
+      "outputs": [
+        ".stitch/designs/mindfulness/META.md",
+        ".stitch/designs/mindfulness/design.html"
+      ],
+      "frontmatter_hash": "",
+      "body_hash": "",
+      "checks_hash": "",
+      "inputs_hash": "",
+      "upstream_hash": "",
+      "state": "concrete",
+      "path": "/Users/minh/Documents/openplayboosks/examples/baby-app/.converge/journal/default/tasks/008-mindfulness-02-design/TASK.md",
+      "seed": null
+    },
+    "008-mindfulness-03-convert": {
+      "id": "008-mindfulness-03-convert",
+      "depends_on": [
+        "03-build-screens"
+      ],
+      "depended_on_by": [],
+      "tags": [
+        "convert",
+        "flutter",
+        "screen-mindfulness"
+      ],
+      "checks": [
+        "screen-exists",
+        "dart-valid",
+        "uses-theme",
+        "no-hardcoded-colors"
+      ],
+      "inputs": [
+        ".stitch/designs/mindfulness/design.html",
+        ".stitch/designs/mindfulness/SPEC.md",
+        ".stitch/system/DESIGN.md"
+      ],
+      "outputs": [
+        "lib/screens/mindfulness/mindfulness_screen.dart"
+      ],
+      "frontmatter_hash": "",
+      "body_hash": "",
+      "checks_hash": "",
+      "inputs_hash": "",
+      "upstream_hash": "",
+      "state": "concrete",
+      "path": "/Users/minh/Documents/openplayboosks/examples/baby-app/.converge/journal/default/tasks/008-mindfulness-03-convert/TASK.md",
+      "seed": null
+    },
+    "008-mindfulness-04-analyze": {
+      "id": "008-mindfulness-04-analyze",
+      "depends_on": [
+        "03-build-screens"
+      ],
+      "depended_on_by": [],
+      "tags": [
+        "analyze",
+        "screen-mindfulness"
+      ],
+      "checks": [
+        "widgets-json-exists"
+      ],
+      "inputs": [
+        "lib/screens/mindfulness/mindfulness_screen.dart"
+      ],
+      "outputs": [
+        ".stitch/designs/mindfulness/widgets.jsonl"
+      ],
+      "frontmatter_hash": "",
+      "body_hash": "",
+      "checks_hash": "",
+      "inputs_hash": "",
+      "upstream_hash": "",
+      "state": "concrete",
+      "path": "/Users/minh/Documents/openplayboosks/examples/baby-app/.converge/journal/default/tasks/008-mindfulness-04-analyze/TASK.md",
+      "seed": null
+    },
+    "008-mindfulness-05-split": {
+      "id": "008-mindfulness-05-split",
+      "depends_on": [
+        "03-build-screens"
+      ],
+      "depended_on_by": [],
+      "tags": [
+        "split",
+        "screen-mindfulness"
+      ],
+      "checks": [],
+      "inputs": [
+        ".stitch/designs/mindfulness/widgets.jsonl"
+      ],
+      "outputs": [
+        "lib/screens/mindfulness/_widgets/**/*.dart"
+      ],
+      "frontmatter_hash": "",
+      "body_hash": "",
+      "checks_hash": "",
+      "inputs_hash": "",
+      "upstream_hash": "",
+      "state": "concrete",
+      "path": "/Users/minh/Documents/openplayboosks/examples/baby-app/.converge/journal/default/tasks/008-mindfulness-05-split/TASK.md",
+      "seed": null
+    },
+    "008-mindfulness-06-lift": {
+      "id": "008-mindfulness-06-lift",
+      "depends_on": [
+        "03-build-screens"
+      ],
+      "depended_on_by": [],
+      "tags": [
+        "lift",
+        "screen-mindfulness"
+      ],
+      "checks": [],
+      "inputs": [
+        ".stitch/designs/mindfulness/widgets.jsonl",
+        "lib/screens/mindfulness/_widgets/**/*.dart"
+      ],
+      "outputs": [
+        "lib/widgets/**/*.dart"
+      ],
+      "frontmatter_hash": "",
+      "body_hash": "",
+      "checks_hash": "",
+      "inputs_hash": "",
+      "upstream_hash": "",
+      "state": "concrete",
+      "path": "/Users/minh/Documents/openplayboosks/examples/baby-app/.converge/journal/default/tasks/008-mindfulness-06-lift/TASK.md",
+      "seed": null
+    },
+    "009-health-log-01-spec": {
+      "id": "009-health-log-01-spec",
+      "depends_on": [
+        "03-build-screens"
+      ],
+      "depended_on_by": [],
+      "tags": [
+        "spec",
+        "screen-health-log"
+      ],
+      "checks": [
+        "spec-exists",
+        "spec-has-content"
+      ],
+      "inputs": [
+        ".stitch/system/DESIGN.md",
+        ".stitch/UX.md",
+        ".stitch/screens.json"
+      ],
+      "outputs": [
+        ".stitch/designs/health-log/SPEC.md"
+      ],
+      "frontmatter_hash": "",
+      "body_hash": "",
+      "checks_hash": "",
+      "inputs_hash": "",
+      "upstream_hash": "",
+      "state": "concrete",
+      "path": "/Users/minh/Documents/openplayboosks/examples/baby-app/.converge/journal/default/tasks/009-health-log-01-spec/TASK.md",
+      "seed": null
+    },
+    "009-health-log-02-design": {
+      "id": "009-health-log-02-design",
+      "depends_on": [
+        "03-build-screens"
+      ],
+      "depended_on_by": [],
+      "tags": [
+        "design",
+        "html",
+        "screen-health-log"
+      ],
+      "checks": [
+        "design-exists",
+        "meta-exists",
+        "uses-glossary",
+        "has-data-attributes"
+      ],
+      "inputs": [
+        ".stitch/designs/health-log/SPEC.md",
+        ".stitch/system/DESIGN.md",
+        ".stitch/system/META.md"
+      ],
+      "outputs": [
+        ".stitch/designs/health-log/META.md",
+        ".stitch/designs/health-log/design.html"
+      ],
+      "frontmatter_hash": "",
+      "body_hash": "",
+      "checks_hash": "",
+      "inputs_hash": "",
+      "upstream_hash": "",
+      "state": "concrete",
+      "path": "/Users/minh/Documents/openplayboosks/examples/baby-app/.converge/journal/default/tasks/009-health-log-02-design/TASK.md",
+      "seed": null
+    },
+    "009-health-log-03-convert": {
+      "id": "009-health-log-03-convert",
+      "depends_on": [
+        "03-build-screens"
+      ],
+      "depended_on_by": [],
+      "tags": [
+        "convert",
+        "flutter",
+        "screen-health-log"
+      ],
+      "checks": [
+        "screen-exists",
+        "dart-valid",
+        "uses-theme",
+        "no-hardcoded-colors"
+      ],
+      "inputs": [
+        ".stitch/designs/health-log/design.html",
+        ".stitch/designs/health-log/SPEC.md",
+        ".stitch/system/DESIGN.md"
+      ],
+      "outputs": [
+        "lib/screens/health_log/health_log_screen.dart"
+      ],
+      "frontmatter_hash": "",
+      "body_hash": "",
+      "checks_hash": "",
+      "inputs_hash": "",
+      "upstream_hash": "",
+      "state": "concrete",
+      "path": "/Users/minh/Documents/openplayboosks/examples/baby-app/.converge/journal/default/tasks/009-health-log-03-convert/TASK.md",
+      "seed": null
+    },
+    "009-health-log-04-analyze": {
+      "id": "009-health-log-04-analyze",
+      "depends_on": [
+        "03-build-screens"
+      ],
+      "depended_on_by": [],
+      "tags": [
+        "analyze",
+        "screen-health-log"
+      ],
+      "checks": [
+        "widgets-json-exists"
+      ],
+      "inputs": [
+        "lib/screens/health_log/health_log_screen.dart"
+      ],
+      "outputs": [
+        ".stitch/designs/health-log/widgets.jsonl"
+      ],
+      "frontmatter_hash": "",
+      "body_hash": "",
+      "checks_hash": "",
+      "inputs_hash": "",
+      "upstream_hash": "",
+      "state": "concrete",
+      "path": "/Users/minh/Documents/openplayboosks/examples/baby-app/.converge/journal/default/tasks/009-health-log-04-analyze/TASK.md",
+      "seed": null
+    },
+    "009-health-log-05-split": {
+      "id": "009-health-log-05-split",
+      "depends_on": [
+        "03-build-screens"
+      ],
+      "depended_on_by": [],
+      "tags": [
+        "split",
+        "screen-health-log"
+      ],
+      "checks": [],
+      "inputs": [
+        ".stitch/designs/health-log/widgets.jsonl"
+      ],
+      "outputs": [
+        "lib/screens/health_log/_widgets/**/*.dart"
+      ],
+      "frontmatter_hash": "",
+      "body_hash": "",
+      "checks_hash": "",
+      "inputs_hash": "",
+      "upstream_hash": "",
+      "state": "concrete",
+      "path": "/Users/minh/Documents/openplayboosks/examples/baby-app/.converge/journal/default/tasks/009-health-log-05-split/TASK.md",
+      "seed": null
+    },
+    "009-health-log-06-lift": {
+      "id": "009-health-log-06-lift",
+      "depends_on": [
+        "03-build-screens"
+      ],
+      "depended_on_by": [],
+      "tags": [
+        "lift",
+        "screen-health-log"
+      ],
+      "checks": [],
+      "inputs": [
+        ".stitch/designs/health-log/widgets.jsonl",
+        "lib/screens/health_log/_widgets/**/*.dart"
+      ],
+      "outputs": [
+        "lib/widgets/**/*.dart"
+      ],
+      "frontmatter_hash": "",
+      "body_hash": "",
+      "checks_hash": "",
+      "inputs_hash": "",
+      "upstream_hash": "",
+      "state": "concrete",
+      "path": "/Users/minh/Documents/openplayboosks/examples/baby-app/.converge/journal/default/tasks/009-health-log-06-lift/TASK.md",
+      "seed": null
+    },
+    "010-mood-wellness-01-spec": {
+      "id": "010-mood-wellness-01-spec",
+      "depends_on": [
+        "03-build-screens"
+      ],
+      "depended_on_by": [],
+      "tags": [
+        "spec",
+        "screen-mood-wellness"
+      ],
+      "checks": [
+        "spec-exists",
+        "spec-has-content"
+      ],
+      "inputs": [
+        ".stitch/system/DESIGN.md",
+        ".stitch/UX.md",
+        ".stitch/screens.json"
+      ],
+      "outputs": [
+        ".stitch/designs/mood-wellness/SPEC.md"
+      ],
+      "frontmatter_hash": "",
+      "body_hash": "",
+      "checks_hash": "",
+      "inputs_hash": "",
+      "upstream_hash": "",
+      "state": "concrete",
+      "path": "/Users/minh/Documents/openplayboosks/examples/baby-app/.converge/journal/default/tasks/010-mood-wellness-01-spec/TASK.md",
+      "seed": null
+    },
+    "010-mood-wellness-02-design": {
+      "id": "010-mood-wellness-02-design",
+      "depends_on": [
+        "03-build-screens"
+      ],
+      "depended_on_by": [],
+      "tags": [
+        "design",
+        "html",
+        "screen-mood-wellness"
+      ],
+      "checks": [
+        "design-exists",
+        "meta-exists",
+        "uses-glossary",
+        "has-data-attributes"
+      ],
+      "inputs": [
+        ".stitch/designs/mood-wellness/SPEC.md",
+        ".stitch/system/DESIGN.md",
+        ".stitch/system/META.md"
+      ],
+      "outputs": [
+        ".stitch/designs/mood-wellness/META.md",
+        ".stitch/designs/mood-wellness/design.html"
+      ],
+      "frontmatter_hash": "",
+      "body_hash": "",
+      "checks_hash": "",
+      "inputs_hash": "",
+      "upstream_hash": "",
+      "state": "concrete",
+      "path": "/Users/minh/Documents/openplayboosks/examples/baby-app/.converge/journal/default/tasks/010-mood-wellness-02-design/TASK.md",
+      "seed": null
+    },
+    "010-mood-wellness-03-convert": {
+      "id": "010-mood-wellness-03-convert",
+      "depends_on": [
+        "03-build-screens"
+      ],
+      "depended_on_by": [],
+      "tags": [
+        "convert",
+        "flutter",
+        "screen-mood-wellness"
+      ],
+      "checks": [
+        "screen-exists",
+        "dart-valid",
+        "uses-theme",
+        "no-hardcoded-colors"
+      ],
+      "inputs": [
+        ".stitch/designs/mood-wellness/design.html",
+        ".stitch/designs/mood-wellness/SPEC.md",
+        ".stitch/system/DESIGN.md"
+      ],
+      "outputs": [
+        "lib/screens/mood_wellness/mood_wellness_screen.dart"
+      ],
+      "frontmatter_hash": "",
+      "body_hash": "",
+      "checks_hash": "",
+      "inputs_hash": "",
+      "upstream_hash": "",
+      "state": "concrete",
+      "path": "/Users/minh/Documents/openplayboosks/examples/baby-app/.converge/journal/default/tasks/010-mood-wellness-03-convert/TASK.md",
+      "seed": null
+    },
+    "010-mood-wellness-04-analyze": {
+      "id": "010-mood-wellness-04-analyze",
+      "depends_on": [
+        "03-build-screens"
+      ],
+      "depended_on_by": [],
+      "tags": [
+        "analyze",
+        "screen-mood-wellness"
+      ],
+      "checks": [
+        "widgets-json-exists"
+      ],
+      "inputs": [
+        "lib/screens/mood_wellness/mood_wellness_screen.dart"
+      ],
+      "outputs": [
+        ".stitch/designs/mood-wellness/widgets.jsonl"
+      ],
+      "frontmatter_hash": "",
+      "body_hash": "",
+      "checks_hash": "",
+      "inputs_hash": "",
+      "upstream_hash": "",
+      "state": "concrete",
+      "path": "/Users/minh/Documents/openplayboosks/examples/baby-app/.converge/journal/default/tasks/010-mood-wellness-04-analyze/TASK.md",
+      "seed": null
+    },
+    "010-mood-wellness-05-split": {
+      "id": "010-mood-wellness-05-split",
+      "depends_on": [
+        "03-build-screens"
+      ],
+      "depended_on_by": [],
+      "tags": [
+        "split",
+        "screen-mood-wellness"
+      ],
+      "checks": [],
+      "inputs": [
+        ".stitch/designs/mood-wellness/widgets.jsonl"
+      ],
+      "outputs": [
+        "lib/screens/mood_wellness/_widgets/**/*.dart"
+      ],
+      "frontmatter_hash": "",
+      "body_hash": "",
+      "checks_hash": "",
+      "inputs_hash": "",
+      "upstream_hash": "",
+      "state": "concrete",
+      "path": "/Users/minh/Documents/openplayboosks/examples/baby-app/.converge/journal/default/tasks/010-mood-wellness-05-split/TASK.md",
+      "seed": null
+    },
+    "010-mood-wellness-06-lift": {
+      "id": "010-mood-wellness-06-lift",
+      "depends_on": [
+        "03-build-screens"
+      ],
+      "depended_on_by": [],
+      "tags": [
+        "lift",
+        "screen-mood-wellness"
+      ],
+      "checks": [],
+      "inputs": [
+        ".stitch/designs/mood-wellness/widgets.jsonl",
+        "lib/screens/mood_wellness/_widgets/**/*.dart"
+      ],
+      "outputs": [
+        "lib/widgets/**/*.dart"
+      ],
+      "frontmatter_hash": "",
+      "body_hash": "",
+      "checks_hash": "",
+      "inputs_hash": "",
+      "upstream_hash": "",
+      "state": "concrete",
+      "path": "/Users/minh/Documents/openplayboosks/examples/baby-app/.converge/journal/default/tasks/010-mood-wellness-06-lift/TASK.md",
+      "seed": null
+    },
+    "011-education-01-spec": {
+      "id": "011-education-01-spec",
+      "depends_on": [
+        "03-build-screens"
+      ],
+      "depended_on_by": [],
+      "tags": [
+        "spec",
+        "screen-education"
+      ],
+      "checks": [
+        "spec-exists",
+        "spec-has-content"
+      ],
+      "inputs": [
+        ".stitch/system/DESIGN.md",
+        ".stitch/UX.md",
+        ".stitch/screens.json"
+      ],
+      "outputs": [
+        ".stitch/designs/education/SPEC.md"
+      ],
+      "frontmatter_hash": "",
+      "body_hash": "",
+      "checks_hash": "",
+      "inputs_hash": "",
+      "upstream_hash": "",
+      "state": "concrete",
+      "path": "/Users/minh/Documents/openplayboosks/examples/baby-app/.converge/journal/default/tasks/011-education-01-spec/TASK.md",
+      "seed": null
+    },
+    "011-education-02-design": {
+      "id": "011-education-02-design",
+      "depends_on": [
+        "03-build-screens"
+      ],
+      "depended_on_by": [],
+      "tags": [
+        "design",
+        "html",
+        "screen-education"
+      ],
+      "checks": [
+        "design-exists",
+        "meta-exists",
+        "uses-glossary",
+        "has-data-attributes"
+      ],
+      "inputs": [
+        ".stitch/designs/education/SPEC.md",
+        ".stitch/system/DESIGN.md",
+        ".stitch/system/META.md"
+      ],
+      "outputs": [
+        ".stitch/designs/education/META.md",
+        ".stitch/designs/education/design.html"
+      ],
+      "frontmatter_hash": "",
+      "body_hash": "",
+      "checks_hash": "",
+      "inputs_hash": "",
+      "upstream_hash": "",
+      "state": "concrete",
+      "path": "/Users/minh/Documents/openplayboosks/examples/baby-app/.converge/journal/default/tasks/011-education-02-design/TASK.md",
+      "seed": null
+    },
+    "011-education-03-convert": {
+      "id": "011-education-03-convert",
+      "depends_on": [
+        "03-build-screens"
+      ],
+      "depended_on_by": [],
+      "tags": [
+        "convert",
+        "flutter",
+        "screen-education"
+      ],
+      "checks": [
+        "screen-exists",
+        "dart-valid",
+        "uses-theme",
+        "no-hardcoded-colors"
+      ],
+      "inputs": [
+        ".stitch/designs/education/design.html",
+        ".stitch/designs/education/SPEC.md",
+        ".stitch/system/DESIGN.md"
+      ],
+      "outputs": [
+        "lib/screens/education/education_screen.dart"
+      ],
+      "frontmatter_hash": "",
+      "body_hash": "",
+      "checks_hash": "",
+      "inputs_hash": "",
+      "upstream_hash": "",
+      "state": "concrete",
+      "path": "/Users/minh/Documents/openplayboosks/examples/baby-app/.converge/journal/default/tasks/011-education-03-convert/TASK.md",
+      "seed": null
+    },
+    "011-education-04-analyze": {
+      "id": "011-education-04-analyze",
+      "depends_on": [
+        "03-build-screens"
+      ],
+      "depended_on_by": [],
+      "tags": [
+        "analyze",
+        "screen-education"
+      ],
+      "checks": [
+        "widgets-json-exists"
+      ],
+      "inputs": [
+        "lib/screens/education/education_screen.dart"
+      ],
+      "outputs": [
+        ".stitch/designs/education/widgets.jsonl"
+      ],
+      "frontmatter_hash": "",
+      "body_hash": "",
+      "checks_hash": "",
+      "inputs_hash": "",
+      "upstream_hash": "",
+      "state": "concrete",
+      "path": "/Users/minh/Documents/openplayboosks/examples/baby-app/.converge/journal/default/tasks/011-education-04-analyze/TASK.md",
+      "seed": null
+    },
+    "011-education-05-split": {
+      "id": "011-education-05-split",
+      "depends_on": [
+        "03-build-screens"
+      ],
+      "depended_on_by": [],
+      "tags": [
+        "split",
+        "screen-education"
+      ],
+      "checks": [],
+      "inputs": [
+        ".stitch/designs/education/widgets.jsonl"
+      ],
+      "outputs": [
+        "lib/screens/education/_widgets/**/*.dart"
+      ],
+      "frontmatter_hash": "",
+      "body_hash": "",
+      "checks_hash": "",
+      "inputs_hash": "",
+      "upstream_hash": "",
+      "state": "concrete",
+      "path": "/Users/minh/Documents/openplayboosks/examples/baby-app/.converge/journal/default/tasks/011-education-05-split/TASK.md",
+      "seed": null
+    },
+    "011-education-06-lift": {
+      "id": "011-education-06-lift",
+      "depends_on": [
+        "03-build-screens"
+      ],
+      "depended_on_by": [],
+      "tags": [
+        "lift",
+        "screen-education"
+      ],
+      "checks": [],
+      "inputs": [
+        ".stitch/designs/education/widgets.jsonl",
+        "lib/screens/education/_widgets/**/*.dart"
+      ],
+      "outputs": [
+        "lib/widgets/**/*.dart"
+      ],
+      "frontmatter_hash": "",
+      "body_hash": "",
+      "checks_hash": "",
+      "inputs_hash": "",
+      "upstream_hash": "",
+      "state": "concrete",
+      "path": "/Users/minh/Documents/openplayboosks/examples/baby-app/.converge/journal/default/tasks/011-education-06-lift/TASK.md",
+      "seed": null
+    },
+    "012-article-reader-01-spec": {
+      "id": "012-article-reader-01-spec",
+      "depends_on": [
+        "03-build-screens"
+      ],
+      "depended_on_by": [],
+      "tags": [
+        "spec",
+        "screen-article-reader"
+      ],
+      "checks": [
+        "spec-exists",
+        "spec-has-content"
+      ],
+      "inputs": [
+        ".stitch/system/DESIGN.md",
+        ".stitch/UX.md",
+        ".stitch/screens.json"
+      ],
+      "outputs": [
+        ".stitch/designs/article-reader/SPEC.md"
+      ],
+      "frontmatter_hash": "",
+      "body_hash": "",
+      "checks_hash": "",
+      "inputs_hash": "",
+      "upstream_hash": "",
+      "state": "concrete",
+      "path": "/Users/minh/Documents/openplayboosks/examples/baby-app/.converge/journal/default/tasks/012-article-reader-01-spec/TASK.md",
+      "seed": null
+    },
+    "012-article-reader-02-design": {
+      "id": "012-article-reader-02-design",
+      "depends_on": [
+        "03-build-screens"
+      ],
+      "depended_on_by": [],
+      "tags": [
+        "design",
+        "html",
+        "screen-article-reader"
+      ],
+      "checks": [
+        "design-exists",
+        "meta-exists",
+        "uses-glossary",
+        "has-data-attributes"
+      ],
+      "inputs": [
+        ".stitch/designs/article-reader/SPEC.md",
+        ".stitch/system/DESIGN.md",
+        ".stitch/system/META.md"
+      ],
+      "outputs": [
+        ".stitch/designs/article-reader/META.md",
+        ".stitch/designs/article-reader/design.html"
+      ],
+      "frontmatter_hash": "",
+      "body_hash": "",
+      "checks_hash": "",
+      "inputs_hash": "",
+      "upstream_hash": "",
+      "state": "concrete",
+      "path": "/Users/minh/Documents/openplayboosks/examples/baby-app/.converge/journal/default/tasks/012-article-reader-02-design/TASK.md",
+      "seed": null
+    },
+    "012-article-reader-03-convert": {
+      "id": "012-article-reader-03-convert",
+      "depends_on": [
+        "03-build-screens"
+      ],
+      "depended_on_by": [],
+      "tags": [
+        "convert",
+        "flutter",
+        "screen-article-reader"
+      ],
+      "checks": [
+        "screen-exists",
+        "dart-valid",
+        "uses-theme",
+        "no-hardcoded-colors"
+      ],
+      "inputs": [
+        ".stitch/designs/article-reader/design.html",
+        ".stitch/designs/article-reader/SPEC.md",
+        ".stitch/system/DESIGN.md"
+      ],
+      "outputs": [
+        "lib/screens/article_reader/article_reader_screen.dart"
+      ],
+      "frontmatter_hash": "",
+      "body_hash": "",
+      "checks_hash": "",
+      "inputs_hash": "",
+      "upstream_hash": "",
+      "state": "concrete",
+      "path": "/Users/minh/Documents/openplayboosks/examples/baby-app/.converge/journal/default/tasks/012-article-reader-03-convert/TASK.md",
+      "seed": null
+    },
+    "012-article-reader-04-analyze": {
+      "id": "012-article-reader-04-analyze",
+      "depends_on": [
+        "03-build-screens"
+      ],
+      "depended_on_by": [],
+      "tags": [
+        "analyze",
+        "screen-article-reader"
+      ],
+      "checks": [
+        "widgets-json-exists"
+      ],
+      "inputs": [
+        "lib/screens/article_reader/article_reader_screen.dart"
+      ],
+      "outputs": [
+        ".stitch/designs/article-reader/widgets.jsonl"
+      ],
+      "frontmatter_hash": "",
+      "body_hash": "",
+      "checks_hash": "",
+      "inputs_hash": "",
+      "upstream_hash": "",
+      "state": "concrete",
+      "path": "/Users/minh/Documents/openplayboosks/examples/baby-app/.converge/journal/default/tasks/012-article-reader-04-analyze/TASK.md",
+      "seed": null
+    },
+    "012-article-reader-05-split": {
+      "id": "012-article-reader-05-split",
+      "depends_on": [
+        "03-build-screens"
+      ],
+      "depended_on_by": [],
+      "tags": [
+        "split",
+        "screen-article-reader"
+      ],
+      "checks": [],
+      "inputs": [
+        ".stitch/designs/article-reader/widgets.jsonl"
+      ],
+      "outputs": [
+        "lib/screens/article_reader/_widgets/**/*.dart"
+      ],
+      "frontmatter_hash": "",
+      "body_hash": "",
+      "checks_hash": "",
+      "inputs_hash": "",
+      "upstream_hash": "",
+      "state": "concrete",
+      "path": "/Users/minh/Documents/openplayboosks/examples/baby-app/.converge/journal/default/tasks/012-article-reader-05-split/TASK.md",
+      "seed": null
+    },
+    "012-article-reader-06-lift": {
+      "id": "012-article-reader-06-lift",
+      "depends_on": [
+        "03-build-screens"
+      ],
+      "depended_on_by": [],
+      "tags": [
+        "lift",
+        "screen-article-reader"
+      ],
+      "checks": [],
+      "inputs": [
+        ".stitch/designs/article-reader/widgets.jsonl",
+        "lib/screens/article_reader/_widgets/**/*.dart"
+      ],
+      "outputs": [
+        "lib/widgets/**/*.dart"
+      ],
+      "frontmatter_hash": "",
+      "body_hash": "",
+      "checks_hash": "",
+      "inputs_hash": "",
+      "upstream_hash": "",
+      "state": "concrete",
+      "path": "/Users/minh/Documents/openplayboosks/examples/baby-app/.converge/journal/default/tasks/012-article-reader-06-lift/TASK.md",
+      "seed": null
+    },
+    "013-settings-01-spec": {
+      "id": "013-settings-01-spec",
+      "depends_on": [
+        "03-build-screens"
+      ],
+      "depended_on_by": [],
+      "tags": [
+        "spec",
+        "screen-settings"
+      ],
+      "checks": [
+        "spec-exists",
+        "spec-has-content"
+      ],
+      "inputs": [
+        ".stitch/system/DESIGN.md",
+        ".stitch/UX.md",
+        ".stitch/screens.json"
+      ],
+      "outputs": [
+        ".stitch/designs/settings/SPEC.md"
+      ],
+      "frontmatter_hash": "",
+      "body_hash": "",
+      "checks_hash": "",
+      "inputs_hash": "",
+      "upstream_hash": "",
+      "state": "concrete",
+      "path": "/Users/minh/Documents/openplayboosks/examples/baby-app/.converge/journal/default/tasks/013-settings-01-spec/TASK.md",
+      "seed": null
+    },
+    "013-settings-02-design": {
+      "id": "013-settings-02-design",
+      "depends_on": [
+        "03-build-screens"
+      ],
+      "depended_on_by": [],
+      "tags": [
+        "design",
+        "html",
+        "screen-settings"
+      ],
+      "checks": [
+        "design-exists",
+        "meta-exists",
+        "uses-glossary",
+        "has-data-attributes"
+      ],
+      "inputs": [
+        ".stitch/designs/settings/SPEC.md",
+        ".stitch/system/DESIGN.md",
+        ".stitch/system/META.md"
+      ],
+      "outputs": [
+        ".stitch/designs/settings/META.md",
+        ".stitch/designs/settings/design.html"
+      ],
+      "frontmatter_hash": "",
+      "body_hash": "",
+      "checks_hash": "",
+      "inputs_hash": "",
+      "upstream_hash": "",
+      "state": "concrete",
+      "path": "/Users/minh/Documents/openplayboosks/examples/baby-app/.converge/journal/default/tasks/013-settings-02-design/TASK.md",
+      "seed": null
+    },
+    "013-settings-03-convert": {
+      "id": "013-settings-03-convert",
+      "depends_on": [
+        "03-build-screens"
+      ],
+      "depended_on_by": [],
+      "tags": [
+        "convert",
+        "flutter",
+        "screen-settings"
+      ],
+      "checks": [
+        "screen-exists",
+        "dart-valid",
+        "uses-theme",
+        "no-hardcoded-colors"
+      ],
+      "inputs": [
+        ".stitch/designs/settings/design.html",
+        ".stitch/designs/settings/SPEC.md",
+        ".stitch/system/DESIGN.md"
+      ],
+      "outputs": [
+        "lib/screens/settings/settings_screen.dart"
+      ],
+      "frontmatter_hash": "",
+      "body_hash": "",
+      "checks_hash": "",
+      "inputs_hash": "",
+      "upstream_hash": "",
+      "state": "concrete",
+      "path": "/Users/minh/Documents/openplayboosks/examples/baby-app/.converge/journal/default/tasks/013-settings-03-convert/TASK.md",
+      "seed": null
+    },
+    "013-settings-04-analyze": {
+      "id": "013-settings-04-analyze",
+      "depends_on": [
+        "03-build-screens"
+      ],
+      "depended_on_by": [],
+      "tags": [
+        "analyze",
+        "screen-settings"
+      ],
+      "checks": [
+        "widgets-json-exists"
+      ],
+      "inputs": [
+        "lib/screens/settings/settings_screen.dart"
+      ],
+      "outputs": [
+        ".stitch/designs/settings/widgets.jsonl"
+      ],
+      "frontmatter_hash": "",
+      "body_hash": "",
+      "checks_hash": "",
+      "inputs_hash": "",
+      "upstream_hash": "",
+      "state": "concrete",
+      "path": "/Users/minh/Documents/openplayboosks/examples/baby-app/.converge/journal/default/tasks/013-settings-04-analyze/TASK.md",
+      "seed": null
+    },
+    "013-settings-05-split": {
+      "id": "013-settings-05-split",
+      "depends_on": [
+        "03-build-screens"
+      ],
+      "depended_on_by": [],
+      "tags": [
+        "split",
+        "screen-settings"
+      ],
+      "checks": [],
+      "inputs": [
+        ".stitch/designs/settings/widgets.jsonl"
+      ],
+      "outputs": [
+        "lib/screens/settings/_widgets/**/*.dart"
+      ],
+      "frontmatter_hash": "",
+      "body_hash": "",
+      "checks_hash": "",
+      "inputs_hash": "",
+      "upstream_hash": "",
+      "state": "concrete",
+      "path": "/Users/minh/Documents/openplayboosks/examples/baby-app/.converge/journal/default/tasks/013-settings-05-split/TASK.md",
+      "seed": null
+    },
+    "013-settings-06-lift": {
+      "id": "013-settings-06-lift",
+      "depends_on": [
+        "03-build-screens"
+      ],
+      "depended_on_by": [],
+      "tags": [
+        "lift",
+        "screen-settings"
+      ],
+      "checks": [],
+      "inputs": [
+        ".stitch/designs/settings/widgets.jsonl",
+        "lib/screens/settings/_widgets/**/*.dart"
+      ],
+      "outputs": [
+        "lib/widgets/**/*.dart"
+      ],
+      "frontmatter_hash": "",
+      "body_hash": "",
+      "checks_hash": "",
+      "inputs_hash": "",
+      "upstream_hash": "",
+      "state": "concrete",
+      "path": "/Users/minh/Documents/openplayboosks/examples/baby-app/.converge/journal/default/tasks/013-settings-06-lift/TASK.md",
+      "seed": null
+    }
+  },
+  "child_map": {
+    "03-build-screens": [
+      "001-home-01-spec",
+      "001-home-02-design",
+      "001-home-03-convert",
+      "001-home-04-analyze",
+      "001-home-05-split",
+      "001-home-06-lift",
+      "002-browse-01-spec",
+      "002-browse-02-design",
+      "002-browse-03-convert",
+      "002-browse-04-analyze",
+      "002-browse-05-split",
+      "002-browse-06-lift",
+      "003-library-01-spec",
+      "003-library-02-design",
+      "003-library-03-convert",
+      "003-library-04-analyze",
+      "003-library-05-split",
+      "003-library-06-lift",
+      "004-profile-01-spec",
+      "004-profile-02-design",
+      "004-profile-03-convert",
+      "004-profile-04-analyze",
+      "004-profile-05-split",
+      "004-profile-06-lift",
+      "005-cycle-tracking-01-spec",
+      "005-cycle-tracking-02-design",
+      "005-cycle-tracking-03-convert",
+      "005-cycle-tracking-04-analyze",
+      "005-cycle-tracking-05-split",
+      "005-cycle-tracking-06-lift",
+      "006-weight-nutrition-01-spec",
+      "006-weight-nutrition-02-design",
+      "006-weight-nutrition-03-convert",
+      "006-weight-nutrition-04-analyze",
+      "006-weight-nutrition-05-split",
+      "006-weight-nutrition-06-lift",
+      "007-pregnancy-progress-01-spec",
+      "007-pregnancy-progress-02-design",
+      "007-pregnancy-progress-03-convert",
+      "007-pregnancy-progress-04-analyze",
+      "007-pregnancy-progress-05-split",
+      "007-pregnancy-progress-06-lift",
+      "008-mindfulness-01-spec",
+      "008-mindfulness-02-design",
+      "008-mindfulness-03-convert",
+      "008-mindfulness-04-analyze",
+      "008-mindfulness-05-split",
+      "008-mindfulness-06-lift",
+      "009-health-log-01-spec",
+      "009-health-log-02-design",
+      "009-health-log-03-convert",
+      "009-health-log-04-analyze",
+      "009-health-log-05-split",
+      "009-health-log-06-lift",
+      "010-mood-wellness-01-spec",
+      "010-mood-wellness-02-design",
+      "010-mood-wellness-03-convert",
+      "010-mood-wellness-04-analyze",
+      "010-mood-wellness-05-split",
+      "010-mood-wellness-06-lift",
+      "011-education-01-spec",
+      "011-education-02-design",
+      "011-education-03-convert",
+      "011-education-04-analyze",
+      "011-education-05-split",
+      "011-education-06-lift",
+      "012-article-reader-01-spec",
+      "012-article-reader-02-design",
+      "012-article-reader-03-convert",
+      "012-article-reader-04-analyze",
+      "012-article-reader-05-split",
+      "012-article-reader-06-lift",
+      "013-settings-01-spec",
+      "013-settings-02-design",
+      "013-settings-03-convert",
+      "013-settings-04-analyze",
+      "013-settings-05-split",
+      "013-settings-06-lift"
+    ],
+    "07-build-overlays": [],
+    "08-generate-assets": [],
+    "09-generate-tests": [],
+    "001-gather-idea": [],
+    "002-generate-prd": [],
+    "003-generate-ux": [],
+    "004-breakdown-ux-to-screens": [],
+    "002-generate-design-system": [],
+    "005-generate-design-references": [],
+    "001-analyze-data-models": [],
+    "002-create-models": [],
+    "003-create-mock-data": [],
+    "001-connect-providers": [],
+    "002-analyze-navigations": [],
+    "004-verify": [],
+    "001-provider-PregnancyProfile": [],
+    "002-provider-WeightEntry": [],
+    "003-provider-CycleEntry": [],
+    "004-provider-MoodEntry": [],
+    "005-provider-SymptomEntry": [],
+    "006-provider-DoctorVisit": [],
+    "007-provider-Reminder": [],
+    "008-provider-WeekContent": [],
+    "009-provider-InfoItem": [],
+    "010-provider-SelfCareCheckState": [],
+    "011-provider-Article": [],
+    "012-provider-Exercise": [],
+    "013-provider-UserPreferences": [],
+    "001-BookmarkButton-onPressed-1": [],
+    "001-BottomNav-onDestinationSelected-1": [],
+    "001-ExerciseGuideItem-onTap-1": [],
+    "001-ExportData-onTap-1": [],
+    "001-FAB-onPressed-1": [],
+    "001-FeaturedExerciseCard-onTap-1": [],
+    "001-ModeSelectorPill-onTap-1": [],
+    "001-SearchButton-onPressed-1": [],
+    "001-StartExerciseButton-onPressed-1": [],
+    "001-home": [],
+    "002-ExerciseCard-onTap-1": [],
+    "002-FAB-onPressed-1": [],
+    "002-FeaturedArticleCard-onTap-1": [],
+    "002-PrimaryCta-onPressed-1": [],
+    "002-RelatedArticleCard-onTap-1": [],
+    "002-cycle-tracking": [],
+    "003-ArticleCard-onTap-1": [],
+    "003-MoodBanner-onTap-1": [],
+    "003-weight-nutrition": [],
+    "004-BookmarkedArticleCard-onTap-1": [],
+    "004-pregnancy-progress": [],
+    "005-mindfulness": [],
+    "006-exercise-detail": [],
+    "007-health-log": [],
+    "008-mood-wellness": [],
+    "009-education": [],
+    "010-article-reader": [],
+    "011-settings": [],
+    "01-prepare-requirements-diverge": [
+      "001-gather-idea",
+      "002-generate-prd",
+      "003-generate-ux",
+      "004-breakdown-ux-to-screens"
+    ],
+    "01-prepare-requirements-converge": [],
+    "02-design-system-diverge": [
+      "002-generate-design-system",
+      "005-generate-design-references"
+    ],
+    "02-design-system-converge": [],
+    "05-add-behavior-diverge": [
+      "001-analyze-data-models",
+      "002-create-models",
+      "003-create-mock-data",
+      "004-implement-providers"
+    ],
+    "05-add-behavior-converge": [],
+    "06-wire-screens-diverge": [
+      "001-connect-providers",
+      "002-analyze-navigations",
+      "003-wire-per-screen",
+      "004-verify"
+    ],
+    "06-wire-screens-converge": [],
+    "004-implement-providers-diverge": [
+      "001-provider-PregnancyProfile",
+      "002-provider-WeightEntry",
+      "003-provider-CycleEntry",
+      "004-provider-MoodEntry",
+      "005-provider-SymptomEntry",
+      "006-provider-DoctorVisit",
+      "007-provider-Reminder",
+      "008-provider-WeekContent",
+      "009-provider-InfoItem",
+      "010-provider-SelfCareCheckState",
+      "011-provider-Article",
+      "012-provider-Exercise",
+      "013-provider-UserPreferences"
+    ],
+    "004-implement-providers-converge": [],
+    "003-wire-per-screen-diverge": [
+      "001-BookmarkButton-onPressed-1",
+      "001-BottomNav-onDestinationSelected-1",
+      "001-ExerciseGuideItem-onTap-1",
+      "001-ExportData-onTap-1",
+      "001-FAB-onPressed-1",
+      "001-FeaturedExerciseCard-onTap-1",
+      "001-ModeSelectorPill-onTap-1",
+      "001-SearchButton-onPressed-1",
+      "001-StartExerciseButton-onPressed-1",
+      "001-home",
+      "002-ExerciseCard-onTap-1",
+      "002-FAB-onPressed-1",
+      "002-FeaturedArticleCard-onTap-1",
+      "002-PrimaryCta-onPressed-1",
+      "002-RelatedArticleCard-onTap-1",
+      "002-cycle-tracking",
+      "003-ArticleCard-onTap-1",
+      "003-MoodBanner-onTap-1",
+      "003-weight-nutrition",
+      "004-BookmarkedArticleCard-onTap-1",
+      "004-pregnancy-progress",
+      "005-mindfulness",
+      "006-exercise-detail",
+      "007-health-log",
+      "008-mood-wellness",
+      "009-education",
+      "010-article-reader",
+      "011-settings"
+    ],
+    "003-wire-per-screen-converge": [],
+    "root-diverge": [],
+    "root-converge": [],
+    "001-home-01-spec": [],
+    "001-home-02-design": [],
+    "001-home-03-convert": [],
+    "001-home-04-analyze": [],
+    "001-home-05-split": [],
+    "001-home-06-lift": [],
+    "002-browse-01-spec": [],
+    "002-browse-02-design": [],
+    "002-browse-03-convert": [],
+    "002-browse-04-analyze": [],
+    "002-browse-05-split": [],
+    "002-browse-06-lift": [],
+    "003-library-01-spec": [],
+    "003-library-02-design": [],
+    "003-library-03-convert": [],
+    "003-library-04-analyze": [],
+    "003-library-05-split": [],
+    "003-library-06-lift": [],
+    "004-profile-01-spec": [],
+    "004-profile-02-design": [],
+    "004-profile-03-convert": [],
+    "004-profile-04-analyze": [],
+    "004-profile-05-split": [],
+    "004-profile-06-lift": [],
+    "005-cycle-tracking-01-spec": [],
+    "005-cycle-tracking-02-design": [],
+    "005-cycle-tracking-03-convert": [],
+    "005-cycle-tracking-04-analyze": [],
+    "005-cycle-tracking-05-split": [],
+    "005-cycle-tracking-06-lift": [],
+    "006-weight-nutrition-01-spec": [],
+    "006-weight-nutrition-02-design": [],
+    "006-weight-nutrition-03-convert": [],
+    "006-weight-nutrition-04-analyze": [],
+    "006-weight-nutrition-05-split": [],
+    "006-weight-nutrition-06-lift": [],
+    "007-pregnancy-progress-01-spec": [],
+    "007-pregnancy-progress-02-design": [],
+    "007-pregnancy-progress-03-convert": [],
+    "007-pregnancy-progress-04-analyze": [],
+    "007-pregnancy-progress-05-split": [],
+    "007-pregnancy-progress-06-lift": [],
+    "008-mindfulness-01-spec": [],
+    "008-mindfulness-02-design": [],
+    "008-mindfulness-03-convert": [],
+    "008-mindfulness-04-analyze": [],
+    "008-mindfulness-05-split": [],
+    "008-mindfulness-06-lift": [],
+    "009-health-log-01-spec": [],
+    "009-health-log-02-design": [],
+    "009-health-log-03-convert": [],
+    "009-health-log-04-analyze": [],
+    "009-health-log-05-split": [],
+    "009-health-log-06-lift": [],
+    "010-mood-wellness-01-spec": [],
+    "010-mood-wellness-02-design": [],
+    "010-mood-wellness-03-convert": [],
+    "010-mood-wellness-04-analyze": [],
+    "010-mood-wellness-05-split": [],
+    "010-mood-wellness-06-lift": [],
+    "011-education-01-spec": [],
+    "011-education-02-design": [],
+    "011-education-03-convert": [],
+    "011-education-04-analyze": [],
+    "011-education-05-split": [],
+    "011-education-06-lift": [],
+    "012-article-reader-01-spec": [],
+    "012-article-reader-02-design": [],
+    "012-article-reader-03-convert": [],
+    "012-article-reader-04-analyze": [],
+    "012-article-reader-05-split": [],
+    "012-article-reader-06-lift": [],
+    "013-settings-01-spec": [],
+    "013-settings-02-design": [],
+    "013-settings-03-convert": [],
+    "013-settings-04-analyze": [],
+    "013-settings-05-split": [],
+    "013-settings-06-lift": []
+  },
+  "parent_map": {
+    "03-build-screens": [],
+    "07-build-overlays": [],
+    "08-generate-assets": [],
+    "09-generate-tests": [],
+    "001-gather-idea": [],
+    "002-generate-prd": [],
+    "003-generate-ux": [],
+    "004-breakdown-ux-to-screens": [],
+    "002-generate-design-system": [],
+    "005-generate-design-references": [],
+    "001-analyze-data-models": [],
+    "002-create-models": [],
+    "003-create-mock-data": [],
+    "001-connect-providers": [],
+    "002-analyze-navigations": [],
+    "004-verify": [],
+    "001-provider-PregnancyProfile": [],
+    "002-provider-WeightEntry": [],
+    "003-provider-CycleEntry": [],
+    "004-provider-MoodEntry": [],
+    "005-provider-SymptomEntry": [],
+    "006-provider-DoctorVisit": [],
+    "007-provider-Reminder": [],
+    "008-provider-WeekContent": [],
+    "009-provider-InfoItem": [],
+    "010-provider-SelfCareCheckState": [],
+    "011-provider-Article": [],
+    "012-provider-Exercise": [],
+    "013-provider-UserPreferences": [],
+    "001-BookmarkButton-onPressed-1": [],
+    "001-BottomNav-onDestinationSelected-1": [],
+    "001-ExerciseGuideItem-onTap-1": [],
+    "001-ExportData-onTap-1": [],
+    "001-FAB-onPressed-1": [],
+    "001-FeaturedExerciseCard-onTap-1": [],
+    "001-ModeSelectorPill-onTap-1": [],
+    "001-SearchButton-onPressed-1": [],
+    "001-StartExerciseButton-onPressed-1": [],
+    "001-home": [],
+    "002-ExerciseCard-onTap-1": [],
+    "002-FAB-onPressed-1": [],
+    "002-FeaturedArticleCard-onTap-1": [],
+    "002-PrimaryCta-onPressed-1": [],
+    "002-RelatedArticleCard-onTap-1": [],
+    "002-cycle-tracking": [],
+    "003-ArticleCard-onTap-1": [],
+    "003-MoodBanner-onTap-1": [],
+    "003-weight-nutrition": [],
+    "004-BookmarkedArticleCard-onTap-1": [],
+    "004-pregnancy-progress": [],
+    "005-mindfulness": [],
+    "006-exercise-detail": [],
+    "007-health-log": [],
+    "008-mood-wellness": [],
+    "009-education": [],
+    "010-article-reader": [],
+    "011-settings": [],
+    "01-prepare-requirements-diverge": [],
+    "01-prepare-requirements-converge": [],
+    "02-design-system-diverge": [],
+    "02-design-system-converge": [],
+    "05-add-behavior-diverge": [],
+    "05-add-behavior-converge": [],
+    "06-wire-screens-diverge": [],
+    "06-wire-screens-converge": [],
+    "004-implement-providers-diverge": [],
+    "004-implement-providers-converge": [],
+    "003-wire-per-screen-diverge": [],
+    "003-wire-per-screen-converge": [],
+    "root-diverge": [],
+    "root-converge": [],
+    "001-home-01-spec": [
+      "03-build-screens"
+    ],
+    "001-home-02-design": [
+      "03-build-screens"
+    ],
+    "001-home-03-convert": [
+      "03-build-screens"
+    ],
+    "001-home-04-analyze": [
+      "03-build-screens"
+    ],
+    "001-home-05-split": [
+      "03-build-screens"
+    ],
+    "001-home-06-lift": [
+      "03-build-screens"
+    ],
+    "002-browse-01-spec": [
+      "03-build-screens"
+    ],
+    "002-browse-02-design": [
+      "03-build-screens"
+    ],
+    "002-browse-03-convert": [
+      "03-build-screens"
+    ],
+    "002-browse-04-analyze": [
+      "03-build-screens"
+    ],
+    "002-browse-05-split": [
+      "03-build-screens"
+    ],
+    "002-browse-06-lift": [
+      "03-build-screens"
+    ],
+    "003-library-01-spec": [
+      "03-build-screens"
+    ],
+    "003-library-02-design": [
+      "03-build-screens"
+    ],
+    "003-library-03-convert": [
+      "03-build-screens"
+    ],
+    "003-library-04-analyze": [
+      "03-build-screens"
+    ],
+    "003-library-05-split": [
+      "03-build-screens"
+    ],
+    "003-library-06-lift": [
+      "03-build-screens"
+    ],
+    "004-profile-01-spec": [
+      "03-build-screens"
+    ],
+    "004-profile-02-design": [
+      "03-build-screens"
+    ],
+    "004-profile-03-convert": [
+      "03-build-screens"
+    ],
+    "004-profile-04-analyze": [
+      "03-build-screens"
+    ],
+    "004-profile-05-split": [
+      "03-build-screens"
+    ],
+    "004-profile-06-lift": [
+      "03-build-screens"
+    ],
+    "005-cycle-tracking-01-spec": [
+      "03-build-screens"
+    ],
+    "005-cycle-tracking-02-design": [
+      "03-build-screens"
+    ],
+    "005-cycle-tracking-03-convert": [
+      "03-build-screens"
+    ],
+    "005-cycle-tracking-04-analyze": [
+      "03-build-screens"
+    ],
+    "005-cycle-tracking-05-split": [
+      "03-build-screens"
+    ],
+    "005-cycle-tracking-06-lift": [
+      "03-build-screens"
+    ],
+    "006-weight-nutrition-01-spec": [
+      "03-build-screens"
+    ],
+    "006-weight-nutrition-02-design": [
+      "03-build-screens"
+    ],
+    "006-weight-nutrition-03-convert": [
+      "03-build-screens"
+    ],
+    "006-weight-nutrition-04-analyze": [
+      "03-build-screens"
+    ],
+    "006-weight-nutrition-05-split": [
+      "03-build-screens"
+    ],
+    "006-weight-nutrition-06-lift": [
+      "03-build-screens"
+    ],
+    "007-pregnancy-progress-01-spec": [
+      "03-build-screens"
+    ],
+    "007-pregnancy-progress-02-design": [
+      "03-build-screens"
+    ],
+    "007-pregnancy-progress-03-convert": [
+      "03-build-screens"
+    ],
+    "007-pregnancy-progress-04-analyze": [
+      "03-build-screens"
+    ],
+    "007-pregnancy-progress-05-split": [
+      "03-build-screens"
+    ],
+    "007-pregnancy-progress-06-lift": [
+      "03-build-screens"
+    ],
+    "008-mindfulness-01-spec": [
+      "03-build-screens"
+    ],
+    "008-mindfulness-02-design": [
+      "03-build-screens"
+    ],
+    "008-mindfulness-03-convert": [
+      "03-build-screens"
+    ],
+    "008-mindfulness-04-analyze": [
+      "03-build-screens"
+    ],
+    "008-mindfulness-05-split": [
+      "03-build-screens"
+    ],
+    "008-mindfulness-06-lift": [
+      "03-build-screens"
+    ],
+    "009-health-log-01-spec": [
+      "03-build-screens"
+    ],
+    "009-health-log-02-design": [
+      "03-build-screens"
+    ],
+    "009-health-log-03-convert": [
+      "03-build-screens"
+    ],
+    "009-health-log-04-analyze": [
+      "03-build-screens"
+    ],
+    "009-health-log-05-split": [
+      "03-build-screens"
+    ],
+    "009-health-log-06-lift": [
+      "03-build-screens"
+    ],
+    "010-mood-wellness-01-spec": [
+      "03-build-screens"
+    ],
+    "010-mood-wellness-02-design": [
+      "03-build-screens"
+    ],
+    "010-mood-wellness-03-convert": [
+      "03-build-screens"
+    ],
+    "010-mood-wellness-04-analyze": [
+      "03-build-screens"
+    ],
+    "010-mood-wellness-05-split": [
+      "03-build-screens"
+    ],
+    "010-mood-wellness-06-lift": [
+      "03-build-screens"
+    ],
+    "011-education-01-spec": [
+      "03-build-screens"
+    ],
+    "011-education-02-design": [
+      "03-build-screens"
+    ],
+    "011-education-03-convert": [
+      "03-build-screens"
+    ],
+    "011-education-04-analyze": [
+      "03-build-screens"
+    ],
+    "011-education-05-split": [
+      "03-build-screens"
+    ],
+    "011-education-06-lift": [
+      "03-build-screens"
+    ],
+    "012-article-reader-01-spec": [
+      "03-build-screens"
+    ],
+    "012-article-reader-02-design": [
+      "03-build-screens"
+    ],
+    "012-article-reader-03-convert": [
+      "03-build-screens"
+    ],
+    "012-article-reader-04-analyze": [
+      "03-build-screens"
+    ],
+    "012-article-reader-05-split": [
+      "03-build-screens"
+    ],
+    "012-article-reader-06-lift": [
+      "03-build-screens"
+    ],
+    "013-settings-01-spec": [
+      "03-build-screens"
+    ],
+    "013-settings-02-design": [
+      "03-build-screens"
+    ],
+    "013-settings-03-convert": [
+      "03-build-screens"
+    ],
+    "013-settings-04-analyze": [
+      "03-build-screens"
+    ],
+    "013-settings-05-split": [
+      "03-build-screens"
+    ],
+    "013-settings-06-lift": [
+      "03-build-screens"
+    ]
+  }
+}

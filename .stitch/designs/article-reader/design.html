@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=375, initial-scale=1.0">
+  <title>Article Reader — Baby Bump Design</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'lavender': '#7C3AED',
+            'lavender-tint': '#F5F3FF',
+            'lavender-light': '#A78BFA',
+            'blush': '#F9A8D4',
+            'mint': '#6EE7B7',
+            'mist': '#FAFAFA',
+            'graphite': '#1F2937',
+            'stone': '#6B7280',
+            'misty-border': '#E5E7EB',
+            'coral': '#EF4444',
+            'warm-white': '#FFFFFF',
+          },
+          fontFamily: {
+            'nunito': ['Nunito', 'system-ui', 'sans-serif'],
+          },
+          borderRadius: {
+            'card': '16px',
+            'sheet': '28px',
+            'pill': '999px',
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Nunito', system-ui, sans-serif;
+      background: #E8E8E8;
+      display: flex;
+      justify-content: center;
+      padding: 32px 16px;
+      min-height: 100vh;
+    }
+    .phone {
+      width: 375px;
+      min-height: 812px;
+      border-radius: 40px;
+      overflow: hidden;
+      position: relative;
+      box-shadow: 0 24px 64px rgba(0,0,0,0.2);
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+    .card-shadow {
+      box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    }
+    .card-tap:active {
+      transform: scale(0.98);
+      transition: transform 200ms ease-out;
+    }
+    .icon-btn:active {
+      transform: scale(0.95);
+      transition: transform 200ms ease-out;
+    }
+    @keyframes fade-in {
+      from { opacity: 0; transform: translateY(8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .animate-fade-in {
+      animation: fade-in 300ms ease-out backwards;
+    }
+    @keyframes slide-in-right {
+      from { opacity: 0; transform: translateX(20px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+    .slide-in {
+      animation: slide-in-right 300ms ease-out backwards;
+    }
+  </style>
+</head>
+<body>
+  <div class="phone">
+
+    <!-- Scaffold with CustomScrollView + SliverAppBar -->
+    <div data-flutter="scaffold" class="scaffold" style="display: flex; flex-direction: column; min-height: 100vh; background-color: #F5F3FF;">
+
+      <!-- AppBar with collapsing header -->
+      <header data-flutter="sliver-app-bar" data-expanded-height="240" data-pinned="true" class="relative bg-lavender-tint">
+
+        <!-- Hero Image -->
+        <div class="absolute inset-0">
+          <img data-flutter="cached-image" class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=750&q=80" alt="Article hero image" />
+          <!-- Gradient overlay for text readability -->
+          <div class="absolute inset-0 bg-gradient-to-t from-graphite/70 via-graphite/20 to-transparent"></div>
+        </div>
+
+        <!-- Header content (collapses on scroll) -->
+        <div class="relative z-10 flex flex-col h-full justify-end p-4">
+          <!-- Topic badge -->
+          <div data-flutter="chip" data-color="secondary" data-selected="true" class="self-start mb-2">
+            <span class="bg-blush text-white text-xs font-semibold px-3 py-1 rounded-full">Nutrition</span>
+          </div>
+          <!-- Title -->
+          <h1 class="text-2xl font-semibold text-white leading-tight" style="line-height: 28px; text-shadow: 0 2px 8px rgba(0,0,0,0.3);">Understanding Iron Needs During Pregnancy</h1>
+          <!-- Metadata row -->
+          <div class="flex items-center gap-2 mt-2 text-white/90">
+            <span class="text-xs font-medium">Dr. Sarah Chen</span>
+            <span class="text-xs">•</span>
+            <span class="text-xs">May 15, 2026</span>
+            <span class="text-xs">•</span>
+            <span class="text-xs">5 min read</span>
+          </div>
+        </div>
+
+        <!-- AppBar Actions overlay (back, bookmark, share) -->
+        <div class="absolute top-0 left-0 right-0 flex items-center h-14 px-2">
+          <!-- Back button -->
+          <button data-flutter="icon-btn" aria-label="Navigate back" class="icon-btn w-12 h-12 flex items-center justify-center rounded-full bg-white/20 backdrop-blur-sm hover:bg-white/30">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+            </svg>
+          </button>
+          <div class="flex-1"></div>
+          <!-- Bookmark button -->
+          <button data-flutter="icon-btn" aria-label="Bookmark article" class="icon-btn w-12 h-12 flex items-center justify-center rounded-full bg-white/20 backdrop-blur-sm hover:bg-white/30">
+            <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"/>
+            </svg>
+          </button>
+          <!-- Share button -->
+          <button data-flutter="icon-btn" aria-label="Share article" class="icon-btn w-12 h-12 flex items-center justify-center rounded-full bg-white/20 backdrop-blur-sm hover:bg-white/30">
+            <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"/>
+            </svg>
+          </button>
+        </div>
+      </header>
+
+      <!-- Body - scrollable content -->
+      <main data-flutter="sliver-list" class="flex-1 overflow-y-auto pb-24">
+
+        <!-- Article Content Section -->
+        <section class="px-4 py-6">
+
+          <!-- Section Header -->
+          <h2 class="text-xl font-semibold text-lavender mb-4" style="line-height: 28px;">Why Iron Matters More Than Ever</h2>
+
+          <!-- Paragraph 1 -->
+          <p class="text-base text-graphite mb-4 leading-relaxed" style="line-height: 24px; letter-spacing: 0.15pt;">
+            During pregnancy, your body needs nearly twice as much iron as usual to support the growth of your baby and the expansion of your own blood supply. Iron is essential for making hemoglobin — the protein in red blood cells that carries oxygen to your tissues and your growing baby.
+          </p>
+
+          <!-- Pull Quote -->
+          <div data-flutter="card" class="bg-blush/10 border-l-4 border-blush p-4 mb-6 rounded-r-card">
+            <p class="text-base text-graphite italic leading-relaxed" style="line-height: 24px;">
+              "Your iron needs jump from 18mg to 27mg daily during pregnancy — that's a 50% increase in just nine months."
+            </p>
+          </div>
+
+          <!-- Section Header 2 -->
+          <h2 class="text-xl font-semibold text-lavender mb-4" style="line-height: 28px;">Signs of Iron Deficiency</h2>
+
+          <!-- Paragraph 2 -->
+          <p class="text-base text-graphite mb-4 leading-relaxed" style="line-height: 24px; letter-spacing: 0.15pt;">
+            Many pregnant people don't realize they're low in iron until a blood test reveals the issue. But paying attention to early signs can help you catch deficiency before it becomes problematic.
+          </p>
+
+          <!-- Bullet List -->
+          <div class="space-y-3 mb-6">
+            <div class="flex items-start gap-3">
+              <div class="w-2 h-2 rounded-full bg-blush mt-2 shrink-0"></div>
+              <p class="text-base text-graphite leading-relaxed" style="line-height: 24px;">Unusual fatigue or weakness that doesn't ease with rest</p>
+            </div>
+            <div class="flex items-start gap-3">
+              <div class="w-2 h-2 rounded-full bg-blush mt-2 shrink-0"></div>
+              <p class="text-base text-graphite leading-relaxed" style="line-height: 24px;">Pale skin, especially in the eyelids, nails, or gums</p>
+            </div>
+            <div class="flex items-start gap-3">
+              <div class="w-2 h-2 rounded-full bg-blush mt-2 shrink-0"></div>
+              <p class="text-base text-graphite leading-relaxed" style="line-height: 24px;">Shortness of breath during normal activities</p>
+            </div>
+            <div class="flex items-start gap-3">
+              <div class="w-2 h-2 rounded-full bg-blush mt-2 shrink-0"></div>
+              <p class="text-base text-graphite leading-relaxed" style="line-height: 24px;">Persistent headaches or difficulty concentrating</p>
+            </div>
+            <div class="flex items-start gap-3">
+              <div class="w-2 h-2 rounded-full bg-blush mt-2 shrink-0"></div>
+              <p class="text-base text-graphite leading-relaxed" style="line-height: 24px;">Dizziness or lightheadedness</p>
+            </div>
+          </div>
+
+          <!-- Section Header 3 -->
+          <h2 class="text-xl font-semibold text-lavender mb-4" style="line-height: 28px;">Iron-Rich Foods to Include</h2>
+
+          <!-- Paragraph 3 -->
+          <p class="text-base text-graphite mb-4 leading-relaxed" style="line-height: 24px; letter-spacing: 0.15pt;">
+            The best approach to getting enough iron is through a balanced diet. Both heme iron (from animal sources) and non-heme iron (from plant sources and supplements) contribute to your daily needs, but heme iron is absorbed more efficiently by your body.
+          </p>
+
+          <!-- Pull Quote 2 -->
+          <div data-flutter="card" class="bg-blush/10 border-l-4 border-blush p-4 mb-6 rounded-r-card">
+            <p class="text-base text-graphite italic leading-relaxed" style="line-height: 24px;">
+              "Pairing iron-rich foods with vitamin C — like orange slices with your spinach salad — can boost absorption by up to 6 times."
+            </p>
+          </div>
+
+          <!-- Divider -->
+          <hr class="border-misty-border my-6" />
+
+          <!-- Related Articles Section -->
+          <section class="mt-6">
+            <h3 class="text-lg font-semibold text-graphite mb-4">Related Articles</h3>
+
+            <div data-flutter="horizontal-scroll" class="overflow-x-auto -mx-4 px-4">
+              <div data-flutter="row" data-spacing="sm" class="flex gap-3">
+
+                <!-- Related Article Card 1 -->
+                <div data-flutter="card" data-color="primary" class="card-tap bg-mist rounded-card card-shadow w-[140px] shrink-0 cursor-pointer slide-in overflow-hidden animate-fade-in" style="animation-delay: 0ms;" data-route="/article-reader/rel-1">
+                  <div class="h-20 bg-lavender/10 rounded-t-card flex items-center justify-center">
+                    <svg class="w-8 h-8 text-lavender/40" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+                    </svg>
+                  </div>
+                  <div class="p-3">
+                    <h4 class="text-sm font-semibold text-graphite mb-1 line-clamp-2" style="line-height: 18px;">Best Prenatal Vitamins for Morning Sickness</h4>
+                    <div class="flex items-center gap-1 mt-2 text-stone">
+                      <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                      </svg>
+                      <span class="text-[11px]">4 min</span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Related Article Card 2 -->
+                <div data-flutter="card" data-color="secondary" class="card-tap bg-mist rounded-card card-shadow w-[140px] shrink-0 cursor-pointer slide-in overflow-hidden animate-fade-in" style="animation-delay: 50ms;" data-route="/article-reader/rel-2">
+                  <div class="h-20 bg-blush/10 rounded-t-card flex items-center justify-center">
+                    <svg class="w-8 h-8 text-blush/40" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+                    </svg>
+                  </div>
+                  <div class="p-3">
+                    <h4 class="text-sm font-semibold text-graphite mb-1 line-clamp-2" style="line-height: 18px;">Managing Pregnancy Fatigue Naturally</h4>
+                    <div class="flex items-center gap-1 mt-2 text-stone">
+                      <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                      </svg>
+                      <span class="text-[11px]">5 min</span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Related Article Card 3 -->
+                <div data-flutter="card" data-color="tertiary" class="card-tap bg-mist rounded-card card-shadow w-[140px] shrink-0 cursor-pointer slide-in overflow-hidden animate-fade-in" style="animation-delay: 100ms;" data-route="/article-reader/rel-3">
+                  <div class="h-20 bg-mint/10 rounded-t-card flex items-center justify-center">
+                    <svg class="w-8 h-8 text-mint/40" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+                    </svg>
+                  </div>
+                  <div class="p-3">
+                    <h4 class="text-sm font-semibold text-graphite mb-1 line-clamp-2" style="line-height: 18px;">Second Trimester Meal Planning</h4>
+                    <div class="flex items-center gap-1 mt-2 text-stone">
+                      <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                      </svg>
+                      <span class="text-[11px]">6 min</span>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </section>
+
+          <!-- Bottom padding -->
+          <div class="h-8"></div>
+
+        </section>
+
+      </main>
+
+    </div>
+  </div>
+</body>
+</html>

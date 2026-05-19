@@ -1,0 +1,22 @@
+{
+  "attemptNumber": 1,
+  "startedAt": "2026-05-19T02:28:48.692Z",
+  "completedAt": "2026-05-19T02:29:08.384Z",
+  "spawnedTasks": [
+    {
+      "id": "article-reader-split-001-QuoteCallout",
+      "writeToPath": ".converge/journal/default/tasks/article-reader-split-001-QuoteCallout/TASK.md"
+    },
+    {
+      "id": "article-reader-split-002-BulletItem",
+      "writeToPath": ".converge/journal/default/tasks/article-reader-split-002-BulletItem/TASK.md"
+    },
+    {
+      "id": "article-reader-split-003-RelatedArticleCard",
+      "writeToPath": ".converge/journal/default/tasks/article-reader-split-003-RelatedArticleCard/TASK.md"
+    }
+  ],
+  "status": "success",
+  "spawnCount": 3,
+  "durationMs": 19692
+}

@@ -1,0 +1,23 @@
+{
+  "taskId": "012-article-reader-06-lift",
+  "attemptNumber": 1,
+  "inputs": [
+    {
+      "pattern": ".stitch/designs/article-reader/widgets.jsonl",
+      "count": 1,
+      "samples": [
+        ".stitch/designs/article-reader/widgets.jsonl"
+      ]
+    },
+    {
+      "pattern": "lib/screens/article_reader/_widgets/**/*.dart",
+      "count": 0,
+      "samples": []
+    }
+  ],
+  "outputs": [
+    "lib/widgets/**/*.dart"
+  ],
+  "blocked": true,
+  "blockedReason": "Missing required inputs: lib/screens/article_reader/_widgets/**/*.dart"
+}

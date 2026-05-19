@@ -1,0 +1,17 @@
+{
+  "taskId": "article-reader-split-003-RelatedArticleCard",
+  "attemptNumber": 1,
+  "inputs": [
+    {
+      "pattern": "lib/screens/article_reader/article_reader_screen.dart",
+      "count": 1,
+      "samples": [
+        "lib/screens/article_reader/article_reader_screen.dart"
+      ]
+    }
+  ],
+  "outputs": [
+    "lib/screens/article_reader/_widgets/RelatedArticleCard.dart"
+  ],
+  "blocked": false
+}

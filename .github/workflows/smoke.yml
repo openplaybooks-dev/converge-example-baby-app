@@ -1,0 +1,57 @@
+name: smoke
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  playbook:
+    name: Stub-backend playbook run
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Install Converge
+        run: npm i -g @openplaybooks/converge
+
+      - name: Set up Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+
+      - name: Seed env (no real API keys; stub backend doesn't need them)
+        run: |
+          cp .env.example .env
+          echo "IMAGE_BACKEND=stub" >> .env
+
+      - name: Wipe generated outputs
+        run: ./scripts/clean.sh
+
+      - name: Run playbook with stub image backend
+        env:
+          IMAGE_BACKEND: stub
+        run: ./scripts/run.sh
+
+      - name: Verify outputs
+        run: |
+          ls lib/screens | wc -l
+          find assets/illustrations -name '*.svg' | wc -l
+          test -f lib/router/app_router.dart
+          test -f lib/theme/app_theme.dart
+
+      - name: Upload journal on failure
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: journal-${{ github.run_id }}
+          path: .converge/journal/
+          if-no-files-found: ignore

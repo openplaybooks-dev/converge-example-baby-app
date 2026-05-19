@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=375, initial-scale=1.0" />
+  <title>My Pregnancy — Baby Bump</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --lavender-bloom: #7C3AED;
+      --blush-rose: #F9A8D4;
+      --soft-mint: #6EE7B7;
+      --morning-mist: #FAFAFA;
+      --lavender-tint: #F5F3FF;
+      --deep-graphite: #1F2937;
+      --stone-grey: #6B7280;
+      --misty-border: #E5E7EB;
+      --warm-white: #FFFFFF;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+
+    body {
+      font-family: 'Nunito', system-ui, sans-serif;
+      background: #E8E8E8;
+      display: flex;
+      justify-content: center;
+      padding: 32px 16px;
+      min-height: 100vh;
+    }
+
+    .phone {
+      width: 375px;
+      min-height: 812px;
+      background: var(--lavender-tint);
+      border-radius: 40px;
+      overflow: hidden;
+      position: relative;
+      box-shadow: 0 24px 64px rgba(0,0,0,0.2);
+    }
+
+    /* Card shadow utility */
+    .card-shadow { box-shadow: 0 8px 24px rgba(0,0,0,0.08); }
+
+    /* Card radius */
+    .radius-lg { border-radius: 16px; }
+    .radius-sheet { border-radius: 28px 28px 0 0; }
+    .radius-full { border-radius: 999px; }
+
+    /* Text styles */
+    .text-hero { font-size: 57px; font-weight: 700; line-height: 64px; color: var(--lavender-bloom); }
+    .text-title { font-size: 22px; font-weight: 600; line-height: 28px; color: var(--deep-graphite); }
+    .text-subtitle { font-size: 16px; font-weight: 500; line-height: 24px; color: var(--deep-graphite); }
+    .text-body { font-size: 16px; font-weight: 400; line-height: 24px; color: var(--deep-graphite); }
+    .text-body-sm { font-size: 14px; font-weight: 400; line-height: 20px; color: var(--deep-graphite); }
+    .text-caption { font-size: 11px; font-weight: 500; line-height: 16px; color: var(--stone-grey); }
+    .text-muted { font-size: 14px; font-weight: 400; line-height: 20px; color: var(--stone-grey); }
+
+    /* Bottom safe area */
+    .safe-bottom { padding-bottom: 34px; }
+  </style>
+</head>
+<body>
+  <div class="phone">
+
+    <!-- Scaffold -->
+    <div data-flutter="scaffold" class="scaffold flex flex-col min-h-screen bg-lavender-tint">
+
+      <!-- AppBar: no elevation, Lavender Tint background -->
+      <header data-flutter="app-bar" class="h-14 flex items-center px-1 bg-lavender-tint" style="box-shadow: none;">
+        <!-- Back button -->
+        <button data-flutter="icon-btn" aria-label="Go back" class="w-12 h-12 flex items-center justify-center rounded-full">
+          <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M19 12H5M12 19l-7-7 7-7"/>
+          </svg>
+        </button>
+        <!-- Title -->
+        <h1 data-flutter="app-bar-title" class="flex-1 text-center mr-12 text-xl font-semibold" style="color: var(--deep-graphite);">My Pregnancy</h1>
+      </header>
+
+      <!-- Body: PageView for week-by-week swiper -->
+      <main data-flutter="body" class="flex-1 overflow-y-auto pb-[140px]">
+
+        <!-- PageView container (shows week 12 as example) -->
+        <div data-flutter="page-view" data-controller="pageView" class="min-h-full">
+
+          <!-- Individual Week Page -->
+          <div data-page="12" class="px-4 pt-2 pb-4">
+
+            <!-- 7.1 WeekHeroCard: full-width, ~40% screen height -->
+            <div class="radius-lg p-6 text-center relative overflow-hidden" style="background: linear-gradient(180deg, #F9A8D4 0%, #FFFFFF 100%); min-height: 280px;">
+              <!-- Fruit emoji -->
+              <div class="mb-4">
+                <div class="w-20 h-20 mx-auto rounded-full overflow-hidden flex items-center justify-center" style="background: #FBC4E0;">
+                  <span class="text-5xl">🍅</span>
+                </div>
+              </div>
+              <!-- Week number hero -->
+              <div data-flutter="text" data-text="displayLarge" class="text-hero">Week 12</div>
+              <!-- Trimester badge -->
+              <div data-flutter="chip" data-color="blushRose" class="inline-flex items-center gap-1 px-3 py-1 rounded-full mt-2" style="background: rgba(249,168,212,0.3);">
+                <span class="text-sm font-semibold" style="color: var(--lavender-bloom);">First Trimester</span>
+              </div>
+              <!-- Countdown text -->
+              <p class="text-muted mt-3">18 weeks to go</p>
+              <!-- Due date -->
+              <p class="text-caption mt-1">Due January 15, 2026</p>
+            </div>
+
+            <!-- 7.2 BodyChangesCard -->
+            <div data-flutter="card" class="radius-lg p-4 mt-4 bg-warm-white card-shadow">
+              <h2 data-flutter="text" data-text="titleLarge" class="text-title mb-3">Body Changes</h2>
+              <ul data-flutter="list" class="space-y-3">
+                <li data-flutter="list-item" class="flex items-start gap-3">
+                  <span class="w-2 h-2 rounded-full mt-2 shrink-0" style="background: var(--blush-rose);"></span>
+                  <span class="text-body-sm">Your uterus is now about the size of a grapefruit</span>
+                </li>
+                <li data-flutter="list-item" class="flex items-start gap-3">
+                  <span class="w-2 h-2 rounded-full mt-2 shrink-0" style="background: var(--blush-rose);"></span>
+                  <span class="text-body-sm">You may experience mild cramping or round ligament pain</span>
+                </li>
+                <li data-flutter="list-item" class="flex items-start gap-3">
+                  <span class="w-2 h-2 rounded-full mt-2 shrink-0" style="background: var(--blush-rose);"></span>
+                  <span class="text-body-sm">Fatigue may continue, but energy often improves this trimester</span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- 7.3 BabyDevelopmentCard -->
+            <div data-flutter="card" class="radius-lg p-4 mt-4 bg-warm-white card-shadow">
+              <h2 data-flutter="text" data-text="titleLarge" class="text-title mb-3">Baby's Development</h2>
+              <p class="text-body">Your baby is now about 2 inches long — the size of a plum! Fingers and toes are fully formed, and tooth buds are appearing beneath the gums. The brain continues to develop rapidly, and your baby may start making small movements you can't feel yet.</p>
+            </div>
+
+            <!-- 7.4 SelfCareTipsCard -->
+            <div data-flutter="card" class="radius-lg p-4 mt-4 bg-warm-white card-shadow">
+              <h2 data-flutter="text" data-text="titleLarge" class="text-title mb-4">Self-Care Tips</h2>
+              <div data-flutter="column" data-spacing="md" class="space-y-3">
+
+                <!-- Tip 1 -->
+                <div data-flutter="expandable-tip" class="radius-md p-3 border" style="border-color: var(--misty-border);">
+                  <div data-flutter="row" data-cross-axis="center" class="items-center gap-3">
+                    <div data-flutter="avatar" data-color="blushRose" class="w-8 h-8 rounded-full flex items-center justify-center shrink-0" style="background: var(--blush-rose);">
+                      <span class="text-sm font-semibold" style="color: var(--warm-white);">1</span>
+                    </div>
+                    <span class="text-subtitle flex-1">Stay hydrated</span>
+                    <svg class="w-5 h-5 text-stone-grey" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M19 9l-7 7-7-7"/>
+                    </svg>
+                  </div>
+                  <p class="text-body-sm mt-3 pl-11">Aim for 8-10 glasses of water daily. Staying hydrated helps prevent UTIs and constipation, common during pregnancy.</p>
+                </div>
+
+                <!-- Tip 2 -->
+                <div data-flutter="expandable-tip" class="radius-md p-3 border" style="border-color: var(--misty-border);">
+                  <div data-flutter="row" data-cross-axis="center" class="items-center gap-3">
+                    <div data-flutter="avatar" data-color="blushRose" class="w-8 h-8 rounded-full flex items-center justify-center shrink-0" style="background: var(--blush-rose);">
+                      <span class="text-sm font-semibold" style="color: var(--warm-white);">2</span>
+                    </div>
+                    <span class="text-subtitle flex-1">Try gentle exercise</span>
+                    <svg class="w-5 h-5 text-stone-grey" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M19 9l-7 7-7-7"/>
+                    </svg>
+                  </div>
+                  <p class="text-body-sm mt-3 pl-11">Walking or prenatal yoga can help with energy levels and prepare your body for labor.</p>
+                </div>
+
+                <!-- Tip 3 -->
+                <div data-flutter="expandable-tip" class="radius-md p-3 border" style="border-color: var(--misty-border);">
+                  <div data-flutter="row" data-cross-axis="center" class="items-center gap-3">
+                    <div data-flutter="avatar" data-color="blushRose" class="w-8 h-8 rounded-full flex items-center justify-center shrink-0" style="background: var(--blush-rose);">
+                      <span class="text-sm font-semibold" style="color: var(--warm-white);">3</span>
+                    </div>
+                    <span class="text-subtitle flex-1">Schedule your anatomy scan</span>
+                    <svg class="w-5 h-5 text-stone-grey" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M19 9l-7 7-7-7"/>
+                    </svg>
+                  </div>
+                  <p class="text-body-sm mt-3 pl-11">Your 20-week anatomy scan is approaching. This detailed ultrasound checks baby's development and is often covered by insurance.</p>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+          <!-- End week page -->
+
+        </div>
+        <!-- End PageView -->
+
+      </main>
+      <!-- End Body -->
+
+      <!-- 7.5 DueDateSummaryCard: pinned at bottom, always visible -->
+      <div data-flutter="container" class="absolute bottom-0 left-0 right-0 radius-sheet bg-warm-white card-shadow safe-bottom" style="padding-bottom: env(safe-area-inset-bottom, 0);">
+
+        <div data-flutter="row" data-main-axis="space-between" data-cross-axis="center" class="px-5 py-4">
+          <!-- Left: Trimester + Due date -->
+          <div>
+            <div data-flutter="chip" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full mb-2" style="background: var(--lavender-bloom);">
+              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="var(--warm-white)">
+                <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
+              </svg>
+              <span class="text-xs font-semibold" style="color: var(--warm-white);">First Trimester</span>
+            </div>
+            <p class="text-caption">Due Date</p>
+            <p data-flutter="text" data-text="titleMedium" class="text-subtitle">January 15, 2026</p>
+          </div>
+          <!-- Right: Days remaining -->
+          <div class="text-right">
+            <p data-flutter="text" data-text="displayLarge" class="text-3xl font-bold" style="color: var(--soft-mint);">126</p>
+            <p class="text-muted text-sm">days to go</p>
+          </div>
+        </div>
+
+      </div>
+      <!-- End DueDateSummaryCard -->
+
+    </div>
+    <!-- End Scaffold -->
+
+  </div>
+</body>
+</html>

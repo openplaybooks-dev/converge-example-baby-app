@@ -1,0 +1,20 @@
+{
+  "taskId": "001-home-02-design",
+  "epicId": "default",
+  "focusPath": "default/001-home-02-design",
+  "status": "running",
+  "startedAt": "2026-05-18T23:03:01.392Z",
+  "attempt": 1,
+  "gapsResolved": 0,
+  "gapsFailed": 0,
+  "checklist": [
+    {
+      "id": "subtask:spawn-1",
+      "type": "subtask",
+      "description": "stitch-generate",
+      "details": ".converge/skills/stitch-generate/SKILL.md",
+      "done": true,
+      "doneAt": "2026-05-18T23:03:14.226Z"
+    }
+  ]
+}

@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Baby Bump - Pregnancy Progress</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --color-primary: #7C3AED;
+      --color-secondary: #F9A8D4;
+      --color-tertiary: #6EE7B7;
+      --color-background: #F5F3FF;
+      --color-surface: #FAFAFA;
+      --color-text-primary: #1F2937;
+      --color-text-secondary: #6B7280;
+      --color-border: #E5E7EB;
+      --color-error: #EF4444;
+      --color-white: #FFFFFF;
+      --radius-card: 16px;
+      --radius-button: 24px;
+      --spacing-unit: 8px;
+      --font-family: 'Nunito', sans-serif;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+
+    body {
+      font-family: var(--font-family);
+      background: #1E1B2E;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 20px 0;
+    }
+
+    .phone {
+      width: 375px;
+      min-height: 812px;
+      background: var(--color-background);
+      border-radius: 40px;
+      overflow: hidden;
+      position: relative;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.4);
+    }
+
+    .confetti {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 200px;
+      pointer-events: none;
+      overflow: hidden;
+    }
+
+    .confetti-piece {
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      border-radius: 2px;
+      animation: confettiFall 3s ease-out forwards;
+    }
+
+    @keyframes confettiFall {
+      0% {
+        transform: translateY(-20px) rotate(0deg);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(200px) rotate(720deg);
+        opacity: 0;
+      }
+    }
+
+    .status-bar {
+      height: 44px;
+      background: transparent;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 24px;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--color-text-primary);
+      position: relative;
+      z-index: 10;
+    }
+
+    .status-bar-icons {
+      display: flex;
+      gap: 6px;
+      align-items: center;
+    }
+
+    .status-bar-icons svg {
+      width: 18px;
+      height: 18px;
+    }
+
+    .app-bar {
+      height: 56px;
+      display: flex;
+      align-items: center;
+      padding: 0 8px;
+      background: transparent;
+      position: relative;
+      z-index: 10;
+    }
+
+    .back-btn {
+      width: 48px;
+      height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: none;
+      background: rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(8px);
+      cursor: pointer;
+      border-radius: 50%;
+      transition: background 200ms ease-out;
+    }
+
+    .back-btn:hover {
+      background: var(--color-white);
+    }
+
+    .back-btn svg {
+      width: 24px;
+      height: 24px;
+      color: var(--color-text-primary);
+    }
+
+    .app-bar-title {
+      flex: 1;
+      font-size: 20px;
+      font-weight: 600;
+      color: var(--color-text-primary);
+      text-align: center;
+      margin-right: 48px;
+    }
+
+    .content {
+      padding: 0 16px 100px;
+      overflow-y: auto;
+    }
+
+    .section {
+      margin-bottom: 24px;
+    }
+
+    .hero-card {
+      background: linear-gradient(180deg, var(--color-secondary) 0%, var(--color-white) 100%);
+      border-radius: var(--radius-card);
+      padding: 32px 24px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-sparkles {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      pointer-events: none;
+    }
+
+    .sparkle {
+      position: absolute;
+      animation: sparkle 2s ease-in-out infinite;
+    }
+
+    @keyframes sparkle {
+      0%, 100% { opacity: 0.3; transform: scale(0.8); }
+      50% { opacity: 1; transform: scale(1.2); }
+    }
+
+    .week-hero {
+      position: relative;
+      z-index: 1;
+    }
+
+    .week-number {
+      font-size: 72px;
+      font-weight: 700;
+      color: var(--color-primary);
+      line-height: 80px;
+      letter-spacing: -2px;
+    }
+
+    .week-label {
+      font-size: 18px;
+      font-weight: 500;
+      color: var(--color-text-secondary);
+      margin-top: -4px;
+    }
+
+    .fruit-comparison {
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      margin-top: 16px;
+    }
+
+    .fruit-illustration {
+      width: 80px;
+      height: 80px;
+    }
+
+    .fruit-name {
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--color-text-primary);
+    }
+
+    .page-dots {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 24px;
+    }
+
+    .page-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--color-border);
+    }
+
+    .page-dot.active {
+      background: var(--color-primary);
+      width: 24px;
+      border-radius: 4px;
+    }
+
+    .card {
+      background: var(--color-white);
+      border-radius: var(--radius-card);
+      padding: 16px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    }
+
+    .card-title {
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--color-text-primary);
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .card-title svg {
+      width: 20px;
+      height: 20px;
+      color: var(--color-primary);
+    }
+
+    .body-changes {
+      list-style: none;
+    }
+
+    .body-changes li {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      padding: 8px 0;
+      border-bottom: 1px solid var(--color-border);
+      font-size: 14px;
+      line-height: 20px;
+      color: var(--color-text-primary);
+    }
+
+    .body-changes li:last-child {
+      border-bottom: none;
+    }
+
+    .body-changes li::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--color-secondary);
+      margin-top: 7px;
+      flex-shrink: 0;
+    }
+
+    .baby-dev-text {
+      font-size: 14px;
+      line-height: 20px;
+      color: var(--color-text-primary);
+    }
+
+    .tips-list {
+      list-style: none;
+    }
+
+    .tips-list li {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 12px 0;
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    .tips-list li:last-child {
+      border-bottom: none;
+    }
+
+    .tip-number {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: var(--color-primary);
+      color: var(--color-white);
+      font-size: 14px;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .tip-text {
+      font-size: 14px;
+      line-height: 20px;
+      color: var(--color-text-primary);
+    }
+
+    .due-summary {
+      background: linear-gradient(135deg, var(--color-primary), #9F67FF);
+      border-radius: var(--radius-card);
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .due-info {
+      color: var(--color-white);
+    }
+
+    .due-label {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.4pt;
+      text-transform: uppercase;
+      opacity: 0.8;
+      margin-bottom: 4px;
+    }
+
+    .due-date {
+      font-size: 16px;
+      font-weight: 600;
+    }
+
+    .due-countdown {
+      font-size: 32px;
+      font-weight: 700;
+      color: var(--color-white);
+    }
+
+    .due-days {
+      font-size: 12px;
+      font-weight: 500;
+      opacity: 0.8;
+    }
+
+    .trimester-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      padding: 6px 12px;
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--color-white);
+      margin-top: 8px;
+    }
+
+    .trimester-badge svg {
+      width: 14px;
+      height: 14px;
+    }
+
+    .bottom-nav {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 80px;
+      background: var(--color-white);
+      display: flex;
+      justify-content: space-around;
+      align-items: flex-start;
+      padding-top: 8px;
+      border-top: 1px solid var(--color-border);
+    }
+
+    .nav-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 4px;
+      padding: 8px 16px;
+      border: none;
+      background: none;
+      cursor: pointer;
+      position: relative;
+    }
+
+    .nav-item.active::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      width: 40px;
+      height: 4px;
+      background: var(--color-primary);
+      border-radius: 2px;
+      opacity: 0.15;
+    }
+
+    .nav-item svg {
+      width: 24px;
+      height: 24px;
+      color: var(--color-text-secondary);
+    }
+
+    .nav-item.active svg {
+      color: var(--color-primary);
+    }
+
+    .nav-item span {
+      font-size: 11px;
+      font-weight: 500;
+      color: var(--color-text-secondary);
+    }
+
+    .nav-item.active span {
+      font-weight: 600;
+      color: var(--color-primary);
+    }
+
+    .home-indicator {
+      position: absolute;
+      bottom: 8px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 134px;
+      height: 5px;
+      background: var(--color-text-primary);
+      border-radius: 3px;
+      opacity: 0.2;
+    }
+  </style>
+</head>
+<body>
+  <div class="phone">
+    <div class="confetti" aria-hidden="true">
+      <div class="confetti-piece" style="left: 10%; background: #7C3AED; animation-delay: 0s;"></div>
+      <div class="confetti-piece" style="left: 20%; background: #F9A8D4; animation-delay: 0.2s;"></div>
+      <div class="confetti-piece" style="left: 30%; background: #6EE7B7; animation-delay: 0.4s;"></div>
+      <div class="confetti-piece" style="left: 40%; background: #7C3AED; animation-delay: 0.1s;"></div>
+      <div class="confetti-piece" style="left: 50%; background: #F9A8D4; animation-delay: 0.3s;"></div>
+      <div class="confetti-piece" style="left: 60%; background: #6EE7B7; animation-delay: 0.5s;"></div>
+      <div class="confetti-piece" style="left: 70%; background: #7C3AED; animation-delay: 0.15s;"></div>
+      <div class="confetti-piece" style="left: 80%; background: #F9A8D4; animation-delay: 0.35s;"></div>
+      <div class="confetti-piece" style="left: 90%; background: #6EE7B7; animation-delay: 0.25s;"></div>
+    </div>
+
+    <div class="status-bar">
+      <span>9:41</span>
+      <div class="status-bar-icons">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M5 12.55a11 11 0 0 1 14.08 0M1.42 9a16 16 0 0 1 21.16 0M8.53 16.11a6 6 0 0 1 6.95 0M12 20h.01"/>
+        </svg>
+        <svg viewBox="0 0 24 24" fill="currentColor">
+          <rect x="2" y="7" width="18" height="10" rx="2" stroke="currentColor" stroke-width="2" fill="none"/>
+          <rect x="4" y="9" width="14" height="6" rx="1" fill="currentColor"/>
+        </svg>
+      </div>
+    </div>
+
+    <header class="app-bar">
+      <button class="back-btn" aria-label="Go back">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M19 12H5M12 19l-7-7 7-7"/>
+        </svg>
+      </button>
+      <h1 class="app-bar-title">My Pregnancy</h1>
+    </header>
+
+    <main class="content">
+      <section class="section">
+        <div class="hero-card">
+          <div class="hero-sparkles" aria-hidden="true">
+            <svg class="sparkle" style="top: 20%; left: 15%;" width="16" height="16" viewBox="0 0 24 24" fill="#7C3AED">
+              <path d="M12 0L14.5 9.5L24 12L14.5 14.5L12 24L9.5 14.5L0 12L9.5 9.5L12 0Z"/>
+            </svg>
+            <svg class="sparkle" style="top: 30%; right: 20%; animation-delay: 0.5s;" width="12" height="12" viewBox="0 0 24 24" fill="#F9A8D4">
+              <path d="M12 0L14.5 9.5L24 12L14.5 14.5L12 24L9.5 14.5L0 12L9.5 9.5L12 0Z"/>
+            </svg>
+            <svg class="sparkle" style="top: 50%; left: 10%; animation-delay: 1s;" width="10" height="10" viewBox="0 0 24 24" fill="#6EE7B7">
+              <path d="M12 0L14.5 9.5L24 12L14.5 14.5L12 24L9.5 14.5L0 12L9.5 9.5L12 0Z"/>
+            </svg>
+            <svg class="sparkle" style="top: 15%; right: 30%; animation-delay: 0.3s;" width="14" height="14" viewBox="0 0 24 24" fill="#7C3AED">
+              <path d="M12 0L14.5 9.5L24 12L14.5 14.5L12 24L9.5 14.5L0 12L9.5 9.5L12 0Z"/>
+            </svg>
+          </div>
+          <div class="week-hero">
+            <div class="week-number">24</div>
+            <div class="week-label">weeks pregnant</div>
+            <div class="fruit-comparison">
+              <svg class="fruit-illustration" viewBox="0 0 80 80" fill="none">
+                <ellipse cx="40" cy="45" rx="32" ry="30" fill="#FBC4E0"/>
+                <ellipse cx="40" cy="45" rx="26" ry="24" fill="#F9A8D4"/>
+                <ellipse cx="35" cy="40" rx="8" ry="6" fill="#fff" opacity="0.3"/>
+                <path d="M40 15C40 15 45 20 50 20C55 20 55 15 55 15" stroke="#6EE7B7" stroke-width="3" stroke-linecap="round"/>
+                <ellipse cx="52" cy="18" rx="6" ry="4" fill="#6EE7B7" transform="rotate(-30 52 18)"/>
+              </svg>
+              <span class="fruit-name">Papaya</span>
+            </div>
+          </div>
+          <div class="page-dots" aria-label="Week navigation indicator">
+            <span class="page-dot"></span>
+            <span class="page-dot"></span>
+            <span class="page-dot active"></span>
+            <span class="page-dot"></span>
+            <span class="page-dot"></span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="card">
+          <h2 class="card-title">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+            </svg>
+            Body Changes This Week
+          </h2>
+          <ul class="body-changes">
+            <li>Your uterus is now about the size of a soccer ball</li>
+            <li>You may experience more frequent urination as baby presses on your bladder</li>
+            <li>Leg cramps and swelling may increase</li>
+            <li>Stretch marks may appear on your belly and breasts</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="card">
+          <h2 class="card-title">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"/>
+              <path d="M12 16v-4M12 8h.01"/>
+            </svg>
+            Baby's Development
+          </h2>
+          <p class="baby-dev-text">
+            Your baby is now about 11 inches long and weighs around 1.3 pounds. The senses are developing rapidly — your little one can now hear sounds from the outside world. Fingernails are fully formed and baby is starting to develop a sleep pattern.
+          </p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="card">
+          <h2 class="card-title">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/>
+              <path d="M12 8v4l3 3"/>
+            </svg>
+            Self-Care Tips
+          </h2>
+          <ul class="tips-list">
+            <li>
+              <span class="tip-number">1</span>
+              <span class="tip-text">Stay hydrated with at least 8-10 glasses of water daily</span>
+            </li>
+            <li>
+              <span class="tip-number">2</span>
+              <span class="tip-text">Try sleeping on your left side to improve circulation</span>
+            </li>
+            <li>
+              <span class="tip-number">3</span>
+              <span class="tip-text">Gentle stretching can help with leg cramps and discomfort</span>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="due-summary">
+          <div class="due-info">
+            <div class="due-label">Due Date</div>
+            <div class="due-date">December 15, 2026</div>
+            <div class="trimester-badge">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
+              </svg>
+              Second Trimester
+            </div>
+          </div>
+          <div class="due-countdown">
+            112
+            <div class="due-days">days to go</div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <nav class="bottom-nav" role="navigation" aria-label="Main navigation">
+      <button class="nav-item active" aria-current="page" aria-label="Home">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M12 3L4 9v12h5v-7h6v7h5V9z"/>
+        </svg>
+        <span>Home</span>
+      </button>
+      <button class="nav-item" aria-label="Browse">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="11" cy="11" r="8"/>
+          <path d="M21 21l-4.35-4.35"/>
+        </svg>
+        <span>Browse</span>
+      </button>
+      <button class="nav-item" aria-label="Library">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/>
+        </svg>
+        <span>Library</span>
+      </button>
+      <button class="nav-item" aria-label="Profile">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="8" r="4"/>
+          <path d="M4 20c0-4 4-6 8-6s8 2 8 6"/>
+        </svg>
+        <span>Profile</span>
+      </button>
+    </nav>
+
+    <div class="home-indicator"></div>
+  </div>
+</body>
+</html>

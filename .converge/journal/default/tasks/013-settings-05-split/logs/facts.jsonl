@@ -1,0 +1,2 @@
+{"type":"file-exists","path":".stitch/designs/settings/widgets.jsonl","cmd":"test -f \".stitch/designs/settings/widgets.jsonl\"","id":"file-exists:test -f \".stitch/designs/settings/widgets.jsonl\"","ok":true,"output":"","exitCode":0,"collectedAt":"2026-05-19T02:47:57.600Z"}
+{"type":"file-exists","path":".stitch/designs/settings/widgets.jsonl","cmd":"test -f \".stitch/designs/settings/widgets.jsonl\"","id":"file-exists:test -f \".stitch/designs/settings/widgets.jsonl\"","ok":true,"output":"","exitCode":0,"collectedAt":"2026-05-19T02:47:57.602Z"}

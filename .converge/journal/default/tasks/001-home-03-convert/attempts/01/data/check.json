@@ -1,0 +1,25 @@
+{
+  "taskId": "001-home-03-convert",
+  "checks": [
+    {
+      "id": "screen-exists",
+      "description": "Screen widget file exists",
+      "cmd": "test -f lib/screens/home/home_screen.dart"
+    },
+    {
+      "id": "dart-valid",
+      "description": "Dart analysis passes",
+      "cmd": "dart analyze lib/screens/home/home_screen.dart"
+    },
+    {
+      "id": "uses-theme",
+      "description": "Uses Theme.of(context) for styling",
+      "cmd": "grep -q 'Theme.of(context)' lib/screens/home/home_screen.dart"
+    },
+    {
+      "id": "no-hardcoded-colors",
+      "description": "No hardcoded colors — uses colorScheme",
+      "cmd": "! grep -qE 'Color\\(0x|Colors\\.' lib/screens/home/home_screen.dart"
+    }
+  ]
+}

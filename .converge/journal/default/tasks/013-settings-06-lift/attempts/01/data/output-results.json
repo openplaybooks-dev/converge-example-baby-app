@@ -1,0 +1,6 @@
+[
+  {
+    "path": "lib/widgets/**/*.dart",
+    "exists": false
+  }
+]

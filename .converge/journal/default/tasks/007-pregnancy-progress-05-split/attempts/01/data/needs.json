@@ -1,0 +1,17 @@
+{
+  "taskId": "007-pregnancy-progress-05-split",
+  "attemptNumber": 1,
+  "inputs": [
+    {
+      "pattern": ".stitch/designs/pregnancy-progress/widgets.jsonl",
+      "count": 1,
+      "samples": [
+        ".stitch/designs/pregnancy-progress/widgets.jsonl"
+      ]
+    }
+  ],
+  "outputs": [
+    "lib/screens/pregnancy_progress/_widgets/**/*.dart"
+  ],
+  "blocked": false
+}

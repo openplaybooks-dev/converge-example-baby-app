@@ -1,0 +1,34 @@
+[
+  {
+    "id": "screen-exists",
+    "description": "Screen widget file exists",
+    "cmd": "test -f lib/screens/pregnancy_progress/pregnancy_progress_screen.dart",
+    "passed": true,
+    "exit_code": 0,
+    "output": ""
+  },
+  {
+    "id": "dart-valid",
+    "description": "Dart analysis passes",
+    "cmd": "dart analyze lib/screens/pregnancy_progress/pregnancy_progress_screen.dart",
+    "passed": true,
+    "exit_code": 0,
+    "output": "Analyzing pregnancy_progress_screen.dart...\nNo issues found!"
+  },
+  {
+    "id": "uses-theme",
+    "description": "Uses Theme.of(context) for styling",
+    "cmd": "grep -q 'Theme.of(context)' lib/screens/pregnancy_progress/pregnancy_progress_screen.dart",
+    "passed": true,
+    "exit_code": 0,
+    "output": ""
+  },
+  {
+    "id": "no-hardcoded-colors",
+    "description": "No hardcoded colors — uses colorScheme",
+    "cmd": "! grep -qE 'Color\\(0x|Colors\\.' lib/screens/pregnancy_progress/pregnancy_progress_screen.dart",
+    "passed": true,
+    "exit_code": 0,
+    "output": ""
+  }
+]

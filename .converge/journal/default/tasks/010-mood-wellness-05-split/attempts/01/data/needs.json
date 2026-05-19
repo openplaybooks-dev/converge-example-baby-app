@@ -1,0 +1,17 @@
+{
+  "taskId": "010-mood-wellness-05-split",
+  "attemptNumber": 1,
+  "inputs": [
+    {
+      "pattern": ".stitch/designs/mood-wellness/widgets.jsonl",
+      "count": 1,
+      "samples": [
+        ".stitch/designs/mood-wellness/widgets.jsonl"
+      ]
+    }
+  ],
+  "outputs": [
+    "lib/screens/mood_wellness/_widgets/**/*.dart"
+  ],
+  "blocked": false
+}

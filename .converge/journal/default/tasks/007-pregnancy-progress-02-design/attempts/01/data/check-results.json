@@ -1,0 +1,34 @@
+[
+  {
+    "id": "design-exists",
+    "description": "design.html exists for pregnancy-progress",
+    "cmd": "test -f .stitch/designs/pregnancy-progress/design.html",
+    "passed": true,
+    "exit_code": 0,
+    "output": ""
+  },
+  {
+    "id": "meta-exists",
+    "description": "META.md exists for pregnancy-progress",
+    "cmd": "test -f .stitch/designs/pregnancy-progress/META.md",
+    "passed": true,
+    "exit_code": 0,
+    "output": ""
+  },
+  {
+    "id": "uses-glossary",
+    "description": "HTML uses Flutter HTML Glossary vocabulary",
+    "cmd": "grep -q 'class=\"scaffold\"' .stitch/designs/pregnancy-progress/design.html",
+    "passed": false,
+    "exit_code": 1,
+    "output": ""
+  },
+  {
+    "id": "has-data-attributes",
+    "description": "HTML uses data-* attributes for Flutter conversion",
+    "cmd": "grep -q 'data-color=' .stitch/designs/pregnancy-progress/design.html",
+    "passed": true,
+    "exit_code": 0,
+    "output": ""
+  }
+]

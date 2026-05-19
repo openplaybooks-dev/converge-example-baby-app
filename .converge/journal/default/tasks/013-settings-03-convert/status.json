@@ -1,0 +1,20 @@
+{
+  "taskId": "013-settings-03-convert",
+  "epicId": "default",
+  "focusPath": "default/013-settings-03-convert",
+  "status": "running",
+  "startedAt": "2026-05-19T02:39:19.198Z",
+  "attempt": 1,
+  "gapsResolved": 0,
+  "gapsFailed": 0,
+  "checklist": [
+    {
+      "id": "subtask:spawn-1",
+      "type": "subtask",
+      "description": "stitch-flutter",
+      "details": ".converge/skills/stitch-flutter/SKILL.md",
+      "done": true,
+      "doneAt": "2026-05-19T02:39:46.278Z"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "taskId": "browse-split-001-LinkCard",
+  "checks": [
+    {
+      "id": "widget-exists",
+      "description": "Widget file exists",
+      "cmd": "test -f lib/screens/browse/_widgets/LinkCard.dart"
+    },
+    {
+      "id": "dart-valid",
+      "description": "Dart analysis passes",
+      "cmd": "dart analyze lib/screens/browse/_widgets/LinkCard.dart"
+    }
+  ]
+}

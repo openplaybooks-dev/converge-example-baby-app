@@ -1,0 +1,25 @@
+{
+  "taskId": "004-profile-02-design",
+  "checks": [
+    {
+      "id": "design-exists",
+      "description": "design.html exists for profile",
+      "cmd": "test -f .stitch/designs/profile/design.html"
+    },
+    {
+      "id": "meta-exists",
+      "description": "META.md exists for profile",
+      "cmd": "test -f .stitch/designs/profile/META.md"
+    },
+    {
+      "id": "uses-glossary",
+      "description": "HTML uses Flutter HTML Glossary vocabulary",
+      "cmd": "grep -q 'class=\"scaffold\"' .stitch/designs/profile/design.html"
+    },
+    {
+      "id": "has-data-attributes",
+      "description": "HTML uses data-* attributes for Flutter conversion",
+      "cmd": "grep -q 'data-color=' .stitch/designs/profile/design.html"
+    }
+  ]
+}

@@ -1,0 +1,114 @@
+[
+  {
+    "line": "converge spawn template --path .converge/playbooks/default/templates/screen-widget-split/TASK.md --id settings-split-001-SettingsCard --var screenId=settings --var screenTitle=Settings --var screenPath=lib/screens/settings/settings_screen.dart --var widgetId=SettingsCard --var widgetName=SettingsCard --var widgetFile=lib/screens/settings/_widgets/SettingsCard.dart",
+    "parsed": {
+      "kind": "template",
+      "path": ".converge/playbooks/default/templates/screen-widget-split/TASK.md",
+      "vars": {
+        "screenId": "settings",
+        "screenTitle": "Settings",
+        "screenPath": "lib/screens/settings/settings_screen.dart",
+        "widgetId": "SettingsCard",
+        "widgetName": "SettingsCard",
+        "widgetFile": "lib/screens/settings/_widgets/SettingsCard.dart"
+      },
+      "id": "settings-split-001-SettingsCard"
+    }
+  },
+  {
+    "line": "converge spawn template --path .converge/playbooks/default/templates/screen-widget-split/TASK.md --id settings-split-002-ListItemRow --var screenId=settings --var screenTitle=Settings --var screenPath=lib/screens/settings/settings_screen.dart --var widgetId=ListItemRow --var widgetName=ListItemRow --var widgetFile=lib/screens/settings/_widgets/ListItemRow.dart",
+    "parsed": {
+      "kind": "template",
+      "path": ".converge/playbooks/default/templates/screen-widget-split/TASK.md",
+      "vars": {
+        "screenId": "settings",
+        "screenTitle": "Settings",
+        "screenPath": "lib/screens/settings/settings_screen.dart",
+        "widgetId": "ListItemRow",
+        "widgetName": "ListItemRow",
+        "widgetFile": "lib/screens/settings/_widgets/ListItemRow.dart"
+      },
+      "id": "settings-split-002-ListItemRow"
+    }
+  },
+  {
+    "line": "converge spawn template --path .converge/playbooks/default/templates/screen-widget-split/TASK.md --id settings-split-003-SwitchRow --var screenId=settings --var screenTitle=Settings --var screenPath=lib/screens/settings/settings_screen.dart --var widgetId=SwitchRow --var widgetName=SwitchRow --var widgetFile=lib/screens/settings/_widgets/SwitchRow.dart",
+    "parsed": {
+      "kind": "template",
+      "path": ".converge/playbooks/default/templates/screen-widget-split/TASK.md",
+      "vars": {
+        "screenId": "settings",
+        "screenTitle": "Settings",
+        "screenPath": "lib/screens/settings/settings_screen.dart",
+        "widgetId": "SwitchRow",
+        "widgetName": "SwitchRow",
+        "widgetFile": "lib/screens/settings/_widgets/SwitchRow.dart"
+      },
+      "id": "settings-split-003-SwitchRow"
+    }
+  },
+  {
+    "line": "converge spawn template --path .converge/playbooks/default/templates/screen-widget-split/TASK.md --id settings-split-004-ActionRow --var screenId=settings --var screenTitle=Settings --var screenPath=lib/screens/settings/settings_screen.dart --var widgetId=ActionRow --var widgetName=ActionRow --var widgetFile=lib/screens/settings/_widgets/ActionRow.dart",
+    "parsed": {
+      "kind": "template",
+      "path": ".converge/playbooks/default/templates/screen-widget-split/TASK.md",
+      "vars": {
+        "screenId": "settings",
+        "screenTitle": "Settings",
+        "screenPath": "lib/screens/settings/settings_screen.dart",
+        "widgetId": "ActionRow",
+        "widgetName": "ActionRow",
+        "widgetFile": "lib/screens/settings/_widgets/ActionRow.dart"
+      },
+      "id": "settings-split-004-ActionRow"
+    }
+  },
+  {
+    "line": "converge spawn template --path .converge/playbooks/default/templates/screen-widget-split/TASK.md --id settings-split-005-AboutRow --var screenId=settings --var screenTitle=Settings --var screenPath=lib/screens/settings/settings_screen.dart --var widgetId=AboutRow --var widgetName=AboutRow --var widgetFile=lib/screens/settings/_widgets/AboutRow.dart",
+    "parsed": {
+      "kind": "template",
+      "path": ".converge/playbooks/default/templates/screen-widget-split/TASK.md",
+      "vars": {
+        "screenId": "settings",
+        "screenTitle": "Settings",
+        "screenPath": "lib/screens/settings/settings_screen.dart",
+        "widgetId": "AboutRow",
+        "widgetName": "AboutRow",
+        "widgetFile": "lib/screens/settings/_widgets/AboutRow.dart"
+      },
+      "id": "settings-split-005-AboutRow"
+    }
+  },
+  {
+    "line": "converge spawn template --path .converge/playbooks/default/templates/screen-widget-split/TASK.md --id settings-split-006-LinkRow --var screenId=settings --var screenTitle=Settings --var screenPath=lib/screens/settings/settings_screen.dart --var widgetId=LinkRow --var widgetName=LinkRow --var widgetFile=lib/screens/settings/_widgets/LinkRow.dart",
+    "parsed": {
+      "kind": "template",
+      "path": ".converge/playbooks/default/templates/screen-widget-split/TASK.md",
+      "vars": {
+        "screenId": "settings",
+        "screenTitle": "Settings",
+        "screenPath": "lib/screens/settings/settings_screen.dart",
+        "widgetId": "LinkRow",
+        "widgetName": "LinkRow",
+        "widgetFile": "lib/screens/settings/_widgets/LinkRow.dart"
+      },
+      "id": "settings-split-006-LinkRow"
+    }
+  },
+  {
+    "line": "converge spawn template --path .converge/playbooks/default/templates/screen-widget-split/TASK.md --id settings-split-007-InkWellScale --var screenId=settings --var screenTitle=Settings --var screenPath=lib/screens/settings/settings_screen.dart --var widgetId=InkWellScale --var widgetName=InkWellScale --var widgetFile=lib/screens/settings/_widgets/InkWellScale.dart",
+    "parsed": {
+      "kind": "template",
+      "path": ".converge/playbooks/default/templates/screen-widget-split/TASK.md",
+      "vars": {
+        "screenId": "settings",
+        "screenTitle": "Settings",
+        "screenPath": "lib/screens/settings/settings_screen.dart",
+        "widgetId": "InkWellScale",
+        "widgetName": "InkWellScale",
+        "widgetFile": "lib/screens/settings/_widgets/InkWellScale.dart"
+      },
+      "id": "settings-split-007-InkWellScale"
+    }
+  }
+]

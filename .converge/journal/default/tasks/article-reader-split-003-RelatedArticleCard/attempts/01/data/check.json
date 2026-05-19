@@ -1,0 +1,15 @@
+{
+  "taskId": "article-reader-split-003-RelatedArticleCard",
+  "checks": [
+    {
+      "id": "widget-exists",
+      "description": "Widget file exists",
+      "cmd": "test -f lib/screens/article_reader/_widgets/RelatedArticleCard.dart"
+    },
+    {
+      "id": "dart-valid",
+      "description": "Dart analysis passes",
+      "cmd": "dart analyze lib/screens/article_reader/_widgets/RelatedArticleCard.dart"
+    }
+  ]
+}

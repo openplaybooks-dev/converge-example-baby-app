@@ -1,0 +1,13 @@
+{"name": "WeightProgressChart", "grep": "Weight Progress", "description": "Line chart card showing weight over time with 1W/1M/All toggle filters", "shared": false}
+{"name": "WeightToggleChip", "grep": "1W", "description": "Time range filter chip for chart (1 week, 1 month, all)", "shared": true}
+{"name": "LatestEntryCard", "grep": "Today's Weight", "description": "Card showing today's weight entry with delta indicator", "shared": false}
+{"name": "WeightDeltaIndicator", "grep": "from last entry", "description": "Delta badge showing weight change with color-coded arrow (up/down/flat)", "shared": true}
+{"name": "NutritionTipsCard", "grep": "Nutrition Tips", "description": "Card with week badge showing stage-specific nutrition tips", "shared": false}
+{"name": "TipListItem", "grep": "blush", "description": "Single nutrition tip with blush dot and text", "shared": true}
+{"name": "WeightLogList", "grep": "Weight Log", "description": "Scrollable list of weight entries with date, value, and optional note", "shared": false}
+{"name": "WeightLogItem", "grep": "Jan 15, 2024", "description": "Single weight log entry card with time badge", "shared": true}
+{"name": "AddWeightSheet", "grep": "Log Weight", "description": "Bottom sheet form for adding new weight entries", "shared": false}
+{"name": "WeightInputField", "grep": "kg", "description": "Numeric text field for weight input with unit suffix", "shared": true}
+{"name": "DatePickerField", "grep": "January 15, 2024", "description": "Tap-to-open date picker field showing selected date", "shared": true}
+{"name": "NotesInputField", "grep": "Add notes", "description": "Multi-line text field for optional notes", "shared": true}
+{"name": "EntryDetailSheet", "grep": "edit", "description": "Bottom sheet for viewing, editing, or deleting existing weight entries", "shared": false}

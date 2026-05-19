@@ -1,0 +1,23 @@
+{
+  "taskId": "008-mindfulness-06-lift",
+  "attemptNumber": 1,
+  "inputs": [
+    {
+      "pattern": ".stitch/designs/mindfulness/widgets.jsonl",
+      "count": 1,
+      "samples": [
+        ".stitch/designs/mindfulness/widgets.jsonl"
+      ]
+    },
+    {
+      "pattern": "lib/screens/mindfulness/_widgets/**/*.dart",
+      "count": 0,
+      "samples": []
+    }
+  ],
+  "outputs": [
+    "lib/widgets/**/*.dart"
+  ],
+  "blocked": true,
+  "blockedReason": "Missing required inputs: lib/screens/mindfulness/_widgets/**/*.dart"
+}

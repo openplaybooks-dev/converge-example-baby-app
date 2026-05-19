@@ -1,0 +1,2 @@
+{"type":"file-exists","path":".stitch/designs/mindfulness/widgets.jsonl","cmd":"test -f \".stitch/designs/mindfulness/widgets.jsonl\"","id":"file-exists:test -f \".stitch/designs/mindfulness/widgets.jsonl\"","ok":true,"output":"","exitCode":0,"collectedAt":"2026-05-19T00:47:51.650Z"}
+{"type":"file-exists","path":".stitch/designs/mindfulness/widgets.jsonl","cmd":"test -f \".stitch/designs/mindfulness/widgets.jsonl\"","id":"file-exists:test -f \".stitch/designs/mindfulness/widgets.jsonl\"","ok":true,"output":"","exitCode":0,"collectedAt":"2026-05-19T00:47:51.653Z"}

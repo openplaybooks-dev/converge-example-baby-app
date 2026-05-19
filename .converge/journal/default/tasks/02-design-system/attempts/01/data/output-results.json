@@ -1,0 +1,24 @@
+[
+  {
+    "path": ".stitch/system/DESIGN.md",
+    "exists": true,
+    "size_bytes": 14485
+  },
+  {
+    "path": ".stitch/system/META.md",
+    "exists": true,
+    "size_bytes": 4662
+  },
+  {
+    "path": ".stitch/system/single-screen.html",
+    "exists": false
+  },
+  {
+    "path": ".stitch/system/multi-state-screen.html",
+    "exists": false
+  },
+  {
+    "path": ".stitch/system/celebration-screen.html",
+    "exists": false
+  }
+]

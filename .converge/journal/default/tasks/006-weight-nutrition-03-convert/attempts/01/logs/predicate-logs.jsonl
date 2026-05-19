@@ -1,0 +1,16 @@
+{"ts":"2026-05-19T00:15:57.803Z","iter":1,"gaps":0,"stall":0,"node":"action","handler":"check-seed-seeded","status":"start"}
+{"ts":"2026-05-19T00:15:57.803Z","iter":1,"gaps":0,"stall":0,"node":"action","handler":"check-seed-seeded","status":"done","result":"continue"}
+{"ts":"2026-05-19T00:15:57.803Z","iter":1,"gaps":0,"stall":0,"node":"action","handler":"check-outputs-exist","status":"start"}
+{"ts":"2026-05-19T00:15:57.803Z","iter":1,"gaps":0,"stall":0,"node":"action","handler":"check-outputs-exist","status":"done","result":"continue"}
+{"ts":"2026-05-19T00:15:57.803Z","iter":1,"gaps":0,"stall":0,"node":"action","handler":"detect-gaps","status":"start"}
+{"ts":"2026-05-19T00:15:57.942Z","iter":1,"gaps":0,"stall":0,"node":"action","handler":"detect-gaps","status":"done","result":"continue","newGaps":4}
+{"ts":"2026-05-19T00:15:57.942Z","iter":1,"gaps":4,"stall":0,"node":"action","handler":"run-executor","status":"start"}
+{"ts":"2026-05-19T00:15:57.942Z","iter":1,"gaps":4,"stall":0,"node":"action","handler":"run-executor","status":"done","result":"continue"}
+{"ts":"2026-05-19T00:15:57.942Z","iter":1,"gaps":4,"stall":0,"node":"action","handler":"run-skill","status":"start"}
+{"ts":"2026-05-19T00:17:45.738Z","iter":1,"gaps":4,"stall":0,"node":"action","handler":"run-skill","status":"done","result":"continue"}
+{"ts":"2026-05-19T00:17:45.739Z","iter":1,"gaps":4,"stall":0,"node":"action","handler":"repair-loop","status":"start"}
+{"ts":"2026-05-19T00:17:46.821Z","iter":1,"gaps":4,"stall":0,"node":"action","handler":"repair-loop","status":"done","result":"continue"}
+{"ts":"2026-05-19T00:17:46.821Z","iter":1,"gaps":4,"stall":0,"node":"action","handler":"run-strategy","status":"start"}
+{"ts":"2026-05-19T00:22:20.775Z","iter":1,"gaps":4,"stall":0,"node":"action","handler":"run-strategy","status":"done","result":"continue"}
+{"ts":"2026-05-19T00:22:20.776Z","iter":1,"gaps":4,"stall":0,"node":"action","handler":"verify","status":"start"}
+{"ts":"2026-05-19T00:22:22.233Z","iter":1,"gaps":4,"stall":0,"node":"action","handler":"verify","status":"done","result":"done","reason":"All gaps resolved","newGaps":0}

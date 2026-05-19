@@ -1,0 +1,10 @@
+{
+  "taskId": "004-profile-04-analyze",
+  "checks": [
+    {
+      "id": "widgets-json-exists",
+      "description": "widgets.jsonl exists for profile",
+      "cmd": "test -f .stitch/designs/profile/widgets.jsonl"
+    }
+  ]
+}

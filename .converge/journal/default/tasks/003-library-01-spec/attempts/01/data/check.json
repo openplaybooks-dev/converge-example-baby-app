@@ -1,0 +1,15 @@
+{
+  "taskId": "003-library-01-spec",
+  "checks": [
+    {
+      "id": "spec-exists",
+      "description": "SPEC.md exists for library",
+      "cmd": "test -f .stitch/designs/library/SPEC.md"
+    },
+    {
+      "id": "spec-has-content",
+      "description": "SPEC.md has >50 lines",
+      "cmd": "test $(wc -l < .stitch/designs/library/SPEC.md) -gt 50"
+    }
+  ]
+}

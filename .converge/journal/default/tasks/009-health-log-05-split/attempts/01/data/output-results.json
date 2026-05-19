@@ -1,0 +1,6 @@
+[
+  {
+    "path": "lib/screens/health_log/_widgets/**/*.dart",
+    "exists": false
+  }
+]

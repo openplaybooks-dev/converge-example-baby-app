@@ -1,0 +1,14 @@
+{
+  "attemptNumber": 1,
+  "startedAt": "2026-05-18T23:23:49.072Z",
+  "completedAt": "2026-05-18T23:24:04.240Z",
+  "spawnedTasks": [
+    {
+      "id": "browse-split-001-LinkCard",
+      "writeToPath": ".converge/journal/default/tasks/browse-split-001-LinkCard/TASK.md"
+    }
+  ],
+  "status": "success",
+  "spawnCount": 1,
+  "durationMs": 15167
+}

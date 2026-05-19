@@ -1,0 +1,24 @@
+{
+  "taskId": "02-design-system/002-generate-design-system",
+  "attemptNumber": 1,
+  "inputs": [
+    {
+      "pattern": ".stitch/UX.md",
+      "count": 1,
+      "samples": [
+        ".stitch/UX.md"
+      ]
+    },
+    {
+      "pattern": ".stitch/screens.json",
+      "count": 1,
+      "samples": [
+        ".stitch/screens.json"
+      ]
+    }
+  ],
+  "outputs": [
+    ".stitch/system/DESIGN.md"
+  ],
+  "blocked": false
+}

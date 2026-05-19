@@ -1,0 +1,98 @@
+[
+  {
+    "line": "converge spawn template --path .converge/playbooks/default/templates/screen-widget-split/TASK.md --id pregnancy-progress-split-001-WeekHeroCard --var screenId=pregnancy-progress --var screenTitle=\"My Pregnancy\" --var screenPath=lib/screens/pregnancy_progress/pregnancy_progress_screen.dart --var widgetId=WeekHeroCard --var widgetName=WeekHeroCard --var widgetFile=lib/screens/pregnancy_progress/_widgets/WeekHeroCard.dart",
+    "parsed": {
+      "kind": "template",
+      "path": ".converge/playbooks/default/templates/screen-widget-split/TASK.md",
+      "vars": {
+        "screenId": "pregnancy-progress",
+        "screenTitle": "My Pregnancy",
+        "screenPath": "lib/screens/pregnancy_progress/pregnancy_progress_screen.dart",
+        "widgetId": "WeekHeroCard",
+        "widgetName": "WeekHeroCard",
+        "widgetFile": "lib/screens/pregnancy_progress/_widgets/WeekHeroCard.dart"
+      },
+      "id": "pregnancy-progress-split-001-WeekHeroCard"
+    }
+  },
+  {
+    "line": "converge spawn template --path .converge/playbooks/default/templates/screen-widget-split/TASK.md --id pregnancy-progress-split-002-BodyChangesCard --var screenId=pregnancy-progress --var screenTitle=\"My Pregnancy\" --var screenPath=lib/screens/pregnancy_progress/pregnancy_progress_screen.dart --var widgetId=BodyChangesCard --var widgetName=BodyChangesCard --var widgetFile=lib/screens/pregnancy_progress/_widgets/BodyChangesCard.dart",
+    "parsed": {
+      "kind": "template",
+      "path": ".converge/playbooks/default/templates/screen-widget-split/TASK.md",
+      "vars": {
+        "screenId": "pregnancy-progress",
+        "screenTitle": "My Pregnancy",
+        "screenPath": "lib/screens/pregnancy_progress/pregnancy_progress_screen.dart",
+        "widgetId": "BodyChangesCard",
+        "widgetName": "BodyChangesCard",
+        "widgetFile": "lib/screens/pregnancy_progress/_widgets/BodyChangesCard.dart"
+      },
+      "id": "pregnancy-progress-split-002-BodyChangesCard"
+    }
+  },
+  {
+    "line": "converge spawn template --path .converge/playbooks/default/templates/screen-widget-split/TASK.md --id pregnancy-progress-split-003-BabyDevelopmentCard --var screenId=pregnancy-progress --var screenTitle=\"My Pregnancy\" --var screenPath=lib/screens/pregnancy_progress/pregnancy_progress_screen.dart --var widgetId=BabyDevelopmentCard --var widgetName=BabyDevelopmentCard --var widgetFile=lib/screens/pregnancy_progress/_widgets/BabyDevelopmentCard.dart",
+    "parsed": {
+      "kind": "template",
+      "path": ".converge/playbooks/default/templates/screen-widget-split/TASK.md",
+      "vars": {
+        "screenId": "pregnancy-progress",
+        "screenTitle": "My Pregnancy",
+        "screenPath": "lib/screens/pregnancy_progress/pregnancy_progress_screen.dart",
+        "widgetId": "BabyDevelopmentCard",
+        "widgetName": "BabyDevelopmentCard",
+        "widgetFile": "lib/screens/pregnancy_progress/_widgets/BabyDevelopmentCard.dart"
+      },
+      "id": "pregnancy-progress-split-003-BabyDevelopmentCard"
+    }
+  },
+  {
+    "line": "converge spawn template --path .converge/playbooks/default/templates/screen-widget-split/TASK.md --id pregnancy-progress-split-004-SelfCareTipsCard --var screenId=pregnancy-progress --var screenTitle=\"My Pregnancy\" --var screenPath=lib/screens/pregnancy_progress/pregnancy_progress_screen.dart --var widgetId=SelfCareTipsCard --var widgetName=SelfCareTipsCard --var widgetFile=lib/screens/pregnancy_progress/_widgets/SelfCareTipsCard.dart",
+    "parsed": {
+      "kind": "template",
+      "path": ".converge/playbooks/default/templates/screen-widget-split/TASK.md",
+      "vars": {
+        "screenId": "pregnancy-progress",
+        "screenTitle": "My Pregnancy",
+        "screenPath": "lib/screens/pregnancy_progress/pregnancy_progress_screen.dart",
+        "widgetId": "SelfCareTipsCard",
+        "widgetName": "SelfCareTipsCard",
+        "widgetFile": "lib/screens/pregnancy_progress/_widgets/SelfCareTipsCard.dart"
+      },
+      "id": "pregnancy-progress-split-004-SelfCareTipsCard"
+    }
+  },
+  {
+    "line": "converge spawn template --path .converge/playbooks/default/templates/screen-widget-split/TASK.md --id pregnancy-progress-split-005-ExpandableTipTile --var screenId=pregnancy-progress --var screenTitle=\"My Pregnancy\" --var screenPath=lib/screens/pregnancy_progress/pregnancy_progress_screen.dart --var widgetId=ExpandableTipTile --var widgetName=ExpandableTipTile --var widgetFile=lib/screens/pregnancy_progress/_widgets/ExpandableTipTile.dart",
+    "parsed": {
+      "kind": "template",
+      "path": ".converge/playbooks/default/templates/screen-widget-split/TASK.md",
+      "vars": {
+        "screenId": "pregnancy-progress",
+        "screenTitle": "My Pregnancy",
+        "screenPath": "lib/screens/pregnancy_progress/pregnancy_progress_screen.dart",
+        "widgetId": "ExpandableTipTile",
+        "widgetName": "ExpandableTipTile",
+        "widgetFile": "lib/screens/pregnancy_progress/_widgets/ExpandableTipTile.dart"
+      },
+      "id": "pregnancy-progress-split-005-ExpandableTipTile"
+    }
+  },
+  {
+    "line": "converge spawn template --path .converge/playbooks/default/templates/screen-widget-split/TASK.md --id pregnancy-progress-split-006-DueDateSummaryCard --var screenId=pregnancy-progress --var screenTitle=\"My Pregnancy\" --var screenPath=lib/screens/pregnancy_progress/pregnancy_progress_screen.dart --var widgetId=DueDateSummaryCard --var widgetName=DueDateSummaryCard --var widgetFile=lib/screens/pregnancy_progress/_widgets/DueDateSummaryCard.dart",
+    "parsed": {
+      "kind": "template",
+      "path": ".converge/playbooks/default/templates/screen-widget-split/TASK.md",
+      "vars": {
+        "screenId": "pregnancy-progress",
+        "screenTitle": "My Pregnancy",
+        "screenPath": "lib/screens/pregnancy_progress/pregnancy_progress_screen.dart",
+        "widgetId": "DueDateSummaryCard",
+        "widgetName": "DueDateSummaryCard",
+        "widgetFile": "lib/screens/pregnancy_progress/_widgets/DueDateSummaryCard.dart"
+      },
+      "id": "pregnancy-progress-split-006-DueDateSummaryCard"
+    }
+  }
+]

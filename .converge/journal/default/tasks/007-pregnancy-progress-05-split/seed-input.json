@@ -1,0 +1,34 @@
+{
+  "attemptNumber": 1,
+  "startedAt": "2026-05-19T00:35:49.686Z",
+  "projectDir": "/Users/minh/Documents/openplayboosks/examples/baby-app",
+  "playbookName": "default",
+  "parentTaskDir": ".converge/journal/default/tasks/007-pregnancy-progress-05-split",
+  "journalCtx": {
+    "epicId": "default",
+    "taskId": "007-pregnancy-progress-05-split"
+  },
+  "taskMeta": {
+    "id": "007-pregnancy-progress-05-split",
+    "title": "Split: My Pregnancy"
+  },
+  "vars": {
+    "screenId": "pregnancy-progress",
+    "title": "My Pregnancy",
+    "screenPath": "lib/screens/pregnancy_progress/pregnancy_progress_screen.dart",
+    "widgetsJsonPath": ".stitch/designs/pregnancy-progress/widgets.jsonl",
+    "localWidgetsDir": "lib/screens/pregnancy_progress/_widgets"
+  },
+  "ctxMethods": [
+    "log",
+    "ai.ask",
+    "plan.getPlanPath",
+    "artifact",
+    "spawn",
+    "continueAfterChildren",
+    "stop",
+    "goals.spawn",
+    "goals.update",
+    "goals.nextBuildable"
+  ]
+}

@@ -1,0 +1,9 @@
+{"name": "MoodCard", "grep": "How are you feeling today?", "description": "Card showing mood check-in with emoji buttons for daily tracking", "shared": true}
+{"name": "MoodButton", "grep": "Terrible", "description": "Individual mood emoji button with label and selection state", "shared": true}
+{"name": "ChecklistSection", "grep": "Today's Checklist", "description": "Horizontal scrollable checklist section with progress counter", "shared": false}
+{"name": "ChecklistChip", "grep": "Weight logged", "description": "Pill-shaped chip showing task completion status with check icon", "shared": true}
+{"name": "QuickActionsSection", "grep": "Quick Actions", "description": "2x2 grid of quick action buttons for common tasks", "shared": false}
+{"name": "QuickActionButton", "grep": "Log Weight", "description": "Action button with icon and label, supports outlined variant", "shared": true}
+{"name": "WeeklyTipCard", "grep": "Weekly Tip", "description": "Gradient card displaying weekly health tip with icon and text", "shared": false}
+{"name": "BottomNavBar", "grep": "Icons.home", "description": "Bottom navigation bar with app destinations", "shared": true}
+{"name": "NavDestination", "grep": "Nav item structure", "description": "Navigation item with icon, label, and active state styling", "shared": true}

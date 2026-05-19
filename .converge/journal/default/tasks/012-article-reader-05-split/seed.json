@@ -1,0 +1,20 @@
+{
+  "seeded": true,
+  "seededAt": "2026-05-19T02:28:48.692Z",
+  "spawnCount": 3,
+  "keepLooping": false,
+  "subtasks": [
+    {
+      "id": "article-reader-split-001-QuoteCallout",
+      "writeToPath": ".converge/journal/default/tasks/article-reader-split-001-QuoteCallout/TASK.md"
+    },
+    {
+      "id": "article-reader-split-002-BulletItem",
+      "writeToPath": ".converge/journal/default/tasks/article-reader-split-002-BulletItem/TASK.md"
+    },
+    {
+      "id": "article-reader-split-003-RelatedArticleCard",
+      "writeToPath": ".converge/journal/default/tasks/article-reader-split-003-RelatedArticleCard/TASK.md"
+    }
+  ]
+}

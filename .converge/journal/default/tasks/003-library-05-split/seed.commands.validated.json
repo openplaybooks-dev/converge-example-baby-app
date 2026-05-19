@@ -1,0 +1,50 @@
+[
+  {
+    "line": "converge spawn template --path .converge/playbooks/default/templates/screen-widget-split/TASK.md --id library-split-001-LinkCard --var screenId=library --var screenTitle=Library --var screenPath=lib/screens/library/library_screen.dart --var widgetId=LinkCard --var widgetName=LinkCard --var widgetFile=lib/screens/library/_widgets/LinkCard.dart",
+    "parsed": {
+      "kind": "template",
+      "path": ".converge/playbooks/default/templates/screen-widget-split/TASK.md",
+      "vars": {
+        "screenId": "library",
+        "screenTitle": "Library",
+        "screenPath": "lib/screens/library/library_screen.dart",
+        "widgetId": "LinkCard",
+        "widgetName": "LinkCard",
+        "widgetFile": "lib/screens/library/_widgets/LinkCard.dart"
+      },
+      "id": "library-split-001-LinkCard"
+    }
+  },
+  {
+    "line": "converge spawn template --path .converge/playbooks/default/templates/screen-widget-split/TASK.md --id library-split-002-NavDestination --var screenId=library --var screenTitle=Library --var screenPath=lib/screens/library/library_screen.dart --var widgetId=NavDestination --var widgetName=NavDestination --var widgetFile=lib/screens/library/_widgets/NavDestination.dart",
+    "parsed": {
+      "kind": "template",
+      "path": ".converge/playbooks/default/templates/screen-widget-split/TASK.md",
+      "vars": {
+        "screenId": "library",
+        "screenTitle": "Library",
+        "screenPath": "lib/screens/library/library_screen.dart",
+        "widgetId": "NavDestination",
+        "widgetName": "NavDestination",
+        "widgetFile": "lib/screens/library/_widgets/NavDestination.dart"
+      },
+      "id": "library-split-002-NavDestination"
+    }
+  },
+  {
+    "line": "converge spawn template --path .converge/playbooks/default/templates/screen-widget-split/TASK.md --id library-split-003-BottomNavBar --var screenId=library --var screenTitle=Library --var screenPath=lib/screens/library/library_screen.dart --var widgetId=BottomNavBar --var widgetName=BottomNavBar --var widgetFile=lib/screens/library/_widgets/BottomNavBar.dart",
+    "parsed": {
+      "kind": "template",
+      "path": ".converge/playbooks/default/templates/screen-widget-split/TASK.md",
+      "vars": {
+        "screenId": "library",
+        "screenTitle": "Library",
+        "screenPath": "lib/screens/library/library_screen.dart",
+        "widgetId": "BottomNavBar",
+        "widgetName": "BottomNavBar",
+        "widgetFile": "lib/screens/library/_widgets/BottomNavBar.dart"
+      },
+      "id": "library-split-003-BottomNavBar"
+    }
+  }
+]

@@ -1,0 +1,17 @@
+{
+  "taskId": "013-settings-04-analyze",
+  "attemptNumber": 1,
+  "inputs": [
+    {
+      "pattern": "lib/screens/settings/settings_screen.dart",
+      "count": 1,
+      "samples": [
+        "lib/screens/settings/settings_screen.dart"
+      ]
+    }
+  ],
+  "outputs": [
+    ".stitch/designs/settings/widgets.jsonl"
+  ],
+  "blocked": false
+}

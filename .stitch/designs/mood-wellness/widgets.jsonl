@@ -1,0 +1,6 @@
+{"name": "TodaysMoodCard", "grep": "class _TodaysMoodCard extends StatelessWidget", "description": "Card with mood emoji selector (5 emojis) and note input field for logging today's mood", "shared": false}
+{"name": "MoodEmoji", "grep": "class _MoodEmoji extends StatelessWidget", "description": "Individual mood selection emoji button with selection state and animation", "shared": true}
+{"name": "MoodTrendChart", "grep": "class _MoodTrendChart extends StatelessWidget", "description": "Line chart card showing mood history with time range chips (1W/1M/All)", "shared": false}
+{"name": "EnergyTrendChart", "grep": "class _EnergyTrendChart extends StatelessWidget", "description": "Line chart card showing energy history with time range chips (1W/1M/All)", "shared": false}
+{"name": "WellnessTipCard", "grep": "class _WellnessTipCard extends StatefulWidget", "description": "Expandable card showing wellness tips with animated expand/collapse and category badge", "shared": false}
+{"name": "ChartChip", "grep": "class _ChartChip extends StatelessWidget", "description": "Time range selector chip used by trend charts for filtering time periods", "shared": true}

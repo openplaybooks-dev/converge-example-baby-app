@@ -1,0 +1,34 @@
+{
+  "attemptNumber": 1,
+  "startedAt": "2026-05-19T02:47:57.602Z",
+  "projectDir": "/Users/minh/Documents/openplayboosks/examples/baby-app",
+  "playbookName": "default",
+  "parentTaskDir": ".converge/journal/default/tasks/013-settings-05-split",
+  "journalCtx": {
+    "epicId": "default",
+    "taskId": "013-settings-05-split"
+  },
+  "taskMeta": {
+    "id": "013-settings-05-split",
+    "title": "Split: Settings"
+  },
+  "vars": {
+    "screenId": "settings",
+    "title": "Settings",
+    "screenPath": "lib/screens/settings/settings_screen.dart",
+    "widgetsJsonPath": ".stitch/designs/settings/widgets.jsonl",
+    "localWidgetsDir": "lib/screens/settings/_widgets"
+  },
+  "ctxMethods": [
+    "log",
+    "ai.ask",
+    "plan.getPlanPath",
+    "artifact",
+    "spawn",
+    "continueAfterChildren",
+    "stop",
+    "goals.spawn",
+    "goals.update",
+    "goals.nextBuildable"
+  ]
+}

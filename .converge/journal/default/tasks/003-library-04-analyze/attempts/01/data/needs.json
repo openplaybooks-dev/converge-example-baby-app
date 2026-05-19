@@ -1,0 +1,17 @@
+{
+  "taskId": "003-library-04-analyze",
+  "attemptNumber": 1,
+  "inputs": [
+    {
+      "pattern": "lib/screens/library/library_screen.dart",
+      "count": 1,
+      "samples": [
+        "lib/screens/library/library_screen.dart"
+      ]
+    }
+  ],
+  "outputs": [
+    ".stitch/designs/library/widgets.jsonl"
+  ],
+  "blocked": false
+}

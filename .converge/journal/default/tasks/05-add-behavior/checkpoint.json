@@ -1,0 +1,15 @@
+{
+  "status": "pending",
+  "progress": {
+    "totalChildren": 4,
+    "completedChildren": 0,
+    "failedChildren": 0,
+    "childIds": [
+      "001-analyze-data-models",
+      "002-create-models",
+      "003-create-mock-data",
+      "004-implement-providers"
+    ],
+    "lastProgressUpdate": "2026-05-19T23:15:00.098Z"
+  }
+}

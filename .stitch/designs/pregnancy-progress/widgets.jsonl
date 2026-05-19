@@ -1,0 +1,6 @@
+{"name": "WeekHeroCard", "grep": "Week $week", "description": "Hero card showing current week with fruit emoji, trimester badge, and due date countdown", "shared": true}
+{"name": "BodyChangesCard", "grep": "Body Changes", "description": "Card listing body changes for the current pregnancy week with bullet points", "shared": true}
+{"name": "BabyDevelopmentCard", "grep": "Baby's Development", "description": "Card displaying baby's developmental milestones for the current week", "shared": true}
+{"name": "SelfCareTipsCard", "grep": "Self-Care Tips", "description": "Expandable tips card with numbered tiles showing self-care recommendations", "shared": true}
+{"name": "ExpandableTipTile", "grep": "isExpanded", "description": "Expandable tile with number badge, title, and collapsible detail text", "shared": true}
+{"name": "DueDateSummaryCard", "grep": "days to go", "description": "Bottom summary bar showing trimester badge and countdown to due date", "shared": true}

@@ -1,0 +1,6 @@
+[
+  {
+    "path": "lib/screens/education/_widgets/**/*.dart",
+    "exists": false
+  }
+]

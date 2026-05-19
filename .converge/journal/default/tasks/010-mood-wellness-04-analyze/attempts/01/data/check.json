@@ -1,0 +1,10 @@
+{
+  "taskId": "010-mood-wellness-04-analyze",
+  "checks": [
+    {
+      "id": "widgets-json-exists",
+      "description": "widgets.jsonl exists for mood-wellness",
+      "cmd": "test -f .stitch/designs/mood-wellness/widgets.jsonl"
+    }
+  ]
+}

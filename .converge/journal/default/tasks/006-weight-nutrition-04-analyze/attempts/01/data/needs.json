@@ -1,0 +1,17 @@
+{
+  "taskId": "006-weight-nutrition-04-analyze",
+  "attemptNumber": 1,
+  "inputs": [
+    {
+      "pattern": "lib/screens/weight_nutrition/weight_nutrition_screen.dart",
+      "count": 1,
+      "samples": [
+        "lib/screens/weight_nutrition/weight_nutrition_screen.dart"
+      ]
+    }
+  ],
+  "outputs": [
+    ".stitch/designs/weight-nutrition/widgets.jsonl"
+  ],
+  "blocked": false
+}

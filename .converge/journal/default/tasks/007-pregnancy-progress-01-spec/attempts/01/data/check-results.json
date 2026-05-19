@@ -1,0 +1,18 @@
+[
+  {
+    "id": "spec-exists",
+    "description": "SPEC.md exists for pregnancy-progress",
+    "cmd": "test -f .stitch/designs/pregnancy-progress/SPEC.md",
+    "passed": true,
+    "exit_code": 0,
+    "output": ""
+  },
+  {
+    "id": "spec-has-content",
+    "description": "SPEC.md has >50 lines",
+    "cmd": "test $(wc -l < .stitch/designs/pregnancy-progress/SPEC.md) -gt 50",
+    "passed": true,
+    "exit_code": 0,
+    "output": ""
+  }
+]

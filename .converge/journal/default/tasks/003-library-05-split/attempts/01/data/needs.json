@@ -1,0 +1,17 @@
+{
+  "taskId": "003-library-05-split",
+  "attemptNumber": 1,
+  "inputs": [
+    {
+      "pattern": ".stitch/designs/library/widgets.jsonl",
+      "count": 1,
+      "samples": [
+        ".stitch/designs/library/widgets.jsonl"
+      ]
+    }
+  ],
+  "outputs": [
+    "lib/screens/library/_widgets/**/*.dart"
+  ],
+  "blocked": false
+}

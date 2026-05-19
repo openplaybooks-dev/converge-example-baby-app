@@ -1,0 +1,12 @@
+{
+  "taskId": "01-prepare-requirements",
+  "attemptNumber": 4,
+  "inputs": [],
+  "outputs": [
+    "PRD.md",
+    ".stitch/UX.md",
+    ".stitch/screens.json",
+    ".stitch/SITE.md"
+  ],
+  "blocked": false
+}

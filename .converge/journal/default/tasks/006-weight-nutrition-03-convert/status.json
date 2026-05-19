@@ -1,0 +1,20 @@
+{
+  "taskId": "006-weight-nutrition-03-convert",
+  "epicId": "default",
+  "focusPath": "default/006-weight-nutrition-03-convert",
+  "status": "running",
+  "startedAt": "2026-05-19T00:15:57.943Z",
+  "attempt": 1,
+  "gapsResolved": 0,
+  "gapsFailed": 0,
+  "checklist": [
+    {
+      "id": "subtask:spawn-1",
+      "type": "subtask",
+      "description": "stitch-flutter",
+      "details": ".converge/skills/stitch-flutter/SKILL.md",
+      "done": true,
+      "doneAt": "2026-05-19T00:17:45.737Z"
+    }
+  ]
+}

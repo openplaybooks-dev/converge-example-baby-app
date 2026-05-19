@@ -1,0 +1,5 @@
+{"name": "CurrentCycleCard", "grep": "Widget _buildCurrentCycleCard(BuildContext context)", "description": "Card displaying current cycle day, progress bar, and fertile window indicator", "shared": false}
+{"name": "HistoryItemCard", "grep": "Widget _buildHistoryItem(", "description": "List item showing cycle history entry with date range, duration badge, progress bar and notes", "shared": true}
+{"name": "LogCycleBottomSheet", "grep": "class _LogCycleBottomSheet extends StatefulWidget", "description": "Bottom sheet form with date picker, cycle length input, notes field, and irregular cycle toggle", "shared": true}
+{"name": "FertileWindowBottomSheet", "grep": "class _FertileWindowBottomSheet extends StatelessWidget", "description": "Bottom sheet displaying ovulation prediction date and fertile window information", "shared": true}
+{"name": "EntryDetailBottomSheet", "grep": "class _EntryDetailBottomSheet extends StatelessWidget", "description": "Bottom sheet for viewing and editing cycle entry details with delete and save actions", "shared": true}

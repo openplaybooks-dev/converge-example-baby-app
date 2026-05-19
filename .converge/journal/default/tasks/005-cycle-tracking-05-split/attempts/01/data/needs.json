@@ -1,0 +1,17 @@
+{
+  "taskId": "005-cycle-tracking-05-split",
+  "attemptNumber": 1,
+  "inputs": [
+    {
+      "pattern": ".stitch/designs/cycle-tracking/widgets.jsonl",
+      "count": 1,
+      "samples": [
+        ".stitch/designs/cycle-tracking/widgets.jsonl"
+      ]
+    }
+  ],
+  "outputs": [
+    "lib/screens/cycle_tracking/_widgets/**/*.dart"
+  ],
+  "blocked": false
+}

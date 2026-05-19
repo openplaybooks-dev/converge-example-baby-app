@@ -1,0 +1,17 @@
+{
+  "taskId": "013-settings-05-split",
+  "attemptNumber": 1,
+  "inputs": [
+    {
+      "pattern": ".stitch/designs/settings/widgets.jsonl",
+      "count": 1,
+      "samples": [
+        ".stitch/designs/settings/widgets.jsonl"
+      ]
+    }
+  ],
+  "outputs": [
+    "lib/screens/settings/_widgets/**/*.dart"
+  ],
+  "blocked": false
+}

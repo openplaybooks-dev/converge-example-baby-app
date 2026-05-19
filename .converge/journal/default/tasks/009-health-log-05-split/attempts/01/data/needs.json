@@ -1,0 +1,17 @@
+{
+  "taskId": "009-health-log-05-split",
+  "attemptNumber": 1,
+  "inputs": [
+    {
+      "pattern": ".stitch/designs/health-log/widgets.jsonl",
+      "count": 1,
+      "samples": [
+        ".stitch/designs/health-log/widgets.jsonl"
+      ]
+    }
+  ],
+  "outputs": [
+    "lib/screens/health_log/_widgets/**/*.dart"
+  ],
+  "blocked": false
+}

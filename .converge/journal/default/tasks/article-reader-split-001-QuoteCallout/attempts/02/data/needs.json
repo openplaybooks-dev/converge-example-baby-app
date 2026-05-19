@@ -1,0 +1,17 @@
+{
+  "taskId": "article-reader-split-001-QuoteCallout",
+  "attemptNumber": 2,
+  "inputs": [
+    {
+      "pattern": "lib/screens/article_reader/article_reader_screen.dart",
+      "count": 1,
+      "samples": [
+        "lib/screens/article_reader/article_reader_screen.dart"
+      ]
+    }
+  ],
+  "outputs": [
+    "lib/screens/article_reader/_widgets/QuoteCallout.dart"
+  ],
+  "blocked": false
+}

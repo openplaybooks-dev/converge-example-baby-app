@@ -1,0 +1,82 @@
+[
+  {
+    "line": "converge spawn template --path .converge/playbooks/default/templates/screen-widget-split/TASK.md --id cycle-tracking-split-001-CurrentCycleCard --var screenId=cycle-tracking --var screenTitle=\"Cycle Tracking\" --var screenPath=lib/screens/cycle_tracking/cycle_tracking_screen.dart --var widgetId=CurrentCycleCard --var widgetName=CurrentCycleCard --var widgetFile=lib/screens/cycle_tracking/_widgets/CurrentCycleCard.dart",
+    "parsed": {
+      "kind": "template",
+      "path": ".converge/playbooks/default/templates/screen-widget-split/TASK.md",
+      "vars": {
+        "screenId": "cycle-tracking",
+        "screenTitle": "Cycle Tracking",
+        "screenPath": "lib/screens/cycle_tracking/cycle_tracking_screen.dart",
+        "widgetId": "CurrentCycleCard",
+        "widgetName": "CurrentCycleCard",
+        "widgetFile": "lib/screens/cycle_tracking/_widgets/CurrentCycleCard.dart"
+      },
+      "id": "cycle-tracking-split-001-CurrentCycleCard"
+    }
+  },
+  {
+    "line": "converge spawn template --path .converge/playbooks/default/templates/screen-widget-split/TASK.md --id cycle-tracking-split-002-HistoryItemCard --var screenId=cycle-tracking --var screenTitle=\"Cycle Tracking\" --var screenPath=lib/screens/cycle_tracking/cycle_tracking_screen.dart --var widgetId=HistoryItemCard --var widgetName=HistoryItemCard --var widgetFile=lib/screens/cycle_tracking/_widgets/HistoryItemCard.dart",
+    "parsed": {
+      "kind": "template",
+      "path": ".converge/playbooks/default/templates/screen-widget-split/TASK.md",
+      "vars": {
+        "screenId": "cycle-tracking",
+        "screenTitle": "Cycle Tracking",
+        "screenPath": "lib/screens/cycle_tracking/cycle_tracking_screen.dart",
+        "widgetId": "HistoryItemCard",
+        "widgetName": "HistoryItemCard",
+        "widgetFile": "lib/screens/cycle_tracking/_widgets/HistoryItemCard.dart"
+      },
+      "id": "cycle-tracking-split-002-HistoryItemCard"
+    }
+  },
+  {
+    "line": "converge spawn template --path .converge/playbooks/default/templates/screen-widget-split/TASK.md --id cycle-tracking-split-003-LogCycleBottomSheet --var screenId=cycle-tracking --var screenTitle=\"Cycle Tracking\" --var screenPath=lib/screens/cycle_tracking/cycle_tracking_screen.dart --var widgetId=LogCycleBottomSheet --var widgetName=LogCycleBottomSheet --var widgetFile=lib/screens/cycle_tracking/_widgets/LogCycleBottomSheet.dart",
+    "parsed": {
+      "kind": "template",
+      "path": ".converge/playbooks/default/templates/screen-widget-split/TASK.md",
+      "vars": {
+        "screenId": "cycle-tracking",
+        "screenTitle": "Cycle Tracking",
+        "screenPath": "lib/screens/cycle_tracking/cycle_tracking_screen.dart",
+        "widgetId": "LogCycleBottomSheet",
+        "widgetName": "LogCycleBottomSheet",
+        "widgetFile": "lib/screens/cycle_tracking/_widgets/LogCycleBottomSheet.dart"
+      },
+      "id": "cycle-tracking-split-003-LogCycleBottomSheet"
+    }
+  },
+  {
+    "line": "converge spawn template --path .converge/playbooks/default/templates/screen-widget-split/TASK.md --id cycle-tracking-split-004-FertileWindowBottomSheet --var screenId=cycle-tracking --var screenTitle=\"Cycle Tracking\" --var screenPath=lib/screens/cycle_tracking/cycle_tracking_screen.dart --var widgetId=FertileWindowBottomSheet --var widgetName=FertileWindowBottomSheet --var widgetFile=lib/screens/cycle_tracking/_widgets/FertileWindowBottomSheet.dart",
+    "parsed": {
+      "kind": "template",
+      "path": ".converge/playbooks/default/templates/screen-widget-split/TASK.md",
+      "vars": {
+        "screenId": "cycle-tracking",
+        "screenTitle": "Cycle Tracking",
+        "screenPath": "lib/screens/cycle_tracking/cycle_tracking_screen.dart",
+        "widgetId": "FertileWindowBottomSheet",
+        "widgetName": "FertileWindowBottomSheet",
+        "widgetFile": "lib/screens/cycle_tracking/_widgets/FertileWindowBottomSheet.dart"
+      },
+      "id": "cycle-tracking-split-004-FertileWindowBottomSheet"
+    }
+  },
+  {
+    "line": "converge spawn template --path .converge/playbooks/default/templates/screen-widget-split/TASK.md --id cycle-tracking-split-005-EntryDetailBottomSheet --var screenId=cycle-tracking --var screenTitle=\"Cycle Tracking\" --var screenPath=lib/screens/cycle_tracking/cycle_tracking_screen.dart --var widgetId=EntryDetailBottomSheet --var widgetName=EntryDetailBottomSheet --var widgetFile=lib/screens/cycle_tracking/_widgets/EntryDetailBottomSheet.dart",
+    "parsed": {
+      "kind": "template",
+      "path": ".converge/playbooks/default/templates/screen-widget-split/TASK.md",
+      "vars": {
+        "screenId": "cycle-tracking",
+        "screenTitle": "Cycle Tracking",
+        "screenPath": "lib/screens/cycle_tracking/cycle_tracking_screen.dart",
+        "widgetId": "EntryDetailBottomSheet",
+        "widgetName": "EntryDetailBottomSheet",
+        "widgetFile": "lib/screens/cycle_tracking/_widgets/EntryDetailBottomSheet.dart"
+      },
+      "id": "cycle-tracking-split-005-EntryDetailBottomSheet"
+    }
+  }
+]

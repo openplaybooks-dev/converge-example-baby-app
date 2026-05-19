@@ -1,0 +1,13 @@
+{
+  "taskId": "02-design-system",
+  "attemptNumber": 1,
+  "inputs": [],
+  "outputs": [
+    ".stitch/system/DESIGN.md",
+    ".stitch/system/META.md",
+    ".stitch/system/single-screen.html",
+    ".stitch/system/multi-state-screen.html",
+    ".stitch/system/celebration-screen.html"
+  ],
+  "blocked": false
+}

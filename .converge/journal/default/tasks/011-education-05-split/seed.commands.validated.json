@@ -1,0 +1,66 @@
+[
+  {
+    "line": "converge spawn template --path .converge/playbooks/default/templates/screen-widget-split/TASK.md --id education-split-001-FeaturedArticleCard --var screenId=education --var screenTitle=Education --var screenPath=lib/screens/education/education_screen.dart --var widgetId=FeaturedArticleCard --var widgetName=FeaturedArticleCard --var widgetFile=lib/screens/education/_widgets/FeaturedArticleCard.dart",
+    "parsed": {
+      "kind": "template",
+      "path": ".converge/playbooks/default/templates/screen-widget-split/TASK.md",
+      "vars": {
+        "screenId": "education",
+        "screenTitle": "Education",
+        "screenPath": "lib/screens/education/education_screen.dart",
+        "widgetId": "FeaturedArticleCard",
+        "widgetName": "FeaturedArticleCard",
+        "widgetFile": "lib/screens/education/_widgets/FeaturedArticleCard.dart"
+      },
+      "id": "education-split-001-FeaturedArticleCard"
+    }
+  },
+  {
+    "line": "converge spawn template --path .converge/playbooks/default/templates/screen-widget-split/TASK.md --id education-split-002-TopicCard --var screenId=education --var screenTitle=Education --var screenPath=lib/screens/education/education_screen.dart --var widgetId=TopicCard --var widgetName=TopicCard --var widgetFile=lib/screens/education/_widgets/TopicCard.dart",
+    "parsed": {
+      "kind": "template",
+      "path": ".converge/playbooks/default/templates/screen-widget-split/TASK.md",
+      "vars": {
+        "screenId": "education",
+        "screenTitle": "Education",
+        "screenPath": "lib/screens/education/education_screen.dart",
+        "widgetId": "TopicCard",
+        "widgetName": "TopicCard",
+        "widgetFile": "lib/screens/education/_widgets/TopicCard.dart"
+      },
+      "id": "education-split-002-TopicCard"
+    }
+  },
+  {
+    "line": "converge spawn template --path .converge/playbooks/default/templates/screen-widget-split/TASK.md --id education-split-003-RecentArticleCard --var screenId=education --var screenTitle=Education --var screenPath=lib/screens/education/education_screen.dart --var widgetId=RecentArticleCard --var widgetName=RecentArticleCard --var widgetFile=lib/screens/education/_widgets/RecentArticleCard.dart",
+    "parsed": {
+      "kind": "template",
+      "path": ".converge/playbooks/default/templates/screen-widget-split/TASK.md",
+      "vars": {
+        "screenId": "education",
+        "screenTitle": "Education",
+        "screenPath": "lib/screens/education/education_screen.dart",
+        "widgetId": "RecentArticleCard",
+        "widgetName": "RecentArticleCard",
+        "widgetFile": "lib/screens/education/_widgets/RecentArticleCard.dart"
+      },
+      "id": "education-split-003-RecentArticleCard"
+    }
+  },
+  {
+    "line": "converge spawn template --path .converge/playbooks/default/templates/screen-widget-split/TASK.md --id education-split-004-SearchOverlay --var screenId=education --var screenTitle=Education --var screenPath=lib/screens/education/education_screen.dart --var widgetId=SearchOverlay --var widgetName=SearchOverlay --var widgetFile=lib/screens/education/_widgets/SearchOverlay.dart",
+    "parsed": {
+      "kind": "template",
+      "path": ".converge/playbooks/default/templates/screen-widget-split/TASK.md",
+      "vars": {
+        "screenId": "education",
+        "screenTitle": "Education",
+        "screenPath": "lib/screens/education/education_screen.dart",
+        "widgetId": "SearchOverlay",
+        "widgetName": "SearchOverlay",
+        "widgetFile": "lib/screens/education/_widgets/SearchOverlay.dart"
+      },
+      "id": "education-split-004-SearchOverlay"
+    }
+  }
+]

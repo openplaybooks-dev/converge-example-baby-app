@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=375, initial-scale=1.0">
+  <title>Mood & Wellness — Baby Bump Design</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'lavender': '#7C3AED',
+            'lavender-tint': '#F5F3FF',
+            'blush': '#F9A8D4',
+            'mint': '#6EE7B7',
+            'mist': '#FAFAFA',
+            'graphite': '#1F2937',
+            'stone': '#6B7280',
+            'misty-border': '#E5E7EB',
+            'coral': '#EF4444',
+            'warm-white': '#FFFFFF',
+          },
+          fontFamily: {
+            'nunito': ['Nunito', 'system-ui', 'sans-serif'],
+          },
+          borderRadius: {
+            'card': '16px',
+            'sheet': '28px',
+            'pill': '999px',
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Nunito', system-ui, sans-serif;
+      background: #E8E8E8;
+      display: flex;
+      justify-content: center;
+      padding: 32px 16px;
+      min-height: 100vh;
+    }
+    .phone {
+      width: 375px;
+      min-height: 812px;
+      border-radius: 40px;
+      overflow: hidden;
+      position: relative;
+      box-shadow: 0 24px 64px rgba(0,0,0,0.2);
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+    .card-shadow {
+      box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    }
+    .card-tap:active {
+      transform: scale(0.98);
+      transition: transform 200ms ease-out;
+    }
+    .emoji-btn {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      border: 2px solid var(--color-border);
+      background: var(--color-surface);
+      font-size: 28px;
+      cursor: pointer;
+      transition: transform 200ms ease-out, border-color 200ms ease-out, background 200ms ease-out;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .emoji-btn:hover {
+      border-color: #7C3AED;
+      transform: scale(1.1);
+    }
+    .emoji-btn.selected {
+      border-color: #F9A8D4;
+      border-width: 3px;
+      background: rgba(249, 168, 212, 0.2);
+      transform: scale(1.05);
+    }
+    .chip-tap:active {
+      opacity: 0.8;
+      transition: opacity 150ms ease-out;
+    }
+    .badge-pill {
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-size: 11px;
+      font-weight: 600;
+    }
+    @keyframes fade-in-up {
+      from { opacity: 0; transform: translateY(12px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .animate-section {
+      animation: fade-in-up 300ms ease-out backwards;
+    }
+    .chart-dot {
+      transition: transform 200ms ease-out;
+    }
+    .chart-dot:hover {
+      transform: scale(1.5);
+    }
+  </style>
+</head>
+<body>
+  <div class="phone">
+
+    <!-- Scaffold -->
+    <div data-flutter="scaffold" class="scaffold flex flex-col min-h-screen bg-lavender-tint">
+
+      <!-- AppBar -->
+      <header data-flutter="app-bar" class="flex items-center h-14 px-4 bg-lavender-tint">
+        <button data-flutter="icon-btn" aria-label="Go back" class="w-12 h-12 flex items-center justify-center rounded-full hover:bg-lavender/10">
+          <svg class="icon w-6 h-6 text-graphite" data-name="arrow_back" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M19 12H5M12 19l-7-7 7-7"/>
+          </svg>
+        </button>
+        <h1 class="flex-1 text-xl font-semibold text-graphite text-center pr-12">Mood & Wellness</h1>
+      </header>
+
+      <!-- Body - CustomScrollView with sections -->
+      <main data-flutter="custom-scroll" class="flex-1 overflow-y-auto px-4 pb-6">
+
+        <!-- Section 1: Today's Mood Card (SliverAppBar expanded child) -->
+        <section class="mt-6 mb-6 animate-section" style="animation-delay: 0ms;">
+          <div data-flutter="card" data-color="primary" class="card-tap bg-mist rounded-card card-shadow p-4 cursor-pointer">
+            <!-- Header row -->
+            <div data-flutter="row" data-main-axis="space-between" data-cross-axis="center" class="flex justify-between items-center mb-4">
+              <div>
+                <h2 class="text-base font-semibold text-graphite" style="line-height: 24px;">How are you feeling today?</h2>
+                <p class="text-sm text-stone" style="line-height: 20px;">May 19, 2026</p>
+              </div>
+              <span class="badge-pill bg-mint/20 text-graphite">Today</span>
+            </div>
+
+            <!-- Emoji row -->
+            <div data-flutter="row" data-main-axis="space-evenly" data-spacing="sm" class="flex justify-between items-center gap-2 mb-4">
+              <button class="emoji-btn" aria-label="Terrible mood, tap to log" aria-pressed="false">😔</button>
+              <button class="emoji-btn" aria-label="Bad mood, tap to log" aria-pressed="false">😕</button>
+              <button class="emoji-btn" aria-label="Okay mood, tap to log" aria-pressed="false">😐</button>
+              <button class="emoji-btn selected" aria-label="Good mood, tap to log" aria-pressed="true">🙂</button>
+              <button class="emoji-btn" aria-label="Great mood, tap to log" aria-pressed="false">😊</button>
+            </div>
+
+            <!-- Note field -->
+            <div class="mt-4">
+              <textarea class="w-full min-h-[56px] px-4 py-3 bg-misty-border/50 rounded-xl text-sm text-graphite placeholder-stone resize-none transition-shadow duration-200 focus:outline-none focus:ring-2 focus:ring-lavender/30"
+                data-flutter="text-field"
+                placeholder="Add a note (optional, max 200 characters)"
+                aria-label="Mood note"></textarea>
+            </div>
+          </div>
+        </section>
+
+        <!-- Section 2: Mood Trend Chart -->
+        <section class="mb-6 animate-section" style="animation-delay: 50ms;">
+          <div data-flutter="card" data-color="primary" class="card-tap bg-mist rounded-card card-shadow p-4">
+            <!-- Header with toggle chips -->
+            <div data-flutter="row" data-main-axis="space-between" data-cross-axis="center" class="flex justify-between items-center mb-4">
+              <h3 class="text-base font-semibold text-graphite" style="line-height: 24px;">Mood Trend</h3>
+              <div data-flutter="row" data-spacing="xs" class="flex items-center gap-1">
+                <button class="chip-tap px-3 py-1.5 rounded-full text-xs font-semibold bg-lavender text-white" data-flutter="chip" data-color="primary">1W</button>
+                <button class="chip-tap px-3 py-1.5 rounded-full text-xs font-semibold bg-misty-border text-graphite" data-flutter="chip">1M</button>
+                <button class="chip-tap px-3 py-1.5 rounded-full text-xs font-semibold bg-misty-border text-graphite" data-flutter="chip">All</button>
+              </div>
+            </div>
+
+            <!-- Chart area -->
+            <div class="relative h-[160px]">
+              <svg data-flutter="custom-paint" class="w-full h-full" viewBox="0 0 300 140" preserveAspectRatio="xMidYMid meet">
+                <!-- Grid lines -->
+                <line x1="0" y1="20" x2="300" y2="20" stroke="#E5E7EB" stroke-width="1"/>
+                <line x1="0" y1="50" x2="300" y2="50" stroke="#E5E7EB" stroke-width="1"/>
+                <line x1="0" y1="80" x2="300" y2="80" stroke="#E5E7EB" stroke-width="1"/>
+                <line x1="0" y1="110" x2="300" y2="110" stroke="#E5E7EB" stroke-width="1"/>
+
+                <!-- Y-axis labels -->
+                <text x="8" y="24" font-size="10" fill="#6B7280" font-family="Nunito">😊</text>
+                <text x="8" y="54" font-size="10" fill="#6B7280" font-family="Nunito">🙂</text>
+                <text x="8" y="84" font-size="10" fill="#6B7280" font-family="Nunito">😐</text>
+                <text x="8" y="114" font-size="10" fill="#6B7280" font-family="Nunito">😢</text>
+
+                <!-- Area fill -->
+                <path d="M0 85 Q37.5 80 75 70 T150 55 T225 45 T300 35 L300 120 L0 120 Z" fill="url(#moodAreaGrad)"/>
+
+                <!-- Line -->
+                <path d="M0 85 Q37.5 80 75 70 T150 55 T225 45 T300 35" fill="none" stroke="#7C3AED" stroke-width="2.5" stroke-linecap="round"/>
+
+                <!-- Data points -->
+                <circle class="chart-dot" cx="0" cy="85" r="5" fill="#7C3AED" data-point="Mon"/>
+                <circle class="chart-dot" cx="50" cy="78" r="5" fill="#7C3AED" data-point="Tue"/>
+                <circle class="chart-dot" cx="100" cy="65" r="5" fill="#7C3AED" data-point="Wed"/>
+                <circle class="chart-dot" cx="150" cy="55" r="5" fill="#7C3AED" data-point="Thu"/>
+                <circle class="chart-dot" cx="200" cy="48" r="5" fill="#7C3AED" data-point="Fri"/>
+                <circle class="chart-dot" cx="250" cy="40" r="5" fill="#7C3AED" data-point="Sat"/>
+                <circle class="chart-dot" cx="300" cy="35" r="5" fill="#7C3AED" data-point="Sun"/>
+
+                <!-- X-axis labels -->
+                <text x="0" y="132" font-size="10" fill="#6B7280" text-anchor="middle" font-family="Nunito">Mon</text>
+                <text x="50" y="132" font-size="10" fill="#6B7280" text-anchor="middle" font-family="Nunito">Tue</text>
+                <text x="100" y="132" font-size="10" fill="#6B7280" text-anchor="middle" font-family="Nunito">Wed</text>
+                <text x="150" y="132" font-size="10" fill="#6B7280" text-anchor="middle" font-family="Nunito">Thu</text>
+                <text x="200" y="132" font-size="10" fill="#6B7280" text-anchor="middle" font-family="Nunito">Fri</text>
+                <text x="250" y="132" font-size="10" fill="#6B7280" text-anchor="middle" font-family="Nunito">Sat</text>
+                <text x="300" y="132" font-size="10" fill="#6B7280" text-anchor="middle" font-family="Nunito">Sun</text>
+
+                <!-- Gradient def -->
+                <defs>
+                  <linearGradient id="moodAreaGrad" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#7C3AED" stop-opacity="0.2"/>
+                    <stop offset="100%" stop-color="#7C3AED" stop-opacity="0"/>
+                  </linearGradient>
+                </defs>
+              </svg>
+            </div>
+
+            <!-- Legend -->
+            <div data-flutter="row" data-spacing="xs" data-main-axis="start" class="flex items-center gap-2 mt-3">
+              <span class="text-xs text-stone">Score</span>
+              <div class="w-2 h-2 rounded-full bg-lavender"></div>
+              <span class="text-xs text-stone">Mood</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- Section 3: Energy Trend Chart -->
+        <section class="mb-6 animate-section" style="animation-delay: 100ms;">
+          <div data-flutter="card" data-color="primary" class="card-tap bg-mist rounded-card card-shadow p-4">
+            <!-- Header with toggle chips -->
+            <div data-flutter="row" data-main-axis="space-between" data-cross-axis="center" class="flex justify-between items-center mb-4">
+              <h3 class="text-base font-semibold text-graphite" style="line-height: 24px;">Energy Trend</h3>
+              <div data-flutter="row" data-spacing="xs" class="flex items-center gap-1">
+                <button class="chip-tap px-3 py-1.5 rounded-full text-xs font-semibold bg-mint text-graphite" data-flutter="chip" data-color="tertiary">1W</button>
+                <button class="chip-tap px-3 py-1.5 rounded-full text-xs font-semibold bg-misty-border text-graphite" data-flutter="chip">1M</button>
+                <button class="chip-tap px-3 py-1.5 rounded-full text-xs font-semibold bg-misty-border text-graphite" data-flutter="chip">All</button>
+              </div>
+            </div>
+
+            <!-- Chart area -->
+            <div class="relative h-[160px]">
+              <svg data-flutter="custom-paint" class="w-full h-full" viewBox="0 0 300 140" preserveAspectRatio="xMidYMid meet">
+                <!-- Grid lines -->
+                <line x1="0" y1="20" x2="300" y2="20" stroke="#E5E7EB" stroke-width="1"/>
+                <line x1="0" y1="50" x2="300" y2="50" stroke="#E5E7EB" stroke-width="1"/>
+                <line x1="0" y1="80" x2="300" y2="80" stroke="#E5E7EB" stroke-width="1"/>
+                <line x1="0" y1="110" x2="300" y2="110" stroke="#E5E7EB" stroke-width="1"/>
+
+                <!-- Y-axis labels -->
+                <text x="8" y="24" font-size="10" fill="#6B7280" font-family="Nunito">High</text>
+                <text x="8" y="54" font-size="10" fill="#6B7280" font-family="Nunito">Med</text>
+                <text x="8" y="84" font-size="10" fill="#6B7280" font-family="Nunito">Low</text>
+                <text x="8" y="114" font-size="10" fill="#6B7280" font-family="Nunito">VLow</text>
+
+                <!-- Area fill -->
+                <path d="M0 90 Q37.5 75 75 80 T150 60 T225 45 T300 50 L300 120 L0 120 Z" fill="url(#energyAreaGrad)"/>
+
+                <!-- Line -->
+                <path d="M0 90 Q37.5 75 75 80 T150 60 T225 45 T300 50" fill="none" stroke="#6EE7B7" stroke-width="2.5" stroke-linecap="round"/>
+
+                <!-- Data points -->
+                <circle class="chart-dot" cx="0" cy="90" r="5" fill="#6EE7B7" data-point="Mon"/>
+                <circle class="chart-dot" cx="50" cy="80" r="5" fill="#6EE7B7" data-point="Tue"/>
+                <circle class="chart-dot" cx="100" cy="75" r="5" fill="#6EE7B7" data-point="Wed"/>
+                <circle class="chart-dot" cx="150" cy="60" r="5" fill="#6EE7B7" data-point="Thu"/>
+                <circle class="chart-dot" cx="200" cy="50" r="5" fill="#6EE7B7" data-point="Fri"/>
+                <circle class="chart-dot" cx="250" cy="55" r="5" fill="#6EE7B7" data-point="Sat"/>
+                <circle class="chart-dot" cx="300" cy="50" r="5" fill="#6EE7B7" data-point="Sun"/>
+
+                <!-- X-axis labels -->
+                <text x="0" y="132" font-size="10" fill="#6B7280" text-anchor="middle" font-family="Nunito">Mon</text>
+                <text x="50" y="132" font-size="10" fill="#6B7280" text-anchor="middle" font-family="Nunito">Tue</text>
+                <text x="100" y="132" font-size="10" fill="#6B7280" text-anchor="middle" font-family="Nunito">Wed</text>
+                <text x="150" y="132" font-size="10" fill="#6B7280" text-anchor="middle" font-family="Nunito">Thu</text>
+                <text x="200" y="132" font-size="10" fill="#6B7280" text-anchor="middle" font-family="Nunito">Fri</text>
+                <text x="250" y="132" font-size="10" fill="#6B7280" text-anchor="middle" font-family="Nunito">Sat</text>
+                <text x="300" y="132" font-size="10" fill="#6B7280" text-anchor="middle" font-family="Nunito">Sun</text>
+
+                <!-- Gradient def -->
+                <defs>
+                  <linearGradient id="energyAreaGrad" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#6EE7B7" stop-opacity="0.2"/>
+                    <stop offset="100%" stop-color="#6EE7B7" stop-opacity="0"/>
+                  </linearGradient>
+                </defs>
+              </svg>
+            </div>
+
+            <!-- Legend -->
+            <div data-flutter="row" data-spacing="xs" data-main-axis="start" class="flex items-center gap-2 mt-3">
+              <span class="text-xs text-stone">Level</span>
+              <div class="w-2 h-2 rounded-full bg-mint"></div>
+              <span class="text-xs text-stone">Energy</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- Section 4: Wellness Tip -->
+        <section class="mb-6 animate-section" style="animation-delay: 150ms;">
+          <div data-flutter="card" data-color="primary" data-expandable="true" class="card-tap bg-mist rounded-card card-shadow p-4 cursor-pointer">
+            <!-- Header row -->
+            <div data-flutter="row" data-main-axis="space-between" data-cross-axis="center" class="flex justify-between items-center mb-3">
+              <div data-flutter="row" data-spacing="sm" class="flex items-center gap-2">
+                <svg class="icon w-5 h-5 text-lavender" data-name="lightbulb" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M9 21h6M12 3a6 6 0 0 0-6 6c0 2.22 1.21 4.16 3 5.19V17a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-2.81c1.79-1.03 3-2.97 3-5.19a6 6 0 0 0-6-6z"/>
+                </svg>
+                <h3 class="text-base font-semibold text-graphite" style="line-height: 24px;">Wellness Tip</h3>
+              </div>
+              <span class="badge-pill bg-lavender/10 text-lavender" data-flutter="chip" data-color="primary">Mood</span>
+            </div>
+
+            <!-- Tip text -->
+            <p class="text-sm text-stone" style="line-height: 20px;">
+              Your energy is improving! Try adding a 10-minute walk after meals to maintain this positive trend.
+            </p>
+
+            <!-- Expand indicator -->
+            <div class="flex justify-center mt-3">
+              <svg class="icon w-4 h-4 text-stone" data-name="expand_more" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M6 9l6 6 6-6"/>
+              </svg>
+            </div>
+          </div>
+        </section>
+
+      </main>
+
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,366 @@
+{
+  "iteration": 2,
+  "stallCount": 0,
+  "nodes": [
+    {
+      "id": "check-seed-seeded",
+      "handler": "check-seed-seeded",
+      "status": "done",
+      "origin": "initial",
+      "data": {
+        "priority": 100
+      },
+      "result": {
+        "action": "continue",
+        "durationMs": 0
+      }
+    },
+    {
+      "id": "check-outputs-exist",
+      "handler": "check-outputs-exist",
+      "status": "done",
+      "origin": "initial",
+      "data": {
+        "priority": 99
+      },
+      "result": {
+        "action": "continue",
+        "durationMs": 0
+      }
+    },
+    {
+      "id": "detect-gaps",
+      "handler": "detect-gaps",
+      "status": "done",
+      "origin": "initial",
+      "data": {
+        "priority": 98
+      },
+      "result": {
+        "action": "continue",
+        "gaps": [
+          {
+            "id": "001-home-01-spec-plan-missing",
+            "type": "incomplete",
+            "level": "task",
+            "scope": "001-home-01-spec",
+            "severity": "high",
+            "description": "[001-home-01-spec] Generating plan",
+            "source": "unit",
+            "detected": "2026-05-18T23:00:54.484Z",
+            "resolved": false,
+            "checks": [],
+            "metadata": {
+              "gapKind": "plan",
+              "unitPath": "/Users/minh/Documents/openplayboosks/examples/baby-app/.converge/journal/default/tasks/001-home-01-spec/TASK.md",
+              "taskId": "001-home-01-spec",
+              "taskTitle": "Spec: Home"
+            }
+          }
+        ],
+        "durationMs": 0
+      }
+    },
+    {
+      "id": "signal-done",
+      "handler": "signal-done",
+      "status": "buffered",
+      "origin": "initial",
+      "data": {
+        "priority": 97,
+        "applicable": "noGapsAndExecuted"
+      }
+    },
+    {
+      "id": "resolve-plan",
+      "handler": "resolve-plan",
+      "status": "done",
+      "origin": "initial",
+      "data": {
+        "priority": 90
+      },
+      "result": {
+        "action": "continue",
+        "durationMs": 89094
+      }
+    },
+    {
+      "id": "run-executor",
+      "handler": "run-executor",
+      "status": "done",
+      "origin": "initial",
+      "data": {
+        "priority": 65
+      },
+      "result": {
+        "action": "continue",
+        "durationMs": 0
+      }
+    },
+    {
+      "id": "verify",
+      "handler": "verify",
+      "status": "done",
+      "origin": "initial",
+      "data": {
+        "priority": 50
+      },
+      "result": {
+        "action": "continue",
+        "gaps": [
+          {
+            "id": "001-home-01-spec-missing-output-.stitch/designs/home/SPEC.md",
+            "type": "incomplete",
+            "level": "task",
+            "scope": "001-home-01-spec",
+            "severity": "high",
+            "description": "[001-home-01-spec] Task output not created: .stitch/designs/home/SPEC.md",
+            "source": "unit",
+            "detected": "2026-05-18T23:02:23.591Z",
+            "resolved": false,
+            "checks": [],
+            "metadata": {
+              "gapKind": "output",
+              "unitPath": "/Users/minh/Documents/openplayboosks/examples/baby-app/.converge/journal/default/tasks/001-home-01-spec/TASK.md",
+              "taskId": "001-home-01-spec",
+              "taskTitle": "Spec: Home",
+              "taskPrompt": "# Spec: Home\n\nGenerate the screen specification for **Home** (`/`).\n\n## Inputs\n- `.stitch/system/DESIGN.md` — Design system\n- `.stitch/UX.md` — UX overview\n- `.stitch/screens.json` — Screen definitions\n\n## Task\n\nRead inputs and produce `.stitch/designs/home/SPEC.md` containing:\n\n1. **Screen Title** — Home\n2. **Purpose** — What this screen does and why\n3. **Route** — `/`\n4. **Widget Name** — `HomeScreen`\n5. **Design Tokens** — Colors, typography, spacing from DESIGN.md\n6. **Layout Rules** — Scaffold structure, app bar, body, bottom nav\n7. **Sections** — Each visual section with:\n   - Description of content\n   - Widget type (ListView, GridView, Column, etc.)\n   - Data requirements\n   - Interactive elements\n8. **Data** — Entities and fields displayed on this screen\n9. **Motion** — Entry animations, transitions, hero animations\n10. **Accessibility** — Semantics labels, focus order, contrast notes\n11. **Anti-Patterns** — Things to avoid\n\n## Success Criteria\n\n- `.stitch/designs/home/SPEC.md` exists and has >50 lines\n- All required sections present\n- Design tokens reference DESIGN.md values",
+              "taskInputs": [
+                ".stitch/system/DESIGN.md",
+                ".stitch/UX.md",
+                ".stitch/screens.json"
+              ],
+              "factId": "file-exists:test -f \".stitch/designs/home/SPEC.md\"",
+              "awaitingUserInput": false
+            }
+          },
+          {
+            "id": "001-home-01-spec-check-failed-spec-exists",
+            "type": "incomplete",
+            "level": "task",
+            "scope": "001-home-01-spec",
+            "severity": "high",
+            "description": "[001-home-01-spec] Check failed: SPEC.md exists for home",
+            "source": "unit",
+            "detected": "2026-05-18T23:02:23.593Z",
+            "resolved": false,
+            "checks": [],
+            "metadata": {
+              "gapKind": "check-failed",
+              "checkId": "spec-exists",
+              "checkCmd": "test -f .stitch/designs/home/SPEC.md",
+              "checkDescription": "SPEC.md exists for home",
+              "checkOutput": "",
+              "checkExitCode": 1,
+              "taskPrompt": "# Spec: Home\n\nGenerate the screen specification for **Home** (`/`).\n\n## Inputs\n- `.stitch/system/DESIGN.md` — Design system\n- `.stitch/UX.md` — UX overview\n- `.stitch/screens.json` — Screen definitions\n\n## Task\n\nRead inputs and produce `.stitch/designs/home/SPEC.md` containing:\n\n1. **Screen Title** — Home\n2. **Purpose** — What this screen does and why\n3. **Route** — `/`\n4. **Widget Name** — `HomeScreen`\n5. **Design Tokens** — Colors, typography, spacing from DESIGN.md\n6. **Layout Rules** — Scaffold structure, app bar, body, bottom nav\n7. **Sections** — Each visual section with:\n   - Description of content\n   - Widget type (ListView, GridView, Column, etc.)\n   - Data requirements\n   - Interactive elements\n8. **Data** — Entities and fields displayed on this screen\n9. **Motion** — Entry animations, transitions, hero animations\n10. **Accessibility** — Semantics labels, focus order, contrast notes\n11. **Anti-Patterns** — Things to avoid\n\n## Success Criteria\n\n- `.stitch/designs/home/SPEC.md` exists and has >50 lines\n- All required sections present\n- Design tokens reference DESIGN.md values",
+              "taskId": "001-home-01-spec",
+              "taskTitle": "Spec: Home",
+              "unitPath": "/Users/minh/Documents/openplayboosks/examples/baby-app/.converge/journal/default/tasks/001-home-01-spec/TASK.md",
+              "factId": "check:spec-exists"
+            }
+          },
+          {
+            "id": "001-home-01-spec-check-failed-spec-has-content",
+            "type": "incomplete",
+            "level": "task",
+            "scope": "001-home-01-spec",
+            "severity": "high",
+            "description": "[001-home-01-spec] Check failed: SPEC.md has >50 lines",
+            "source": "unit",
+            "detected": "2026-05-18T23:02:23.597Z",
+            "resolved": false,
+            "checks": [],
+            "metadata": {
+              "gapKind": "check-failed",
+              "checkId": "spec-has-content",
+              "checkCmd": "test $(wc -l < .stitch/designs/home/SPEC.md) -gt 50",
+              "checkDescription": "SPEC.md has >50 lines",
+              "checkOutput": "/bin/bash: .stitch/designs/home/SPEC.md: No such file or directory\n/bin/bash: line 0: test: -gt: unary operator expected",
+              "checkExitCode": 2,
+              "taskPrompt": "# Spec: Home\n\nGenerate the screen specification for **Home** (`/`).\n\n## Inputs\n- `.stitch/system/DESIGN.md` — Design system\n- `.stitch/UX.md` — UX overview\n- `.stitch/screens.json` — Screen definitions\n\n## Task\n\nRead inputs and produce `.stitch/designs/home/SPEC.md` containing:\n\n1. **Screen Title** — Home\n2. **Purpose** — What this screen does and why\n3. **Route** — `/`\n4. **Widget Name** — `HomeScreen`\n5. **Design Tokens** — Colors, typography, spacing from DESIGN.md\n6. **Layout Rules** — Scaffold structure, app bar, body, bottom nav\n7. **Sections** — Each visual section with:\n   - Description of content\n   - Widget type (ListView, GridView, Column, etc.)\n   - Data requirements\n   - Interactive elements\n8. **Data** — Entities and fields displayed on this screen\n9. **Motion** — Entry animations, transitions, hero animations\n10. **Accessibility** — Semantics labels, focus order, contrast notes\n11. **Anti-Patterns** — Things to avoid\n\n## Success Criteria\n\n- `.stitch/designs/home/SPEC.md` exists and has >50 lines\n- All required sections present\n- Design tokens reference DESIGN.md values",
+              "taskId": "001-home-01-spec",
+              "taskTitle": "Spec: Home",
+              "unitPath": "/Users/minh/Documents/openplayboosks/examples/baby-app/.converge/journal/default/tasks/001-home-01-spec/TASK.md",
+              "factId": "check:spec-has-content"
+            }
+          }
+        ],
+        "durationMs": 18
+      }
+    },
+    {
+      "id": "check-stall",
+      "handler": "check-stall",
+      "status": "done",
+      "origin": "initial",
+      "data": {
+        "priority": 45
+      },
+      "result": {
+        "action": "continue",
+        "durationMs": 0
+      }
+    },
+    {
+      "id": "advance-attempt",
+      "handler": "advance-attempt",
+      "status": "done",
+      "origin": "initial",
+      "data": {
+        "priority": 40
+      },
+      "result": {
+        "action": "continue",
+        "durationMs": 0
+      }
+    },
+    {
+      "id": "repair-loop",
+      "handler": "repair-loop",
+      "status": "done",
+      "origin": "initial",
+      "data": {
+        "priority": 55
+      },
+      "result": {
+        "action": "continue",
+        "durationMs": 10
+      }
+    },
+    {
+      "id": "run-strategy:task-run#1",
+      "handler": "run-strategy",
+      "status": "done",
+      "origin": "planned",
+      "data": {
+        "strategy": "task-run",
+        "priority": 55
+      },
+      "result": {
+        "action": "continue",
+        "durationMs": 37311
+      }
+    },
+    {
+      "id": "check-seed-seeded#2",
+      "handler": "check-seed-seeded",
+      "status": "done",
+      "origin": "reactive",
+      "data": {
+        "priority": 100
+      },
+      "result": {
+        "action": "continue",
+        "durationMs": 0
+      }
+    },
+    {
+      "id": "check-outputs-exist#2",
+      "handler": "check-outputs-exist",
+      "status": "done",
+      "origin": "reactive",
+      "data": {
+        "priority": 99
+      },
+      "result": {
+        "action": "done",
+        "success": true,
+        "reason": "Outputs already present",
+        "durationMs": 39
+      }
+    },
+    {
+      "id": "detect-gaps#2",
+      "handler": "detect-gaps",
+      "status": "buffered",
+      "origin": "reactive",
+      "data": {
+        "priority": 98
+      }
+    },
+    {
+      "id": "signal-done#2",
+      "handler": "signal-done",
+      "status": "buffered",
+      "origin": "reactive",
+      "data": {
+        "priority": 97,
+        "applicable": "noGapsAndExecuted"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "from": "_start",
+      "to": "check-seed-seeded",
+      "iteration": 1,
+      "ts": "2026-05-18T23:00:54.483Z"
+    },
+    {
+      "from": "check-seed-seeded",
+      "to": "check-outputs-exist",
+      "iteration": 1,
+      "ts": "2026-05-18T23:00:54.483Z"
+    },
+    {
+      "from": "check-outputs-exist",
+      "to": "detect-gaps",
+      "iteration": 1,
+      "ts": "2026-05-18T23:00:54.484Z"
+    },
+    {
+      "from": "detect-gaps",
+      "to": "resolve-plan",
+      "iteration": 1,
+      "ts": "2026-05-18T23:02:23.579Z"
+    },
+    {
+      "from": "resolve-plan",
+      "to": "run-executor",
+      "iteration": 1,
+      "ts": "2026-05-18T23:02:23.579Z"
+    },
+    {
+      "from": "run-executor",
+      "to": "verify",
+      "iteration": 1,
+      "ts": "2026-05-18T23:02:23.597Z"
+    },
+    {
+      "from": "verify",
+      "to": "repair-loop",
+      "iteration": 1,
+      "ts": "2026-05-18T23:02:23.608Z"
+    },
+    {
+      "from": "repair-loop",
+      "to": "run-strategy:task-run#1",
+      "iteration": 1,
+      "ts": "2026-05-18T23:03:00.919Z"
+    },
+    {
+      "from": "run-strategy:task-run#1",
+      "to": "check-stall",
+      "iteration": 1,
+      "ts": "2026-05-18T23:03:00.920Z"
+    },
+    {
+      "from": "check-stall",
+      "to": "advance-attempt",
+      "iteration": 1,
+      "ts": "2026-05-18T23:03:00.920Z"
+    },
+    {
+      "from": "advance-attempt",
+      "to": "check-seed-seeded#2",
+      "iteration": 2,
+      "ts": "2026-05-18T23:03:00.921Z"
+    },
+    {
+      "from": "check-seed-seeded#2",
+      "to": "check-outputs-exist#2",
+      "iteration": 2,
+      "ts": "2026-05-18T23:03:00.960Z"
+    }
+  ]
+}
