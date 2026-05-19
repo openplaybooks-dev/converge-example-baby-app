@@ -1,0 +1,26 @@
+{
+  "kind": "definition",
+  "taskMdPath": "/Users/minh/Documents/openplayboosks/examples/baby-app/.converge/skills/stitch-flutter/SKILL.md",
+  "rejectedPath": "/Users/minh/Documents/openplayboosks/examples/baby-app/.converge/skills/stitch-flutter/SKILL.md.rejected",
+  "parseError": "/Users/minh/Documents/openplayboosks/examples/baby-app/.converge/skills/stitch-flutter/SKILL.md: TASK.md must start with `---` YAML frontmatter delimiter",
+  "detectedAt": "2026-05-19T02:39:46.399Z",
+  "expected": {
+    "format": "TASK.md with `---` delimited YAML frontmatter, then markdown body.",
+    "requiredKeys": [
+      "id"
+    ],
+    "listValuedKeys": [
+      "outputs",
+      "inputs",
+      "checks",
+      "depends_on",
+      "tags",
+      "skills"
+    ]
+  },
+  "actual": {
+    "firstBytes": "# Stitch Flutter — Tailwind HTML → Pixel-Perfect Flutter\n\nConvert HTML + Tailwind CSS design mockups into production-ready Flutter widgets. AI produces beautiful Tailwind — this skill maps every utility class to its exact Flutter equivalent.\n\n## Design Philosophy\n\n1. **AI generates Tailwind HTML** — what it's best at, highest design quality\n2. **Minimal `data-flutter` hints** — only for Flutter-sp",
+    "byteLength": 10595
+  },
+  "suggestedFix": "Re-emit the TASK.md frontmatter with each list-valued key followed by `  - item` bullets, and ensure scalar values containing colons, pipes, or backslashes are quoted."
+}

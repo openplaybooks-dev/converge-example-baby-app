@@ -1,0 +1,26 @@
+{
+  "kind": "definition",
+  "taskMdPath": "/Users/minh/Documents/openplayboosks/examples/baby-app/.converge/skills/stitch-generate/SKILL.md",
+  "rejectedPath": "/Users/minh/Documents/openplayboosks/examples/baby-app/.converge/skills/stitch-generate/SKILL.md.rejected",
+  "parseError": "/Users/minh/Documents/openplayboosks/examples/baby-app/.converge/skills/stitch-generate/SKILL.md: TASK.md must start with `---` YAML frontmatter delimiter",
+  "detectedAt": "2026-05-19T02:35:29.782Z",
+  "expected": {
+    "format": "TASK.md with `---` delimited YAML frontmatter, then markdown body.",
+    "requiredKeys": [
+      "id"
+    ],
+    "listValuedKeys": [
+      "outputs",
+      "inputs",
+      "checks",
+      "depends_on",
+      "tags",
+      "skills"
+    ]
+  },
+  "actual": {
+    "firstBytes": "# Stitch Generate — Mobile Screen Mockups for Flutter\n\nGenerate high-fidelity mobile screen mockups for Flutter apps. Mockups use HTML + Tailwind CSS as a visual preview format — the source of truth is the screen's Flutter widget structure, not the HTML.\n\n## Design Philosophy\n\n1. **Think mobile-first** — design for a 375pt viewport held in one hand. Every element must be thumb-reachable, every tap",
+    "byteLength": 9211
+  },
+  "suggestedFix": "Re-emit the TASK.md frontmatter with each list-valued key followed by `  - item` bullets, and ensure scalar values containing colons, pipes, or backslashes are quoted."
+}

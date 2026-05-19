@@ -1,0 +1,90 @@
+---
+name: default
+description: End-to-end Flutter app generation — from idea.md to app-store-ready Bloom
+run:
+  mode: oneoff
+  maxIterations: 250
+  maxTaskAttempts: 3
+tasks:
+  - id: 01-prepare-requirements
+  - id: 02-design-system
+    depends_on:
+      - 01-prepare-requirements
+  - id: 03-build-screens
+    depends_on:
+      - 02-design-system
+  - id: 05-add-behavior
+    depends_on:
+      - 03-build-screens
+  - id: 06-wire-screens
+    depends_on:
+      - 05-add-behavior
+  - id: 07-build-overlays
+    depends_on:
+      - 06-wire-screens
+  - id: 08-generate-assets
+    depends_on:
+      - 07-build-overlays
+  - id: 09-generate-tests
+    depends_on:
+      - 08-generate-assets
+goals:
+  - id: pub-get
+    description: pubspec resolves and dependencies install
+    checks:
+      - id: check
+        cmd: flutter pub get
+  - id: analyze-clean
+    description: dart analyze passes with no errors or warnings
+    checks:
+      - id: check
+        cmd: |
+          OUT=$(dart analyze lib/ 2>&1)
+          echo "$OUT"
+          ! echo "$OUT" | grep -qE '^\s*(error|warning)'
+  - id: build-apk
+    description: debug APK builds successfully
+    checks:
+      - id: check
+        cmd: flutter build apk --debug
+  - id: tests-pass
+    description: flutter test suite is green
+    checks:
+      - id: check
+        cmd: flutter test
+  - id: screen-count-matches-manifest
+    description: lib/screens count equals .stitch/screens.json count
+    checks:
+      - id: check
+        cmd: |
+          MANIFEST=$(jq '(if type == "array" then . else .screens end) | map(select(.route | startswith("/"))) | length' .stitch/screens.json)
+          ACTUAL=$(find lib/screens -name '*_screen.dart' | wc -l | tr -d ' ')
+          [ "$MANIFEST" = "$ACTUAL" ] || { echo "manifest=$MANIFEST actual=$ACTUAL"; exit 1; }
+  - id: no-null-onpressed
+    description: no onPressed:null outside Disabled wrappers
+    checks:
+      - id: check
+        cmd: |
+          BAD=$(grep -RnE 'onPressed:\s*null' lib/ --include='*.dart' 2>/dev/null | grep -v 'Disabled' || true)
+          [ -z "$BAD" ] || { echo "$BAD"; exit 1; }
+  - id: no-placeholder-text
+    description: no Lorem|TODO|FIXME|Coming soon|TBD in lib/
+    checks:
+      - id: check
+        cmd: |
+          BAD=$(grep -RnE '(Lorem|TODO|FIXME|Coming soon|TBD)' lib/ --include='*.dart' 2>/dev/null || true)
+          [ -z "$BAD" ] || { echo "$BAD"; exit 1; }
+  - id: all-navs-wired
+    description: every navigations.json element has status=="wired"
+    checks:
+      - id: check
+        cmd: jq -e '[.. | objects | select(has("status")) | .status] | all(. == "wired")' navigations.json
+  - id: assets-generated
+    description: 40 weeks + 5 empty states + 15 icons
+    checks:
+      - id: weeks
+        cmd: "[ $(find assets/illustrations/baby-sizes -name '*.svg' 2>/dev/null | wc -l | tr -d ' ') -ge 40 ]"
+      - id: empties
+        cmd: "[ $(find assets/illustrations/empty-states -name '*.svg' 2>/dev/null | wc -l | tr -d ' ') -ge 5 ]"
+      - id: icons
+        cmd: "[ $(find assets/icons -name '*.svg' 2>/dev/null | wc -l | tr -d ' ') -ge 15 ]"
