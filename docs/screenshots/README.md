@@ -1,6 +1,6 @@
 # Screenshots
 
-All 13 screens, captured from the generated Flutter app running in Chrome at viewport 390×844 (iPhone 14 Pro size class).
+All 13 screens, captured from the generated Flutter app running in Chrome at viewport **430×2400** logical pixels (× DPR 2 → 860×4800 PNG). The viewport width matches iPhone 16 Pro Max so Material 3 breakpoints render the mobile layout; the height is exaggerated so scrollable Flutter content (Home's Quick Actions, the article reader, the pregnancy progress detail) fits in one shot without clipping.
 
 | Order | Route | Screen | File |
 | ---: | :--- | :--- | :--- |
@@ -29,6 +29,6 @@ flutter build web --release
 
 Xcode 26 (the current stable) ships expecting iOS 26.x simulator runtimes, but most dev machines still have iOS 18.x runtimes pre-installed. `flutter run -d ios` fails on the version mismatch without manually downloading the matching runtime via Xcode → Settings → Components.
 
-Flutter's web renderer uses the same widget tree and the same layout engine as the mobile renderers — the screenshots fairly represent what the app looks like on a phone. The viewport is set to 390×844 (iPhone 14 Pro logical pixels) so the Material 3 breakpoints render the mobile layout, not a tablet/desktop one.
+Flutter's web renderer uses the same widget tree and the same layout engine as the mobile renderers — the screenshots fairly represent what the app looks like on a phone.
 
-If you have a working iOS or Android emulator, you can render those instead — every route is reachable via the URL `bloom:/<route>` deep link or via tapping the bottom nav and the cards on each screen.
+If you have a working iOS or Android emulator, you can render those instead — every route is reachable via the bottom nav and the cards on each screen.

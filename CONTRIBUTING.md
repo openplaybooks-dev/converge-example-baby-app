@@ -1,6 +1,6 @@
 # Contributing
 
-This repo is a **frozen showcase** of one playbook run. Its purpose is to demonstrate the [Converge](https://github.com/openplaybooks/converge) framework — autonomous, gated, dynamically-spawning playbooks — not to be an actively maintained Flutter app.
+This repo is a **frozen showcase** of one playbook run. Its purpose is to demonstrate the [Converge](https://github.com/openplaybooks-dev/converge) framework — autonomous, gated, dynamically-spawning playbooks — not to be an actively maintained Flutter app.
 
 ## What lives where
 
@@ -13,7 +13,7 @@ This repo is a **frozen showcase** of one playbook run. Its purpose is to demons
 
 ## Where to send issues
 
-- **Framework bugs** (runner crashes, journal corruption, goal-check semantics, skill dispatch): open them upstream at <https://github.com/openplaybooks/converge>.
+- **Framework bugs** (runner crashes, journal corruption, goal-check semantics, skill dispatch): open them upstream at <https://github.com/openplaybooks-dev/converge>.
 - **Playbook bugs** (a goal check that's too strict, a missing dependency in `playbook.yml`, a task body that drifts from the data-models contract): open them here.
 - **Generated-code bugs** (the produced Flutter app fails to compile, an analyzer rule fires): also here — usually they point back to a missing assertion in the playbook.
 
