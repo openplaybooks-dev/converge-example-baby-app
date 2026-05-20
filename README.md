@@ -32,68 +32,55 @@ Full breakdown in **[docs/METRICS.md](./docs/METRICS.md)** · chronological time
 <tr>
 <td width="50%" align="center">
 <img src="./docs/screenshots/01-home.png" width="280" alt="Home screen"><br>
-<sub><b>1. Home — <code>/</code></b><br>Week tracker, mood selector, daily checklist, quick actions, weekly health tip.</sub>
-</td>
+<b>1. Home — <code>/</code></b><br>Week tracker, mood selector, daily checklist, quick actions, weekly health tip.</td>
 <td width="50%" align="center">
 <img src="./docs/screenshots/02-browse.png" width="280" alt="Browse screen"><br>
-<sub><b>2. Browse — <code>/browse</code></b><br>Feature index — entry point to Cycle Tracking and Weight & Nutrition.</sub>
-</td>
+<b>2. Browse — <code>/browse</code></b><br>Feature index — entry point to Cycle Tracking and Weight & Nutrition.</td>
 </tr>
 <tr>
 <td width="50%" align="center">
 <img src="./docs/screenshots/03-library.png" width="280" alt="Library screen"><br>
-<sub><b>3. Library — <code>/library</code></b><br>Saved articles and bookmarks.</sub>
-</td>
+<b>3. Library — <code>/library</code></b><br>Saved articles and bookmarks.</td>
 <td width="50%" align="center">
 <img src="./docs/screenshots/04-profile.png" width="280" alt="Profile screen"><br>
-<sub><b>4. Profile — <code>/profile</code></b><br>User profile, pregnancy details, navigation.</sub>
-</td>
+<b>4. Profile — <code>/profile</code></b><br>User profile, pregnancy details, navigation.</td>
 </tr>
 <tr>
 <td width="50%" align="center">
 <img src="./docs/screenshots/05-cycle-tracking.png" width="280" alt="Cycle tracking screen"><br>
-<sub><b>5. Cycle Tracking — <code>/cycle-tracking</code></b><br>Period log with fertile-window prediction and cycle history.</sub>
-</td>
+<b>5. Cycle Tracking — <code>/cycle-tracking</code></b><br>Period log with fertile-window prediction and cycle history.</td>
 <td width="50%" align="center">
 <img src="./docs/screenshots/06-weight-nutrition.png" width="280" alt="Weight and nutrition screen"><br>
-<sub><b>6. Weight & Nutrition — <code>/weight-nutrition</code></b><br>Weight progress chart with time-range tabs and nutrition tips.</sub>
-</td>
+<b>6. Weight & Nutrition — <code>/weight-nutrition</code></b><br>Weight progress chart with time-range tabs and nutrition tips.</td>
 </tr>
 <tr>
 <td width="50%" align="center">
 <img src="./docs/screenshots/07-pregnancy-progress.png" width="280" alt="Pregnancy progress screen"><br>
-<sub><b>7. Pregnancy Progress — <code>/pregnancy-progress</code></b><br>Week-by-week detail: baby size, body changes, baby's development.</sub>
-</td>
+<b>7. Pregnancy Progress — <code>/pregnancy-progress</code></b><br>Week-by-week detail: baby size, body changes, baby's development.</td>
 <td width="50%" align="center">
 <img src="./docs/screenshots/08-mindfulness.png" width="280" alt="Mindfulness screen"><br>
-<sub><b>8. Mindfulness — <code>/mindfulness</code></b><br>Breathing exercises and guided stretches.</sub>
-</td>
+<b>8. Mindfulness — <code>/mindfulness</code></b><br>Breathing exercises and guided stretches.</td>
 </tr>
 <tr>
 <td width="50%" align="center">
 <img src="./docs/screenshots/09-health-log.png" width="280" alt="Health log screen"><br>
-<sub><b>9. Health Log — <code>/health-log</code></b><br>Doctor visits, reminders, symptom tracking.</sub>
-</td>
+<b>9. Health Log — <code>/health-log</code></b><br>Doctor visits, reminders, symptom tracking.</td>
 <td width="50%" align="center">
 <img src="./docs/screenshots/10-mood-wellness.png" width="280" alt="Mood and wellness screen"><br>
-<sub><b>10. Mood & Wellness — <code>/mood-wellness</code></b><br>Today's mood, energy levels, wellness trend chart.</sub>
-</td>
+<b>10. Mood & Wellness — <code>/mood-wellness</code></b><br>Today's mood, energy levels, wellness trend chart.</td>
 </tr>
 <tr>
 <td width="50%" align="center">
 <img src="./docs/screenshots/11-education.png" width="280" alt="Education screen"><br>
-<sub><b>11. Education — <code>/education</code></b><br>Curated articles by trimester.</sub>
-</td>
+<b>11. Education — <code>/education</code></b><br>Curated articles by trimester.</td>
 <td width="50%" align="center">
 <img src="./docs/screenshots/12-article-reader.png" width="280" alt="Article reader screen"><br>
-<sub><b>12. Article Reader — <code>/article-reader/:id</code></b><br>Long-form reading view with quote callouts and related articles.</sub>
-</td>
+<b>12. Article Reader — <code>/article-reader/:id</code></b><br>Long-form reading view with quote callouts and related articles.</td>
 </tr>
 <tr>
 <td width="50%" align="center">
 <img src="./docs/screenshots/13-settings.png" width="280" alt="Settings screen"><br>
-<sub><b>13. Settings — <code>/settings</code></b><br>Account, preferences, about.</sub>
-</td>
+<b>13. Settings — <code>/settings</code></b><br>Account, preferences, about.</td>
 <td width="50%"></td>
 </tr>
 </table>
